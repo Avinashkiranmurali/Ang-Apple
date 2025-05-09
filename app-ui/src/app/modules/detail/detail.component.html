@@ -1,0 +1,185 @@
+<div class="edge-to-edge">
+    <div class="result-title">
+        <div class="result-title-wrapper">
+            <app-page-title></app-page-title>
+            <a class="skip-to-details" (click)="sharedService.scrollToProductDetails('app-product-info', child, viewportScroller)"
+              href="javascript:void(0)" [attr.aria-label]="'productInfo' | translate">
+              {{ 'productInfo' | translate }}
+            </a>
+        </div>
+    </div>
+    <div class="content-container product-overview contain">
+        <div class="loading-tile" *ngIf="detailsLoading && !detailLoadError"><span class="loading-image medium"></span>
+        </div>
+        <section class="product-summary" *ngIf="isMobile">
+            <article>
+                <div class="product-title">
+                    <h2>{{ details['name'] }}</h2>
+                </div>
+            </article>
+        </section>
+        <section class="product-gallery" *ngIf="!detailsLoading && !detailLoadError">
+            <div class="product-gallery-content">
+              <img src="{{ (details['images']?.large) | aplImgSize : ( isMobile || isTablet ) ? '400' : '540' }}" alt="{{ details['name'] }}"/>
+            </div>
+        </section>
+        <section class="product-summary" *ngIf="!detailsLoading && !detailLoadError">
+            <article [ngClass]="{'unbundled': config['pricingOption'] === 'unbundledDetails', 'mobile-padding':true}"
+                [ngSwitch]="detailPageTemplate">
+                <div *ngSwitchDefault>
+                    <div class="product-title">
+                        <h2 *ngIf="isDesktop || isTablet">{{ details['name'] }}</h2>
+                        <ul *ngIf="isShowOptions === true">
+                            <li *ngFor="let option of details['options']  | orderBy: 'asc': 'orderBy'">{{option.value}}</li>
+                        </ul>
+                    </div>
+
+                    <div class="product-variations"
+                        *ngFor="let optionSet of productByConfigOptions | keyvalue : sharedService.returnZero  | orderBy: 'numericOrder':  'orderBy'; let last=last"
+                        [ngClass]="{'last-variant' : last }">
+                        <div *ngIf="optionSet.value['name'] !== 'color'" class="language-variant">
+                            <label class="language-label"
+                                [attr.for]="selectedVariant[optionSet.value['name']] + '_' + optionSet.value['name']">{{optionSet.value['name']}}</label>
+                            <select [(ngModel)]="selectedVariant[optionSet.value['name']]"
+                                [attr.id]="selectedVariant[optionSet.value['name']] + '_' + optionSet.value['name']"
+                                [attr.aria-label]="selectedVariant[optionSet.value['name']]"
+                                (change)="changeVariantOption(optionSet.value['orderBy'],selectedVariant[optionSet.value['name']],optionSet.value)">
+                                <option [ngValue]="option.key"
+                                        *ngFor="let option of optionSet.value['optionData']">
+                                    {{option['value']}}</option>
+                            </select>
+                        </div>
+                        <div *ngIf="optionSet.value['name'] === 'color'" class="color-variant">
+                            <legend class="dimensionColor">
+                                {{ 'color' | translate }}
+                                <span class="selected-text"> -
+                                    {{ hoverColor || selectedVariantText }}</span>
+                            </legend>
+                            <ul class="bandColor-list" role="list">
+                                <li class="item" *ngFor="let option of optionSet.value['optionData']; let i = index"
+                                    (mouseover)="mouseHoverEvent(option['value'])" (mouseleave)="mouseLeaveEvent()"
+                                    [ngClass]="{'hidden':option['optHidden']}">
+                                    <input type="radio" id="{{ option['key'] + '-' }}{{ optionSet.value['name'] }}"
+                                        [attr.name]="optionSet.value['name']" [ngClass]="'opt-cell ' + option['value']"
+                                        [value]="option['key']"
+                                        [attr.aria-label]="option['key'] + '-' + optionSet.value['name'] "
+                                        [(ngModel)]="selectedVariant[optionSet.value['name']]"
+                                        [checked]="(selectedVariant[optionSet.value['name']] === option['key'])"
+                                        (click)="changeVariantOption(optionSet.value['orderBy'],option['key'],optionSet.value)" />
+
+                                    <label appConfigOption [indexVal]="i" [optdata]="option" [config]="config"
+                                        [messages]="messages" [optset]="optionSet.value"
+                                        for="{{ option['key'] + '-' }}{{ optionSet.value['name'] }}" class="item-details"
+                                        [ngClass]="{'selected':selectedVariant[optionSet.value['name']] === option['key'] }">
+                                    </label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="product-section">
+                        <div class="product-price" [ngClass]="{'no-border': (!displaySubNav && !isShowOptions)}">
+                            <div class="product-price-content" [title]="setTaxFeeTitle" [ngClass]="{'with-split-pay-message' : paymentMaxLimit && paymentMaxLimit > 0  && showSplitPayMessage, 'with-apple-care': isServicePlansExist}">
+                                <!-- new pricingTemplate -->
+                                <div>
+                                    <app-pricing-temp ext="" [offer]="details['offers'][0]"
+                                        [item]="details" [priceModel]="priceModel" parentClass="product-detail-page">
+                                    </app-pricing-temp>
+                                </div>
+                            </div>
+                            
+                            <div *ngIf="paymentMaxLimit && paymentMaxLimit > 0  && showSplitPayMessage" class="static-split-pay-message" [ngClass]="{'with-smart-price' : smartPrice, 'with-apple-care': isServicePlansExist}">
+                                <div>{{ 'staticSplitPayMessage' | translate: {paymentMaxLimit: this.paymentMaxLimit} }}</div>
+                            </div>
+
+                            <div class="smart-price-container" *ngIf="smartPrice">
+                                <app-smart-price [smartPrice]="smartPrice" [ext]="" [parentClass]="'detail-view'"></app-smart-price>
+                            </div>
+                            <!-- APPLE CARE TEMPLATE-->
+                            <app-apple-care *ngIf="isServicePlansExist"
+                                            [appleCareServicePlans]="details.addOns.servicePlans"
+                                            [readOnly]="false"
+                                            [isProductView]="true"
+                                            (selectedAppleCareService)="selectedAppleCareServicePlan($event)">
+                            </app-apple-care>
+
+                            <div *ngIf="details['isEligibleForGift']" class="selected-product-gift-qualified" [ngClass]="{'with-split-pay-message' : paymentMaxLimit && paymentMaxLimit > 0 && showSplitPayMessage}">
+                                <div>{{ additionalDetailsPageMessage }}</div>
+                            </div>
+                            <div class="btn-container btn-container-flex">
+                                <button id="btn-addtocart" class="btn-base blue-btn" attr.aria-label="{{ (config.fullCatalog ? 'addToCartBtn' : 'checkout') | translate }} {{ details.name }}"
+                                    (click)="addToCart(details['psid'], details)"
+                                    [ngClass]="buttonColor">{{ (config.fullCatalog ? 'addToCartBtn' : 'checkout') | translate }}</button>
+                            </div>
+                        </div>
+
+                        <p [innerHTML]="'EstimateDisclaimer' | translate" class="msg-disclaimer detailsPageDisclaimer"
+                            *ngIf="details['offers'][0].isEligibleForPayrollDeduction"></p>
+                        <div *ngIf="config['showShippingAvailability']" class="shipping-availability">
+                            <p class=" icon-shipping">{{ 'shippingAvailability' | translate }} <span
+                                    class="text-semibold">{{
+                  details['shippingAvailabilityMessage'] }}</span></p>
+                        </div>
+                    </div>
+                    <div class="payment-info" [ngSwitch]="detailPageCostBreakdownTemplate">
+                        <div class="cost-breakdown" *ngSwitchCase="'full-retail'">
+                            <p class="full-price-payment dotted"><span>{{ 'fullRetailPrice' | translate }}</span> <span
+                                    class="amount">{{details['offers'][0].totalPrice.amount | currency}} </span></p>
+                            <p class="full-price-payment dotted"><span>{{ 'monthlyPayments' | translate }}</span> <span
+                                    class="amount">{{priceModel?.paymentValue | currency}}{{ 'perMonth' | translate }}</span>
+                            </p>
+                        </div>
+                    </div>
+                    <p class="payment-disclaimer" *ngIf="messages['paymentDisclaimerConfig_' + routeParams.subcat] || messages['paymentDisclaimerConfig']"
+                     [innerHTML]="(messages['paymentDisclaimerConfig_' + routeParams.subcat]) ? messages['paymentDisclaimerConfig_' + routeParams.subcat] : 'paymentDisclaimerConfig' | translate: translateParams "></p>
+                    <p class="watch-connectivity-reqs"
+                     *ngIf="!isAccessory && routeParams.category === 'watch' && (messages[routeParams.subcat+'ConnectivityReqs'] || messages['connectivityReqs'])"
+                     [innerHTML]="messages[routeParams.subcat+'ConnectivityReqs'] ? messages[routeParams.subcat+'ConnectivityReqs'] : messages['connectivityReqs']"></p>
+                    <p class="tax-inclusion-note" *ngIf="!config.fullCatalog && messages['taxVatIncluded']">*{{ 'taxVatIncluded' | translate }}</p>
+                </div>
+            </article>
+        </section>
+        <div class="page-error-container" role="alert" aria-live="polite"
+            [class]="{'error-overlay':cartService.addCartError || cartService.cartFullError || cartService.pricingFullError}"
+            *ngIf="detailLoadError || cartService.addCartError || cartService.cartFullError || cartService.pricingFullError">
+            <h2 role="presentation" *ngIf="detailLoadError">{{ 'detailsLoadingError' | translate }}</h2>
+            <h2 role="presentation" *ngIf="cartService.addCartError">{{ 'addToCartError' | translate }}</h2>
+            <h2 role="presentation" *ngIf="cartService.cartFullError">{{ 'addTocartFullError' | translate }}</h2>
+            <h2 role="presentation" *ngIf="cartService.pricingFullError">{{ 'pricingFullError' | translate }}</h2>
+            <p>{{ 'tryAgainLater' | translate }}</p>
+        </div>
+    </div>
+    <div class="contain carousel-image-container" *ngIf="carouselImages && carouselImages.length > 0">
+        <app-zoomable-slideshow
+            [carouselImages]="carouselImages"
+            [imageServerUrl]="config['imageServerUrl']">
+        </app-zoomable-slideshow>
+    </div>
+    <!-- Common Template for Product Description -->
+    <div class="product-feature-wrapper">
+        <app-product-information id="app-product-info"
+          *ngIf="!detailsLoading && !detailLoadError"
+          parentClass="product-detail-page"
+          [configItemSku]="configItemSku"
+          [configItemUpc]="configItemUpc"
+          [messages]="messages"
+          [details]="details">
+        </app-product-information>
+    </div>
+
+  <!-- Recently viewed products carousel type -->
+  <app-carousel *ngIf="!isMobile"></app-carousel>
+
+
+  <div class="section-divider" *ngIf="showTaxDisclaimer || details.additionalInfo?.manufacturerFootNote"></div>
+    <div class="section-divider" *ngIf="showTaxDisclaimer || details.additionalInfo?.manufacturerNote"></div>
+
+    <div class=" product-disclaimer contain ">
+        <p class="msg-disclaimer " *ngIf="showTaxDisclaimer">* {{ 'taxFeeDisclaimer' | translate }}</p>
+        <p class="msg-disclaimer " *ngIf="details.additionalInfo?.manufacturerFootNote"
+            [innerHTML]="details.additionalInfo.manufacturerFootNote"></p>
+        <p class="msg-disclaimer " *ngIf="details.additionalInfo?.manufacturerNote"
+            [innerHTML]="details.additionalInfo.manufacturerNote"></p>
+    </div>
+
+</div>

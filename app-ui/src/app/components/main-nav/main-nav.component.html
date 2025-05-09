@@ -1,0 +1,17 @@
+<ul [ngStyle]="{'background': config.navBarBackgroundColor, 'color': config.navBarTextColor }"
+    class="mobile-main-nav">
+  <li *ngFor="let link of mainNav; let i = index">
+    <a appCustomHoverLink [navBarColors]="config.navBarColors" class="main-nav-link" [ngClass]="link.slug" [routerLink]="['browse/', link.slug ]" *ngIf="link.templateType === 'LANDING' && link.configurable === false" (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+    </a>
+    <a appCustomHoverLink [navBarColors]="config.navBarColors" class="main-nav-link" [ngClass]="link.slug" [routerLink]="['configure/', link.slug ]"
+       *ngIf="link.configurable === true" routerLinkActive="active" (click)="changeSubnav(i)" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+    </a>
+    <a appCustomHoverLink [navBarColors]="config.navBarColors" class="main-nav-link" [ngClass]="link.slug" [routerLink]="['curated/', link.slug, link.subCategories[0].slug ]"
+       *ngIf="link.templateType === '' || link.templateType === 'CATEGORYLIST'" (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+    </a>
+    <a appCustomHoverLink [navBarColors]="config.navBarColors" class="main-nav-link" [ngClass]="link.slug" [routerLink]="['curated/', link.slug, link.subCategories[0].slug ]"
+       *ngIf="link.templateType === '' || link.templateType === 'CATEGORY'" (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+    </a>
+  </li>
+</ul>
+

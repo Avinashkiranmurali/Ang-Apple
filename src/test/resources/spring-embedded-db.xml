@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/jdbc
+        http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
+
+    <!--
+        Create an embedded HSQL database accessible via jdbc:hsqldb:mem:default
+    -->
+    <jdbc:embedded-database id="default" type="HSQL">
+        <!-- Add the following scripts to initialize the database -->
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/drop_tables.sql"/>
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_table.sql"/>
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/orders_table.sql"/>
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/orders_travelers_table.sql"/>
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/supplier_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/var_program_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_tax_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_fee_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_adjustment_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_tax_adjustment_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/order_line_fee_adjustment_table.sql" />
+        <jdbc:script location="classpath:/com/b2r/db/dao/ibatis/sql/payment_table.sql"/>
+    </jdbc:embedded-database>
+</beans>

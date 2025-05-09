@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form id="postSamlForm" method="post" action="${action}">
+    #if(${SAMLResponse})
+        <input type="hidden" name="SAMLResponse" value="${SAMLResponse}" />
+    #end
+    #if(${SAMLRequest})
+        <input type="hidden" name="SAMLRequest" value="${SAMLRequest}" />
+    #end
+    #if(${RelayState})
+        <input type="hidden" name="RelayState" value="${RelayState}" />
+    #end
+</form>
+<script>
+    window.onload = function() {
+        document.getElementById("postSamlForm").submit();
+    };
+</script>
+</body>
+</html>

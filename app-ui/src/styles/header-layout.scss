@@ -1,0 +1,216 @@
+.top-hat {
+  height:auto;
+  width:100%;
+  position: relative;
+
+  .top-parent{
+    padding:0 rem(15px);
+    width:100%;
+    height:100%;
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+  }
+  .prg-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    min-height: rem(100px);
+    justify-content: space-between;
+  }
+  .prg-container-wrapper{ @include flexbox;}
+  .logo-container {
+    img.var-logo{
+      max-height: rem(75px);
+      max-width: rem(350px);
+      padding-left: 0.01rem;
+    }
+    span.print-only {display:none;}
+    @media print {
+      display:block;
+      a {display:none;}
+      span.print-only {display:block;}
+    }
+
+    .logo-header-block {
+      width: max-content;
+      display: table;
+    }
+
+    .secondary-logo-vl {
+      margin-right: rem(10px);
+    }
+
+    a.primary-logo-vl {
+      border-left: 1px solid $fc-light-gray;
+      padding-left: rem(10px);
+      display: table-cell;
+    }
+
+    a.cursor-default {
+      cursor: default;
+    }
+  }
+  .text-container {
+    .h-parent {
+      .h-text {
+        margin: 0;
+        font-size: rem(35px);
+        font-weight: 400;
+        line-height: normal;
+        @include for-small-mobile {
+          font-size: rem(22px);
+        }
+      }
+      .h-subtext {
+        font-size: rem(14.5px);
+        padding-top: rem(5px);
+        margin: 0;
+        @include for-small-mobile {
+          font-size: rem(12px);
+        }
+      }
+    }
+  }
+  .user-nav {
+    text-align:right;
+    font-weight:bold;
+    list-style-type:none;
+
+    @media print {display:none;}
+
+    .welcome-msg, .user-cart, .user-info {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .welcome-msg{
+      z-index:1;
+    }
+    .user-cart, .user-info{
+      width: rem(65px);
+      border-left: rem(1px) solid #999;
+      padding: rem(5px) rem(0px) rem(5px) rem(10px);
+      position: relative;
+      text-align: center;
+      .cart-cta {
+        color:#999;
+        font-size:$s-reg4;
+      }
+      .popup-cta{
+        color:#999;
+        font-size:$s-reg4;
+        &:after {
+          position: relative;
+          top: rem(-3px);
+          display: inline-block;
+          font-family:'GlyphIcons';
+          font-style:normal;
+          font-weight:normal;
+          line-height:1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          content: '\e639';
+          font-size:0.4em;
+          padding-left:rem(8px);
+        }
+        &:hover, &:focus {
+          text-decoration:none;
+          color:#0070C9;
+        }
+        &:hover {
+          outline:none;
+        }
+        &:focus {
+          outline:rem(2px) solid Highlight;
+          outline:rem(2px) solid -webkit-focus-ring-color;
+        }
+        &:active {
+          color:#999;
+        }
+
+        span {
+          font-size:0.4em;
+          padding:rem(5px) 0 0 rem(8px);
+          &:before {color:#999;vertical-align:top;top:rem(8px);}
+        }
+        &.paymentLock{
+          cursor:default;
+          &:before{color: #828282;}
+          &:after{display:none;}
+        }
+      }
+      .popover {
+        left:auto;
+        right:0;
+        top:rem(25px);
+        border-radius:0;
+        max-width:none;
+        &.bottom {
+          .popover-arrow {
+            left: auto;
+            right: rem(7px);
+          }
+        }
+        &.open {
+          display:block;
+          .popover-content {
+            padding:0;
+            width:rem(285px);
+            &:focus {outline:none;}
+          }
+        }
+      }
+      &.no-border {
+        border: none;
+      }
+    }
+    .points-label{font-weight:bold;}
+  }
+  /* login container - sign-in required */
+  .login-container{
+    text-align:center;
+    float:right;
+    width:rem(200px);
+  }
+  .login-btn-container{
+    .sign-in {
+      padding: rem(8px) rem(10px);
+      font-size: rem(16px);
+      font-weight: $fw-medium;
+      line-height: 1;
+      width: 100%;
+    }
+  }
+  .login-member{
+    font-weight: normal;
+    padding-top: rem(12px);
+    line-height: 1;
+    a{
+      text-decoration: underline;
+    }
+  }
+}
+.box-sh{
+  box-shadow: 0 rem(1px) rem(10px) rem(1px) #ccc;
+  position: relative;
+  z-index: 99;
+}
+.box-ln{border-bottom: rem(1px) solid #ccc;}
+
+.align-items-normal {
+  align-items: normal !important;
+}
+
+.no-logo {
+  min-width: rem(25px);
+}
+
+.name-points-table {
+  table-layout: auto;
+  width: 100%;
+}
+
+.width25 {
+  width: 25%;
+}

@@ -1,0 +1,36 @@
+@import "~styles/mixins";
+@import "~styles/common/items-list";
+@import "~styles/common/cart-container";
+@import "~styles/common/total-breakdown";
+@import "~styles/common/payment-summary";
+::ng-deep {
+  .order-confirm-text {
+    padding-bottom: rem(15px);
+    color: #333;
+
+    p {
+      color: #333;
+
+      span {
+        color: #333;
+      }
+    }
+
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .order-confirm-date {
+      color: #333;
+      font-size: $s-reg;
+    }
+
+    .order-confirm-number-print, .order-confirm-date-print {
+      display: none;
+    }
+  }
+}

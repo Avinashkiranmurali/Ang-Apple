@@ -1,0 +1,6 @@
+<div class="container orders-section">
+    <div class="content-container order-history" *ngIf="!isLoading">
+      <h2 class="order-title">{{ 'orders' | translate }}</h2>
+      <app-order-tiles [orderItems]="orders"></app-order-tiles>
+    </div>
+  </div>

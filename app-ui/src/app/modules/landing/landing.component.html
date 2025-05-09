@@ -1,0 +1,86 @@
+<div class="banner-landing">
+  <ng-container *ngIf="programBanner && programBanner['active'] && messages[programBanner['active']] && displayProgramBnr">
+    <app-program-info-banner
+      [bannerData]="bannerData"
+      [category]="category"
+      [programBanner]="programBanner"
+    ></app-program-info-banner>
+  </ng-container>
+  <ng-container *ngIf="!category && (singleProductBanners?.length > 0 || landingBanners?.length > 0 )">
+    <app-slideshow [isMobile]=isMobile [banners]="landingBanners" [imageServerUrl]="config.imageServerUrl"></app-slideshow>
+  </ng-container>
+  <ng-container *ngIf="!category && isMobile && multiBanner && multiBanner.length > 0">
+    <app-multi-product-banner [multiBanner]="multiBanner[0]"></app-multi-product-banner>
+  </ng-container>
+  <ng-container *ngFor="let list of multiProductBannerActiveList; let index = index">
+    <ng-container *ngIf="(multiProductBanner && multiProductBanner['active'] && messages[multiProductBanner['active']]  === 'true'
+    && list && list['active'] && messages[list['active']] === 'true'
+    && displayProgramBanner(messages[list['active']], category))">
+      <app-multi-product-banner
+        [multiProductBanner]="list"
+        [items]="list.listDetails">
+      </app-multi-product-banner>
+    </ng-container>
+  </ng-container>
+  <ng-container *ngIf="marketingBanner && marketingBanner['active'] && messages[marketingBanner['active']] === 'true' && displayMarketingBnr">
+    <app-marketing-banner
+      [marketingBanner]="marketingBanner"
+      [marketingBannerList]="marketingBannerList"
+      [items]="marketingBannerItems"
+    ></app-marketing-banner>
+  </ng-container>
+  <!-- TO BE REMOVED ONCE CAROUSEL IS UP -->
+  <ng-container *ngIf="productBanner && productBanner['activeProducts'] && messages[productBanner['activeProducts']] && displayProductBnr">
+    <app-product-banner
+      class="content-container product-banner {{ messages[product + '-' + productBanner['templateClass']] }}"
+      [imageServerUrl]="config['imageServerUrl']"
+      [ngClass]="{'first_product': isFirst, 'last_product': isLast}"
+      [messages]="messages"
+      [product]="product"
+      [productBanner]="productBanner"
+      *ngFor="let product of messages[productBanner['activeProducts']].split(','); first as isFirst; last as isLast">
+    </app-product-banner>
+  </ng-container>
+  <h1 class="mobileTitleOnly" *ngIf="category">{{ familyBannerOnMobile[category]?.i18nName }}</h1>
+  <ng-container>
+    <app-family-banner
+      *ngIf="mainNav && mainNav.length > 0 && category"
+      [bannerData]="bannerData"
+      [messages]="messages"
+      [familyBanner]="familyBanner"
+      [getBannerClass] = "getBannerClass"
+      [category] = "category"
+      [familyBannerOnMobile] = "familyBannerOnMobile"
+      [buildBannerLink] = "buildBannerLink"
+      [imageServerUrl]="config['imageServerUrl']"></app-family-banner>
+  </ng-container>
+  <!-- Whats New Banner - 3 Column Grid - NPI Active -->
+  <ng-container *ngIf="isNPIActive && !category && whatsNewBanners && whatsNewBanners.length > 0">
+    <app-column-grid-banner
+      [parentClass]="'whatsNewNPIBanners'"
+      [bannerTitle]="'whatsNewBannerTitle' | translate"
+      [columnGridBanners] = whatsNewBanners
+      [isMobileView] = isMobile>
+    </app-column-grid-banner>
+  </ng-container>
+  <!-- Recently viewed products carousel type -->
+  <app-carousel *ngIf="!isMobile"></app-carousel>
+  <!-- Whats New Banner - 3 Column Grid - POST NPI -->
+  <ng-container *ngIf="!isNPIActive && !category && whatsNewBanners && whatsNewBanners.length > 0">
+    <app-column-grid-banner
+      [parentClass]="'whatsNewBanners'"
+      [bannerTitle]="'whatsNewBannerTitle' | translate"
+      [columnGridBanners] = whatsNewBanners
+      [isMobileView] = isMobile>
+    </app-column-grid-banner>
+  </ng-container>
+  <!-- Product Family Banner - 3 Column Grid  -->
+  <ng-container *ngIf="!category && productFamilyBanners && productFamilyBanners.length > 0">
+    <app-column-grid-banner
+      [parentClass]="'productFamilyBanners'"
+      [bannerTitle]="'productFamilyBannerTitle' | translate"
+      [columnGridBanners] = productFamilyBanners
+      [isMobileView] = isMobile>
+    </app-column-grid-banner>
+  </ng-container>
+</div>

@@ -1,0 +1,10 @@
+<div class="quick-links-component-container" [ngClass]="parentClass">
+  <div class="quick-links-wrapper">
+    <h3 class="quick-links-header animate">{{messages['quickLinks']}}</h3>
+    <ul class="quick-links-list" role="listbox" [attr.aria-label]="'quickLinks' | translate">
+      <li class="quick-link-item animate" *ngFor="let qLink of quickLinks" role="presentation">
+        <a href="{{qLink.linkUrl}}" role="option">{{qLink.linkText}}</a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<section class="address-form-container">
+
+  <section class="address-form-body wrap-container address-form-padding-bottom-shrink">
+    <form name="changeShipAddress" [formGroup]="changeShipAddress" (submit)="submitAddressChange()" class="form-content form-fields" role="form" address-invalid>
+      <article id="address-form-content">
+
+       <!-- Header Template -->
+        <section class="address-fields-header">
+          <h1>{{ 'addressFormHeaderInfo' | translate }}</h1>
+          <legend>{{ 'addressFormFieldInfo' | translate }}</legend>
+        </section>
+        <fieldset id="edit-address-fields" class="wrap-container ie-clear-appearance-text ie-clear-appearance-select">
+          <legend class="hideFromDOM">{{ 'addressFormFieldInfo' | translate }}</legend>
+          <div role="alert" aria-live="assertive" class="hideFromDOM">{{ errorCountLabel }}</div>
+          <section>
+            <ng-template appShippingAddressForm></ng-template>
+          </section>
+        </fieldset>
+        <button id="btn-submit" type="submit" class="hidden" aria-hidden="true"></button>
+      </article>
+    </form>
+
+  </section>
+  <section class="address-form-body wrap-container address-form-padding-shrink">
+    <div class="wrap-container form-margin btn-container-flex full-width-buttons">
+      <button *ngIf="displayAddressCTA()" id="btn-apply-edit-shipContact" class="btn-base blue-btn"
+        [ngClass]="buttonColor"
+        (click)="submitAddressChange()"
+        [disabled]="disableButton()"
+      >{{ 'continue' | translate }}</button>
+
+      <button id="btn-cancel-edit-shipContact" class="btn-base cancel cta-link-type"  [ngClass]="buttonColor" (click)="cancel()">{{ 'cancel' | translate }} </button>
+    </div>
+
+  </section>
+  <section class="address-form-body wrap-container">
+    <article id="address-disclaimer-content">
+      <div class="shipping-policy" [innerHTML]="'appleShippingPolicies' | translate"></div>
+      <div class="address-disclaimer" [innerHTML]="'addressModalFaqs' | translate" *ngIf="'addressModalFaqs' | translate"></div>
+    </article>
+  </section>
+</section>

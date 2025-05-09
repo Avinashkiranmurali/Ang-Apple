@@ -1,0 +1,5 @@
+<form [attr.action]="pbFormData['url']" [attr.method]="pbFormData['method']" accept-charset="UTF-8">
+    <div *ngFor="let param of pbFormData['params'] | keyvalue: sharedService.returnZero">
+        <input type="hidden" [attr.name]="param['key']"  [attr.value]="param['value']"  />
+    </div>
+</form>

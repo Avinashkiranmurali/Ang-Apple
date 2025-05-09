@@ -1,0 +1,54 @@
+@import "~styles/mixins";
+
+.order-detail-parent-container {
+  padding: 0 rem(15px);
+  @include for-mobile-to-tablet() {
+    padding: 0;
+  }
+
+  .order-info {
+    margin: 0;
+    padding-bottom: rem(51px);
+  }
+
+  .order-title {
+    h1 {
+      color: #111111;
+      font-size: rem(40px);
+      font-family: $font-base;
+      font-weight: $font-weight-semi-bold;
+      letter-spacing: 0;
+      line-height: rem(48px);
+      margin: 0 0 rem(9px) 0;
+      padding: 0;
+      opacity: 1;
+      @include for-mobile-to-tablet() {
+        font-size: rem(36px);
+        line-height: rem(43px);
+        margin-bottom: rem(10px);
+      }
+    }
+
+    .details-order-number, .details-order-date {
+      color: #111111;
+      font-size: rem(16px);
+      line-height: rem(19px);
+      font-family: $font-base;
+      font-weight: $font-weight-regular;
+      letter-spacing: 0;
+      padding: 0;
+      opacity: 1;
+    }
+
+    .details-order-date {
+      margin-top: rem(7px);
+    }
+  }
+}
+
+.container {
+  padding: rem(77px) rem(15px) rem(103px) rem(15px);
+  @include for-mobile-to-tablet() {
+    padding: rem(40px) rem(25px) rem(103px) rem(25px);
+  }
+}

@@ -1,0 +1,10 @@
+<div class="modal-header consent-form-header">
+  <h3 class="modal-title" id="consent-form-modal-title">{{ 'consentFormHeader' | translate }}</h3>
+</div>
+<div class="modal-body split-container consent-form-body">
+    <p [innerHtml]="messages['splitPayTermsContent']"></p>
+</div>
+<div class="modal-footer white-background text-right">
+    <button class="btn-base blue-btn action-item consent-form-btn" (click)="agree()">{{ 'agree' | translate }}</button>&nbsp;
+    <button class="btn-base blue-btn action-item consent-form-btn" (click)="cancel()">{{ 'cancel' | translate }}</button>
+</div>

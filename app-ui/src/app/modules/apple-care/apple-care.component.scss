@@ -1,0 +1,216 @@
+@import "~styles/mixins";
+
+.apple-care-container {
+  padding: rem(24px) 0 rem(32px) 0;
+
+  .apple-care-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .section-divider {
+    border-top: rem(1px) solid #cccccc;
+  }
+
+  .apple-care-wrapper {
+    display: flex;
+
+    .apple-care-desc-container {
+      width: 100%;
+
+      .apple-care-header {
+        display: flex;
+        margin: rem(21px) 0 rem(17px) 0;
+        font-size: rem(16px);
+        font-weight: $font-weight-semi-bold;
+        text-align: left;
+        letter-spacing: 0;
+        color: #111111;
+        line-height: rem(19.2px);
+      }
+
+      .apple-care-title {
+        font-size: rem(14px);
+        font-weight: $font-weight-semi-bold;
+        text-align: left;
+        letter-spacing: 0;
+        color: #111111;
+        line-height: rem(16.8px);
+        margin: 0 rem(20px) 0 0;
+
+        @include for-mobile {
+          margin-right: rem(30px);
+        }
+      }
+
+      .apple-care-icon {
+        &::before {
+          width: rem(13px);
+          height: rem(12px);
+          content: url('../../../assets/images/AppleCareIcon.png');
+          vertical-align: middle;
+          margin-right: rem(8px);
+          margin-top: rem(-2px);
+        }
+      }
+
+      .learnMoreLink {
+        font-size: rem(14px);
+        font-weight: $font-weight-regular;
+        text-align: left;
+        letter-spacing: 0;
+        color: #0070c9;
+        line-height: rem(16.8px);
+      }
+    }
+
+    .apple-care-title-section {
+      display: inline-flex;
+      width: 100%;
+      justify-content: space-between;
+
+      .btn-container {
+        .link-base {
+          font-size: rem(16px);
+          font-weight: $font-weight-semi-bold;
+          text-align: right;
+          letter-spacing: 0;
+          color: #0070c9;
+          line-height: rem(19px);
+          padding-left: rem(39px);
+
+          &.remove-link {
+            font-size: rem(16px);
+            font-weight: $font-weight-regular;
+            line-height: rem(16px);
+            padding-left: rem(20px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.apple-care-container {
+  &.apple-care-cart-view {
+    padding: 0;
+
+    .section-divider {
+      border: 0;
+      border-top: rem(1px) solid #e6e6e6;
+    }
+
+    .apple-care-wrapper {
+      padding: rem(20px) 0 rem(20px) 0;
+
+      .apple-care-desc-container {
+        .apple-care-title {
+          font-size: rem(16px);
+          line-height: rem(19px);
+          display: flex;
+        }
+
+        .apple-care-icon {
+          &::before {
+            width: rem(15px);
+            height: rem(14px);
+            content: url('../../../assets/images/AppleCareIcon.png');
+            vertical-align: middle;
+            margin: rem(-1px) rem(11px) 0 rem(1px);
+          }
+        }
+
+        .learnMoreLink {
+          font-size: rem(14px);
+          line-height: rem(16.8px);
+          padding-left: rem(29px);
+          display: inline-block;
+          padding-top: rem(10px);
+        }
+
+        .apple-care-title-section {
+          .btn-container {
+            .link-base {
+              font-weight: 400;
+
+              &.remove-link {
+                margin-top: rem(14px);
+              }
+            }
+          }
+        }
+        .apple-care-title-section {
+          .btn-container {
+            .link-base {
+              font-weight: 400;
+              &.remove-link {
+                margin-top: rem(14px);
+              }
+            }
+          }
+        }
+      }
+
+      .btn-container {
+        text-align: right;
+
+        .link-base {
+          font-size: rem(16px);
+          line-height: rem(19px);
+          font-weight: 400;
+          @include for-mobile {
+            padding-left: rem(32px);
+          }
+
+          &.remove-link {
+            margin-top: rem(14px);
+            font-size: rem(16px);
+            line-height: rem(16px);
+          }
+        }
+      }
+    }
+
+    &.apple-care-gift-view {
+      .apple-care-wrapper {
+        padding: rem(15px) 0;
+
+        .apple-care-desc-container {
+          .apple-care-title {
+            font-size: rem(14px);
+            line-height: rem(16px);
+          }
+
+          .apple-care-icon {
+            &::before {
+              margin-top: rem(-4px);
+            }
+          }
+
+          .learnMoreLink {
+            font-size: rem(12px);
+            line-height: rem(14px);
+            padding-top: rem(11px);
+          }
+        }
+
+        .btn-container {
+          text-align: right;
+
+          .link-base {
+            font-size: rem(14px);
+            line-height: rem(16px);
+            font-weight: 400;
+
+            &.remove-link {
+              margin-top: rem(9px);
+              font-size: rem(16px);
+              line-height: rem(14px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

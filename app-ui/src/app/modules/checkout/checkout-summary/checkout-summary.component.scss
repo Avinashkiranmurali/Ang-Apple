@@ -1,0 +1,14 @@
+@import "~styles/common/cart-container";
+@import "~styles/common/order";
+
+::ng-deep {
+    .rs-summary .rs-summary-value {
+        p.local-currency {
+            margin-bottom: 0;
+            font-weight: 500;
+        }
+        .price-amount {
+            font-weight: $font-weight-semi-bold;
+        }
+    }
+}

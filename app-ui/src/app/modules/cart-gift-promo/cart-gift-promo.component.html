@@ -1,0 +1,150 @@
+<div class="cart-gift-promo-section">
+  <div class="gift-promo-cart-offer" *ngIf="!giftItem && !review"
+       [ngClass]="{ 'multi-gift-promo' : item.productDetail.isMultiGiftAvailable }">
+    <div class="gift-promo-offer-list">
+      <div class="gift-promo-offer-container">
+        <div class="cart-gift-product-image small-12 small-offset-0" *ngIf="!item.productDetail.isMultiGiftAvailable">
+          <img src="{{ item.productDetail.addOns.availableGiftItems[0].images.medium | aplImgSize : '100' }}"
+               alt="{{ item.productDetail.addOns.availableGiftItems[0].name}}"/>
+        </div>
+        <div class="gift-promo-offer-content">
+          <div class="gift-promo-offer-details"
+               [ngClass]="{ 'space-between' : (!item.productDetail.isMultiGiftAvailable || isMobile), 'flex-start' : !isMobile && item.productDetail.isMultiGiftAvailable }">
+            <div class="gift-promo-offer-left small-12">
+              <span class="gift-with-purchase">{{ giftPromoCartMessage }}</span>
+              <app-cart-pricing-temp class="gift-promo-single-item-price"
+                                     *ngIf="!item.productDetail.isMultiGiftAvailable"
+                                     [item]="item.productDetail.addOns.availableGiftItems[0]"
+                                     [offers]="item.productDetail.addOns.availableGiftItems[0].offers[0]"
+                                     ext="qty_"
+                                     [verifyFullDiscount]='true'
+                                     parentClass="gift-promo-cart-left"
+              ></app-cart-pricing-temp>
+            </div>
+            <div class="gift-promo-offer-right large-3 small-12">
+              <div class="">
+                <div class="gift-promo-offer-free">
+                    <span class="cart-add-select-gift">
+                      <a href="javascript:void(0)" *ngIf="!item.productDetail.isMultiGiftAvailable"
+                         (click)="addFreeGift()"
+                         [attr.aria-label]="'Add gift item ' + item.productDetail.addOns.availableGiftItems[0].name">
+                        <span class="">{{ 'add' | translate }}</span>
+                      </a>
+                      <a href="javascript:void(0)" *ngIf="item.productDetail.isMultiGiftAvailable"
+                         (click)="changeGiftSelection()">
+                        <span class="">{{ 'chooseYourGift' | translate }} </span>
+                      </a>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="gift-promo-cart" *ngIf="giftItem">
+    <div class="gift-promo-cart-title">
+      <p class="gift-promo-cart-title-text">{{ 'cartGiftWithPurchaseTitle' | translate }}</p>
+      <p class="gift-return-note">{{ 'giftCannotBeReturned' | translate }}</p>
+    </div>
+    <div class="gift-promo-cart-container">
+      <div class="cart-gift-product-image small-12 small-offset-0">
+        <img src="{{ giftItem.productDetail.images.medium  | aplImgSize : '100'}}"
+             alt="{{giftItem.productDetail.name}}"/>
+      </div>
+      <div class="gift-promo-cart-content">
+        <div class="gift-promo-cart-details">
+          <div class="gift-promo-cart-left">
+            <div class="gift-product-name">{{ giftItem.productDetail.name }}</div>
+            <div class="gift-selection-link" *ngIf="item.productDetail.isMultiGiftAvailable && !review">
+              <a href="javascript:void(0)" (click)="changeGiftSelection()" class="gift-selection-change">
+                <span>{{ 'changeGiftSelection' | translate }}</span></a>
+            </div>
+          </div>
+          <div class="gift-promo-cart-right large-5 small-11">
+            <div class="">
+              <div class="gift-promo-cart-free">
+                <app-cart-pricing-temp
+                  parentClass="gift-promo-cart-right"
+                  [item]="giftItem"
+                  [offers]="giftItem.productDetail.offers[0]"
+                  ext="qty_"
+                  [verifyFullDiscount]='true'>
+                </app-cart-pricing-temp>
+                <span class="gift-remove-link" *ngIf="!review">
+                  <a href="javascript:void(0)" (click)="removeGiftItem(item)"
+                     attr.aria-label="{{'remove' | translate }} gift item {{giftItem.productDetail.name}}">{{ 'remove' | translate }}</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- APPLE CARE TEMPLATE -->
+        <app-apple-care *ngIf="isServicePlansExist"
+                        [appleCareServicePlans]="giftItem.productDetail.addOns.servicePlans"
+                        [selectedServicePlan]="giftItem.selectedAddOns.servicePlan"
+                        [readOnly]="review"
+                        [cartItem]="item"
+                        [giftItem]="giftItem"
+                        [isProductView]="false"
+                        [isGiftView]="true"
+                        (addOrUpdateCartEvent)="cartUpdateEvent($event)">
+        </app-apple-care>
+        <div class="gift-promo-cart-engraving"
+             *ngIf="item.selectedAddOns.giftItem?.productDetail.isEngravable && (review ? isEngraved : true)">
+          <div>
+            <span class="cart-engraving-icon"></span>
+            <span class="gift-promo-add-engraving"
+                  attr.aria-label=" {{ 'addEngrv' | translate }} for Gift item {{giftItem.productName}}"
+                  *ngIf="(!(giftItem.engrave.line1.length > 0 || giftItem.engrave.line2.length > 0)) && !review">{{ 'addEngrv' | translate }}</span>
+            <span class="gift-promo-engraved-text"
+                  *ngIf="giftItem.engrave.line1.length > 0 || giftItem.engrave.line2.length > 0">
+              <span class="gift-promo-add-engraving">{{ 'engraved' | translate }}</span>
+              <span *ngIf="giftItemEngraveCollapsed && !review" class="gift-engrave-edit-pipe">|</span>
+              <a href="javascript:void(0)" *ngIf="giftItemEngraveCollapsed && !review" (click)="editEngraveGiftTxt()"
+                 attr.aria-label="{{messages.editLink}} engraving for gift item {{giftItem.productName}} ">{{ 'edit' | translate }}</a>
+            </span>
+          </div>
+          <div>
+            <span class="gift-engrave-add-link" *ngIf="!isEngraved">
+                <a href="javascript:void(0)" id=""
+                   attr.aria-label=" {{ 'addEngrv' | translate }} for Gift item {{giftItem.productName}}"
+                   (click)="giftItemEngraveCollapsed=!giftItemEngraveCollapsed;editEngraveGiftTxt()"
+                   (keydown.enter)="editEngraveGiftTxt()" class="toggle-button g-icons">
+                  <span class="">{{ 'add' | translate }}</span>
+                </a>
+            </span>
+          </div>
+        </div>
+        <div *ngIf="giftItem.productDetail.isEngravable" class="add-edit-engraving">
+          <div>
+            <div class="engrave-options view-mode" *ngIf="isEngraved">
+              <p>{{ giftItem.engrave.line1 }}</p>
+              <p>{{ giftItem.engrave.line2 }}</p>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="giftItem.productDetail.isEngravable"
+             [ngClass]="{'gift-item-engrave-collapsed': giftItemEngraveCollapsed ,'gift-item-engrave-expanded': !giftItemEngraveCollapsed}">
+          <div>
+            <div item-engrave engrave-index="0"
+                 class="cart-gift-item-engrave"
+                 *ngIf="giftItemEngraveCollapsed"
+            ></div>
+          </div>
+        </div>
+        <div class="gift-promo-cart-shipping">
+          <div>
+            <span class="gift-promo-shipping-note"
+                  *ngIf="isEngraved && showGiftShippingAvailability !== false">{{ 'engravedProducts' | translate }}</span>
+            <span class="gift-promo-shipping-note" *ngIf="!isEngraved && showGiftShippingAvailability !== false">{{
+              'availableToShip' | translate }} {{
+              item.selectedAddOns.giftItem.productDetail.shippingAvailabilityMessage ?
+                item.selectedAddOns.giftItem.productDetail.shippingAvailabilityMessage : 'inStock' | translate  }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

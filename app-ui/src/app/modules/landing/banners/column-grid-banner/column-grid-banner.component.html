@@ -1,0 +1,30 @@
+<article class="column-grid-banner-container" *ngIf="columnGridBanners && columnGridBanners.length > 0" [ngClass]="parentClass">
+    <section class="column-grid-banner-wrapper">
+        <div class="banner-header" role="presentation">
+            <h4 class="banner-title" id="banner-title-{{ parentClass }}" [innerHTML]="bannerTitle"></h4>
+        </div>
+        <ul attr.aria-labelledby="banner-title-{{ parentClass }}" class="column-grid-banner-tiles">
+            <li class="column-grid-banner {{ banner['categoryId'] }}"
+                *ngFor="let banner of columnGridBanners">
+                <a class="product-tile" [routerLink]="banner['config']['isTileEnabled'] === false ? null : getProductBannerRouterLink(banner['categoryId'], banner['config']['tileLink'])"
+                  [attr.aria-disabled]="banner['config']['isTileEnabled'] === false"
+                  tabindex="{{ banner['config']['isTileEnabled'] === false ? -1 : 0 }}"
+                  [ngClass]="{'tile-disabled': banner['config']['isTileEnabled'] === false}"
+                  attr.aria-label="{{ banner['config']['categoryName'] ? banner['config']['categoryName'] : banner['categoryName'] }} banner">
+                  <!-- CUSTOM FONT SCALE DIRECTIVE -->
+                  <p appCustomFontScale
+                    [minFontSize]="banner['config']['minimumFontSize'] ? banner['config']['minimumFontSize'] : '11'"
+                    [maxFontSize]="isMobileView ? 21 : 24"
+                    id="{{banner['categoryId']}}"
+                    class="category-name">
+                    <span [innerHTML]="banner['config']['categoryName'] ? banner['config']['categoryName'] : banner['categoryName']" class="category-name-text" style="display: inline-block;"></span>
+                  </p>
+                  <div class="image-container" [ngClass]="{'tile-overlay': banner['config']['isTileEnabled'] === false}">
+                    <img [src]="isMobileView ? config['imageServerUrl'] + banner['config']['mobileImage'] : config['imageServerUrl'] + banner['config']['desktopImage']" aria-hidden="true" alt="{{ (banner['config']['categoryName'] ? banner['config']['categoryName'] : banner['categoryName']) + ' ' + ('products' | translate) }}">
+                  </div>
+                  <p *ngIf="banner['config']['isTileEnabled'] === false" class="coming-soon-text">{{ banner['config']['overlayText'] }}</p>
+                </a>
+            </li>
+        </ul>
+    </section>
+</article>

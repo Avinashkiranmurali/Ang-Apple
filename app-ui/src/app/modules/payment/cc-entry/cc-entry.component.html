@@ -1,0 +1,102 @@
+<form role="form" [formGroup]="selectPaymentsForm" name="selectPaymentsForm" class="payment-module" autocomplete="off">
+  <section [ngSwitch]="isDesktop || isTablet">
+    <!-- mobile to tablet view -->
+    <div class="contain" *ngSwitchCase="false" >
+      <div class="hero-container">
+        <h2 class="title-header">{{ 'paymentPageHeading' | translate }}</h2>
+        <p class="title-desc" (click)="toggleOrderSummary()"
+           [ngClass]="{ 'show-order-summary' : (displayOrderSummOnMobile && isUnbundled), 'title-desc-active': isUnbundled  }"
+           [innerHTML]="'paymentPageDescription' | translate: translateParams">
+        </p>
+      </div>
+
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-card formGroupName="cardForm" (newItemEvent)="getCardType($event)" [postCardDetailsError]="postCardDetailsError">
+            </app-card>
+            <app-order-summary
+                             [paySumExt]="''"
+                             [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+                             [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+                             [totals]="state.cart.displayCartTotal.price"
+                             [payFrequency]="payFrequency"
+                             *ngIf="state.cart && isUnbundled"
+                             [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+                             [totalFees]="state.cart.displayCartTotal.totalFees"
+                             [paymentRequired]="paymentRequired"
+                             [pointsUsed]="pointsUsed"
+                             [hidden]="!displayOrderSummOnMobile"
+                             [displayOrderSummOnMobile]="displayOrderSummOnMobile"
+                             (displayOrderSummary)="toggleOrderSummary()">
+            </app-order-summary>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half"></div>
+          <div class="bottom-half">
+            <div class="content-container">
+              <ng-container *ngTemplateOutlet="buttonComponent"></ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- default all desktop view -->
+    <div class="contain" *ngSwitchDefault>
+      <div class="hero-container">
+        <h2 class="title-header">{{'paymentPageHeading' | translate}}</h2>
+        <p class="title-desc" [innerHTML]="'paymentPageDescription' | translate: translateParams"></p>
+      </div>
+
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-card formGroupName="cardForm" (newItemEvent)="getCardType($event)" [postCardDetailsError]="postCardDetailsError">
+            </app-card>
+            <ng-container *ngTemplateOutlet="buttonComponent"></ng-container>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half" *ngIf="isUnbundled">
+            <app-order-summary
+                               [paySumExt]="''"
+                               [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+                               [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+                               [totals]="state.cart.displayCartTotal.price"
+                               [payFrequency]="payFrequency"
+                               *ngIf="state.cart && isUnbundled"
+                               [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+                               [totalFees]="state.cart.displayCartTotal.totalFees"
+                               [paymentRequired]="paymentRequired"
+                               [pointsUsed]="pointsUsed"
+            >
+            </app-order-summary>
+          </div>
+          <div class="bottom-half"
+               [ngClass]="{ 'bottom-half-shift-to-top': !isUnbundled }"
+          >
+            <app-payment-summary *ngIf="state"
+                                 heading="paymentSummaryComponentHeading"
+                                 [state]="state"
+                                 subtitle="{{(state.selections.payment && state.selections.payment?.paySummarySubtitle) ?
+              state.selections.payment.paySummarySubtitle  : 'paymentSummarySubtitleDefault'}}"
+                                 template="{{(state.selections.payment && state.selections.payment.paySummaryTemplate) ?
+              state.selections.payment.paySummaryTemplate : '' }}"
+            ></app-payment-summary>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ng-template #buttonComponent>
+      <div class="button-component">
+        <div class="button-container-flex buttons-full-width">
+          <button *ngIf="state.selections.payment.splitPayOption" [disabled]="selectPaymentsForm.invalid" class="btn-base blue-btn"
+                  [ngClass]="selectPaymentsForm.invalid ? 'button-disabled': ''" [innerHTML]="'nextStepReviewYourOrder'| translate" (click)="postCardDetails()"></button>
+          <button class="btn-base cta-link-type cancel" [innerHTML]="'backToPaymentOptions' | translate" (click)="backToPaymentPage()"></button>
+        </div>
+      </div>
+    </ng-template>
+  </section>
+</form>

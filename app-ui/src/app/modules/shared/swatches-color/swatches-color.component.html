@@ -1,0 +1,5 @@
+
+<div *ngIf="item.optionsConfigurationData?.color" class="swatch-container">
+<img *ngFor="let option of item.optionsConfigurationData?.color" class="swatch-img"
+     [src]="option['swatchImageUrl']"  alt="{{ option['value'] }}" width="17" height="17">
+</div>

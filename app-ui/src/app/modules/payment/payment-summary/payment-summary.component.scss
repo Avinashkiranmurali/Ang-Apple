@@ -1,0 +1,72 @@
+@import "~styles/mixins";
+@import "~styles/common/payment-module";
+
+.payment-summary-subtitle {
+  text-align: left;
+  font-family: SF Pro Display;
+  font-size: rem(16px);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: #666666;
+  opacity: 1;
+  margin-bottom: rem(31px);
+}
+.template-container {
+  display:flex;
+  flex-direction: column;
+  font-family: SF Pro Display;
+  font-size: rem(16px);
+  font-weight: 400;
+  color: #111;
+
+  .balance, .total, .remaining {
+    display:flex;
+    > span {
+      flex: 1;
+      align-items: stretch;
+
+      .payment-summary-content-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: 100%;
+
+        div {
+          //applied setting to right side
+          &.right-side {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+  .remaining {
+    > span {
+      .payment-summary-content-container {
+        justify-content: flex-start;
+      }
+    }
+  }
+  .total {
+    border-bottom: 1px solid #ccc;
+    margin-bottom:rem(24px);
+    padding-bottom:rem(21px);
+    margin-top:rem(12px);
+  }
+  .bottom-wrapper {
+
+    .payment-summary-value {
+      font-family: SF Pro Display;
+      font-size: rem(16px);
+      font-weight: 600;
+      margin-bottom: rem(16px);
+    }
+  }
+
+
+}
+.minus {
+  &::before {
+    content: "\002d";
+  }
+}

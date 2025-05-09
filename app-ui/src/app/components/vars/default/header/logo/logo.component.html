@@ -1,0 +1,29 @@
+<ng-container [ngSwitch]="headerTemplate['logoTemplate']['template']">
+  <div class="logo-header-block" *ngSwitchCase="'logo-container.htm'">
+    <img [src]="secImgSrc" id="sec-var-logo" class="var-logo" [ngClass]="(secImgSrc && imgSrc) ? 'secondary-logo-vl var-logo-mbl-width' : ''"
+         alt="{{ 'clientLogoAlt' | translate }}" aria-label="logo" *ngIf="secImgSrc" />
+
+    <a href (click)="navigateToClient()" [class.primary-logo-vl] = "secImgSrc && imgSrc"
+       [class.cursor-default] = "!checkNavBack()"
+       [attr.title]="'clientLogoAlt' | translate"
+       [attr.aria-label]="('programDisplayName' | translate) + ' logo'">
+      <img [src]="imgSrc" class="var-logo" [class.var-logo-mbl-width] = "secImgSrc"
+           alt="{{ 'clientLogoAlt' | translate }}" aria-label="logo" />
+    </a>
+    <span class="print-only" aria-hidden="true"><img class="var-logo" [src]="imgSrc" alt="{{ 'clientLogoAlt' | translate }}" aria-label="logo" /></span>
+  </div>
+  <div *ngSwitchCase="'text-container.htm'">
+    <div class="h-parent">
+      <h2 class="h-text" [style.color]="config.clientHeaderTextColor">{{ 'headerMainTitle' | translate }}</h2>
+      <p class="h-subtext" [style.color]="config.clientHeaderSubTextColor" [innerHTML]="'headerSubTitle' | translate"></p>
+    </div>
+  </div>
+  <div *ngSwitchCase="'store-landing-logo-container.htm'">
+    <a href (click)="navigateToStore()" aria-label="logo" [attr.title]="'clientLogoAlt' | translate">
+      <img class="var-logo" [src]="config.imageServerUrl +'/'+ program.imageUrl"
+           alt="{{ 'clientLogoAlt' | translate }}"  aria-label="logo"/>
+    </a>
+    <span class="print-only" aria-hidden="true"><img class="var-logo" [src]="config.imageServerUrl +'/'+
+    program.imageUrl" alt="{{ 'clientLogoAlt' | translate }}" aria-label="logo" /></span>
+  </div>
+</ng-container>

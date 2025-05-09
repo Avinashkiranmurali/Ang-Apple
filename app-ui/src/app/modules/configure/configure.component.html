@@ -1,0 +1,183 @@
+<div class="container-fluid category-custom {{subcat}}">
+
+    <div class="result-title">
+        <div class="result-title-wrapper">
+            <app-page-title></app-page-title>
+            <a class="skip-to-details" (click)="sharedService.scrollToProductDetails('app-product-info', child, viewportScroller)"
+              href="javascript:void(0)" [attr.aria-label]="'productInfo' | translate">
+              {{ 'productInfo' | translate }}
+            </a>
+        </div>
+    </div>
+
+    <section class="contain customize-container">
+        <div class="page-error-container" role="alert" aria-live="polite" [ngClass]="{'error-overlay': cartService.cartFullError || cartService.pricingFullError}"
+           *ngIf="cartService.cartFullError || cartService.pricingFullError">
+            <h2 role="presentation" [hidden]="!cartService.cartFullError">{{ 'addTocartFullError' | translate }}</h2>
+            <h2 role="presentation" [hidden]="!cartService.pricingFullError">{{ 'pricingFullError' | translate }}</h2>
+        </div>
+        <div class="customize-product-selection" *ngIf="!productLoadError && isMobile">
+            <h2>{{ 'buyYour' | translate}}
+                <span [innerHTML]="subcatName"></span>
+            </h2>
+            <p [innerHTML]="'freeShipping' | translate"></p>
+        </div>
+        <div class="customize-product-image" *ngIf="!productLoadError" aria-live="polite" aria-atomic="true"  >
+            <img [src]="displayImage"  alt="{{configImgAlt}}" />
+        </div>
+        <div class="customize-product-selection" *ngIf="!productLoadError">
+            <h2 *ngIf="!isMobile">{{ 'buyYour' | translate }}
+                <span [innerHTML]="subcatName"></span>
+            </h2>
+            <p *ngIf="!isMobile" [innerHTML]="'freeShipping' | translate">
+            </p>
+
+            <div class="selection-container">
+                <fieldset class="selection-block " *ngFor="let optionSet of productByConfigOptions | keyvalue : sharedService.returnZero; let parentIndex = index"
+                          [disabled]="optionSet.value.disabled" id="{{optionSet.value.name}}"
+                          [attr.aria-disabled]="optionSet.value.disabled"
+                          [ngClass]="{'disabled':  optionSet.value.disabled,
+                          'hidden':optionSet.value.hidden }">
+                    <!-- | orderBy:'orderBy' -->
+                    <legend class="g-icons" [ngClass]="'icon-step-'+ (parentIndex+1)">{{optionSet.value.title }}</legend>
+                    <ul *ngIf="!optionSet.value.isDenomination || optionSet.value.isDenomination"
+                      class="select-buttons" id="{{optionSet.value.name}}-btns"
+                        [attr.role]="'list'">
+                        <li class="item" *ngFor="let option  of optionSet.value.options | keyvalue : sharedService.returnZero |
+                        orderBy : 'asc' : 'value.minProduct.offers[0].displayPrice.points' ;let index=index"
+                            [ngClass]="{'hidden':option.value.hidden}">
+                            <input type="radio"
+                                   (click)="filterProductsFromUserSelections(parentIndex,optionSet.value.name, option.value.value,option.value.key)"
+                                   id="{{ option.value.key + '-' }}{{ optionSet.value.name }}"
+                                   [attr.name]="optionSet.value.name"
+                                   [(ngModel)]="selectedConfigItem[optionSet.value.name]" [value]="option.value.key"
+                                   [disabled]="optionSet.value.disabled"
+                                   [attr.aria-disabled]="optionSet.value.disabled"
+                                [checked]="(selectedConfigItem[optionSet.value.name] === option.value.key)" />
+
+                            <label appConfigOption
+                                   [indexVal]="index"
+                                   [optdata]="option.value"
+                                   [config]="config"
+                                   [messages]="messages"
+                                   [optset]="optionSet.value"
+                                   for="{{ option.value.key + '-' }}{{ optionSet.value.name }}"
+                                   class="item-details"
+                                   [ngClass]="{'disabled':optionSet.value.disabled, 'selected': selectedConfigItem[optionSet.value.name] === option.value.key,
+                                   'min-price-content': config.showOptionsFromPrice && optionSet.value.showOptionsFromPrice}">
+
+                                <app-pricing-temp
+                                    *ngIf="config.showOptionsFromPrice && optionSet.value.showOptionsFromPrice"
+                                    [offer]="option.value.minProduct.offers[0]"
+                                    [item]="option.value.minProduct"
+                                    [showFromLabel]="true"
+                                    parentClass="config-from-price"
+                                  ></app-pricing-temp>
+                            </label>
+                        </li>
+
+                    </ul>
+
+                </fieldset>
+            </div>
+            <div class="wifi-cellular-note" [hidden]="!showCellularNote">
+                <span>{{ '`wifiCellularNote-${slug}`' | translate }}:
+                </span> {{ '`wifiCellularNoteText-${slug}`' | translate }}</div>
+            <div class="selection-cta" *ngIf="allOptionsSelected && !detailCallLoading">
+                <div class="cta-container">
+                    <div class="selected-product-cost pricing-block" title="{{ setTaxFeeTitle }}" [ngClass]="{'with-split-pay-message' : paymentMaxLimit && paymentMaxLimit > 0  && showSplitPayMessage, 'with-apple-care': isServicePlansExist }">
+                        <div>
+                            <app-pricing-temp parentClass="product-configure-page" messages="messages" ext="" [offer]="itemToCart.offers[0]" [item]="itemToCart" [priceModel]="priceModel"></app-pricing-temp>
+                        </div>
+                    </div>
+
+                    <div *ngIf="paymentMaxLimit && paymentMaxLimit > 0 && showSplitPayMessage" class="static-split-pay-message" [ngClass]="{'with-smart-price' : smartPrice, 'with-apple-care': isServicePlansExist}">
+                        <div>{{ 'staticSplitPayMessage' | translate: {paymentMaxLimit: this.paymentMaxLimit} }}</div>
+                    </div>
+
+                    <div class="smart-price-container" *ngIf="smartPrice">
+                        <app-smart-price [smartPrice]="smartPrice" [ext]="" [parentClass]="'config-view'"></app-smart-price>
+                    </div>
+                    <!-- APPLE CARE TEMPLATE -->
+                    <app-apple-care *ngIf="isServicePlansExist"
+                                    [appleCareServicePlans]="details.addOns.servicePlans"
+                                    [readOnly]="false"
+                                    [isProductView]="true"
+                                    (selectedAppleCareService)="selectedAppleCareServicePlan($event)">
+                    </app-apple-care>
+
+                    <div *ngIf="details?.isEligibleForGift" class="selected-product-gift-qualified" [ngClass]="{'with-split-pay-message' : paymentMaxLimit && paymentMaxLimit > 0  && showSplitPayMessage}">
+                        <div>{{ additionalConfigPageMessage }}</div>
+                    </div>
+
+                    <div class="selected-product-button">
+                        <button id="btn-addtocart" class="btn-base blue-btn" [ngClass]="buttonColor" attr.aria-label="{{ (config.fullCatalog ? 'addToCartBtn' : 'checkout') | translate }} {{ itemToCart.name }}"
+                            (click)="addToCart(itemToCart['psid'], details)">
+                            {{ (config.fullCatalog ? 'addToCartBtn' : 'checkout') | translate }}
+                        </button>
+                    </div>
+                </div>
+                <p inter-msg msg="EstimateDisclaimer" class="msg-disclaimer configurableDisclaimer" *ngIf="itemToCart['offers'][0].isEligibleForPayrollDeduction"></p>
+                <p *ngIf="config['showShippingAvailability']" class="item-availability icon-shipping">{{ 'shippingAvailability' | translate }}
+                  <span class="text-bold">{{ details?.shippingAvailabilityMessage }}</span></p>
+            </div>
+            <!-- pricing details, financing, connectivity, coverage area disclaimers and VAT TAX disclaimer -->
+            <div class="payment-info" *ngIf="allOptionsSelected" [ngSwitch]="detailPageCostBreakdownTemplate">
+                <div class="cost-breakdown" *ngSwitchCase="'full-retail'">
+                    <p class="full-price-payment dotted"><span>{{ 'fullRetailPrice' | translate }}</span><br/>
+                    <span class="amount">{{details['offers'][0].totalPrice.amount | currency}} </span></p>
+                    <p class="full-price-payment dotted"><span>{{ 'monthlyPayments' | translate }}</span> <span
+                    class="amount">{{priceModel?.paymentValue | currency}}{{ 'perMonth' | translate }}</span>
+                    </p>
+                </div>
+            </div>
+            <div class="config-disclaimer-message" *ngIf="allOptionsSelected">
+                <p class="payment-disclaimer" *ngIf="messages['paymentDisclaimerConfig_' + subcat] ||
+                    messages['paymentDisclaimerConfig']" [innerHTML]="(messages['paymentDisclaimerConfig_' + subcat]) ?
+                    messages['paymentDisclaimerConfig_' + subcat] : 'paymentDisclaimerConfig' | translate: translateParams "></p>
+                <p class="watch-connectivity-reqs"
+                    *ngIf="category === 'watch' && (messages[subcat+'ConnectivityReqs'] || messages['connectivityReqs'])"
+                    [innerHTML]="messages[subcat+'ConnectivityReqs'] ? messages[subcat+'ConnectivityReqs'] : messages['connectivityReqs']"></p>
+                <p class="tax-inclusion-note" *ngIf="!config.fullCatalog && messages['taxVatIncluded']">*{{ 'taxVatIncluded' | translate }}</p>
+            </div>
+        </div>
+        <div class="page-error-container" *ngIf="productLoadError" role="alert" aria-live="polite">
+            <h2 role="presentation">{{ subcatName }} {{ 'modelsUnavailable' | translate }}</h2>
+            <p role="presentation">{{ 'tryAgainLater' | translate }}</p>
+        </div>
+    </section>
+    <div class="contain carousel-image-container" *ngIf="carouselImages && carouselImages.length > 0">
+        <app-zoomable-slideshow
+            [carouselImages]="carouselImages"
+            [imageServerUrl]="config['imageServerUrl']">
+        </app-zoomable-slideshow>
+    </div>
+    <div class="container-fluid customize-product-feature" [ngClass]="details && details['additionalInfo']['manufacturerFootNote'] ? '' : ''" *ngIf="details">
+        <!--    &lt;!&ndash; Common Template for Product Description &ndash;&gt;-->
+        <app-product-information id="app-product-info"
+          parentClass="product-configure-page"
+          [messages]="messages"
+          [configItemSku]="configItemSku"
+          [configItemUpc]="configItemUpc"
+          [details]="details">
+        </app-product-information>
+
+    </div>
+
+    <!-- Recently viewed products carousel type -->
+    <app-carousel *ngIf="!isMobile"></app-carousel>
+
+    <div class="container-fluid customize-product-feature" *ngIf="details && details['additionalInfo']['manufacturerFootNote']">
+        <section class="contain product-footnote-container">
+            <p class="msg-disclaimer" [innerHTML]="details['additionalInfo']['manufacturerFootNote'] | safe"></p>
+        </section>
+    </div>
+    <div class="container-fluid customize-product-feature" *ngIf="details && details['additionalInfo']['manufacturerNote']">
+        <section class="contain product-footnote-container">
+            <p class="msg-disclaimer" [innerHTML]="details['additionalInfo']['manufacturerNote'] | safe"></p>
+        </section>
+    </div>
+    <div class="contain">
+        <p class="msg-disclaimer" *ngIf="showTaxDisclaimer">* {{ 'taxFeeDisclaimer' | translate }}</p>
+    </div>
+</div>

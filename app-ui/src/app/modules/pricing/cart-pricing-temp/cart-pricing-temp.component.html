@@ -1,0 +1,125 @@
+<!-- Include for pricing template -->
+<div class="pricing-module cart" [class.discounted]="(isDiscounted?.discounted)" [ngClass]="parentClass">
+      <div class="price-content {{ext}}ext" [ngSwitch]="sharedService.getPricingTemp(pricingTemplate, ext, verifyFullDiscount, isDiscounted)" *ngIf="pricingTemplate && pricingTemplate !== 'no_pay'">
+        <!-- -----------------
+            Templates - with Quantity
+      ----------------- -->
+      <!-- Show Free text instead of Zero Points - irrespective of rewards template-->
+        <div *ngSwitchCase="'qty_full-discounted.htm'">
+          <span class="gift-promo-free-caption full-discount-free-caption uppercase">{{ 'free' | translate }}</span>
+        </div>
+
+        <!-- Rewards - Points Only & Cash Rewards -->
+        <div *ngSwitchCase="'qty_rewards-template.htm'">
+            <div class="discount-container" [class]="{'gift' : item.isGift}" *ngIf="!config['disableStrikethrough'] && (isDiscounted?.discounted) && (isDiscounted?.point)">
+                <div class="discount-module" [class]="{'point-discounted': (isDiscounted?.point)}">
+                    <span>
+                        <app-discount-temp [offers]="offers" [item]="item"></app-discount-temp>
+                    </span>
+                </div>
+            </div>
+            <div class="price-amount">
+                {{ offers['displayPrice']['points'] * item['quantity'] | currencyFormat: pricingTemplate : user['locale']}} <span>{{
+              pointLabel }}<span [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+            </div>
+        </div>
+        <!-- Cash Only -->
+        <div *ngSwitchCase="'qty_cash-template.htm'">
+            <div class="discount-container" [class]="{'gift' : item.isGift}" *ngIf="!config['disableStrikethrough'] && (isDiscounted?.discounted) && (isDiscounted?.cash)">
+                <div class="discount-module" [class]="{'cash-discounted': (isDiscounted?.cash)}">
+                </div>
+            </div>
+            <div class="price-amount" *ngIf="!config['pricingShowOriginalPrice']">
+                {{ offers['displayPrice']['amount'] * item['quantity'] | currency}}
+           <span [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*
+          </sup>
+           </span>
+            </div>
+            <div class="price-amount" *ngIf="config['pricingShowOriginalPrice']">
+                <span [innerHTML]="messages['prodVolDiscountAmount']"></span>
+              <span [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true"  class="notice-indicator" >*
+          </sup></span>
+            </div>
+        </div>
+        <!-- Points and Cash -->
+        <div *ngSwitchCase="'qty_points_cash-template.htm'" [class]="{ 'dual-price': (isDiscounted?.point) && (isDiscounted?.cash) }">
+            <div class="discount-container" *ngIf="!config['disableStrikethrough'] && (isDiscounted?.discounted)" [class]="{'dual-price': (isDiscounted?.point) && (isDiscounted?.cash),'gift': item.isGift}">
+                <div class="discount-module" [class]="{'point-discounted': (isDiscounted?.point)}" *ngIf="(isDiscounted?.point)">
+                    <span>
+            <app-discount-temp [ext]="ext" [offers]="offers" [item]="item" parentClass="parentClass"></app-discount-temp>
+          </span>
+                </div>
+                <div class="amount-discount" [class]="{'cash-discounted': (isDiscounted?.cash)}" *ngIf="(isDiscounted?.cash)">
+                    <span class="offscreen">Original price was</span>
+                    <span *ngIf="(isDiscounted?.point)">{{ messages['or'] }} </span>
+                    <span>{{ offers?.unpromotedDisplayPrice?.amount * item['quantity'] | currency }}</span>
+                </div>
+            </div>
+            <div class="price-container">
+                <div class="price-amount">
+                    {{ offers['displayPrice']['points'] * item['quantity'] | number}}
+                  <span>{{ pointLabel }}<span  [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+                  </span>
+                </div>
+                <p class="local-currency">
+                  {{ messages['or'] }} {{ offers['displayPrice']['amount'] * item['quantity'] | currency }}<span  [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true"  class="notice-indicator">*</sup></span>
+                </p>
+            </div>
+        </div>
+        <!-- Cash and Points -->
+        <div *ngSwitchCase="'qty_cash_points-template.htm'" [class]="{ 'dual-price': ((isDiscounted?.point) && (isDiscounted?.cash)) }">
+            <div class="discount-container" *ngIf="!config['disableStrikethrough'] && (isDiscounted?.discounted)" [class]="{'dual-price': (isDiscounted?.point) && (isDiscounted?.cash), 'gift': item.isGift}">
+                <div class="amount-discount" [class]="{'cash-discounted': (isDiscounted?.cash)}" *ngIf="(isDiscounted?.cash)">
+                    <span class="offscreen">Original price was</span>
+                    <span>{{ offers?.unpromotedDisplayPrice?.amount * item['quantity'] | currency }}</span>
+                </div>
+                <div class="discount-module" [class]="{'point-discounted': (isDiscounted?.point)}" *ngIf="(isDiscounted?.point)">
+                    <span *ngIf="(isDiscounted?.cash)">{{ messages['or'] }} </span>
+                    <span>
+            <app-discount-temp [ext]="ext" [offers]="offers" [item]="item"></app-discount-temp>
+          </span>
+                </div>
+            </div>
+            <div class="price-container">
+                <div class="price-amount">
+                    {{ offers['displayPrice']['amount'] * item['quantity'] | currency}}
+                  <span [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator" >*</sup>
+                </span>
+                </div>
+                <p class="local-currency">
+                    {{ messages['or'] }} {{ offers['displayPrice']['points'] * item['quantity'] | number }} {{ pointLabel }}
+                  <span [hidden]="!config['showTaxDisclaimer']" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+                </p>
+            </div>
+        </div>
+        <!-- EPP Pay Per Period Only -->
+        <div *ngSwitchCase="'qty_pd_only-template.htm'">
+            <div class="product-estimate">
+                <span [innerHTML]="(offers['isActual']) ? 'messages[\'actualPayPeriodQty-cart\']' : 'messages[\'estPayPeriodQty-cart\']'"></span>
+              <span *ngIf="!validTax" role="img" aria-label="Superscript asterisk" [hidden]="!config['showTaxDisclaimer']"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+            </div>
+        </div>
+        <!-- EPP Cash and Pay Per Period / each -->
+        <div *ngSwitchCase="'qty_pd_cash-template.htm'">
+            <div class="" [class]="{'isEligible' : offers['isEligibleForPayrollDeduction']}">
+                <div class="price-amount cash">{{ offers['displayPrice']['amount'] * item['quantity'] | currency}} </div>
+                <div class="local-currency">
+                    <span [innerHTML]="offers['isActual'] ? 'messages[\'actualPayPeriodQty-cart\']' : 'messages[\'estPayPeriodQty-cart\']'"></span>
+                  <span *ngIf="!validTax" role="img" aria-label="Superscript asterisk" [hidden]="!config['showTaxDisclaimer']"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+                </div>
+            </div>
+        </div>
+        <!-- Rewards - Points Only & Cash Rewards -->
+        <div *ngSwitchDefault>
+            <div class="discount-container" [class]="{'gift' : item.isGift}"  *ngIf="!config['disableStrikethrough'] && (isDiscounted?.discounted) && (isDiscounted?.point)">
+                <div class="discount-module" [class]="{'point-discounted': (isDiscounted?.point)}">
+                </div>
+            </div>
+            <div class="price-amount">
+                {{ offers['displayPrice']['points'] | currencyFormat: pricingTemplate : user['locale']}} <span>{{ messages['pointLabel'] }}<span
+                role="img" aria-label="Superscript asterisk"  [hidden]="!config['showTaxDisclaimer']"><sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+                <span>{{ messages['each'] }}</span>
+            </div>
+        </div>
+    </div>
+</div>

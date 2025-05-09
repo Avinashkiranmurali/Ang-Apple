@@ -1,0 +1,8 @@
+@import "~styles/mixins";
+@import "~styles/common/order";
+
+::ng-deep {
+  .semi-bold {
+    font-weight: $font-weight-semi-bold;
+  }
+}

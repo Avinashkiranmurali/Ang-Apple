@@ -1,0 +1,12 @@
+@import "~styles/mixins";
+
+#keep-alive-img {
+  display: block;
+  height: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  position: absolute;
+  bottom: rem(10px);
+  z-index: 1;
+}

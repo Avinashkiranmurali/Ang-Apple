@@ -1,0 +1,86 @@
+<ng-container [ngSwitch]="headerTemplate['userLineTemplate']['template']">
+  <div *ngSwitchCase="'anonymous'">
+    <ng-container [ngSwitch]="headerTemplate['userLineTemplate']['anonTemplate']">
+      <div *ngSwitchCase="'dual'">
+        <div class="login-container anonymous desktop-only">
+          <ng-container *ngTemplateOutlet="loginComponent"></ng-container>
+        </div>
+        <div class="login-container anonymous mobile-only" [style.color]="config.welcomeMessageTextColorOnMobile">
+          <ng-container *ngTemplateOutlet="loginComponent"></ng-container>
+        </div>
+      </div>
+      <div class="login-container anonymous" *ngSwitchDefault>
+        <div class="login-btn-container navline">
+          <div class="nav-el user-logout last">
+            <button class="btn-base" [ngClass]="headerTemplate['userLineTemplate']['btnClass']" (click)="doSignIn()">{{'loginButtonText' | translate}}</button>
+          </div>
+          <div *ngIf="messages['loginJoinText']" class="login-member" [innerHTML]="'loginJoinText' | translate"></div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <div *ngSwitchDefault>
+    <ng-container [ngSwitch]="headerTemplate['userLineTemplate']['welcomeMsg']['template']">
+      <div *ngSwitchCase="'welcome-cta'">
+        <div class="navline">
+          <div class="nav-el welcome-msg last">
+            <div class="desktop-only" *ngIf="!getSuppressLogoTemplate()">
+              <span [innerHTML]="'welcomeFullMsg' | translate: translateParams"></span>
+              <span class="points-label"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</span>
+            </div>
+            <div class="mobile-only" *ngIf="!getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <div [innerHTML]="'mobileUserWelcomeMsg' | translate: translateParams"></div>
+              <div class="points-label"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</div>
+            </div>
+            <table class="name-points-table" *ngIf="getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <tr><td class="pull-left"><span>{{user.firstName}}</span></td><td class="width25"></td><td class="pull-right"><span class="points-label">  {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</span></td></tr>
+            </table>
+          </div>
+          <div class="nav-el user-logout last">
+            <button [attr.id]="(loginRequired) ? 'btn-user-signin' : 'btn-user-signout'" [ngClass]="(loginRequired) ? 'btn-login' : 'btn-logout'" class="btn-base" (click)="loginRequired ? doSignIn() : doSignOut()">{{ (loginRequired) ? messages['signIn'] : messages['signOut'] }}</button>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchCase="'custom-msg'">
+        <div class="navline">
+          <div class="nav-el welcome-msg last">
+            <div class="desktop-only" *ngIf="!getSuppressLogoTemplate()">
+              <span [innerHTML]="'welcomeFullMsg' | translate: translateParams"></span>
+              <span class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ 'headerPointLabel' | translate }}</span>
+            </div>
+            <div class="mobile-only" *ngIf="!getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <div [innerHTML]="'mobileUserWelcomeMsg' | translate: translateParams"></div>
+              <div class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ 'headerPointLabel' | translate  }}</div>
+            </div>
+            <table class="name-points-table" *ngIf="getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <tr><td class="pull-left"><span>{{user.firstName}}</span></td><td class="width25"></td><td class="pull-right"><span class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ 'headerPointLabel' | translate  }}</span></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div *ngSwitchDefault>
+        <div class="navline">
+          <div [ngClass]="!getSuppressLogoTemplate()?'nav-el welcome-msg last':'nav-el last'">
+            <div class="desktop-only" *ngIf="!getSuppressLogoTemplate()">
+              <span [innerHTML]="'welcomeFullMsg' | translate: translateParams"></span>
+              <span class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</span>
+            </div>
+            <div class="mobile-only" *ngIf="!getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <div [innerHTML]="'mobileUserWelcomeMsg' | translate: translateParams"></div>
+              <div class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</div>
+            </div>
+            <table class="name-points-table" *ngIf="getSuppressLogoTemplate()" [style.color]="config.welcomeMessageTextColorOnMobile" [style.background]="config.welcomeMessageBackgroundColorOnMobile">
+              <tr><td class="pull-left"><span>{{user.firstName}}</span></td><td class="width25"></td><td class="pull-right"><span class="points-label" *ngIf="config.displayPointsOnHeader"> {{ (userStore.get() | async).balance  | currencyFormat:config.pricingTemplate:user.locale }} {{ pointLabel }}</span></td></tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+  <ng-template #loginComponent>
+    <div class="login-btn-container">
+      <button class="btn-base" [ngClass]="headerTemplate['userLineTemplate']['btnClass']" (click)="doSignIn()">{{'loginButtonText' | translate}}</button>
+    </div>
+    <div *ngIf="messages['loginJoinText']" class="login-member" [innerHTML]="'loginJoinText' | translate"></div>
+  </ng-template>
+</ng-container>

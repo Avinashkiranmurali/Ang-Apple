@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configuration scan="true" scanPeriod="30 seconds">
+    <conversionRule conversionWord="m"
+                    converterClass="com.b2s.logging.logback.pattern.PatternReplacingConverter" />
+    <conversionRule conversionWord="msg"
+                    converterClass="com.b2s.logging.logback.pattern.PatternReplacingConverter" />
+    <conversionRule conversionWord="message"
+                    converterClass="com.b2s.logging.logback.pattern.PatternReplacingConverter" />
+    <statusListener class="ch.qos.logback.core.status.NopStatusListener" />
+
+    <appender name="b2r_base" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/apple-gr_base.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.base}/logs/apple-gr_base.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
+            by default -->
+        <encoder>
+            <pattern>[%d] ${HOSTNAME} %X{tranxId} %X{user} %t %-5p %m \(%c{0}\)%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="b2r_access" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${catalina.base}/logs/apple-gr_access_verbose.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.base}/logs/b2r_access_verbose.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
+            by default -->
+        <encoder>
+            <pattern>[%d] ${HOSTNAME} %X{tranxId} %X{user} %t %-5p %m \(%c{0}\)%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="audit_log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <filter class="com.b2s.rewards.apple.logging.AuditFilter" />
+        <file>${catalina.base}/logs/apple-gr_audit.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <!-- daily rollover -->
+            <fileNamePattern>${catalina.base}/logs/apple-gr_audit.log.%d{yyyy-MM-dd}</fileNamePattern>
+            <!-- keep 30 days' worth of history -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+        <!-- encoders are assigned the type ch.qos.logback.classic.encoder.PatternLayoutEncoder
+            by default -->
+        <encoder>
+            <pattern>[%d] ${HOSTNAME} %X{tranxId} %X{user} %t %-5p %m \(%c{0}\)%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Open source framework -->
+    <logger name="org.apache.cxf.interceptor" level="info" />
+    <logger name="com.b2s.rewards.security" level="info">
+        <appender-ref ref="b2r_access"/>
+    </logger>
+
+    <logger name="com.b2s" level="warn" />
+    <logger name="com.b2s.rewards.apple.controller.CartController" level="info" />
+    <logger name="com.b2s.service.product.client.rest.ObjectMapperFactory" level="error" />
+    <logger name="com.b2s.shop" level="info" />
+    <logger name="com.b2s.integration" level="info" />
+    <logger name="com.b2s.recommendation.collector" level="info" />
+    <logger name="com.b2s.rewards.dao" level="info" />
+    <logger name="com.b2s.rewards.merchandise" level="info" />
+    <logger name="com.b2s.rewards.model" level="info" />
+    <logger name="com.b2s.rewards.service" level="info" />
+    <logger name="com.b2s.apple.services" level="info" />
+    <logger name="com.b2s.rewards.apple.interceptor" level="info" />
+    <logger name="com.b2s.rewards.apple.controller" level="info" />
+    <logger name="com.b2s.spark" level="info" />
+    <logger name="com.b2s.apple.mapper" level="info" />
+    <logger name="com.b2s.security.oauth" level="info" />
+    <logger name="com.b2s.service.utils.rest.client" level="debug" />
+    <logger name="com.b2s.spark.client" level="debug" />
+    <logger name="com.b2s.apple.config" level="debug" />
+
+    <logger name="com.mattwilliamsnyc" level="info" />
+    <logger name="org.springframework.cache" level="debug" />
+
+    <logger name="com.b2s.service.product.client.rest.AsyncWebResourceService" level="debug" />
+    <logger name="com.b2s.service.product.client.rest.WebResourceService" level="debug" />
+    <logger name="com.b2s.service.product.client.rest.RestService" level="debug" />
+    <logger name="com.b2s.service.product.client.rest.AsyncRestService" level="debug" />
+    <logger name="com.b2s.service.pricing.client.simple" level="info"/>
+    <logger name="com.b2s.common.services.pricing.impl" level="debug"/>
+    <logger name="com.b2s.common.services.discountservice" level="info"/>
+    <logger name="org.opensaml.ws" level="trace"/>
+    <logger name="com.mchange" level="info" />
+    <logger name="com.b2s.security.saml" level="info" />
+    <logger name="com.b2s.security.saml.interceptor" level="debug" />
+    <logger name="com.b2s.idology" level="info" />
+    <logger name="net.sf.ehcache" level="debug"/>
+    <root level="error">
+        <appender-ref ref="b2r_base"/>
+        <appender-ref ref="audit_log"/>
+    </root>
+</configuration>

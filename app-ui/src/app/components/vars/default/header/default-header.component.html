@@ -1,0 +1,11 @@
+<div id="top-hat" *ngIf="headerTemplate.hasOwnProperty('class')" class="top-hat" [style.background]="config.clientHeaderBackgroundColor" [style.height]="getSuppressLogoTemplate()?'4em':'auto'">
+ <div class="top-parent" [ngClass]="headerTemplate['class']" [class.box-sh]="config.displayClientHeaderShadow" [class.box-ln]="config.displayClientHeaderDivider">
+   <div class="contain prg-container-wrapper">
+     <div class="prg-container" [ngClass]="getSuppressLogoTemplate() ? 'align-items-normal':''">
+       <div *ngIf="getSuppressLogoTemplate()" class="no-logo"></div>
+       <app-logo *ngIf="!getSuppressLogoTemplate()" [ngClass]="headerTemplate['logoTemplate']['class']" [headerTemplate]="headerTemplate" [config]="config" [program]="program"></app-logo>
+       <app-welcome-msg  *ngIf="headerTemplate['userLineTemplate']" [ngClass]="headerTemplate['userLineTemplate']['class']" [headerTemplate]="headerTemplate" [config]="config" [program]="program" [messages]="messages" [user]="user"></app-welcome-msg>
+     </div>
+   </div>
+ </div>
+</div>

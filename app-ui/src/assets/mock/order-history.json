@@ -1,0 +1,38 @@
+[
+  {
+    "orderId": 2100118073,
+    "displayOrderId": "2100118073",
+    "showVarOrderId": false,
+    "orderDate": 1598368851263,
+    "shipments": 1,
+    "orderTotal": {
+      "amount": 999,
+      "currencyCode": "USD",
+      "points": 435564
+    },
+    "paymentInfo": {
+      "awardsUsed": 435564,
+      "awardsPurchased": 0,
+      "awardsPurchasedPrice": 0,
+      "ccLast4": null
+    },
+    "orderSubTotal": null,
+    "totalTax": null,
+    "shippingCost": null,
+    "totalFee": null,
+    "items": 1,
+    "remainingBalance": 0,
+    "lineItems": null,
+    "deliveryAddress": null,
+    "contactInfo": null,
+    "purchasedPriceCurrency": "$0.00",
+    "refundTotal": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "totalDiscount": null,
+    "gstAmount": null,
+    "earnedPoints": 0
+  }
+]

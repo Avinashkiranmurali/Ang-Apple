@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="Supplier_template"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="623"
+		 pageHeight="842"
+		 columnWidth="623"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<parameter name="categoryDetailsSubreport" isForPrompting="false" class="java.lang.Object"/>
+	<parameter name="redemptionMessageDetailSubreport" isForPrompting="false" class="java.lang.Object"/>
+
+	<field name="supplierName" class="java.lang.String"/>
+	<field name="active" class="java.lang.String"/>
+	<field name="categoryDetailsDataSource" class="java.lang.Object"/>
+	<field name="redemptionMessageDetailDataSource" class="java.lang.Object"/>
+
+		<background>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</background>
+		<title>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="10"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="39"  isSplitAllowed="true" >
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="0"
+						y="21"
+						width="170"
+						height="15"
+						key="subreport-1"
+						stretchType="RelativeToTallestObject"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{categoryDetailsDataSource}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{categoryDetailsSubreport}]]></subreportExpression>
+				</subreport>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="0"
+						y="0"
+						width="80"
+						height="20"
+						backcolor="#999999"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{supplierName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						mode="Opaque"
+						x="80"
+						y="0"
+						width="537"
+						height="20"
+						backcolor="#999999"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement>
+						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{active}]]></textFieldExpression>
+				</textField>
+				<subreport  isUsingCache="true">
+					<reportElement
+						x="170"
+						y="21"
+						width="394"
+						height="15"
+						key="subreport-2"
+						stretchType="RelativeToTallestObject"
+						positionType="Float"/>
+					<dataSourceExpression><![CDATA[$F{redemptionMessageDetailDataSource}]]></dataSourceExpression>
+					<subreportExpression  class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{redemptionMessageDetailSubreport}]]></subreportExpression>
+				</subreport>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<summary>
+			<band height="0"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

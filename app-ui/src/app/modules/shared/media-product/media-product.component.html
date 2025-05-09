@@ -1,0 +1,26 @@
+<div class="media-product-section" *ngIf="mediaProducts && mediaProducts.length > 0" [ngClass]="{'loading': isProcessing}">
+  <div class="hideFromDOM" *ngIf="isProcessing" role="alert" [attr.aria-label]="'loadingAlt' | translate"></div>
+  <div class="product-container" *ngFor="let product of mediaProducts">
+    <div class="image-container">
+      <img class="" [src]="config.imageServerUrl + ((product.itemId + '-logo') | translate)"
+        alt="{{ product.itemId + '-header' | translate }}" />
+    </div>
+    <div class="desc-container" [ngClass]="{'no-padding': readOnly}">
+      <h2 [innerHTML]="product.itemId + '-header' | translate"></h2>
+      <p
+        [innerHTML]="product.itemId + '-desc' | translate: {'subscriptionAmount': ( +(product.itemId + '-subscription-amount' | translate) | currency )}">
+      </p>
+      <p *ngIf="isConfirmationPage" class="confirmation-message">{{ 'amp-confirmation-message' | translate }}</p>
+      <a *ngIf="!isConfirmationPage" href="javascript:void(0);"
+        attr.aria-label="{{ 'learnMore' | translate }} about {{ product.itemId + '-header' | translate }}"
+        (click)="openMediaProductModal(product)">{{ 'learnMore' | translate }}</a>
+    </div>
+    <div class="btn-container" *ngIf="!readOnly">
+      <span class="link-base"  [ngClass]="{'pill-shaped-cta':!product.addedToCart}">
+        <a href="javascript:void(0);" role="button" (click)="doMediaSubscribe(product)" [ngClass]="{'remove-link':product.addedToCart}"
+          attr.aria-label="{{ (product.addedToCart ? 'remove' : 'add') | translate }} {{ product.itemId + '-header' | translate }}">
+          {{(product.addedToCart ? 'remove' : 'add') | translate}}</a>
+      </span>
+    </div>
+  </div>
+</div>

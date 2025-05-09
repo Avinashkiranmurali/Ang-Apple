@@ -1,0 +1,94 @@
+@import '~styles/mixins';
+
+.media-product-section {
+  padding: rem(40px) rem(5px) rem(40px) 0;
+  border-bottom: rem(1px) solid #e6e6e6;
+  @include for-mobile {
+    padding: rem(40px) 0;
+  }
+
+  .product-container {
+    display: flex;
+    padding: rem(10px) 0;
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    .image-container {
+      height: rem(64px);
+      width: rem(64px);
+      img {
+        width: inherit;
+      }
+    }
+
+    .desc-container {
+      width: rem(885px);
+      padding: 0 rem(30px) rem(12px);
+
+      &.no-padding {
+        padding-right: 0;
+      }
+
+      @include for-mobile {
+        padding: 0 rem(20px) rem(12px);
+      }
+
+      h2 {
+        color: #111111;
+        margin: 0;
+        padding-bottom: rem(7px);
+        font-size: rem(16px);
+        font-weight: $font-weight-semi-bold;
+        line-height: rem(19px);
+      }
+
+      a {
+        font-size: rem(16px);
+        line-height: rem(19px);
+      }
+
+      p {
+        font-size: rem(16px);
+        line-height: rem(19px);
+        margin-bottom: 0;
+        padding-bottom: rem(11px);
+        color: #111111;
+        @include for-mobile {
+          padding-bottom: rem(12px);
+        }
+      }
+
+      .confirmation-message {
+        font-weight: $font-weight-semi-bold;
+        color: #111111;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
+    }
+
+    .btn-container {
+      padding-top: rem(11px);
+      .pill-shaped-cta a {
+        background: #0071E3;
+        &:focus {
+          -moz-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+          -webkit-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+          box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        }
+      }
+      .remove-link {
+        margin: rem(12px) 0 0 0;
+        font-size: rem(16px);
+        font-family: $font-base;
+        line-height: rem(19px);
+        font-weight: $font-weight-regular;
+        color: #0070C9;
+        letter-spacing: rem(0px);
+        display: inline-block;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,3068 @@
+{
+  "psid": "30001MGQQ3AM/A",
+  "sku": "MGQQ3AM/A",
+  "name": "44mm Ginger Sport Band - Regular",
+  "shortDescription": "44mm Ginger Sport Band - Regular",
+  "longDescription": "",
+  "brand": "Apple®",
+  "manufacturer": "Apple",
+  "averageRating": 0,
+  "upc": "194252060315",
+  "shippingAvailabilityMessage": "4–7 business days",
+  "shipmentQuoteDate": "2021-02-16",
+  "promotion": null,
+  "addOns": {
+    "availableGiftItems":[],
+    "servicePlans": []
+  },
+  "categories": [
+    {
+      "imageUrl": "",
+      "i18nName": "Made by Apple",
+      "slug": "all-accessories-made-by-apple",
+      "name": "Made by Apple",
+      "templateType": "CATEGORYLIST",
+      "defaultImage": "",
+      "summaryIconImage": "",
+      "displayOrder": 99,
+      "engraveBgImageLocation": null,
+      "subCategories": [],
+      "parents": [
+        {
+          "imageUrl": "",
+          "i18nName": "Accessories",
+          "slug": "all-accessories",
+          "name": "Accessories",
+          "templateType": "CATEGORYLIST",
+          "defaultImage": "",
+          "summaryIconImage": "",
+          "displayOrder": 1,
+          "engraveBgImageLocation": null,
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "Accessories",
+              "slug": "accessories",
+              "name": "Accessories",
+              "templateType": "",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 7,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "detailUrl": null,
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": false,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "detailUrl": null,
+          "psid": null,
+          "depth": 1,
+          "new": false,
+          "configurable": false,
+          "active": true
+        }
+      ],
+      "products": [],
+      "images": {},
+      "detailUrl": null,
+      "psid": null,
+      "depth": 2,
+      "new": false,
+      "configurable": false,
+      "active": true
+    }
+  ],
+  "offers": [
+    {
+      "basePrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "payPerPeriodPrice": null,
+      "payPeriods": 0,
+      "payDuration": null,
+      "upgradeCost": null,
+      "earnPoints": 0,
+      "convRate": null,
+      "orgSupplierTaxPrice": 0,
+      "msrpPrice": 9200,
+      "sku": "MGQQ3AM/A",
+      "appleSku": null,
+      "payPerPeriodTotalPrice": null,
+      "displayPrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "b2sItemPrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "b2sShippingPrice": {
+        "amount": 0,
+        "currencyCode": "PNT",
+        "points": 0
+      },
+      "varPrice": {
+        "amount": 0,
+        "currencyCode": "",
+        "points": 0
+      },
+      "unpromotedVarPrice": {
+        "amount": 0,
+        "currencyCode": "",
+        "points": 0
+      },
+      "supplierTaxPrice": {
+        "amount": 0,
+        "currencyCode": "",
+        "points": 0
+      },
+      "totalPrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "unitTotalPrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "unpromotedDisplayPrice": {
+        "amount": 49,
+        "currencyCode": "USD",
+        "points": 9200
+      },
+      "fees": {},
+      "tax": {},
+      "discountApplied": 0,
+      "isEligibleForPayrollDeduction": false
+    }
+  ],
+  "options": [
+    {
+      "name": "color",
+      "value": "Ginger",
+      "key": "ginger",
+      "i18Name": "Color",
+      "orderBy": 0,
+      "points": null,
+      "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&qlt=95"
+    }
+  ],
+  "additionalInfo": {
+    "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+  },
+  "images": {
+    "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=30&hei=30",
+    "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=75&hei=75",
+    "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=150&hei=150",
+    "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000"
+  },
+  "variations": [
+    {
+      "psid": "30001MG433AM/A",
+      "sku": "MG433AM/A",
+      "name": "44mm Cyprus Green Sport Band - Regular",
+      "shortDescription": "44mm Cyprus Green Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MG433AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Cyprus Green",
+          "key": "cyprusgreen",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MG433AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MGQQ3AM/A",
+      "sku": "MGQQ3AM/A",
+      "name": "44mm Ginger Sport Band - Regular",
+      "shortDescription": "44mm Ginger Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MGQQ3AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Ginger",
+          "key": "ginger",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MGQQ3AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYD22AM/A",
+      "sku": "MYD22AM/A",
+      "name": "44mm Kumquat Sport Band - Regular",
+      "shortDescription": "44mm Kumquat Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYD22AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Kumquat",
+          "key": "kumquat",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYD22AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYD32AM/A",
+      "sku": "MYD32AM/A",
+      "name": "44mm Northern Blue Sport Band - Regular",
+      "shortDescription": "44mm Northern Blue Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYD32AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Northern Blue",
+          "key": "northernblue",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYD32AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MTPK2AM/A",
+      "sku": "MTPK2AM/A",
+      "name": "44mm White Sport Band - Regular",
+      "shortDescription": "44mm White Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MTPK2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "White",
+          "key": "white",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MTPK2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MTPL2AM/A",
+      "sku": "MTPL2AM/A",
+      "name": "44mm Black Sport Band - Regular",
+      "shortDescription": "44mm Black Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MTPL2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Black",
+          "key": "black",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MTPL2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MTPM2AM/A",
+      "sku": "MTPM2AM/A",
+      "name": "44mm Pink Sand Sport Band - Regular",
+      "shortDescription": "44mm Pink Sand Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MTPM2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Pink Sand",
+          "key": "pinksand",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MTPM2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MY1Y2AM/A",
+      "sku": "MY1Y2AM/A",
+      "name": "44mm Pride Edition Sport Band - Regular",
+      "shortDescription": "44mm Pride Edition Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MY1Y2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Pride",
+          "key": "pride",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MY1Y2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYAV2AM/A",
+      "sku": "MYAV2AM/A",
+      "name": "44mm (PRODUCT)RED Sport Band - Regular",
+      "shortDescription": "44mm (PRODUCT)RED Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYAV2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Red",
+          "key": "product_red",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYAV2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYAW2AM/A",
+      "sku": "MYAW2AM/A",
+      "name": "44mm Pink Citrus Sport Band - Regular",
+      "shortDescription": "44mm Pink Citrus Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYAW2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Pink Citrus",
+          "key": "pinkcitrus",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYAW2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYAX2AM/A",
+      "sku": "MYAX2AM/A",
+      "name": "44mm Deep Navy Sport Band - Regular",
+      "shortDescription": "44mm Deep Navy Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYAX2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Deep Navy",
+          "key": "deepnavy",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYAX2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MYD42AM/A",
+      "sku": "MYD42AM/A",
+      "name": "44mm Plum Sport Band - Regular",
+      "shortDescription": "44mm Plum Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MYD42AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Plum",
+          "key": "plum",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MYD42AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    },
+    {
+      "psid": "30001MXNX2AM/A",
+      "sku": "MXNX2AM/A",
+      "name": "44mm Cactus Sport Band - Regular",
+      "shortDescription": "44mm Cactus Sport Band - Regular",
+      "longDescription": "",
+      "brand": "Apple®",
+      "manufacturer": "apple",
+      "averageRating": 0,
+      "upc": null,
+      "shippingAvailabilityMessage": "4–7 business days",
+      "shipmentQuoteDate": "2021-02-16",
+      "promotion": null,
+      "categories": [],
+      "offers": [
+        {
+          "basePrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": 0,
+          "msrpPrice": 9200,
+          "sku": "MXNX2AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sItemPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unitTotalPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 49,
+            "currencyCode": "USD",
+            "points": 9200
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Cactus",
+          "key": "cactus",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000&qlt=95"
+        }
+      ],
+      "additionalInfo": {
+        "technicalSpecifications": "{\"material\":{\"key\":\"fluoroelastomer\",\"value\":\"Fluoroelastomer\"}}",
+        "manufacturerNote": "[A portion of the proceeds from every (PRODUCT)RED purchase goes to the Global Fund to fight AIDS. From now until June 30, those proceeds will go to the Global Fund’s COVID-19 Response.]",
+        "varAnalyticCode": "ELEC",
+        "varAnalyticKey": "WATC",
+        "whatsInTheBox": "[\"Apple Watch Sport Band (includes straps that can be configured for either S/M or M/L length)\"]"
+      },
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {
+        "compatibility": {
+          "watchmodels": {
+            "key": "watchmodels",
+            "label": "Watch Models",
+            "value": [
+              {
+                "key": "watch42mm",
+                "value": "42mm"
+              },
+              {
+                "key": "watch44mm",
+                "value": "44mm"
+              }
+            ]
+          }
+        }
+      },
+      "accessoryItem": true,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "defaultOffer": {
+        "basePrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": 0,
+        "msrpPrice": 9200,
+        "sku": "MXNX2AM/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sItemPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unitTotalPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 49,
+          "currencyCode": "USD",
+          "points": 9200
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      },
+      "hasOffers": true,
+      "productBasedPricingKey": ""
+    }
+  ],
+  "available": true,
+  "appleSku": null,
+  "merchantSpecificData": {
+    "compatibility": {
+      "watchmodels": {
+        "key": "watchmodels",
+        "label": "Watch Models",
+        "value": [
+          {
+            "key": "watch42mm",
+            "value": "42mm"
+          },
+          {
+            "key": "watch44mm",
+            "value": "44mm"
+          }
+        ]
+      }
+    }
+  },
+  "accessoryItem": true,
+  "optionsConfigurationData": {
+    "color": [
+      {
+        "name": "color",
+        "value": "Black",
+        "key": "black",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPL2ref_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1611165199000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Cactus",
+        "key": "cactus",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MXNX2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157435000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Cyprus Green",
+        "key": "cyprusgreen",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MG433_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157379000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Deep Navy",
+        "key": "deepnavy",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAX2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157467000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Ginger",
+        "key": "ginger",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MGQQ3_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Kumquat",
+        "key": "kumquat",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD22_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408450000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Northern Blue",
+        "key": "northernblue",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD32_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408454000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Pink Citrus",
+        "key": "pinkcitrus",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAW2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157472000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Pink Sand",
+        "key": "pinksand",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPM2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157393000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Plum",
+        "key": "plum",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYD42_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603408452000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Pride",
+        "key": "pride",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MY1Y2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157471000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Red",
+        "key": "product_red",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MYAV2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157462000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "White",
+        "key": "white",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MTPK2_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1599157375000&qlt=95"
+      }
+    ]
+  },
+  "hasVariations": true,
+  "isEngravable": false,
+  "engrave": null,
+  "defaultOffer": {
+    "basePrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "payPerPeriodPrice": null,
+    "payPeriods": 0,
+    "payDuration": null,
+    "upgradeCost": null,
+    "earnPoints": 0,
+    "convRate": null,
+    "orgSupplierTaxPrice": 0,
+    "msrpPrice": 9200,
+    "sku": "MGQQ3AM/A",
+    "appleSku": null,
+    "payPerPeriodTotalPrice": null,
+    "displayPrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "b2sItemPrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "b2sShippingPrice": {
+      "amount": 0,
+      "currencyCode": "PNT",
+      "points": 0
+    },
+    "varPrice": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "unpromotedVarPrice": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "supplierTaxPrice": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "totalPrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "unitTotalPrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "unpromotedDisplayPrice": {
+      "amount": 49,
+      "currencyCode": "USD",
+      "points": 9200
+    },
+    "fees": {},
+    "tax": {},
+    "discountApplied": 0,
+    "isEligibleForPayrollDeduction": false
+  },
+  "hasOffers": true,
+  "productBasedPricingKey": "all-accessories-made-by-apple|"
+}

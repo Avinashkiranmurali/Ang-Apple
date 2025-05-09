@@ -1,0 +1,24 @@
+<div [ngSwitch]="cartButtonsTemplate">
+    <div *ngSwitchCase="'cart-button-simple.htm'" class="btn-container-flex btn-single-50">
+        <button id="btn-checkout" class="btn-base blue-btn btn-large" [ngClass]="{'disabled':disableBtn || isProcessing}" (click)="goToCheckout()" [disabled]="isProcessing || disableBtn">{{ 'checkout' | translate }}</button>
+    </div>
+
+    <div *ngSwitchCase="'cart-button-dual.htm'" class="btn-container-flex">
+        <button id="btn-checkout" class="btn-base blue-btn btn-large" [ngClass]="{'disabled':disableBtn || isProcessing}" (click)="goToCheckout()" [disabled]="isProcessing || disableBtn">{{ 'checkout' | translate }}</button>
+        <button id="btn-cancel" class="btn-base cancel btn-large" [ngClass]="{'disabled':disableBtn || isProcessing}" (click)="redirectUrl()">{{ 'goToDashboard' | translate }}</button>
+    </div>
+
+    <div *ngSwitchCase="'cart-button-subsidy.htm'" class="btn-container-flex btn-single-50">
+        <button id="btn-checkout" class="btn-base blue-btn btn-large" [ngClass]="{'disabled':negativeBalance || disableBtn || isProcessing}" (click)="goToCheckout()" [disabled]="negativeBalance || isProcessing || disableBtn">{{ 'checkout' | translate }}</button>
+    </div>
+
+    <div *ngSwitchCase="'cart-button-submit-request.htm'" class="btn-container-flex">
+        <button id="btn-checkout" class="btn-base blue-btn btn-large" [ngClass]="{'disabled': disableBtn || isProcessing}" (click)="goToCheckout()" [disabled]="isProcessing || disableBtn">{{ 'checkout' | translate }}
+            <em class="g-icons"></em></button>
+        <button id="btn-cancel" class="btn-base btn-large" (click)="goToStore()">{{ 'selectAdditionalItems' | translate }}</button>
+    </div>
+
+    <div *ngSwitchDefault class="btn-container-flex btn-single-50">
+        <button id="btn-checkout" class="btn-base blue-btn btn-large" [ngClass]="{'disabled':negativeBalance || disableBtn || isProcessing}" (click)="goToCheckout()" [disabled]="negativeBalance || isProcessing || disableBtn">{{ 'checkout' | translate }}</button>
+    </div>
+</div>

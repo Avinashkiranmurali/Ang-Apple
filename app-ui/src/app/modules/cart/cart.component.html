@@ -1,0 +1,93 @@
+<section>
+    <!-- Main Cart Section - Item List/No Items -->
+    <div class="container">
+        <div class="content-container full-width">
+            <div class="ie-clear-appearance-select">
+                <section class="cart-container">
+                    <div class="cart-title">
+                        <h2 #cartTitleRef>{{ messages['heresWhatsInYourBag'] }}</h2>
+                        <div class="cart-title-descr" *ngIf="messages['paymentMethodDesc']" [innerHTML]="messages['paymentMethodDesc']"></div>
+                    </div>
+                    <app-smart-price *ngIf="!emptyCart && !cartLoadingError && smartPrice" [smartPrice]="smartPrice" [ext]="'header-section'" [parentClass]="'cart-view header'"></app-smart-price>
+                    <app-cart-items #cartItemComp [cartItems]="cartObjItems" [setCartTaxFeeTitle]="setCartTaxFeeTitle" (cartUpdateEvent)="cartUpdateEvent($event)" *ngIf="!emptyCart && !cartLoadingError"></app-cart-items>
+
+                    <app-media-product [mediaProducts]="cartData?.subscriptions" [readOnly]="false"
+                                    [disableBtn] = "disableBtn"
+                                    (triggerActionProcessing) = "isActionProcessing($event)"
+                                    [messages]="messages"></app-media-product>
+
+                    <div class="summary-breakdown rs-summary p-t-0" *ngIf="!emptyCart && !cartLoadingError">
+                        <div class="subtotal-breakdown large-9 large-offset-3 small-12 small-offset-0">
+                            <div class="items rs-summary-content">
+                                <span class="rs-summary-label">{{ messages['items'] }}</span>
+                                <span class="text-semibold text-align-right rs-summary-value cart-subtotal">
+                    <app-cart-total-temp ext=" " [totalVal]="(pricingOption === 'unbundledCheckout') ? cartSubtotal : cartTotals" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="true"></app-cart-total-temp>
+                </span>
+                            </div>
+                            <div class="shipping-total rs-summary-content">
+                                <div [innerHTML]="messages['shipping']" class="rs-summary-label"></div>
+                                <div class="text-semibold uppercase text-align-right rs-summary-value" *ngIf="(shippingCost['points'] === 0 && shippingCost['amount'] === 0)">{{ messages['free'] }}</div>
+                                <div class="text-semibold text-align-right" *ngIf="!(shippingCost['points'] === 0 && shippingCost['amount'] === 0)">
+                    <span *ngIf="['points_only','points_cash','points_decimal'].indexOf(config['pricingTemplate']) >= 0">{{ shippingCost['points'] | currencyFormat:config.pricingTemplate:user.locale }} {{ messages['pointLabel'] }}</span>
+                                <!-- Use currencyFormat instead of currency -->
+                                <span *ngIf="['points_only','points_cash','points_decimal'].indexOf(config['pricingTemplate']) < 0">{{ shippingCost['amount'] | currency }}</span>
+                                </div>
+                            </div>
+                            <div class="items rs-summary-content" *ngIf="!config['suppressDiscountLineItemInPriceBreakdown']">
+                                <span class="rs-summary-label">{{ messages['discountTitle'] }}</span>
+                                <span class="rs-summary-value">({{ discountedSubtotal?.discountAmt | currency }})</span>
+                            </div>
+                            <div class="sub-total" [ngSwitch]="cartTemplate['cartItems']['subTotalTemp']">
+                                <div *ngSwitchCase="'pd-finance'" class="large-12 small-12 rs-summary-content">
+                                    <span *ngIf="awpPayrollEnabled" class="text-align-right rs-summary-value rs-big-text cart-subtotal" title="{{ setCartTaxFeeTitle }}">
+                                        <app-cart-total-temp ext="sub" [totalVal]="cartSubtotal" [cartSubtotal]="cartSubtotal"></app-cart-total-temp>
+                                    </span>
+                                    <span *ngIf="!awpPayrollEnabled" class="text-align-right rs-summary-value rs-big-text cart-subtotal" title="{{ setCartTaxFeeTitle }}">
+                                        <app-cart-total-temp ext="{{subTotalExt}}" [totalVal]="(pricingOption === 'unbundledCheckout') ? cartSubtotal : cartTotals" [cartSubtotal]="cartSubtotal"></app-cart-total-temp>
+                                    </span>
+                                </div>
+                                <div *ngSwitchDefault class="large-12 small-12 rs-summary-content">
+                                    <span class="rs-summary-label rs-big-text">{{ (pricingOption === 'unbundledCheckout') ? messages['paymentSubtotal'] : messages['cartTotal'] }}</span>
+                                    <span class="text-align-right rs-summary-value rs-big-text cart-subtotal" *ngIf="!cartDiscountedSubtotal">
+                                        <app-cart-total-temp ext="{{subTotalExt}}" [totalVal]="(pricingOption === 'unbundledCheckout') ? cartSubtotal : cartTotals" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="true"></app-cart-total-temp>
+                                    </span>
+                                    <span class="text-align-right rs-summary-value rs-big-text cart-subtotal" *ngIf="cartDiscountedSubtotal && config.SingleItemPurchase">
+                                        <app-cart-total-temp ext="{{subTotalExt}}" [totalVal]="cartDiscountedSubtotal" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="true"></app-cart-total-temp>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="payment-installment text-align-right" *ngIf="maxInstallments && messages['estPayPeriodsMoreInfo']">
+                                <span comp-msg msg="estPayPeriodsMoreInfo"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart-no-items" *ngIf="emptyCart">
+                        <p id="no-items-in-cart">{{ messages['noItemsInCart'] }}</p>
+                        <p>
+                            <button id="btn-continue-shopping-empty-cart" (click)="back()" aria-describedby="no-items-in-cart" class="btn-base continue-shop-btn">{{ messages['continueShoppingBtn'] }}</button>
+                        </p>
+                    </div>
+                </section>
+                <div *ngIf="!emptyCart && !cartLoadingError" class="cart-buttons large-9 large-offset-3 small-12 small-offset-0 text-align-right cart-buttons-wrapper">
+                    <app-smart-price *ngIf="smartPrice" [smartPrice]="smartPrice" [ext]="'cta-section'" [parentClass]="'cart-view cta'"></app-smart-price>
+                    <app-cart-buttons [cartId]="cartId" [cartTemplate]="cartTemplate" [cartObjTotals]="cartObjTotals" [isAddressValid]="isAddressValid" [eppStatus]="eppStatus" [checkoutAddress]="checkoutAddress" [skipPaymentOptionPage]="skipPaymentOptionPage"
+                        [disableBtn]="disableBtn || cartService.getDisableCheckoutBtn()" [isProcessing]="isProcessing" [negativeBalance]="negativeBalance"></app-cart-buttons>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Recently viewed products carousel type -->
+    <app-carousel *ngIf="!isMobile && emptyCart !== undefined" [isCartEmpty]="emptyCart"></app-carousel>
+    <p [innerHTML]="'EstimateDisclaimer' | translate" class="msg-disclaimer detailsPageDisclaimer" *ngIf="user['isEligibleForPayrollDeduction']"></p>
+    <p class="msg-disclaimer " *ngIf="showTaxDisclaimer">* {{ 'taxFeeDisclaimerCart' | translate }}</p>
+    <p class="msg-disclaimer " *ngIf="showFeeDetails">** {{ 'efhDisclaimer' | translate }}</p>
+    <div class="page-error-container full-width-overlay" role="alert" aria-live="polite"
+         [class]="{'error-overlay':cartService.addCartError || cartService.cartFullError || cartService.pricingFullError || cartLoadingError}"
+         *ngIf="cartService.addCartError || cartService.cartFullError || cartService.pricingFullError || cartLoadingError">
+      <h2 role="presentation" *ngIf="cartLoadingError">{{ 'cartLoadingError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="cartService.addCartError">{{ 'addToCartError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="cartService.cartFullError">{{ 'addTocartFullError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="cartService.pricingFullError">{{ 'pricingFullError' | translate }}</h2>
+      <p>{{ messages['tryAgainLater'] }}</p>
+  </div>
+</section>

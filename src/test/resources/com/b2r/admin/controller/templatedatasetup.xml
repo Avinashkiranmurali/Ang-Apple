@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<dataset>
+        <rules_templates rule_type="GENERIC" rule_identifier_code="" rule_content="some score (VARIABLE A) more rules (VARIABLE B) here" var_id="FIS"/>
+        <rules_templates rule_type="SCORE_MORE" rule_identifier_code="" rule_content="Here is you score more" var_id="FIS"/>
+        <rules_templates rule_type="FAQ_GENERAL" rule_identifier_code="" rule_content="Here is the FQA general rule" var_id="FIS"/>
+        <rules_templates rule_type="FAQ_MERCHANDISE" rule_identifier_code="" rule_content="Here is the FQA merchandise rule" var_id="FIS"/>
+        <rules_templates rule_type="FAQ_TRAVEL" rule_identifier_code="" rule_content="Here is the FQA travel rule" var_id="FIS"/>
+        <rules_templates rule_type="CONTACT_US" rule_identifier_code="" rule_content="Here is the contact us reponse travel rule" var_id="FIS"/>
+
+    <rules_tc_codes id="1" tc_code="tc001" rule_type="GENERIC" var_id="FIS" substitution_key="VARIABLE A" substitution_val="earn one (1) Bonus Point (Point(s)) for every $2 dollars of a qualifying Signature debit card purchase"/>
+        <rules_tc_codes id="2" tc_code="tc001" rule_type="GENERIC" var_id="FIS" substitution_key="VARIABLE B" substitution_val="earn a million here"/>
+</dataset>

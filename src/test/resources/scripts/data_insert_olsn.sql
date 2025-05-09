@@ -1,0 +1,6 @@
+INSERT INTO order_line_shipment_notification (id,b2s_order_id,delivery_date,line_number,order_date,partner_order_number,quantity,shipment_date,shipping_carrier,shipping_method,sku,tracking_number,tracking_url)
+VALUES (1,1,{ts '2016-09-02 06:54:40.907000'},1,{ts '2016-08-29 06:54:40.907000'},'123456',1,{ts '2016-08-30 06:54:40.907000'},'UPS','Standard','30001ABCD','123456','<Clob>');
+INSERT INTO order_line_shipment_notification (id,b2s_order_id,delivery_date,line_number,order_date,partner_order_number,quantity,shipment_date,shipping_carrier,shipping_method,sku,tracking_number,tracking_url)
+VALUES (2,2,{ts '2016-09-02 07:48:55.030000'},1,{ts '2016-08-29 07:48:55.030000'},'123456',1,{ts '2016-08-30 07:48:55.030000'},'UPS','Standard','30001ABCD','123456','<Clob>');
+INSERT INTO order_line_shipment_notification (id,b2s_order_id,delivery_date,line_number,order_date,partner_order_number,quantity,shipment_date,shipping_carrier,shipping_method,sku,tracking_number,tracking_url)
+VALUES (3,3,{ts '2016-09-04 07:48:55.030000'},1,{ts '2016-07-29 07:48:55.030000'},'123457',1,{ts '2016-08-30 07:48:55.030000'},'UPS','Standard','30001ABED','UPS123','<Clob>');

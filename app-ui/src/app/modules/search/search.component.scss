@@ -1,0 +1,263 @@
+@import "~styles/mixins";
+
+.search {
+  .content-container {
+    .container {
+      @media (max-width: 1007px) {
+        padding: 0 rem(16px);
+        margin-left: 0;
+      }
+    }
+
+    #btn-load-more {
+      outline: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+  }
+
+  .product-grid-view {
+    li {
+      a {
+        &:focus {
+          outline: none;
+          -moz-box-shadow: inset 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+          -webkit-box-shadow: inset 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+          box-shadow: inset 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        }
+      }
+    }
+  }
+
+  .page-search {
+    width: 100%;
+    max-width: rem(1010px);
+    padding: rem(30px) rem(15px) 0 rem(15px);
+    margin: 0 auto;
+    .btn-base {
+      font-size: rem(12px);
+    }
+    .input-group-addon {
+      padding: rem(3px) rem(6px);
+      font-size: rem(14px);
+      font-weight: normal;
+      line-height: 1;
+      color: #555555;
+      text-align: left;
+      background-color: #fff;
+      border: rem(1px) solid #cccccc;
+      border-right: none;
+    }
+    .form-control {
+      border-left: none;
+      padding-left: 0
+    }
+  }
+}
+
+::ng-deep {
+  app-search {
+    > .search {
+      padding-bottom: rem(50px);
+    }
+  }
+  ngb-popover-window{
+    will-change: unset !important;
+  }
+
+  .sort-options {
+    .btn-secondary{
+      outline: none;
+    }
+    .dropdown-toggle {
+      color: #333;
+      background-color: transparent;
+    }
+    .popover {
+      width: rem(241px);
+      max-width: rem(276px);
+      border-radius: unset;
+      left: unset !important;
+      transform: none !important;
+      top: rem(25px) !important;
+      right: rem(-20px) !important;
+      .popover-arrow {
+        left: 42% !important;
+        top: rem(-16px);
+        &::after {
+          top: rem(1px);
+          right: rem(-6px);
+          border-bottom-color: #fff;
+          border-width: rem(8px);
+        }
+        &::before {
+          top: 0;
+          right: rem(-6px);
+          border-bottom-color: #00000040;
+          border-width: rem(8px);
+        }
+      }
+      .popover-body {
+        font-family: $font-base;
+        @include for-mobile-to-tablet {
+          padding: 0 rem(21px);
+        }
+        .dropdown-item {
+          background-color: #fff;
+          padding: rem(12px) 0;
+
+          .sort-by-label {
+            padding: 0;
+            &:hover {
+              color: #0070c9;
+              background-color: #fff;
+            }
+            &:focus {
+              background-color: #fff;
+            }
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}
+
+.loading-spinner {
+  display: grid;
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1001;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+  &.fadeOut {
+    transition: all 1000ms linear;
+    opacity: 0;
+    visibility: hidden;
+  }
+  img {
+    width: rem(50px);
+    height: rem(50px);
+  }
+}
+
+/* for grid view responsive */
+.product-grid-view.filters-enabled {
+  ul {
+    @media (max-width: 768px) {
+      width: auto;
+    }
+    @include for-tablet {
+      width: 80vw;
+    }
+    li {
+      @include for-tablet {
+        flex: 1 1 15rem;
+        max-width: 45%;
+      }
+    }
+  }
+}
+
+.search-tile-container {
+  margin-top: rem(9px);
+  overflow: unset; // todo: research on this, it could break the horizontal layout; added just to test the sticky child div.
+  .result-title {
+    border-bottom: none;
+    padding-bottom: rem(28px);
+  }
+  .parent-container {
+    border-bottom: rem(1px) solid #e6e6e6;
+    border-top: rem(1px) solid #f2f2f2;
+  }
+  .no-results-container {
+    border-top: rem(1px) solid #eeeeee;
+  }
+  .search-returned-message {
+    color: #666666;
+    padding: 0;
+    line-height: rem(14px);
+    font-size: rem(14px);
+    &.red-txt {
+      color: #c1272d;
+    }
+  }
+  .facets-filter-backdrop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    opacity: 0.15;
+    background-color: #000;
+  }
+  app-facets-filters-component {
+    &.block-animated {
+      &.ng-hide {
+        display: none;
+        @include for-mobile {
+          animation: fadeOut .3s;
+        }
+      }
+      &.filters-show {
+        display: block;
+        animation: none;
+        @include for-mobile {
+          animation: fadeIn .3s;
+        }
+      }
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+    @keyframes fadeOut {
+      from {
+        opacity: 1;
+      }
+      to {
+        opacity: 0;
+      }
+    }
+  }
+
+  .load-more-container {
+    text-align: center;
+    .load-more {
+      margin-top: rem(15px);
+      margin-bottom: rem(15px);
+    }
+  }
+
+  /* Mobile/Phablet */
+  @include for-phablet-only {
+    .container {
+      padding: 0 rem(16px);
+    }
+    .result-title {
+      border-bottom: none;
+    }
+    .parent-container {
+      margin-bottom: 0;
+      border-bottom: none;
+      border-top: rem(1px) solid #e6e6e6;
+    }
+    .filter-sort-section.filter-enhanced .container, .no-filter.filter-enhanced .container {
+      padding: 0;
+    }
+  }
+}

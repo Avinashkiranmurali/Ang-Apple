@@ -1,0 +1,15 @@
+/**
+ * This file is used to remove browser specific styles
+ * or normalize the css settings before styling
+ */
+
+/*used to remove top shadow on iOS devices breaking visual style requirments*/
+input[type=text] {
+  /* Remove First */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Then Style */
+  /* taken care of in proceeding scss files */
+}

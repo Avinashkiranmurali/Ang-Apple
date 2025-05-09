@@ -1,0 +1,393 @@
+@import "~styles/mixins";
+
+/* DETAIL PAGE */
+.product-detail-page {
+  .product-price-currency {
+    font-weight: $fw-medium;
+    padding-bottom: rem(3px);
+  }
+
+  .product-estimate {
+    font-weight: $fw-medium;
+    padding-top: rem(5px);
+    padding-bottom: rem(3px);
+  }
+
+  .product-price-label {
+    font-size: $s-s;
+  }
+
+  .local-currency {
+    font-size: rem(18px);
+    color: #111;
+    line-height: rem(21px);
+    padding-top: rem(2px);
+  }
+
+  .discount-container {
+    &.dual-price {
+      padding-bottom: rem(8px);
+    }
+  }
+
+  &.pricing-module {
+    .price-content {
+      padding-bottom: 0;
+
+      .cash-discounted {
+        font-size: rem(16px);
+        color: #111;
+        line-height: rem(19px);
+      }
+
+      .price-amount {
+        font-size: rem(21px);
+        color: #111;
+        line-height: rem(25px);
+      }
+
+      .isEligible {
+        .price-amount {
+          color: #666666;
+          font-weight: 400;
+        }
+      }
+
+      .cost-breakdown {
+        p {
+          &.total-due {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .isEligible {
+    .product-estimate {
+      font-size: rem(21px);
+      color: #111;
+      line-height: rem(25px);
+
+      .pay-period-amount {
+        > div {
+          display: inline;
+          margin-right: rem(-5px);
+        }
+
+        span {
+          font-size: rem(18px);
+        }
+      }
+
+      .pay-period-installment {
+        font-size: rem(16px);
+        padding-top: rem(3px);
+        font-weight: 400;
+      }
+
+      .notice-indicator {
+        font-size: rem(14px);
+      }
+    }
+  }
+}
+
+/* CONFIGURE PAGE */
+.product-configure-page {
+  &.pricing-module {
+    .cash-discounted {
+      font-size: rem(16px);
+      color: #111;
+      line-height: rem(19px);
+    }
+
+    .price-content {
+      .price-amount {
+        font-size: rem(21px);
+        color: #111;
+        line-height: rem(25px);
+      }
+
+      .local-currency {
+        font-size: rem(18px);
+        color: #111;
+        line-height: rem(21px);
+        padding-top: rem(3px);
+      }
+
+      .isEligible {
+        .product-estimate {
+          font-size: rem(36px);
+          font-weight: 400;
+
+          .pay-period-amount {
+            > div {
+              display: inline;
+              margin-right: rem(-6px);
+            }
+
+            span {
+              font-size: rem(24px);
+            }
+          }
+
+          .pay-period-installment {
+            font-size: rem(24px);
+            color: #666;
+            margin-top: rem(5px);
+          }
+
+          .notice-indicator {
+            font-size: rem(18px);
+          }
+        }
+
+        .price-amount {
+          font-weight: 400;
+          font-size: rem(18px);
+
+          &.cash {
+            font-size: rem(18px);
+          }
+        }
+      }
+    }
+  }
+}
+
+/* APPLE CARE CONTAINER */
+.apple-care-container {
+  &.pricing-module {
+    .price-content {
+      .price-amount, .local-currency {
+        margin: rem(7px) 0;
+        font-size: rem(14px);
+        font-weight: $font-weight-regular;
+        text-align: left;
+        letter-spacing: 0;
+        color: #111111;
+        line-height: rem(16px);
+        display: inline-block;
+      }
+
+      .notice-indicator {
+        display: none;
+      }
+
+      .price-amount {
+        padding-right: rem(4px);
+      }
+    }
+  }
+
+  &.apple-care-cart-view {
+    &.pricing-module {
+      .price-content {
+        padding-left: rem(29px);
+        padding-top: 0px;
+        line-height: rem(16px);
+
+        .price-amount, .local-currency {
+          margin: 0;
+          font-size: rem(14px);
+          line-height: rem(16px);
+        }
+       
+      }
+    }
+    &.pricing-module.discounted{
+      .price-content {
+        .discount-container{
+          display: flex;
+          padding-bottom: 0px;;
+        }
+      }
+      .price-amount, .local-currency {
+      padding-bottom: 0px;
+      margin:0px;
+      }
+    }
+  }
+
+  &.apple-care-gift-view {
+    &.pricing-module {
+      .price-content {
+        line-height: rem(14px);
+        font-size: rem(12px);
+
+        .price-amount, .local-currency {
+          margin: 0;
+          font-size: rem(12px);
+          line-height: rem(14px);
+        }
+      }
+    }
+  }
+
+  &.apple-care-cart-view-enabled {
+    &.pricing-module .price-content {
+      .price-amount {
+        margin: 0;
+        width: max-content;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        font-weight: $font-weight-semi-bold;
+        padding-right: 0;
+      }
+
+      .local-currency {
+        margin: 0px;
+        font-size: rem(14px);
+        line-height: rem(16px);
+      }
+
+      .discount-container { 
+        .amount-discount.cash-discounted{
+          text-align: right;
+          }               
+      }
+    }
+   
+    &.apple-care-gift-view-enabled {
+      &.pricing-module .price-content {
+        .price-amount {
+          width: max-content;
+          font-size: rem(14px);
+          line-height: rem(16px);
+          font-weight: $font-weight-semi-bold;
+        }
+
+        .local-currency {
+          font-size: rem(12px);
+          line-height: rem(14px);
+        }
+      }
+    }
+  }
+}
+
+/* DEFAULT CAROUSEL TEMPLATE */
+.default-carousel-template {
+  &.pricing-module {
+    .price-content {
+      .price-amount, .local-currency {
+        font-size: rem(18px);
+        line-height: rem(21.6px);
+        font-weight: $font-weight-medium;
+        color: #333333;
+        margin: 0;
+      }
+    }
+    .discount-container .amount-discount {
+      text-align: center;
+    }
+  }
+  &.left-justified {
+    .discount-container .amount-discount {
+      text-align: left;
+    }
+  }
+}
+
+/* MINITILE CAROUSEL TEMPLATE */
+.miniTile-carousel-template {
+  &.pricing-module {
+    .price-content {
+      .discount-container {
+        padding-bottom: 0;
+      }
+
+      .price-amount {
+        font-size: rem(16px);
+        font-weight: $font-weight-medium;
+        line-height: 1.3rem;
+        color: #333333;
+      }
+
+      .local-currency {
+        font-size: rem(14px);
+        font-weight: $font-weight-medium;
+        line-height: rem(16px);
+      }
+    }
+    &.discounted {
+      .discount-module{
+        &.point-discounted {
+          padding-bottom: 0;
+        }
+      }
+      .amount-discount {
+        &.cash-discounted {
+          padding-bottom: rem(5px);
+          font-size: rem(12px);
+        }
+      }
+
+    }
+  }
+}
+
+.config-from-price{
+  &.pricing-module {
+    .price-content {
+      .notice-indicator {
+        display: none;
+      }
+      .discount-container {
+        display: none;
+      }
+    }
+  }
+}
+
+/* ORDER PAYMENT SUMMARY */
+.order-payment-summary-info {
+  text-align: right;
+  color: #111111;
+
+  .price-amount {
+    font-weight: $font-weight-semi-bold;
+  }
+
+  .local-currency {
+    font-size: rem(17px);
+    line-height: rem(20px);
+    font-weight: $font-weight-medium;
+  }
+}
+
+/* Related Products Tile */
+.related-products-tile {
+  color: #333333;
+
+  .local-currency {
+    font-size: rem(16px);
+    line-height: rem(19px);
+    font-weight: $font-weight-regular;
+    margin-top: rem(3px);
+  }
+}
+
+/* ORDER SUMMARY COMPONENT */
+.order-summary-component {
+  &.pricing-module .price-content .price-amount {
+    font-weight: $font-weight-regular;
+    font-size: rem(16px);
+    line-height: rem(20px);
+  }
+
+  &.pricing-module .price-content p.local-currency {
+    font-weight: $font-weight-regular;
+    font-size: rem(16px);
+  }
+}
+
+/* CHECKOUT-PAYMENT-SUMMARY */
+.checkout-payment-summary {
+  &.pricing-module .price-content .price-amount {
+    font-weight: $font-weight-semi-bold;
+    font-size: rem(17px);
+    line-height: rem(20px);
+  }
+}

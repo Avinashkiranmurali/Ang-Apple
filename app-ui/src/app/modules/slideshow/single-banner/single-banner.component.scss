@@ -1,0 +1,1713 @@
+@import "~styles/mixins";
+
+.banner-content {
+  display: flex;
+  height: 100%;
+
+  .banner-inner-container {
+    align-items: center;
+    background-color: inherit;
+    display: flex;
+    margin: 0 auto;
+    max-width: rem(1380px);
+    padding: 0;
+    width: 100%;
+
+    .cta {
+      display: flex;
+      z-index: 1;
+
+      .btn-container {
+        padding: rem(21px) 0 0;
+      }
+
+      .new-indicator {
+        display: inline-flex;
+        text-decoration: none;
+        border-radius: rem(18px);
+        border: rem(1px) solid;
+        padding: rem(6px) rem(14px);
+        opacity: 1;
+        margin-bottom: rem(24px);
+        align-self: center;
+        @include text-styling(#CE3000, 16px, $font-weight-medium, 19px, 0, center);
+        @include for-mobile-to-tablet {
+          margin-bottom: rem(16px);
+        }
+      }
+
+      h2 {
+        opacity: 1;
+        @include text-styling($fc-jet-black, 70px, $font-weight-semi-bold, 84px, 0);
+      }
+
+      h3 {
+        @include text-styling($fc-jet-black, 40px, $font-weight-semi-bold, 48px, 0);
+      }
+
+      /* BUTTON CONTAINER STYLE */
+      .btn-container {
+        .link-base {
+          @include text-styling(#0070c9, 24px, $font-weight-regular, 29px, 0);
+          display: inline-flex;
+
+          &.pill-shaped-cta {
+            &.grayed-out {
+              > a {
+                pointer-events: none;
+                background: #A5A5A5 0 0 no-repeat padding-box;
+
+                &:hover {
+                  background: #A5A5A5 0 0 no-repeat padding-box;
+                }
+              }
+            }
+
+            &.no-action {
+              pointer-events: none;
+            }
+
+            &.text-only {
+              > a {
+                background: #737373 0 0 no-repeat padding-box;
+                padding: rem(8px) rem(20px);
+
+                &:hover {
+                  background: #737373 0 0 no-repeat padding-box;
+                }
+              }
+            }
+
+            > a {
+              @include text-styling(#ffffff, 17px, $font-weight-regular, 20px, 0, center);
+              font-family: "SF Pro Text", "SF Pro Display", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+              text-decoration: none;
+              background: #0070c9 0 0 no-repeat padding-box;
+              border-radius: rem(18px);
+              padding: rem(8px) rem(19px);
+              opacity: 1;
+
+              &:hover {
+                background: #0077ed 0 0 no-repeat padding-box;
+              }
+            }
+
+            &.orange {
+              > a {
+                background: #f15d22 0 0 no-repeat padding-box;
+
+                &:hover {
+                  background: #b5461a 0 0 no-repeat padding-box;
+                }
+              }
+            }
+
+            &.pink {
+              > a {
+                background: #d00861 0 0 no-repeat padding-box;
+
+                &:hover {
+                  box-shadow: 0 0 0 #d00861, inset 0 0 rem(9px) rgba(0, 0, 0, 0.5);
+                }
+              }
+            }
+
+            &.orchid {
+              > a {
+                background: #d6107e 0 0 no-repeat padding-box;
+
+                &:hover {
+                  box-shadow: 0 0 0 #d6107e, inset 0 0 rem(9px) rgba(0, 0, 0, 0.5);
+                }
+              }
+            }
+
+            &.white {
+              > a {
+                background: #ffffff 0 0 no-repeat padding-box;
+                color: $fc-jet-black;
+
+                &:hover {
+                  background: #ffffff 0 0 no-repeat padding-box;
+                }
+              }
+            }
+          }
+
+          &.icon-arrow-right {
+            position: relative;
+            color: #0070C9;
+
+            > a {
+              @include text-styling(#0070C9, 21px, $font-weight-regular, 25px, 0);
+              margin-right: rem(5px);
+
+              &:hover {
+                text-decoration: underline;
+                color: inherit;
+              }
+            }
+
+            &:after {
+              content: "\203A";
+              text-decoration: none;
+              font-size: rem(21px);
+              color: inherit;
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      width: 50%;
+    }
+
+    &.justify-center {
+      justify-content: center;
+    }
+
+    &.full-width {
+      max-width: 100%;
+    }
+
+    &.flex-column {
+      flex-direction: column;
+
+      .cta {
+        padding-bottom: rem(50px);
+      }
+    }
+
+    &.flex-column-reverse {
+      flex-direction: column-reverse;
+
+      .cta {
+        padding-top: rem(50px);
+      }
+
+    }
+
+    &.flex-row-reverse {
+      flex-direction: row-reverse;
+
+      .cta {
+        padding-left: rem(50px);
+      }
+    }
+
+    &.justify-content-space-around {
+      justify-content: space-around;
+    }
+
+    &.justify-content-space-between {
+      justify-content: space-between;
+    }
+
+    &.justify-content-flex-end {
+      justify-content: flex-end;
+    }
+
+    &.justify-content-center {
+      justify-content: center;
+    }
+
+    &.justify-content-space-evenly {
+      justify-content: space-evenly;
+      //IE
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        justify-content: space-around;
+      }
+      //Edge
+      @supports (-ms-ime-align:auto) {
+        justify-content: space-around;
+      }
+    }
+
+    &.left-text {
+      .cta {
+        text-align: left;
+      }
+    }
+
+    &.right-text {
+      .cta {
+        text-align: right;
+      }
+    }
+
+    &.cta-text-left {
+      .cta {
+        align-items: flex-start;
+
+        h2, h3 {
+          text-align: left;
+        }
+      }
+    }
+
+    &.cta-text-right {
+      .cta {
+        align-items: flex-end;
+
+        h2, h3 {
+          text-align: right;
+        }
+      }
+    }
+  }
+
+  &.dual-cta {
+    .banner-inner-container {
+      max-width: rem(980px);
+      padding: 0 rem(40px);
+      @include for-mobile-to-tablet {
+        padding: rem(40px) rem(27.5px) rem(80px);
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      .cta {
+        display: flex;
+        flex-direction: column;
+        max-width: rem(495px);
+        width: 100%;
+        margin-right: rem(25px);
+        @include for-mobile-to-tablet {
+          margin: 0;
+          padding-bottom: rem(20px);
+          > * {
+            text-align: center !important;
+          }
+        }
+        h2 {
+          color: #111111;
+          font-size: 2.138096rem;
+          font-weight: 700;
+          line-height: rem(38px);
+          letter-spacing: 0;
+          margin: 0 0 rem(5px);
+          @include for-mobile-to-tablet {
+            font-size: rem(24px);
+            line-height: rem(29px);
+          }
+        }
+        h3 {
+          color: #111111;
+          font-size: 1.4031255rem;
+          font-weight: 400;
+          line-height: rem(25px);
+          letter-spacing: 0;
+          margin: 0 0 rem(20px) 0;
+          @include for-mobile-to-tablet {
+            font-size: rem(16px);
+            line-height: rem(19px);
+            margin: 0 0 rem(15px) 0;
+          }
+        }
+        .short-desc {
+          color: #111111;
+          font-size: rem(16px);
+          line-height: rem(19px);
+          font-style: italic;
+          @include for-mobile-to-tablet {
+            font-size: rem(14px);
+            line-height: rem(17px);
+          }
+        }
+      }
+      .multi-image-container {
+        display: flex;
+        flex-direction: row;
+        max-width: rem(380px);
+        width: 100%;
+        justify-content: center;
+        .image-btn-container {
+          &.second-image-btn-container {
+            padding: 0;
+          }
+          display: flex;
+          flex-direction: column;
+          padding-right: rem(20px);
+          align-items: center;
+          .image-container {
+            max-width: rem(180px);
+            @include for-mobile-to-tablet {
+              max-width: rem(150px);
+              padding-bottom: rem(10px);
+            }
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.default-pib {
+    .banner-inner-container {
+      @include for-tablet {
+        padding: 0 1.33631rem;
+      }
+      @include for-mobile-to-tablet {
+        display: block;
+      }
+      .cta {
+        display: block;
+        margin: 5.879764rem 4.543454rem 5.879764rem 0;
+        max-width: 33.40775rem;
+        width: 33.40775rem;
+        @include for-tablet {
+          margin-right: 1.33631rem;
+        }
+        @include for-mobile-to-tablet {
+          margin: 0;
+          max-width: 100%;
+          width: 100%;
+        }
+        h2 {
+          margin: 0;
+          color: #111;
+          font-size: 2.405358rem;
+          font-weight: 500;
+          line-height: 2.8730665rem;
+          letter-spacing: 0rem;
+          text-align: left;
+          sup {
+            top: -0.35em;
+          }
+          @include for-mobile-to-tablet {
+            margin-top: 2.67262rem;
+            color: #111;
+            font-size: 1.603572rem;
+            font-weight: 500;
+            line-height: 1.9376495rem;
+            letter-spacing: 0rem;
+            text-align: center;
+          }
+        }
+        h3 {
+          margin: 0.668155rem 0 0 0;
+          color: #111;
+          font-size: 1.33631rem;
+          font-weight: 400;
+          line-height: 1.603572rem;
+          letter-spacing: 0rem;
+          text-align: left;
+          @include for-mobile-to-tablet {
+            margin: 0.267262rem 1.603572rem 0 1.603572rem;
+            padding: 0;
+            color: #111;
+            font-size: 1.202679rem;
+            font-weight: 400;
+            line-height: 1.4031255rem;
+            letter-spacing: 0rem;
+            text-align: center;
+          }
+        }
+        .banner-description {
+          margin: 1.603572rem 0 0 0;
+          color: #111;
+          font-size: 1.33631rem;
+          font-weight: 700;
+          line-height: 1.603572rem;
+          letter-spacing: 0rem;
+          text-align: left;
+          @include for-mobile-to-tablet {
+            max-width: 100%;
+            padding: 0 1.603572rem;
+            margin: 0 0 5.0111625rem 0;
+            text-align: center;
+          }
+        }
+        .btn-container {
+          padding: 0;
+          @include for-mobile-to-tablet {
+            text-align: center;
+          }
+
+          .link-base {
+            &.icon-arrow-right {
+              align-items: center;
+
+              > a {
+                @include text-styling(#0070c9, 21px, $font-weight-regular, 25px, 0);
+                margin-right: rem(7px);
+                padding-right: 0;
+              }
+
+              &:after {
+                content: "\203a";
+                text-decoration: none;
+                font-size: rem(21px);
+                color: inherit;
+              }
+            }
+          }
+        }
+        .image-container {
+          &.default {
+            display: none;
+            @include for-mobile-to-tablet {
+              max-width: 16.9043215rem;
+              width: 16.9043215rem;
+              padding: 1.6703875rem 0 2.405358rem;
+              margin: 0 auto;
+              display: flex;
+            }
+          }
+        }
+      }
+      .image-container {
+        max-width: 27.4611705rem;
+        width: 27.4611705rem;
+        align-items: center;
+        margin: 4.00893rem 0 3.9421145rem;
+        @include for-tablet {
+          max-width: 100%;
+        }
+        img {
+          width: auto;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &.iphone-iphone-13-pro {
+    &.banner-content {
+      justify-content: center;
+    }
+
+    .banner-inner-container {
+      margin: 0;
+      max-width: rem(1920px);
+
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        align-self: baseline;
+      }
+
+      .cta {
+        align-items: center;
+        flex-direction: column;
+        margin: rem(62px) 0;
+        white-space: nowrap;
+        padding: 0 rem(220px) 0 0;
+
+        @include for-mobile-to-tablet {
+          margin: rem(39px) 0 rem(22px) 0;
+          padding: 0;
+          align-self: center;
+        }
+
+        @include for-tablet {
+          padding-right: rem(160px);
+        }
+
+        .title-image {
+          @include for-mobile-to-tablet {
+            height: rem(13px);
+            width: 100%;
+          }
+        }
+
+        .new-indicator {
+          margin-bottom: rem(24px);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(16px);
+          }
+        }
+
+        .btn-container {
+          margin: 0;
+          padding: rem(23px) 0 0 !important;
+
+          @include for-mobile-to-tablet {
+            padding: rem(16px) 0 0 !important;
+          }
+        }
+
+        h2 {
+          font-size: initial;
+
+          img {
+            margin: 0;
+          }
+        }
+
+        h3 {
+          margin: rem(8px) 0 0;
+          opacity: 1;
+          padding: 0;
+          @include text-styling($fc-white, 48px, $font-weight-semi-bold, 57px, 0);
+
+          @include for-mobile {
+            @include text-styling($fc-white, 36px, $font-weight-semi-bold, 43px, 0, center);
+            margin: rem(2px) 0 0;
+          }
+        }
+      }
+
+      .image-container {
+        margin-top: rem(31px);
+        max-width: 59%;
+        @include for-tablet {
+          max-width: 34%;
+        }
+        @include for-mobile-to-tablet {
+          margin-top: 0;
+        }
+
+        > img {
+          max-width: rem(263px);
+
+          @include for-mobile-to-tablet {
+            max-width: rem(205px);
+          }
+        }
+      }
+    }
+  }
+
+  &.iphone-iphone-13 {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        align-self: baseline;
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        margin: rem(68px) 0 rem(68px) 0;
+        padding-left: rem(11px);
+        padding-bottom: 0;
+        @include for-mobile-to-tablet {
+          margin: rem(36px) 0 rem(53px) 0;
+        }
+        @include for-tablet {
+          padding-right: rem(8px);
+        }
+
+        .new-indicator {
+          margin-bottom: rem(24px);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(18px);
+          }
+        }
+
+        .title-image {
+          max-height: rem(20px);
+          max-width: rem(107px);
+          align-self: center;
+          margin-bottom: rem(4px);
+          @include for-mobile {
+            max-height: rem(40px);
+            margin-bottom: rem(2px);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 42px, $font-weight-semi-bold, 50px, 0, center);
+          margin: 0;
+
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-jet-black, 21px, $font-weight-regular, 25px, 0, center);
+          }
+        }
+
+        .btn-container {
+          padding-top: rem(22px);
+          @include for-mobile-to-tablet {
+            padding-top: rem(17px);
+          }
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .image-container {
+        margin-top: rem(29px);
+        @include for-mobile-to-tablet {
+          margin-top: 0;
+        }
+
+        > img {
+          max-width: rem(536px);
+          @include for-tablet {
+            padding-left: rem(8px);
+          }
+          @include for-mobile-to-tablet {
+            max-width: rem(374px);
+          }
+        }
+      }
+    }
+  }
+
+  &.music-homepod-mini {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+      }
+      @include for-tablet {
+        flex-direction: column;
+      }
+
+      .cta {
+        padding: 0 !important;
+        margin: rem(73px) rem(254px) 0 rem(254px);
+        flex-direction: column;
+        align-items: center;
+
+        @include for-mobile-to-tablet {
+          margin: rem(102px) rem(50px) rem(99px) !important;
+          width: 100%;
+        }
+
+        h2 {
+          opacity: 1;
+          @include text-styling($fc-jet-black, 24px, $font-weight-bold, 29px, 0, 0);
+        }
+
+        h3 {
+          max-height: rem(29px);
+          margin: rem(15px) 0 0 0;
+          font-weight: $font-weight-regular !important;
+          @include text-styling($fc-jet-black, 24px, $font-weight-regular, 29px, 0, 0);
+
+          @include for-mobile-to-tablet {
+            margin-top: rem(7px);
+          }
+        }
+
+        .btn-container {
+          margin: rem(26px) 0 0 0;
+          padding: 0 !important;
+          @include for-mobile-to-tablet {
+            width: rem(120px);
+          }
+        }
+
+        .title-image {
+          width: rem(400px);
+          max-width: rem(400px);
+          @include for-mobile-to-tablet {
+            width: rem(306px);
+          }
+        }
+      }
+
+      .image-container {
+        margin-bottom: rem(27px);
+
+        > img {
+          max-width: rem(908px);
+          width: 100%;
+          @include for-mobile-to-tablet {
+            width: rem(588px);
+          }
+        }
+
+      }
+    }
+  }
+
+  &.music-airpods-3rd-generation {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      @include for-mobile {
+        flex-direction: column !important;
+        align-self: baseline;
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        padding-right: rem(114px);
+        margin: rem(61px) 0 rem(76px) 0;
+        @include for-mobile {
+          margin: rem(37px) 0 0 0;
+          padding-right: 0;
+          align-items: center;
+        }
+
+        .new-indicator {
+          margin-bottom: rem(25px);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(20px);
+          }
+        }
+
+        .title-image {
+          max-height: rem(42px);
+          max-width: rem(193px);
+          @include for-mobile-to-tablet {
+            max-height: rem(38px);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 24px, $font-weight-semi-bold, 29px, 0, center);
+          margin: rem(12px) 0 0 0;
+          @include for-mobile-to-tablet {
+            margin-top: rem(3px);
+            @include text-styling($fc-jet-black, 21px, $font-weight-semi-bold, 25px, 0, center);
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          padding: 0;
+          margin-top: rem(15px);
+          justify-content: center;
+          @include for-mobile-to-tablet {
+            margin-top: rem(14px);
+          }
+        }
+      }
+
+      .image-container {
+        margin: rem(30px) 0;
+        @include for-mobile {
+          margin: rem(24px) 0 0 0;
+        }
+
+        > img {
+          max-width: rem(171px);
+          @include for-mobile-to-tablet {
+            max-width: rem(139px);
+          }
+        }
+      }
+    }
+  }
+
+  &.watch-apple-watch-series-7 {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      padding: rem(75px) 0 rem(112px);
+
+      @include for-tablet {
+        padding-left: rem(15px);
+      }
+
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        padding: rem(64px) 0 rem(112px);
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        margin-left: rem(127px);
+        padding: 0;
+        align-items: center;
+
+        @include for-tablet {
+          margin-left: rem(80px);
+        }
+
+        @include for-mobile-to-tablet {
+          margin: 0 0 rem(43px) 0;
+        }
+
+        h2 {
+          font-size: unset;
+          line-height: unset;
+          font-weight: unset;
+          letter-spacing: unset;
+          color: unset;
+
+          img {
+            margin: 0;
+            width: rem(170px);
+            height: rem(64px);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 48px, $font-weight-semi-bold, 58px, 0);
+          margin: rem(8px) 0 0 0;
+
+          @include for-mobile-to-tablet {
+            margin: rem(20px) 0 0 0;
+            font-size: rem(36px);
+            line-height: rem(43px);
+          }
+
+          @include for-tablet {
+            text-align: center;
+          }
+
+          @include for-mobile-to-tablet {
+            font-size: rem(32px);
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          padding-top: rem(30px);
+
+          .link-base {
+            a {
+              padding: rem(6.93px) rem(18.7px) rem(9.07px) rem(19.3px);
+
+              @include for-mobile {
+                padding: rem(7.93px) rem(18.7px) rem(8.07px) rem(19.3px);
+              }
+            }
+          }
+        }
+      }
+
+      .image-container {
+        > img {
+          max-width: rem(569px);
+          width: 100%;
+
+          @include for-mobile-to-tablet {
+            max-width: rem(300px);
+          }
+        }
+      }
+    }
+  }
+
+  &.macbook-pro-14-and-16 {
+    .banner-inner-container {
+      padding: rem(74px) 0 rem(31px) 0;
+
+      @include for-mobile-to-tablet {
+        padding-top: rem(94px);
+      }
+
+      .cta {
+        margin: 0;
+        flex-direction: column !important;
+        text-align: center !important;
+        padding: 0 0 rem(25px) 0;
+
+        @include for-mobile-to-tablet {
+          padding-bottom: rem(68px);
+        }
+
+        .btn-container {
+          padding: 0;
+          margin: rem(16px) 0 0 0;
+
+          @include for-mobile {
+            margin: rem(30px) 0 0 0;
+          }
+
+          .link-base {
+            a {
+              padding: rem(7.65px) rem(19.28px) rem(8.35px) rem(18.72px);
+            }
+          }
+        }
+
+        h2 {
+          @include text-styling($fc-jet-black, 28px, $font-weight-medium, 34px, 0);
+          letter-spacing: 0;
+          margin: 0 auto 0 auto;
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 47px, $font-weight-semi-bold, 56px, 0);
+          letter-spacing: 0;
+          margin: 0;
+          opacity: 1;
+
+          @include for-mobile-to-tablet {
+            max-width: rem(320px);
+            line-height: rem(56px);
+            text-align: center;
+            margin-top: rem(6px);
+          }
+        }
+      }
+
+      .image-container {
+        text-align: center;
+
+        > img {
+          max-width: rem(928px);
+          width: 100%;
+
+          @include for-tablet {
+            max-width: rem(950px);
+            width: 85%;
+          }
+        }
+      }
+    }
+  }
+
+  &.ipads {
+    .banner-inner-container {
+      padding: rem(62px) 0 rem(110px);
+      @include for-tablet {
+        padding-left: rem(15px);
+      }
+
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        padding: rem(57px) 0 rem(86px);
+      }
+
+      .cta {
+        flex-direction: column;
+        padding: rem(48px) rem(294px) 0 rem(156px);
+
+        @include for-tablet {
+          padding: rem(48px) rem(125px) 0 !important;
+        }
+
+        @include for-mobile-to-tablet {
+          align-items: center;
+          padding: 0 0 rem(28px);
+        }
+
+        .btn-container {
+          padding: rem(26px) 0 0;
+        }
+
+        .banner-title {
+          @include text-styling($fc-jet-black, 60px, $font-weight-semi-bold, 71px, 0);
+          margin: 0;
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-jet-black, 24px, $font-weight-medium, 29px, 0);
+          padding: rem(1px) 0 0;
+          margin: 0;
+
+          @include for-mobile-to-tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      .image-container {
+        > img {
+          max-width: rem(452px);
+          width: 100%;
+
+          @include for-tablet {
+            max-width: rem(378px);
+          }
+
+          @include for-mobile-to-tablet {
+            max-width: rem(278px);
+          }
+        }
+      }
+    }
+  }
+
+  &.ipad-mini {
+    .banner-inner-container {
+      padding: rem(84px) 0 0;
+
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        padding: rem(68px) 0 0;
+      }
+
+      .cta {
+        flex-direction: column;
+        margin: rem(-84px) 0 0;
+        padding: 0 rem(159px) 0 rem(338px);
+
+        @include for-tablet {
+          padding: 0 rem(75px) 0 rem(135px) !important;
+        }
+
+        @include for-mobile-to-tablet {
+          align-items: center;
+          margin: 0;
+          padding: 0 0 rem(56px);
+        }
+
+        .btn-container {
+          padding: rem(22px) 0 0;
+        }
+
+        .banner-title {
+          @include text-styling($fc-jet-black, 56px, $font-weight-semi-bold, 67px, -0.56px);
+          margin: 0;
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-jet-black, 24px, $font-weight-medium, 29px, -0.36px);
+          margin: rem(-3px) 0 0;
+
+          @include for-mobile-to-tablet {
+            text-align: center;
+          }
+        }
+      }
+
+      .image-container {
+        @include for-mobile-to-tablet {
+          align-self: flex-end !important;
+        }
+
+        > img {
+          max-width: rem(516px);
+          width: 100%;
+
+          @include for-tablet {
+            max-width: rem(430px);
+          }
+
+          @include for-mobile-to-tablet {
+            max-width: rem(322px);
+          }
+        }
+      }
+    }
+  }
+
+  &.studio-display {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      @include for-mobile {
+        flex-direction: column !important;
+        align-items: center;
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        margin: rem(73px) 0;
+        padding-left: rem(171px);
+        padding-bottom: 0;
+        @include for-mobile-to-tablet {
+          margin: rem(39px) 0 0 0;
+          padding-left: 0;
+        }
+        @include for-tablet {
+          padding-left: rem(90px);
+        }
+
+        .new-indicator {
+          margin-bottom: rem(9px);
+        }
+
+        h2 {
+          @include text-styling($fc-jet-black, 48px, $font-weight-semi-bold, 57px, 0, center);
+          margin: 0;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-jet-black, 36px, $font-weight-semi-bold, 43px, 0, center);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 24px, $font-weight-medium, 29px, 0, center);
+          margin: rem(2px) 0 0;
+
+          @include for-mobile-to-tablet {
+            margin-top: rem(1px);
+            @include text-styling($fc-jet-black, 21px, $font-weight-medium, 25px, 0, center);
+          }
+        }
+
+        .btn-container {
+          padding-top: rem(18px);
+          @include for-mobile-to-tablet {
+            padding-top: rem(16px);
+          }
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .image-container {
+        margin: rem(36px) 0 rem(33px) 0;
+        @include for-tablet {
+          max-width: 38%;
+        }
+        @include for-mobile-to-tablet {
+          margin: rem(22px) 0 rem(39px) 0;
+        }
+
+        > img {
+          max-width: rem(332px);
+          @include for-mobile-to-tablet {
+            max-width: rem(248px);
+          }
+        }
+      }
+    }
+  }
+
+  &.mac-studio {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+
+      @include for-mobile-to-tablet {
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+      }
+
+      .cta {
+        flex-direction: column;
+        align-self: flex-start;
+        padding: rem(65px) rem(209px) rem(81px) 0;
+        @include for-tablet {
+          padding: rem(65px) rem(100px) 0 0;
+        }
+        @include for-mobile-to-tablet {
+          align-self: center;
+          margin: 0;
+          padding: rem(39px) 0 0 0;
+        }
+
+        .new-indicator {
+          margin-bottom: rem(9px);
+        }
+
+        .btn-container {
+          padding-top: rem(18px);
+          align-self: center;
+          @include for-mobile-to-tablet {
+            padding: rem(16px) 0 rem(47px) 0;
+          }
+        }
+
+        .banner-title {
+          @include text-styling($fc-jet-black, 48px, $font-weight-semi-bold, 57px, 0, center);
+          margin: 0;
+          @include for-tablet {
+            white-space: nowrap;
+          }
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-jet-black, 36px, $font-weight-semi-bold, 43px, 0, center);
+          }
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-jet-black, 24px, $font-weight-medium, 29px, 0, center);
+          margin: rem(2px) 0 0 0;
+          @include for-mobile-to-tablet {
+            margin-top: rem(1px);
+            @include text-styling($fc-jet-black, 21px, $font-weight-medium, 25px, 0, center);
+          }
+        }
+      }
+
+      .image-container {
+        @include for-tablet {
+          max-width: 35%;
+        }
+        @include for-mobile-to-tablet {
+          margin: 0;
+        }
+
+        > img {
+          max-width: rem(330px);
+          @include for-mobile-to-tablet {
+            max-width: rem(230px);
+          }
+        }
+      }
+    }
+
+  }
+
+  &.iphone-se {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      @include for-mobile-to-tablet {
+        justify-content: space-around;
+        align-items: flex-start;
+      }
+
+      .cta {
+        flex-direction: column;
+        @include for-mobile-to-tablet {
+          align-items: flex-start;
+          position: absolute;
+          top: rem(48px);
+          left: rem(20px);
+        }
+
+        .new-indicator {
+          margin-bottom: rem(16px);
+          @include for-mobile-to-tablet {
+            align-self: baseline;
+            margin-bottom: rem(21px);
+          }
+        }
+
+        .btn-container {
+          padding-top: rem(17px);
+          align-self: center;
+          @include for-mobile-to-tablet {
+            padding-top: rem(21px);
+            align-self: flex-start;
+          }
+        }
+
+        > img {
+          max-width: rem(111px);
+          align-self: center;
+
+          @include for-mobile-to-tablet {
+            max-width: rem(128px);
+            width: rem(128px);
+            align-self: flex-start;
+          }
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-jet-black, 32px, $font-weight-semi-bold, 38px, 0, center);
+          margin: rem(8px) 0 0 0;
+          @include for-tablet {
+            white-space: nowrap;
+          }
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-jet-black, 21px, $font-weight-semi-bold, 25px, 0, left);
+          }
+        }
+      }
+
+      .image-container {
+        margin-left: rem(97px);
+        max-width: 70%;
+        @include for-tablet {
+          margin: 0;
+          max-width: 62%;
+        }
+        @include for-mobile-to-tablet {
+          position: absolute;
+          right: 0;
+          max-width: 75%;
+        }
+
+        > img {
+          max-width: rem(629px);
+          @include for-mobile-to-tablet {
+            max-width: rem(265px);
+            margin-right: 0;
+          }
+          @include for-tablet {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  &.ipad-air {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      max-width: inherit;
+      @include for-mobile-to-tablet {
+        justify-content: space-around;
+      }
+
+      .cta {
+        flex-direction: column;
+        width: rem(315px);
+        margin: 0 rem(126px) 0 0;
+        @include for-mobile-to-tablet {
+          align-items: flex-start;
+          margin: 0 0 0 rem(20px);
+          padding: 0;
+        }
+        @include for-tablet {
+          margin: 0;
+        }
+
+        .new-indicator {
+          align-self: baseline;
+          margin-bottom: rem(8px);
+        }
+
+        .btn-container {
+          padding-top: rem(28px);
+          @include for-mobile-to-tablet {
+            padding-top: rem(29px);
+          }
+        }
+
+        .banner-title {
+          @include text-styling($fc-white, 48px, $font-weight-semi-bold, 57px, 0, left);
+          margin: 0;
+          white-space: nowrap;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-white, 36px, $font-weight-semi-bold, 43px, 0, left);
+          }
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-white, 24px, $font-weight-medium, 29px, 0);
+          margin: rem(1px) 0 0 0;
+          @include for-mobile-to-tablet {
+            margin-top: rem(7px);
+            @include text-styling($fc-white, 21px, $font-weight-medium, 25px, 0);
+          }
+        }
+      }
+
+      .image-container {
+        @include for-tablet {
+          max-width: 27%;
+        }
+        @include for-mobile-to-tablet {
+          margin-left: 0;
+          margin-right: rem(22px);
+          max-width: 56%;
+        }
+
+        > img {
+          max-width: rem(288px);
+          @include for-mobile-to-tablet {
+            max-width: rem(190px);
+          }
+        }
+      }
+    }
+  }
+
+  &.macbook-air {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      @include for-mobile-to-tablet {
+        flex-direction: column;
+        justify-content: space-around;
+        margin: 0;
+      }
+
+      .cta {
+        flex-direction: column;
+        margin: rem(-0.5px) rem(54px) 0 rem(21px);
+        width: rem(315px);
+        @include for-mobile-to-tablet {
+          align-items: center;
+          margin: rem(29px) rem(30px) 0 rem(30px);
+          padding: 0;
+        }
+        @include for-tablet {
+          margin: 0;
+        }
+
+        .new-indicator {
+          align-self: baseline;
+          margin-bottom: rem(8px);
+          padding: rem(4px) rem(13px);
+          @include for-mobile-to-tablet {
+            align-self: center;
+            margin-bottom: rem(12px);
+          }
+        }
+
+        .btn-container {
+          padding-top: rem(20px);
+          @include for-mobile-to-tablet {
+            padding-top: rem(13px);
+          }
+        }
+
+        .banner-title {
+          @include text-styling($fc-jet-black, 48px, $font-weight-semi-bold, 57px, 0, left);
+          margin: 0;
+          white-space: nowrap;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-jet-black, 36px, $font-weight-semi-bold, 43px, 0, left);
+          }
+        }
+
+        .banner-tagLine {
+          @include text-styling($fc-jet-black, 24px, $font-weight-medium, 29px, 0);
+          margin: rem(1px) 0 0 0;
+          @include for-mobile-to-tablet {
+            margin-top: rem(2px);
+            @include text-styling($fc-jet-black, 21px, $font-weight-medium, 25px, 0);
+          }
+        }
+      }
+
+      .image-container {
+        @include for-tablet {
+          max-width: 41%;
+        }
+        @include for-mobile-to-tablet {
+          max-width: 67%;
+          margin: rem(23px) rem(10px) rem(48px) 0;
+        }
+
+        > img {
+          max-width: rem(312px);
+          @include for-mobile-to-tablet {
+            max-width: rem(248px);
+          }
+        }
+      }
+    }
+  }
+
+  &.macbook-pro-13 {
+    .banner-inner-container {
+      background-color: inherit;
+      display: flex;
+      width: 100%;
+      @include for-mobile {
+        flex-direction: column !important;
+        align-items: center;
+      }
+      @include for-tablet {
+        justify-content: center;
+        padding-left: 0 !important;
+      }
+
+      .cta {
+        display: flex;
+        z-index: 1;
+        flex-direction: column;
+        margin: rem(-9px) rem(17px) 0 0;
+        padding-left: 0;
+        padding-bottom: 0;
+        width: rem(315px);
+        @include for-mobile-to-tablet {
+          margin: rem(48px) 0 0 0;
+          padding-left: 0;
+        }
+        @include for-tablet {
+          width: 55%;
+        }
+
+        .new-indicator {
+          margin-bottom: rem(7px);
+          padding: rem(4px) rem(13px);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(16px);
+          }
+        }
+
+        h2 {
+          @include text-styling($fc-white, 32px, $font-weight-semi-bold, 38px, 0, center);
+          margin: 0;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-white, 26px, $font-weight-semi-bold, 31px, 0, center);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-white, 24px, $font-weight-regular, 29px, 0, center);
+          margin: rem(-3px) 0 0;
+
+          @include for-mobile-to-tablet {
+            margin-top: rem(2px);
+            @include text-styling($fc-white, 21px, $font-weight-regular, 25px, 0, center);
+          }
+        }
+
+        .btn-container {
+          padding-top: rem(24px);
+          @include for-mobile-to-tablet {
+            padding-top: rem(21px);
+          }
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      .image-container {
+        margin: rem(37px) rem(42px) rem(38px) 0;
+        @include for-tablet {
+          max-width: 50%;
+        }
+        @include for-mobile-to-tablet {
+          margin: rem(26px) 0 rem(61px) 0;
+        }
+
+        > img {
+          color: $fc-white;
+          @include for-mobile-to-tablet {
+            max-width: rem(375px);
+          }
+          @include for-tablet {
+            width: 110%;
+          }
+        }
+      }
+    }
+  }
+
+  &.ipad-pro {
+    .banner-inner-container {
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        margin-top: rem(25px);
+      }
+
+      .cta {
+        display: flex;
+        flex-direction: column;
+        margin: rem(64px) rem(50px) rem(64px) 0;
+        padding: 0 !important;
+        @include for-mobile-to-tablet {
+          margin: 0 auto;
+        }
+
+        .new-indicator {
+          padding: rem(5px) rem(14px);
+          margin-bottom: rem(17px);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(18px);
+          }
+        }
+
+        h2 {
+          @include text-styling($fc-white, 27px, $font-weight-semi-bold, 32px, 0, center);
+          margin: 0;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-white, 23px, $font-weight-semi-bold, 27px, 0, center);
+          }
+        }
+
+        h3 {
+          @include text-styling($fc-white, 48px, $font-weight-medium, 57px, 0, center);
+          margin: 0;
+          @include for-mobile-to-tablet {
+            @include text-styling($fc-white, 36px, $font-weight-medium, 43px, 0, center);
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          margin-top: rem(27px);
+          padding: 0;
+          @include for-mobile-to-tablet {
+            margin-top: rem(20px);
+          }
+        }
+      }
+
+      .image-container {
+        @include for-mobile-to-tablet {
+          margin-top: rem(-20px);
+        }
+
+        > img {
+          max-width: rem(460px);
+          @include for-mobile-to-tablet {
+            width: 100%;
+            max-width: fit-content;
+          }
+        }
+      }
+    }
+  }
+
+  &.homepod {
+    .banner-inner-container {
+      @include for-mobile-to-tablet {
+        flex-direction: column !important;
+        justify-content: flex-start !important;
+      }
+      .image-container {
+        /*padding-left: rem(314px);*/
+        @include for-mobile-to-tablet {
+          margin-top: rem(28px);
+        }
+        > img {
+          max-width: rem(261px);
+
+          @include for-mobile-to-tablet {
+            max-width: rem(203px);
+          }
+        }
+      }
+      .cta {
+        display: flex;
+        flex-direction: column;
+        padding-left: rem(163px);
+        padding-right: rem(90px);
+
+        @include for-mobile-to-tablet {
+          margin: 0;
+          padding: rem(17px) 0 0;
+        }
+
+        .new-indicator {
+          padding: rem(5px) rem(14px);
+          margin-bottom: rem(13px);
+
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(12px);
+          }
+        }
+
+        .title-image {
+          align-self: center;
+          width: rem(251px);
+
+          @include for-mobile-to-tablet {
+            width: rem(117px);
+          }
+        }
+
+        h3 {
+          @include text-styling(#000000, 24px, $font-weight-regular, 29px, 0, center);
+          margin: rem(10px) 0 0;
+
+          @include for-mobile-to-tablet {
+            margin: rem(4px) 0 0;
+          }
+        }
+
+        .btn-container {
+          display: flex;
+          justify-content: center;
+          margin-top: rem(30px);
+          padding: 0;
+
+          @include for-mobile-to-tablet {
+            margin-top: rem(15px);
+          }
+        }
+      }
+
+
+    }
+  }
+
+}

@@ -1,0 +1,106 @@
+@import "~styles/mixins";
+
+.order-tiles-wrapper {
+  .order-tiles {
+    padding: 0;
+    display: flex;
+    flex-flow: wrap;
+    align-content: space-between;
+
+    .order-tile {
+      max-width: rem(320px);
+      width: rem(320px);
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      list-style: none;
+      flex-grow: 1;
+      border: rem(1px) solid #D2D2D2;
+      border-radius: rem(12px);
+      margin: rem(40px) rem(10px) 0 0;
+      @include for-mobile {
+        &:first-child {
+          margin-top: 0;
+        }
+        margin-right: 0;
+        max-width: 100%;
+        width: 100%;
+      }
+
+      @include for-all-desktops {
+        &:nth-child(-n+3) {
+          margin-top: 0;
+        }
+
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+
+      &:hover {
+        border-color: #808080;
+      }
+
+      &:focus-within {
+        border-color: #007dfa;
+      }
+
+      a {
+        text-decoration: none;
+        color: #111111;
+
+        &:focus {
+          box-shadow: none;
+        }
+      }
+
+      .item-image {
+        width: rem(188px);
+        height: rem(188px);
+        margin: rem(70px) auto rem(50px);
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .item-details {
+        margin: 0 rem(31px) rem(22px) rem(31px);
+
+        .item-order-info-line {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+          margin-bottom: rem(10px);
+          font-size: rem(14px);
+          line-height: rem(16px);
+          font-weight: $font-weight-regular;
+
+          .items-count {
+            text-transform: lowercase;
+          }
+        }
+
+        .item-order-info-section {
+          border-top: rem(1px) solid #D2D2D2;
+          text-align: left;
+        }
+
+        .item-orderDate {
+          margin-top: rem(17px);
+          font-weight: $font-weight-semi-bold;
+          font-size: rem(28px);
+          line-height: rem(34px);
+        }
+
+        .item-orderId {
+          margin-top: rem(2px);
+          font-weight: $font-weight-semi-bold;
+          font-size: rem(22px);
+          line-height: rem(26px);
+        }
+      }
+    }
+  }
+
+}

@@ -1,0 +1,9 @@
+:host {
+    ::ng-deep {
+        app-carousel {
+            .mini-tile {
+                background-color: #EBEDEF !important;
+            }
+        }
+    }
+}

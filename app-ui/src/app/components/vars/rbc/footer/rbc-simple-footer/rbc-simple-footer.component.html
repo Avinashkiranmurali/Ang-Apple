@@ -1,0 +1,18 @@
+<div class="wrapper-footer">
+  <div id="rbc-footer" class="footer">
+  <div class="base-foot">
+    <div class="inner">
+      <p>{{ messages['rbcfooterLabelRBCWeb'] }}, &copy; 1995-{{footerData['currentYear']}}</p>
+      <p class="base-link"><a href="{{ messages['rbcfooterUrlPrivSec'] }}" [attr.aria-label]="messages['rbcfooterLabelPrivSecONWin']" target="_blank" rel="noopener noreferrer">{{ messages['rbcfooterLabelPrivSec'] }}</a> | <a href="{{ messages['rbcfooterUrlLegal'] }}" [attr.aria-label]="messages['rbcfooterLabelLegalONWin']" target="_blank" rel="noopener noreferrer">{{ messages['rbcfooterLabelLegal'] }}</a> | <a href="{{ messages['rbcfooterUrlAccess'] }}" [attr.aria-label]="messages['rbcfooterLabelAccessONWin']" target="_blank" rel="noopener noreferrer">{{ messages['rbcfooterLabelAccess']}}</a></p>
+      <p class="base-link right">
+        <span class="globalfooter-tool" id="tool-totop">
+            <a href (click)="scrollToTop()" tabindex="-1" class="linkedtextandicon">
+                <span>{{ messages['footerLabelToTop'] }}</span>
+                <img [src]="config['imageServerUrl'] + '/apple-gr/assets/img/totopbutton.gif'" alt="" width="16" height="16" />
+            </a>
+        </span>
+      </p>
+    </div>
+  </div>
+</div>
+</div>

@@ -1,0 +1,207 @@
+@import "~styles/mixins";
+@import "~styles/common/cart-container";
+@import "~styles/common/total-breakdown";
+@import "~styles/common/payment-summary";
+
+@media (min-width: 900px) {
+  .checkout-module-container {
+    max-width: 67.483655rem;
+    width: 100%;
+  }
+}
+.checkout-item-list {
+  .cart-product-details {
+    .cart-item-engrave {
+      padding-top: rem(20px);
+      h5 {
+        font-weight: $fw-medium;
+        margin: 0;
+        padding: 0 0 rem(7px);
+        font-size: rem(16px);
+        line-height: rem(19px);
+      }
+    }
+  }
+}
+.promotional-subscription {
+  padding: rem(20px) rem(0px) rem(15px);
+  text-align: right;
+
+  @include for-mobile {
+    text-align: left;
+  }
+
+  /* reusable custom checkbox */
+  .custom-checkbox {
+    @include font-style();
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    padding: 0;
+
+    input[type="checkbox"] {
+      opacity: 0;
+      position: absolute;
+      height: rem(20px);
+      width: rem(20px);
+      border: 0;
+      left: 0;
+      top: 0;
+      @include border-radius();
+      /*Hide the checkmark by default*/
+      & + label {
+        &:after {
+          content: none;
+        }
+      }
+
+      /*Unhide on the checked state*/
+      &:checked + label {
+        &:before {
+          background: #0070C9;
+          border: 0;
+        }
+        &:after {
+          content: "";
+        }
+      }
+
+      /*Adding focus styles on the outer-box of the fake checkbox*/
+      &:focus + label {
+        &:before {
+          outline: none;
+          -moz-box-shadow:     $focus-box-shadow;
+          -webkit-box-shadow:  $focus-box-shadow;
+          box-shadow:          $focus-box-shadow;
+        }
+      }
+    }
+
+    label {
+      position: relative;
+      display: inline-block;
+      font-weight: 400;
+      /*16px width of fake checkbox + 6px distance between fake checkbox and text*/
+      padding-left: rem(22px);
+
+      &:before, &:after {
+        position: absolute;
+        content: "";
+
+        /*Needed for the line-height to take effect*/
+        display: inline-block;
+      }
+
+      /*Outer box of the fake checkbox*/
+      &:before {
+        height: rem(16px);
+        width: rem(16px);
+        cursor: pointer;
+        border: $input-border-active;
+        left: 0;
+
+        /*(24px line-height - 16px height of fake checkbox) / 2 - 1px for the border
+         *to vertically center it.
+         */
+        top: rem(3px);
+        background: none;
+        -moz-border-radius: rem(4px);
+        -webkit-border-radius: rem(4px);
+        -khtml-border-radius: rem(4px);
+        border-radius: rem(4px);
+      }
+
+      /*Checkmark of the fake checkbox*/
+      &:after {
+        color: #fff;
+        position: absolute;
+        height: rem(5px);
+        width: rem(9px);
+        border-left: rem(2px) solid;
+        border-bottom: rem(2px) solid;
+
+        transform: rotate(-45deg);
+
+        left: rem(4px);
+        top: rem(7px);
+      }
+    }
+  }
+
+  /* reusable custom tooltip */
+  button[tooltip] {
+    padding: 0;
+    border: 0;
+    background: none;
+    -moz-border-radius: rem(40px);
+    -webkit-border-radius: rem(40px);
+    -khtml-border-radius: rem(40px);
+    border-radius: rem(40px);
+    margin-left: rem(3px);
+    vertical-align: bottom;
+
+    &:focus {
+      outline: none;
+      -moz-box-shadow:     $focus-box-shadow;
+      -webkit-box-shadow:  $focus-box-shadow;
+      box-shadow:          $focus-box-shadow;
+    }
+
+    .tooltip-wrapper {
+      position: absolute;
+      bottom: rem(40px);
+      right: -5%;
+      text-align: left;
+      font-size: rem(14px);
+      line-height: 1.42861;
+      font-weight: 400;
+      letter-spacing: -.016em;
+      line-height: 1.3;
+      padding: rem(12px) rem(17px) rem(13px);
+      border-radius: rem(4px);
+      background: #f2f2f2;
+      width: 14.23529rem;
+      z-index: 1;
+      margin: 0;
+      color: #333;
+      @include font-style();
+
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 100%; /* At the bottom of the tooltip */
+        right: 10%;
+        margin-left: rem(-5px);
+        border-width: rem(6px);
+        border-style: solid;
+        border-color: #f2f2f2 transparent transparent transparent;
+      }
+    }
+  }
+}
+.policies-terms-note {
+  color: #666666;
+  @media (min-width: 320px) and (max-width: 768px) {
+    margin:0;
+    p {
+      margin-bottom: rem(15px);
+    }
+  }
+  p {
+    font-size: rem(14px);
+    line-height: rem(15px);
+    margin-bottom: rem(5px);
+    text-align: justify;
+    @include for-mobile-to-tablet {
+      text-align: justify;
+      margin-bottom: rem(15px);
+    }
+    strong {
+      color: #333;
+      &.red-txt {
+        color: $error-text-color;
+      }
+    }
+  }
+}
+

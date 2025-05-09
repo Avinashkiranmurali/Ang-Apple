@@ -1,0 +1,90 @@
+<div class="search">
+  <form role="search" class="page-search">
+    <app-search-box [searchPage]="searchPage" [terms]="terms"></app-search-box>
+  </form>
+
+  <div class="content-container search-tile-container nopad">
+    <div class="container">
+      <div class="result-title" aria-live="assertive">
+        <div class="search-returned-message pull-left" *ngIf="!noSearchResults && !contentLoading">
+          {{ (currLocale === 'fr_ca') ? ('searchPlaceHolder' | translate) : ('searchBtn' | translate) }}:
+          {{ itemTotal }} {{ 'prodsReturned' | translate }} "{{ searchTerm['value'] }}"
+        </div>
+        <div class="search-returned-message red-txt pull-left" *ngIf="noSearchResults && !contentLoading">{{ 'noResultsReturned' | translate }}</div>
+      </div>
+    </div>
+
+    <!--Filter and Sort elements -->
+    <div class="parent-container filter-sort-section filter-enhanced"
+      *ngIf="!noSearchResults"
+      [ngClass]="{'filter-nested-sticky': isDesktop}"
+      [style.top.px]="filterStickyTopOffset()">
+      <div class="container">
+        <div class="flex-space-between filter-sort-section">
+          <div class="filter-options">
+            <div role="link" (click)="filterToggle()" (keyup.enter)="filterToggle()" [class.link-active]="showFacetsFilters" class="filter-link" tabindex="0" [attr.aria-expanded] = "showFacetsFilters">
+                <span class="g-icons icon-filter"></span>
+                {{ 'filterLabel' | translate }}
+            </div>
+            <div role="link" class="reset-link" *ngIf="enableResetFlag">
+              <a [routerLink]="[]" [queryParams]="null">
+                <span class="reset-label" tabindex="0">{{ 'resetLabel' | translate }}</span>
+              </a>
+            </div>
+          </div>
+          <!-- Sorting Option - Starts Here -->
+          <app-sort-by></app-sort-by>
+          <!-- Sorting Option - Ends Here -->
+        </div>
+      </div>
+    </div>
+
+    <div class="product-result-list contain p-b-0" [ngClass]="{'no-results-container': noSearchResults}">
+        <!-- Facets Filter - Tree -->
+      <div class="facets-filter-backdrop" *ngIf="showFacetsFilters && isMobile && filterProductsData?.facetsFilters"></div>
+      <app-facets-filters-component
+        #facetComponent
+        *ngIf="filterProductsData?.facetsFilters"
+        [facetsFilters]="filterProductsData.facetsFilters"
+        [facetsScrollObj] = "facetsScrollObj"
+        (triggerApiEmitter)="triggerApi($event)"
+        (triggerScrollEmitter)="triggerScroll()"
+        [latestFacetsFilter]="latestFacetsFilter"
+        (closeModal)="closeModal($event)"
+        [enableResetFlag]="enableResetFlag"
+        class="block-animated"
+        [ngClass]="showFacetsFilters ? 'filters-show' : 'ng-hide'">
+      </app-facets-filters-component>
+      <!-- Facets Filter - Tree -->
+
+      <div class="product-grid-view" [ngClass]="{ 'filters-enabled': showFacetsFilters && filterProductsData?.facetsFilters  }">
+        <ul id="grid" *ngIf="!noSearchResults" role="list">
+          <ng-container *ngIf="(item && (items || (displayBackorderedProducts && !item.available)) && result)">
+            <li class="nopad" *ngFor="let item of items; let index = index;"
+                [ngClass]="{'no-right-border' : !((index +1 ) % 3), 'no-left-folder' : !((index) % 3) && showFacetsFilters}">
+              <app-tile [item]="item" [messages]="messages" [imageSize]="'240'" [index]="index" [isSearchPage]="true"></app-tile>
+            </li>
+          </ng-container>
+        </ul>
+        <div *ngIf="noSearchResults" class="page-error-container"  role="alert" aria-live="polite">
+          <h2 role="presentation">{{ 'noResultsFound' | translate }}</h2>
+          <p role="presentation">{{ 'noResultsHelpTxt' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="loader-container" *ngIf="moreSearchToLoad && !noSearchResults">
+      <div class="col-xs-12 load-more-container">
+        <button id="btn-load-more" class="btn-base load-more" (click)="loadMoreSearchItems()" (keyup.enter)="loadMoreSearchItems()">
+          {{ 'loadMoreBtn' | translate }}
+        </button>
+      </div>
+    </div>
+    <!-- /tile container -->
+  </div>
+  <p class="msg-disclaimer p-l-15" *ngIf="showTaxDisclaimer">* {{ 'taxFeeDisclaimer' | translate }}</p>
+</div>
+
+<div class="loading-spinner" [ngClass]="{ 'fadeOut' : !contentLoading }">
+  <img src="assets/images/loading-icon-blue.gif" alt="{{ 'loadingAlt' | translate }}" role="alert">
+</div>

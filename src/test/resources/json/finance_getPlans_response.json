@@ -1,0 +1,60 @@
+{
+    "financeOptions": [
+        {
+            "varId": "AmexAU",
+            "programId": "b2s_qa_only",
+            "installment": 12,
+            "installmentPeriod": "month",
+            "messageCode": "finance.month.12.text",
+            "orderBy": 1,
+            "currency": "AUD",
+            "installmentAmount": 102.78,
+            "establishmentFeeType": "percentage",
+            "establishmentFeeRate": 4,
+            "establishmentFeeAmt": 49.33,
+            "active": true
+        },
+        {
+            "varId": "AmexAU",
+            "programId": "b2s_qa_only",
+            "installment": 9,
+            "installmentPeriod": "month",
+            "messageCode": "finance.month.9.text",
+            "orderBy": 2,
+            "currency": "AUD",
+            "installmentAmount": 137.05,
+            "establishmentFeeType": "percentage",
+            "establishmentFeeRate": 3,
+            "establishmentFeeAmt": 37,
+            "active": true
+        },
+        {
+            "varId": "AmexAU",
+            "programId": "b2s_qa_only",
+            "installment": 6,
+            "installmentPeriod": "month",
+            "messageCode": "finance.month.6.text",
+            "orderBy": 3,
+            "currency": "AUD",
+            "installmentAmount": 205.57,
+            "establishmentFeeType": "percentage",
+            "establishmentFeeRate": 2,
+            "establishmentFeeAmt": 24.66,
+            "active": true
+        },
+        {
+            "varId": "AmexAU",
+            "programId": "b2s_qa_only",
+            "installment": 3,
+            "installmentPeriod": "month",
+            "messageCode": "finance.month.3.text",
+            "orderBy": 4,
+            "currency": "AUD",
+            "installmentAmount": 411.15,
+            "establishmentFeeType": "percentage",
+            "establishmentFeeRate": 1,
+            "establishmentFeeAmt": 12.33,
+            "active": true
+        }
+    ]
+}

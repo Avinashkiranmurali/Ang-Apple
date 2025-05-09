@@ -1,0 +1,184 @@
+<form #splitPaymentsForm="ngForm" class="payment-module">
+
+  <section [ngSwitch]="isDesktop || isTablet">
+
+    <!-- mobile to tablet view -->
+    <div class="contain" *ngSwitchCase="false">
+      <div class="hero-container">
+        <h2 class="title-header">{{ 'paymentPageHeading' | translate }}</h2>
+        <p class="title-desc" (click)="toggleOrderSummary($event)"
+           [ngClass]="{ 'show-order-summary' : (displayOrderSummOnMobile && isUnbundled), 'title-desc-active': isUnbundled }"
+           [innerHTML]="'paymentPageDescription' | translate: translateParams">
+        </p>
+      </div>
+
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-split-option></app-split-option>
+
+            <ng-container *ngIf="state.selections.payment?.splitPayOption && state.selections.payment?.splitPayOption.subView && state.selections.payment?.splitPayOption.subView.name === 'useCustomPoints'">
+              <ng-container *ngTemplateOutlet="pointsEntryComponent"></ng-container>
+            </ng-container>
+
+            <app-order-summary
+              *ngIf="state.cart && isUnbundled"
+              [hidden]="!displayOrderSummOnMobile"
+              [paySumExt]="''"
+              [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+              [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+              [totals]="state.cart.displayCartTotal.price"
+              [payFrequency]="payFrequency"
+              [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+              [totalFees]="state.cart.displayCartTotal.totalFees"
+              [displayOrderSummOnMobile]="displayOrderSummOnMobile"
+              (displayOrderSummary)="toggleOrderSummary($event)">
+            </app-order-summary>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half"></div>
+          <div class="bottom-half">
+            <div class="content-container">
+              <app-payment-summary *ngIf="state"
+                role="region"
+                aria-live="polite"
+                [state]="state"
+                heading="paymentSummaryComponentHeading"
+                pointLabel="pointLabel"
+                template="{{ (state.selections.payment?.paySummaryTemplate) ? state.selections.payment.paySummaryTemplate : '' }}"
+                subtitle="{{ state.selections.payment?.paySummarySubtitle }}">
+              </app-payment-summary>
+              <ng-container *ngTemplateOutlet="buttonComponent"></ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- default all desktop view -->
+    <div class="contain" *ngSwitchDefault>
+      <div class="hero-container">
+        <h2 class="title-header">{{ 'paymentPageHeading' | translate }}</h2>
+        <p class="title-desc" [innerHTML]="'paymentPageDescription' | translate: translateParams"></p>
+      </div>
+
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-split-option></app-split-option>
+            <div role="alert" aria-live="assertive" class="hideFromDOM">{{ selectedPaymentType }}</div>
+            <ng-container *ngIf="state.selections && state.selections.payment && state.selections.payment.splitPayOption && state.selections.payment.splitPayOption.subView && state.selections.payment.splitPayOption.subView.name === 'useCustomPoints'">
+              <ng-container *ngTemplateOutlet="pointsEntryComponent"></ng-container>
+            </ng-container>
+            <ng-container *ngTemplateOutlet="buttonComponent"></ng-container>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half" *ngIf="isUnbundled">
+            <app-order-summary
+              *ngIf="state.cart"
+              [paySumExt]="''"
+              [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+              [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+              [totals]="state.cart.displayCartTotal.price"
+              [payFrequency]="payFrequency"
+              [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+              [totalFees]="state.cart.displayCartTotal.totalFees">
+            </app-order-summary>
+          </div>
+          <div class="bottom-half" [ngClass]="{ 'bottom-half-shift-to-top': !isUnbundled }">
+            <app-payment-summary *ngIf="state"
+              role="region"
+              aria-live="polite"
+              [splitPayOptionChangeEvent]="state.selections.payment?.splitPayOption ? state.selections.payment.splitPayOption : {}"
+              [pointsToUseChangeEvent] = "pointsToUse ? pointsToUse : 0"
+              [state]="state"
+              heading="paymentSummaryComponentHeading"
+              pointLabel="pointLabel"
+              template="{{ (state.selections.payment?.paySummaryTemplate) ? state.selections.payment.paySummaryTemplate : '' }}"
+              subtitle="{{ (state.selections.payment?.paySummarySubtitle) ? state.selections.payment.paySummarySubtitle  : 'paymentSummarySubtitleDefault' }}">
+            </app-payment-summary>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <ng-template #buttonComponent>
+      <div class="button-component">
+        <div class="button-container-flex buttons-full-width">
+          <button
+            *ngIf="state.selections && state.selections.payment?.splitPayOption"
+            [disabled]="!state.selections.payment.splitPayOption.isValid"
+            class="btn-base blue-btn"
+            name="nextStep"
+            [ngClass]="{ 'button-disabled': !splitPaymentsForm.form.valid }"
+            [innerHTML]="nextBtnMsg()"
+            (click)="submitPaymentDetails()">
+          </button>
+          <button
+            class="btn-base cancel"
+            [class.cta-link-type]="state.selections && state.selections.payment?.splitPayOption"
+            name="backBtn"
+            [innerHTML]="'backToPaymentOptions' | translate"
+            (click)="backToPaymentPage()">
+          </button>
+        </div>
+      </div>
+    </ng-template>
+
+    <ng-template #pointsEntryComponent>
+      <div class="point-entry-component">
+        <label for="pointsToUse" class="point-entry"
+         [ngClass]="{ 'error':pointsToUseField.errors
+           && (pointsToUseField.errors.pattern
+           || pointsToUseField.errors.min
+           || pointsToUseField.errors.max
+           || pointsToUseField.errors.required
+           || pointsToUseField.errors.number) }">
+          <span class="point-entry-desc" [innerHTML]="'split-text-minmax-msg' | translate: translateParamsWithTitleCase"></span>
+          <input
+            type="number"
+            name="customPointsToUse"
+            required
+            id="pointsToUse"
+            [(ngModel)]="isPointsDecimalPricingTemplate ? pointsToUse / 100 : pointsToUse"
+            (ngModelChange)="splitPointsChanged($event)"
+            [pattern]="isPointsDecimalPricingTemplate ? decimalPointsEntryPattern : pointsEntryPattern"
+            #pointsToUseField="ngModel"
+            appMinValidator
+            [min]="isPointsDecimalPricingTemplate ? state.redemptionPaymentLimit.useMinPoints.points / 100 : state.redemptionPaymentLimit.useMinPoints.points"
+            [attr.min]="isPointsDecimalPricingTemplate ? state.redemptionPaymentLimit.useMinPoints.points / 100 : state.redemptionPaymentLimit.useMinPoints.points"
+            appMaxValidator
+            [max]="isPointsDecimalPricingTemplate ? state.redemptionPaymentLimit.useMaxPoints.points / 100 : state.redemptionPaymentLimit.useMaxPoints.points"
+            [attr.max]="isPointsDecimalPricingTemplate ? state.redemptionPaymentLimit.useMaxPoints.points / 100 : state.redemptionPaymentLimit.useMaxPoints.points"
+            [ngClass]="{ 'point-entry-field':pointsToUseField.valid }"
+            [attr.aria-describedby]="!pointsToUseField.valid ? 'pointsToUse_msg' : 'pointsToUse'">
+          <label class="label-display">{{ pointsToUse | currencyFormat: config.pricingTemplate : user.locale }}</label>
+        </label>
+        <div class="error-wrapper" id="pointsToUse_msg" *ngIf="pointsToUseField.errors && (pointsToUseField.errors.pattern || pointsToUseField.errors.min || pointsToUseField.errors.max || pointsToUseField.errors.required || pointsToUseField.errors.number)">
+          <span role="alert" aria-live="polite" class="error-text" *ngIf="(!pointsToUseField.errors.max && !pointsToUseField.errors.min) && (pointsToUseField.errors.required || pointsToUseField.errors.pattern || pointsToUseField.errors.number)" [innerHTML]="'invalidEntry' | translate"></span>
+          <span role="alert" aria-live="polite" class="error-text" *ngIf="pointsToUseField.errors.max" [innerHTML]="'maximumExceeded' | translate: translateParamsWithTitleCase"></span>
+          <span role="alert" aria-live="polite" class="error-text" *ngIf="pointsToUseField.errors.min" [innerHTML]="'minimumExceeded' | translate: translateParamsWithTitleCase"></span>
+        </div>
+
+        <label for="cashToUse">
+          <span class="point-entry-desc">{{ 'additionalPaymentDue' | translate }}</span>
+          <input type="text" id="cashToUse" name="customPaymentToUse"
+            [value]="state.selections.payment.splitPayOption.cashToUse"
+            [(ngModel)]="state.selections.payment.splitPayOption.cashToUse"
+            disabled="true"
+            appDisplayFormat
+            [displayFormat]="'currency'"
+            [config]="config"
+            *ngIf="state.selections.payment.splitPayOption.isValid">
+          <input type="text" id="cashToUse" name="customPaymentToUse"
+            value="-----"
+            disabled="true"
+            *ngIf="!state.selections.payment?.splitPayOption.isValid">
+        </label>
+      </div>
+    </ng-template>
+
+  </section>
+</form>

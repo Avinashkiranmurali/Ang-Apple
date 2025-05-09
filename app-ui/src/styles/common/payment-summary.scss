@@ -1,0 +1,233 @@
+@import "~styles/mixins";
+@import "~styles/typography";
+
+.rs-summary {
+  padding-top: rem(25px);
+
+  @include for-phablet-only {
+    padding-top: rem(35px);
+  }
+
+  .rs-summary-label-color {
+    color: #666666;
+  }
+
+  .rs-summary-content {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: rem(6px);
+
+    &.cart-total {
+      label {
+        margin-bottom: 0px;
+      }
+    }
+
+    @include for-mobile {
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
+    }
+
+    &.cart-earn-points-content {
+      .cart-earn-points-label {
+        label {
+          font-weight: $fw-regular;
+          font-size: rem(16px);
+        }
+      }
+    }
+
+    &.insufficient-balance {
+      .rs-summary-label {
+        color: #CC0000;
+        font-weight: 600;
+        line-height: rem(21px);
+      }
+    }
+  }
+
+  .insufficient-balance-content {
+    text-align: right;
+    margin-top: rem(16px);
+
+    .rs-summary-label {
+      color: #CC0000;
+      font-size: rem(21px);
+      line-height: rem(31px);
+      font-weight: 600;
+    }
+
+    p {
+      font-size: rem(18px);
+      line-height: rem(22px);
+      color: #333333;
+    }
+
+    @include for-mobile {
+      text-align: left;
+    }
+  }
+
+  .rs-summary-total {
+    margin-top: rem(16px);
+    padding-top: rem(10px);
+
+    &.points-only-total {
+      padding-top: rem(16px);
+      margin-bottom: 0;
+      margin-top: rem(20px);
+
+      .rs-summary-content {
+        width: 100%;
+      }
+    }
+  }
+
+  .rs-summary-break-down {
+    margin-bottom: rem(16px);
+    padding-bottom: rem(6px);
+  }
+
+  .rs-summary-label {
+    font-size: rem(17px);
+    line-height: rem(20px);
+    font-weight: $fw-regular;
+    letter-spacing: rem(0px);
+    font-family: $font-base;
+    color: #111111;
+
+    &.points-used {
+      line-height: rem(20px);
+    }
+
+    .rs-summary-instructions {
+      display: flex;
+      @include for-mobile {
+        flex-direction: column;
+        a.tips {
+          padding-left: 0 !important;
+        }
+      }
+
+      a.tips {
+        padding-left: rem(5px);
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .rs-summary-value {
+    font-size: rem(17px);
+    line-height: rem(20px);
+    font-weight: $font-weight-semi-bold;
+    letter-spacing: rem(0px);
+    font-family: $font-base;
+    color: #111111;
+    text-align: right;
+
+    .rs-summary-instructions {
+      display: flex;
+      @include for-mobile {
+        flex-direction: column;
+        a.tips {
+          padding-left: 0 !important;
+        }
+      }
+
+      a.tips {
+        padding-left: rem(5px);
+        color: #333;
+        text-decoration: underline;
+      }
+    }
+
+    &.split-payment-fieldset {
+      @include for-mobile {
+        margin-left: rem(0px);
+        padding-left: rem(0px);
+        width: 100% !important;;
+      }
+    }
+
+    ::ng-deep {
+      p.local-currency {
+        margin-bottom: 0;
+        font-weight: 500;
+      }
+    }
+
+    &.rs-big-text {
+      color: #111111;
+
+      ::ng-deep {
+        p.local-currency, .rs-sub-text {
+          font-size: rem(18px) !important;
+          font-weight: $fw-regular !important;
+        }
+      }
+    }
+
+    ::ng-deep {
+      .pricing-module {
+        .price-content {
+          margin-top: 0;
+          padding-bottom: 0;
+
+          .price-amount {
+            font-weight: 600;
+            font-size: rem(17px);
+            line-height: rem(20px);
+          }
+
+          .rs-summary-label {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .rs-bold-label {
+    font-weight: bold;
+  }
+
+  .rs-big-text {
+    font-size: rem(24px);
+    line-height: rem(29px);
+    font-weight: $font-weight-semi-bold;
+    font-family: $font-base;
+    letter-spacing: rem(0px);
+    color: #111111;
+
+    .cart-earn-points-value {
+      font-size: rem(16px);
+      font-weight: $fw-regular;
+    }
+  }
+
+  .cart-earn-points-value {
+    .total-payment-amount {
+      font-size: rem(16px);
+    }
+  }
+
+  .flex-end {
+    align-self: flex-end;
+    line-height: 1.4;
+  }
+
+  button.rs-summary-label {
+    border: none;
+    background: none;
+    color: #0070C9;
+    text-align: right;
+
+    &:disabled {
+      color: #B8DCF3;
+    }
+  }
+
+}

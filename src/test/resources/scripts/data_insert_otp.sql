@@ -1,0 +1,6 @@
+INSERT INTO otp (id,email_id,otp,created_date,used,usage_date) VALUES (175,'abc@bakkt.com','a1b2c3d4e5',{ts '2019-08-16 04:08:13.740000'},'Y',{ts '2019-08-16 04:08:29.123000'});
+INSERT INTO otp (id,email_id,otp,created_date,used,usage_date) VALUES (176,'def@bakkt.com','$2a$11$GqUzJ40FU6SIhRv2CTQHCOEUp0AyK7ztBfj5xXP5y/CSeNf6ECQMe',{ts '2018-08-29 07:38:19.420000'},'N',null);
+INSERT INTO otp (id,email_id,otp,created_date,used,usage_date) VALUES (177,'ghi@bakkt.com','$2a$11$2TKKtqwprce2bQmsWDqttOLrm4FyNroJgDo12P05CRKdZSE8TwrPy',{ts '2017-01-30 16:54:47.993000'},'Y',{ts '2017-01-30 16:55:11.207000'});
+INSERT INTO otp (id,email_id,otp,created_date,used,usage_date) VALUES (178,'jkl.test@outlook.com',
+'$2a$11$8i6tRuwuabGQ4oWzMNDKbewOS4YbdlNymZb8uE8ciYy2/VFPcYPr6',{ts '2018-03-22 11:20:32.713000'},'Y',{ts '2018-03-22 11:20:44.293000'});
+INSERT INTO otp (id,email_id,otp,created_date,used,usage_date) VALUES (179,'mno@bakkt.com','$2a$11$IRtaQ9VH7iEQBfwvndJIq.w.ltrb/pl36INGsPYe8ZJwgWPpAO5V6',{ts '2019-03-21 15:45:03.603000'},'Y',{ts '2019-03-21 15:45:18.827000'});

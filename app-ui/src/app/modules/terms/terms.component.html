@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="content-container user-info-content">
+    <div class="info-title">
+       <h3> {{ 'termsTitleTxt' | translate }} </h3>
+    </div>
+    <div class="horizontal-split">
+      <p class="use-txt">{{ 'termsLinkUseTxt' | translate }}</p>
+    </div>
+    <div class="browse-content" terms-links >
+      <div class="left-nav" >
+        <h3>{{ 'termsBrowseTxt' | translate }}</h3>
+        <ul class="browselinks" >
+          <li  *ngFor="let elements of termsElements">
+            <div *ngIf="elements && 'terms-'+elements.id | translate">
+              <a [routerLink]="['/store', 'terms']" [fragment]="elements.link" class="link">{{ 'terms-'+elements.id | translate }}</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="right-content">
+        <div class="infoDocument" *ngFor="let elements of termsElements">
+          <ng-container [ngSwitch]="elements.template">
+            <div *ngSwitchCase="'terms-content-container.htm'">
+              <div>
+                 <h2 [attr.id]="elements.link" class="content-title" > {{ 'terms-'+elements.id | translate }}</h2>
+              </div>
+              <div class="term-content" ng-class="elements.class">
+                <div [innerHTML]="'terms-content-'+elements.id | translate"></div>
+              </div>
+            </div>
+
+            <div *ngSwitchCase="'inter-terms-content-container.htm'">
+              <div>
+                <h2 [attr.id]="elements.link" class="content-title" > {{ 'terms-'+elements.id | translate }}</h2>
+              </div>
+              <div class="term-content" ng-class="elements.class">
+                 <div [innerHTML]="'terms-content-'+elements.id | translate: translateParams" class=""></div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

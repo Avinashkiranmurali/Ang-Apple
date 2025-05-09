@@ -1,0 +1,5 @@
+<div class="msg-container msg-container-position">
+    <div class="msg">
+        <div class="msg-content" *ngIf="publicMessages && publicMessages.maintenanceMessage" [innerHTML]="publicMessages.maintenanceMessage | safe"></div>
+    </div>
+</div>

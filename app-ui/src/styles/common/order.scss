@@ -1,0 +1,140 @@
+@import "~styles/mixins";
+
+.order-addresses {
+  display: flex;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  @include for-mobile-to-tablet {
+    flex-direction: column;
+  }
+
+  div {
+    list-style: none;
+    padding-right: rem(60px);
+
+    > div:not(.contact-info) div {
+      @include for-mobile-to-tablet {
+        padding: 0 0 rem(30px) 0;
+      }
+    }
+
+    h3, p {
+      color: #333;
+    }
+
+    h3 {
+      font-size: rem(16px);
+      font-weight: $fw-medium;
+      line-height: rem(19px);
+      margin-top: rem(10px);
+      margin-bottom: rem(15px);
+    }
+
+    p {
+      font-size: $s-reg;
+      line-height: rem(17px);
+      margin-bottom: rem(4px);
+    }
+
+    .selected-payment {
+      font-weight: $fw-medium;
+      margin-bottom: rem(5px);
+    }
+
+    .contact-info {
+      padding-top: rem(10px);
+    }
+
+    .edit-shipping-address {
+      padding-top: rem(12px);
+
+      @include for-mobile-to-tablet {
+        padding-bottom: rem(30px);
+      }
+
+      .orchid {
+        color: #D6107E;
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+      @include for-mobile-to-tablet {
+        padding: 0;
+      }
+    }
+  }
+
+  .capitalize {
+    text-transform: capitalize;
+  }
+
+  a {
+    text-decoration: underline;
+    font-weight: 500;
+    line-height: rem(20px);
+  }
+
+  .order-payment-aggrement {
+    a {
+      display: inline-block;
+      padding-top: rem(7px);
+      font-weight: normal;
+    }
+  }
+}
+
+.order-info-details {
+  overflow: hidden;
+  padding: rem(50px) 0 rem(65px);
+  @include for-mobile-to-tablet {
+    padding: rem(35px) 0 rem(65px);
+  }
+
+  .order-details-wrapper {
+    display: table;
+    width: 100%;
+    @include for-mobile-to-tablet {
+      display: block;
+    }
+  }
+
+  .cart-totals-breakdown {
+    border-top: none;
+    border-left: rem(1px) solid #e6e6e6;
+    clear: none;
+    margin: 0;
+    padding: rem(20px) 0 0 0;
+    float: none;
+    display: table-cell;
+    vertical-align: top;
+    width: 50%;
+    @include for-mobile-to-tablet {
+      display: block;
+      border: none;
+      border-top: rem(1px) solid #e6e6e6;
+      width: 100%;
+      padding-top: rem(20px);
+      table {
+        margin: rem(15px) 0 rem(10px);
+      }
+    }
+
+    .cart-items {
+      width: 100%;
+
+      .cart-product-image {
+        width: 15%;
+      }
+
+      .cart-product-details {
+        width: 84%;
+      }
+    }
+
+    &.no-border {
+      border: none;
+    }
+  }
+}

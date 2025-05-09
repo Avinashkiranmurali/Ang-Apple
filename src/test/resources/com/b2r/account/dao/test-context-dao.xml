@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="byName">
+
+    <import resource="classpath:/com/b2s/rewards/dao/hibernate-test-context.xml"/>
+
+    <bean id="myOrderDAO" class="com.b2r.account.dao.MyOrderDAOImpl" >
+        <property name="myOrderDetailQuery"
+                  value="select o.order_id, o.order_date, o.firstname, o.lastname, o.addr1, o.addr2, o.city, o.state, o.zip, o.country, o.email, o.phone, ol.image_url,ol.supplier_id,ol.item_id, ol.name, ol.order_line_points, ol.quantity, olsn.shipping_method, olsn.shipment_date, olsn.tracking_number, os.desc
+                from orders o left join order_line ol on o.order_id=ol.order_id left join order_line_shipment_notification olsn on ol.order_id = olsn.b2s_order_id and ol.line_num = olsn.line_number left join order_status os on ol.order_status=os.status_id
+                where o.order_id=?" />
+    </bean>
+
+    <bean id="pricingModelConfigurationDao" class="com.b2s.rewards.apple.dao.PricingModelConfigurationDaoImpl"/>
+
+</beans>

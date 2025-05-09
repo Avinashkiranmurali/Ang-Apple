@@ -1,0 +1,20 @@
+@import "~styles/mixins";
+
+.login-error-container {
+  color: #666666;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: rem(20px);
+  height: 100vh;
+
+  .error-msg {
+    margin-bottom: rem(20px);
+
+    p {
+      text-align: center;
+      margin: 0;
+      font-size: rem(20px);
+    }
+  }
+}

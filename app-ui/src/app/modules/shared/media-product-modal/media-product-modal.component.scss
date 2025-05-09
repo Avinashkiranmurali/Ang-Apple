@@ -1,0 +1,110 @@
+@import "~styles/mixins";
+
+.media-product-container {
+  .modal-body {
+    background: transparent;
+
+    .product-body-container {
+      background: transparent;
+      color: #333333;
+      font-weight: $font-weight-regular;
+      font-size: rem(18px);
+      letter-spacing: rem(0px);
+      opacity: 1;
+      padding: 0 rem(81px) 0 rem(81px);
+      @include for-mobile-to-tablet {
+          padding: 0 rem(26px) 0 rem(25px);
+      }
+
+      ::ng-deep {
+        .logo-container {
+          font-weight: $font-weight-semi-bold;
+          padding-bottom: rem(73px);
+          @include for-mobile {
+            padding-top: rem(31px);
+            padding-bottom: rem(43px);
+          }
+
+          .product-logo {
+            width: rem(100px);
+            height: rem(100px);
+            margin: 0 auto rem(16px);
+          }
+
+          .product-title {
+            font-size: rem(34px);
+            font-weight: $font-weight-semi-bold;;
+            line-height: rem(40px);
+            margin: 0 0 0 0;
+
+          }
+
+          .product-subscription-period {
+            padding-top: rem(3px);
+            font-size: rem(21px);
+            font-weight: $font-weight-semi-bold;
+            line-height: rem(25px);
+            margin: 0 0 0 0;
+          }
+        }
+
+        .product-description {
+          line-height: rem(22px);
+        }
+
+        .product-features {
+          list-style-position: outside;
+          padding: rem(23px) 0 rem(42px) rem(18px);
+
+          @include for-mobile {
+            padding-top: rem(22px);
+          }
+
+          li {
+            color: #333333;
+            line-height: rem(36px);
+            @include for-mobile {
+              line-height: rem(22px);
+              padding-bottom: rem(22px);
+            }
+          }
+        }
+
+        .product-registration-info {
+          font-weight: $font-weight-semi-bold;
+          line-height: rem(22px);
+        }
+
+        .product-new-subscription-info {
+          color: #666666;
+          font-size: rem(14px);
+          padding-top: rem(23px);
+          @include for-mobile {
+            line-height: rem(17px);
+          }
+        }
+      }
+    }
+  }
+
+  .product-footer-container {
+    padding: rem(43px) rem(81px) rem(46px) rem(82px);
+    margin: 0;
+
+    @include for-mobile {
+      padding-bottom: rem(100px);
+    }
+
+    .btn-container {
+      .pill-shaped-cta {
+        min-width: rem(62px);
+        height: rem(36px);
+      }
+      .pill-shaped-cta a:focus {
+        -moz-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        -webkit-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+      }
+    }
+  }
+}

@@ -1,0 +1,216 @@
+@import "mixins";
+@import "typography";
+
+/* /-------- DEFAULT FOOTER ---------/ */
+
+#default-footer {
+
+  .base-foot {
+    max-width: rem(1010px);
+    margin: 0 auto;
+    padding: 0 rem(15px) rem(40px);
+
+    .base-link {
+      .footer-to-top {
+        .to-top-text {
+          text-decoration-line: underline;
+        }
+
+        .to-top-icon {
+          padding-left: rem(10px);
+        }
+
+        .to-top-icon:after {
+          content: "";
+          display: inline-block;
+          background: url('../assets/images/up-caret.png') 0 0 no-repeat;
+          background-size: contain;
+          vertical-align: middle;
+          width: rem(10px);
+          height: rem(5px);
+        }
+      }
+      .icon-LiveChat {
+        display: inline-block;
+        padding-right: rem(3px);
+      }
+      &.extended-disclaimer {
+        line-height: rem(17px);
+        letter-spacing: 0;
+        font-weight: $font-weight-regular;
+        a:link {
+          text-decoration: underline;
+        }
+        ol {
+          margin-left: rem(17px);
+          padding-left: 0;
+          li {
+            list-style-type:decimal;
+            padding-bottom: rem(15px);
+          }
+        }
+      }
+    }
+    .upper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+      .links {
+        .separator {
+          border-right: rem(1px) solid;
+          margin: 0 rem(10px);
+          padding: 0;
+        }
+      }
+      p:first-child {
+        flex: 1;
+      }
+    }
+    .inner {
+      display: flex;
+      border-top-style: solid;
+      border-top-width: rem(0.25px);
+      border-top-color: inherit;
+      padding-top: rem(10px);
+
+      @include for-mobile-to-tablet {
+        padding-top: rem(8px);
+      }
+
+      .base-link {
+        color: inherit;
+        line-height: rem(17px);
+        font-weight: 400;
+        margin-bottom: rem(22px);
+
+        a {
+          text-decoration: none;
+        }
+      }
+
+      .copy-right-to-top-section {
+        display: flex;
+        width: 100%;
+        justify-content: flex-end;
+
+        .copy-right {
+          flex-grow: 1;
+        }
+
+        .to-top {
+          display: flex;
+          justify-content: flex-end;
+          min-width: rem(100px);
+
+          &.base-link {
+            margin: 0;
+          }
+        }
+
+      }
+
+      #tool-totop {
+        span {
+          vertical-align: middle;
+        }
+        img {
+          margin-left: rem(5px);
+        }
+      }
+    }
+    &.upper-section {
+      padding-top: rem(16px);
+      padding-bottom: rem(16px);
+      font-size: rem(14px);
+      font-weight: 400;
+      display: flex;
+
+      .base-link {
+        margin: 0;
+      }
+    }
+  }
+}
+
+/** ----- END of DEFAULT ----- **/
+
+.wrapper-footer {
+  clear: both;
+  font-size: rem(14px);
+  & * {
+    color: inherit;
+    font-size: inherit;
+  }
+
+  & a {
+    &:hover, &:active, &:focus {
+      color: inherit;
+    }
+  }
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .base-link{
+    > ul {
+      list-style: none;
+      max-width: rem(1010px);
+      padding: 0 rem(15px) 0 0;
+      margin: 0 auto;
+      color: inherit;
+      border-right-color: inherit;
+      li {
+        padding-right: rem(10px);
+        margin-right: rem(10px);
+        border-right-width: rem(1.3px);
+        border-right-style: solid;
+        border-right-color: inherit;
+        color: inherit;
+        display: inline-block;
+        line-height: rem(15px);
+        &:first-child {
+          padding-left: 0;
+        }
+        &:last-child{
+          border-right: none;
+          margin-right: 0;
+          padding-right: 0;
+        }
+        a {
+          text-decoration: underline;
+          color: inherit;
+        }
+      }
+    }
+  }
+  .footerDisclaimer {
+    ul {
+      li {
+        list-style: disc;
+        margin-left: rem(13px);
+        font-size: rem(14px);
+        line-height: rem(17px);
+        font-weight: 400;
+        color: inherit;
+      }
+    }
+    p {
+      color: inherit;
+    }
+  }
+}
+
+@include for-small-mobile {
+  .wrapper-footer {
+    .base-link {
+      > ul {
+        li {
+          margin-bottom: rem(5px);
+        }
+      }
+    }
+  }
+}

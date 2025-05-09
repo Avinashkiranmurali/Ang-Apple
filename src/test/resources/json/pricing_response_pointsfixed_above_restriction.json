@@ -1,0 +1,587 @@
+{
+  "products":[
+    {
+      "index":124,
+      "merchant":"Apple",
+      "sku":"MPTL2LL/A",
+      "quantity":1,
+      "appliedPromotions":{
+
+      },
+      "prices":{
+        "basePrice":{
+          "unitPoints":26707,
+          "totalPoints":26707,
+          "unpromotedUnitPoints":26707,
+          "unpromotedTotalPoints":26707,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 219.00",
+              "totalPrice":"CAD 219.00",
+              "unpromotedUnitPrice":"CAD 219.00",
+              "unpromotedTotalPrice":"CAD 219.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 26707",
+              "totalPrice":"PNT 26707",
+              "unpromotedUnitPrice":"PNT 26707",
+              "unpromotedTotalPrice":"PNT 26707"
+            }
+          }
+        },
+        "supplierFees":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "bridge2Tax":{
+          "unitPoints":3472,
+          "totalPoints":3472,
+          "unpromotedUnitPoints":3472,
+          "unpromotedTotalPoints":3472,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 28.47",
+              "totalPrice":"CAD 28.47",
+              "unpromotedUnitPrice":"CAD 28.47",
+              "unpromotedTotalPrice":"CAD 28.47"
+            },
+            "PNT":{
+              "unitPrice":"PNT 3472",
+              "totalPrice":"PNT 3472",
+              "unpromotedUnitPrice":"PNT 3472",
+              "unpromotedTotalPrice":"PNT 3472"
+            }
+          }
+        },
+        "varPrice":{
+          "unitPoints":31247,
+          "totalPoints":31247,
+          "unpromotedUnitPoints":31247,
+          "unpromotedTotalPoints":31247,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 256.23",
+              "totalPrice":"CAD 256.23",
+              "unpromotedUnitPrice":"CAD 256.23",
+              "unpromotedTotalPrice":"CAD 256.23"
+            },
+            "PNT":{
+              "unitPrice":"PNT 31247",
+              "totalPrice":"PNT 31247",
+              "unpromotedUnitPrice":"PNT 31247",
+              "unpromotedTotalPrice":"PNT 31247"
+            }
+          }
+        },
+        "hstTax":{
+          "unitPoints":3472,
+          "totalPoints":3472,
+          "unpromotedUnitPoints":3472,
+          "unpromotedTotalPoints":3472,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 28.47",
+              "totalPrice":"CAD 28.47",
+              "unpromotedUnitPrice":"CAD 28.47",
+              "unpromotedTotalPrice":"CAD 28.47"
+            },
+            "PNT":{
+              "unitPrice":"PNT 3472",
+              "totalPrice":"PNT 3472",
+              "unpromotedUnitPrice":"PNT 3472",
+              "unpromotedTotalPrice":"PNT 3472"
+            }
+          }
+        },
+        "gstTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "pstTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "ehfFee":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "cityTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "cityDistrictTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "countyTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "countyDistrictTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "stateTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "bridge2ItemMarkup":{
+          "unitPoints":1068,
+          "totalPoints":1068,
+          "unpromotedUnitPoints":1068,
+          "unpromotedTotalPoints":1068,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 8.76",
+              "totalPrice":"CAD 8.76",
+              "unpromotedUnitPrice":"CAD 8.76",
+              "unpromotedTotalPrice":"CAD 8.76"
+            },
+            "PNT":{
+              "unitPrice":"PNT 1068",
+              "totalPrice":"PNT 1068",
+              "unpromotedUnitPrice":"PNT 1068",
+              "unpromotedTotalPrice":"PNT 1068"
+            }
+          }
+        },
+        "varItemMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "bridge2ShippingMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "varShippingMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayItemPrice":{
+          "unitPoints":27775,
+          "totalPoints":27775,
+          "unpromotedUnitPoints":27775,
+          "unpromotedTotalPoints":27775,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 227.76",
+              "totalPrice":"CAD 227.76",
+              "unpromotedUnitPrice":"CAD 227.76",
+              "unpromotedTotalPrice":"CAD 227.76"
+            },
+            "PNT":{
+              "unitPrice":"PNT 27775",
+              "totalPrice":"PNT 27775",
+              "unpromotedUnitPrice":"PNT 27775",
+              "unpromotedTotalPrice":"PNT 27775"
+            }
+          }
+        },
+        "displayShippingCost":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayFees":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayPrice":{
+          "unitPoints":31247,
+          "totalPoints":31247,
+          "unpromotedUnitPoints":31247,
+          "unpromotedTotalPoints":31247,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 256.23",
+              "totalPrice":"CAD 256.23",
+              "unpromotedUnitPrice":"CAD 256.23",
+              "unpromotedTotalPrice":"CAD 256.23"
+            },
+            "PNT":{
+              "unitPrice":"PNT 31247",
+              "totalPrice":"PNT 31247",
+              "unpromotedUnitPrice":"PNT 31247",
+              "unpromotedTotalPrice":"PNT 31247"
+            }
+          }
+        },
+        "displayTaxes":{
+          "unitPoints":3472,
+          "totalPoints":3472,
+          "unpromotedUnitPoints":3472,
+          "unpromotedTotalPoints":3472,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 28.47",
+              "totalPrice":"CAD 28.47",
+              "unpromotedUnitPrice":"CAD 28.47",
+              "unpromotedTotalPrice":"CAD 28.47"
+            },
+            "PNT":{
+              "unitPrice":"PNT 3472",
+              "totalPrice":"PNT 3472",
+              "unpromotedUnitPrice":"PNT 3472",
+              "unpromotedTotalPrice":"PNT 3472"
+            }
+          }
+        },
+        "bridge2Fee":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "CAD":{
+              "unitPrice":"CAD 0.00",
+              "totalPrice":"CAD 0.00",
+              "unpromotedUnitPrice":"CAD 0.00",
+              "unpromotedTotalPrice":"CAD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        }
+      },
+      "conversionRates":{
+        "costPerPoint":"CAD 0.00820000",
+        "fxRates":{
+          "CAD":{
+            "rate":1,
+            "inverseRate":1
+          },
+          "PNT":{
+            "rate":121.9512195121951,
+            "inverseRate":0.00820000
+          }
+        }
+      },
+      "pricingParameters":{
+        "roundingIncrement":1,
+        "b2sMargin":0.040000000,
+        "varMargin":0E-9,
+        "retailUnitBasePrice":"CAD 219.00",
+        "retailUnitTaxPrice":"CAD 0.00"
+      }
+    }
+  ],
+  "errors":[
+
+  ],
+  "prices":{
+    "displayShippingCost":{
+      "totalPoints":0,
+      "unpromotedTotalPoints":0,
+      "currencies":{
+        "CAD":{
+          "totalPrice":"CAD 0.00",
+          "unpromotedTotalPrice":"CAD 0.00"
+        },
+        "PNT":{
+          "totalPrice":"PNT 0",
+          "unpromotedTotalPrice":"PNT 0"
+        }
+      }
+    },
+    "displayTaxes":{
+      "totalPoints":3472,
+      "unpromotedTotalPoints":3472,
+      "currencies":{
+        "CAD":{
+          "totalPrice":"CAD 28.47",
+          "unpromotedTotalPrice":"CAD 28.47"
+        },
+        "PNT":{
+          "totalPrice":"PNT 3472",
+          "unpromotedTotalPrice":"PNT 3472"
+        }
+      }
+    },
+    "displayPrice":{
+      "totalPoints":31247,
+      "unpromotedTotalPoints":31247,
+      "currencies":{
+        "CAD":{
+          "totalPrice":"CAD 256.23",
+          "unpromotedTotalPrice":"CAD 256.23"
+        },
+        "PNT":{
+          "totalPrice":"PNT 31247",
+          "unpromotedTotalPrice":"PNT 31247"
+        }
+      }
+    },
+    "displayItemPrice":{
+      "totalPoints":27775,
+      "unpromotedTotalPoints":27775,
+      "currencies":{
+        "CAD":{
+          "totalPrice":"CAD 227.76",
+          "unpromotedTotalPrice":"CAD 227.76"
+        },
+        "PNT":{
+          "totalPrice":"PNT 27775",
+          "unpromotedTotalPrice":"PNT 27775"
+        }
+      }
+    },
+    "displayFees":{
+      "totalPoints":0,
+      "unpromotedTotalPoints":0,
+      "currencies":{
+        "CAD":{
+          "totalPrice":"CAD 0.00",
+          "unpromotedTotalPrice":"CAD 0.00"
+        },
+        "PNT":{
+          "totalPrice":"PNT 0",
+          "unpromotedTotalPrice":"PNT 0"
+        }
+      }
+    }
+  },
+  "splitTenderResult":{
+    "ccBuyInAmount":"CAD 95.77",
+    "ccBuyInPoints":11247,
+    "preCCMarkupAmount":"CAD 88.68",
+    "ccB2sProfit":"CAD 7.09",
+    "ccVarProfit":"CAD 0.00",
+    "ccB2sMargin":0.0800000,
+    "ccVarMargin":0E-7,
+    "effectiveB2sMargin":0.040000000,
+    "effectiveVarMargin":0E+11,
+    "ccVarPrice":"CAD 95.77",
+    "effectiveConversionRate":0.00820000,
+    "pointPurchaseRate":0.008515384615384615,
+    "ccBuyInPointsLimit":24997,
+    "ccBuyInAmountLimit":"CAD 212.86",
+    "ccTaxAmount":"CAD 0.00"
+  }
+}

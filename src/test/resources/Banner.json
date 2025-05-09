@@ -1,0 +1,60 @@
+[
+  {
+    "template": {
+      "class": "",
+      "type": "stacks"
+    },
+    "programBanners": {
+      "program": {},
+      "multiProductBanner": {
+        "multiProductBannerList": "List"
+      },
+      "marketingBanner": {
+        "marketingBannerList": "List"
+      },
+      "productBanner": {
+        "activeProducts": "ActiveProducts"
+      }
+    },
+    "bannerTemplateObj": {
+      "additionalInfo": "AdditionalInfo",
+      "additionalInfoClass": "AdditionalInfoClass",
+      "imageUrl": "ImageUrl",
+      "mobileImageUrl": "MobileImageUrl",
+      "externalImageUrl": "ExternalImageUrl",
+      "externalMobileImageUrl": "ExternalMobileImageUrl",
+      "imageTxt": "ImageTxt",
+      "imageClass": "ImageClass",
+      "title": "Title",
+      "titleImg": "TitleImg",
+      "tagLine": "Tagline",
+      "tagLineTxtColor": "TagLineTxtColor",
+      "shortDescription": "Description",
+      "priceStartsFrom": "PriceStartsFrom",
+      "viewAllOptionsTxt": "ViewAllOptionsTxt",
+      "upgradeText": "UpgradeText",
+      "orderBy": "OrderBy",
+      "ctaClass": "CtaClass",
+      "ctaTxtColor": "CtaTxtColor",
+      "btnType": "BtnType",
+      "btnTxt": "BtnTxt",
+      "btnLink": "BtnLink",
+      "btnTxtColor": "BtnTxtColor",
+      "btnClass": "BtnClass",
+      "showBtn": "ShowBtn",
+      "template": "Template",
+      "templateClass": "TemplateClass",
+      "templateBgColor": "TemplateBgColor",
+      "templateTileBgColor": "TemplateTileBgColor",
+      "state": "State",
+      "params": "Params",
+      "active": "DisplayToggle",
+      "activeProducts": "ActiveProducts",
+      "list": "List",
+      "multiBannerSize": "MultiBannerSize",
+      "multiBannerSubTitle": "MultiBannerSubTitle",
+      "multiBannerTitle": "MultiBannerTitle"
+    },
+    "banners": []
+  }
+]

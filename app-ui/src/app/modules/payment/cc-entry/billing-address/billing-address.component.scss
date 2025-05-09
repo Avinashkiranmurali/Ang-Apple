@@ -1,0 +1,144 @@
+@import "~styles/mixins";
+@import "~styles/typography";
+
+.error-wrapper {
+  position: relative;
+  .error-text {
+    @include red-txt;
+    padding: rem(2px) rem(3px) rem(1px) rem(20px);
+
+    top: rem(156px);
+    display: inline-block;
+
+    &:before {
+      content: "\e902";
+      @include error-icon;
+      margin-top: rem(3px);
+      padding-right: .3em;
+      display: inline-block;
+      font-weight: bold;
+      font-size: rem(13px);
+    }
+  }
+}
+
+.field-row{
+  margin-bottom: rem(16px);
+  &.input-entered{
+    label{
+      font-size: rem(14px);
+      top: rem(8px);
+      color: #333;
+    }
+  }
+
+  &.error {
+    color: $error-text-color;
+
+    input {
+      background: #fef0f0;
+      border-color: $input-border-error;
+    }
+  }
+
+  input,select {
+    &:focus~label{
+      font-size: rem(14px);
+      top: rem(8px);
+      color: #333;
+    }
+  }
+  label{
+    position: absolute;
+    font-size: rem(18px);
+    line-height: 1.5;
+    font-weight: 400;
+    letter-spacing: -.01em;
+    display: block;
+    top: rem(16px);
+    padding: 0 rem(16px);
+    color: #333333;
+    -webkit-text-fill-color: #333333;
+    -webkit-transition: 0.125s ease all;
+  }
+
+}
+
+.billing-address {
+  padding-top: rem(8px);
+
+  .address-title{
+    font-size: rem(16px);
+    font-weight: 600;
+    line-height: rem(19px);
+    color: #333;
+    margin-top: 0;
+    margin-bottom: rem(14px);
+  }
+  .use-shipping-address{
+    margin-bottom: rem(14px);
+
+    label{
+      padding-left: rem(10px);
+      font-weight: 400;
+      font-size: rem(16px);
+      color: #333333;
+      margin: 0;
+    }
+  }
+  p{
+    font-size: rem(16px);
+    color: #111;
+    line-height: rem(19px);
+    font-weight: 400;
+    margin: 0;
+  }
+}
+.address-form{
+  .field-row{
+    padding: rem(1px) rem(1px) 0;
+    &.input-entered{
+      label{
+        font-size: rem(14px);
+        top: rem(8px);
+        color: #333;
+      }
+    }
+    input,select {
+      width: 100%;
+      display: block;
+      font-size: rem(18px);
+      font-weight: 400;
+      line-height: 1.23543;
+      letter-spacing: -.022em;
+      box-sizing: border-box;
+      height: rem(55px);
+      padding-top: rem(17px);
+      padding-left: rem(17px);
+      padding-right: rem(17px);
+      text-align: left;
+      border: rem(1px) solid #cccccc;
+      border-radius: rem(12px);
+    }
+    select{
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      @include dropdown-icon;
+      &:focus {
+        @include focus-border;
+      }
+    }
+    label{
+      position: absolute;
+      font-size: rem(18px);
+      line-height: rem(21px);
+      font-weight: 400;
+      letter-spacing: 0;
+      display: block;
+      top: rem(16px);
+      padding: 0 rem(17px);
+      color: #333333;
+    }
+  }
+}

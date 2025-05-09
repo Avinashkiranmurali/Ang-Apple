@@ -1,0 +1,70 @@
+// 1
+plugins {
+  id 'java'
+  id "com.github.node-gradle.node" version "1.4.0"
+}
+
+//Documentation for Node Plugin: https://github.com/node-gradle/gradle-node-plugin
+
+// 2
+node {
+  // Version of node to use.
+  version = '16.17.0'
+
+  // Version of npm to use.
+  npmVersion = '8.15.0'
+
+  // If true, it will download node using above parameters.
+  // If false, it will try to use globally installed node.
+  download = true
+
+  // Set the work directory for unpacking node
+  workDir = file("${project.buildDir}/nodejs")
+
+  // Set the work directory for NPM
+  npmWorkDir = file("${project.buildDir}/npm")
+
+
+  // Set the work directory where node_modules should be located
+  nodeModulesDir = file("${project.projectDir}")
+}
+
+
+
+task sonarqube_ui(type: NpmTask) {
+  //Toggle sonar_preview_stage to 'true' - if you need sonar preview stage :
+  //default command : ./gradlew -Psonar.analysis.mode=preview sonarqube_ui
+  //sonar publish will run after artifact creation on Master job:
+  //default command: ./gradlew -Psonar.analysis.mode=publish sonarqube_ui
+  def sonarMode = project.findProperty('sonar.analysis.mode')
+  if ("publish".equalsIgnoreCase(sonarMode)) {
+    args = ['run', 'sonar']
+  } else {
+    args = ['run', 'no-sonar']
+  }
+}
+
+task add_empty_sonar_report_json() {
+  File sonar = new File(projectDir.toString() + '/../build/sonar')
+  if (!sonar.exists() && sonar.mkdirs()) {
+    println ("$sonar created!")
+  }
+
+  File report = new File(sonar.toString() + '/sonar-report.json')
+  if (!report.exists() && report.createNewFile()) {
+    println ("$report created!")
+  }
+}
+
+sonarqube_ui.dependsOn 'add_empty_sonar_report_json'
+
+// 3
+jar.dependsOn 'npm_run_build'
+
+
+test.dependsOn 'npm_test'
+
+// 4
+jar {
+  from 'dist/ui' into 'static'
+}

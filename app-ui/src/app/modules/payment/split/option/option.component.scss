@@ -1,0 +1,14 @@
+@import "~styles/mixins";
+@import "~styles/common/payment-module";
+
+article {
+  padding-top: rem(5px);
+
+  @include for-mobile-to-tablet {
+    // margin-bottom: 40px;
+  }
+
+  .split-option-wrapper {
+    padding: 0;
+  }
+}

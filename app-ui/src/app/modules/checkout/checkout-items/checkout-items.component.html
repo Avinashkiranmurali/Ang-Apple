@@ -1,0 +1,215 @@
+<div class="items-list checkout-item-list">
+  <ng-container [ngSwitch]="checkoutItemsListTemplate">
+    <div *ngSwitchCase="'checkout-subsidy.htm'" role="list">
+      <div class="cart-items" *ngFor="let item of cartItems | orderBy: 'desc' : 'addedDate'; let index= index"
+           role="listitem">
+        <div class="cart-product-image large-3 small-12 small-offset-0">
+          <img [src]="item.productDetail.images.medium | aplImgSize : '200'" alt="{{ item.productDetail.name }}"/></div>
+        <div class="cart-product-details large-9 small-12 small-offset-0">
+          <div class="cart-item-pricing">
+            <div class="cart-item-name text-bold small-12 large-7 item-section">
+              <span>{{ item.productDetail.name }}</span>
+              <div class="cart-item-description"
+                   *ngIf="item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && !isMobile">
+                <div>
+                  <a href="javascript:void(0)" [attr.aria-expanded]="cartProductDetailsExpanded"
+                     attr.aria-label="{{ (!cartProductDetailsExpanded ? 'showProductDetails' : 'hideProductDetails') | translate }} of {{ item.productDetail.name }}"
+                     role="button"
+                     (click)="cartProductDetailsExpanded = !cartProductDetailsExpanded"
+                     class="show-hide-details toggle-button g-icons">
+                                            <span
+                                              *ngIf="!cartProductDetailsExpanded">{{ 'showProductDetails' | translate
+                                              }}<span class="drop-down-icon-collapsed"></span></span>
+                    <span *ngIf="cartProductDetailsExpanded">{{ 'hideProductDetails' | translate
+                      }}<span class="drop-down-icon-expanded"></span></span>
+
+                  </a>
+                </div>
+                <ul
+                  [ngClass]="{'cart-prod-details-collapsed':!cartProductDetailsExpanded ,'cart-prod-details-expanded':cartProductDetailsExpanded}">
+                  <li *ngFor="let options of item.productDetail.options | orderBy: 'desc'">{{ options.value }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cart-item-subtotal item-section" [attr.title]="setCartTaxFeeTitle">
+              <!-- new pricingTemplate -->
+              <app-cart-pricing-temp ext="qty_" [offers]="item.productDetail.offers[0]"
+                                     [item]="item"></app-cart-pricing-temp>
+              <div class="cart-item-description-container">
+                <div class="cart-item-description"
+                     *ngIf="item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && isMobile">
+                  <div>
+                    <a href="javascript:void(0)" [attr.aria-expanded]="cartProductDetailsExpanded"
+                       attr.aria-label="{{ (!cartProductDetailsExpanded ? 'showProductDetails' : 'hideProductDetails') | translate }} of {{ item.productDetail.name }}"
+                       role="button"
+                       (click)="cartProductDetailsExpanded = !cartProductDetailsExpanded"
+                       class="show-hide-details toggle-button g-icons">
+                                            <span
+                                              *ngIf="!cartProductDetailsExpanded">{{ 'showProductDetails' | translate
+                                              }}<span class="drop-down-icon-collapsed"></span></span>
+                      <span *ngIf="cartProductDetailsExpanded">{{ 'hideProductDetails' | translate
+                        }}<span class="drop-down-icon-expanded"></span></span>
+
+                    </a>
+                  </div>
+                  <ul
+                    [ngClass]="{'cart-prod-details-collapsed':!cartProductDetailsExpanded ,'cart-prod-details-expanded':cartProductDetailsExpanded}">
+                    <li *ngFor="let options of item.productDetail.options | orderBy:'desc'">{{ options.value }}</li>
+                  </ul>
+                </div>
+                <div
+                  *ngIf="!(item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && isMobile)"></div>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item-engrave"
+               *ngIf="item.productDetail.additionalInfo.engravable === 'true' && item.engrave.line1 !== '' && item.quantity === 1">
+            <div class="cart-engrave-options flex">
+              <div class="cart-engraving-section">
+                <span class="cart-engraving-icon"></span>
+                <span class="cart-engraving-title">{{ 'engraved' | translate }}</span>
+                <div class="engrave-text-view">
+                  <p>{{ item.engrave.line1 }}</p>
+                  <p>{{ item.engrave.line2 }}</p>
+                </div>
+              </div>
+              <div class="free-caption-section">
+                <span class="free-caption uppercase">{{ 'free' | translate }}</span>
+              </div>
+
+            </div>
+          </div>
+          <div class="cart-item-availability">
+            <p class="pull-left icon-shipping"
+               *ngIf="showShippingAvailability !== false && item.engrave.line1 === ''">{{ 'availableToShip' | translate }} {{ item.productDetail.shippingAvailabilityMessage ? item.productDetail.shippingAvailabilityMessage : ('inStock' | translate) }}</p>
+            <p class="pull-left icon-shipping"
+               *ngIf="showShippingAvailability !== false && item.engrave.line1 !== ''">{{ 'engravedProducts' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div *ngSwitchDefault role="list">
+      <div class="cart-items" *ngFor="let item of cartItems | orderBy: 'desc' : 'addedDate'; let index= index"
+           role="listitem">
+        <div class="cart-product-image large-3 small-12 small-offset-0">
+          <img [src]="item.productDetail.images.medium | aplImgSize : '200'" alt="{{ item.productDetail.name }}"/></div>
+        <div class="cart-product-details large-9 small-12 small-offset-0">
+          <div class="cart-item-pricing">
+            <div class="cart-item-name text-bold small-12 item-section"
+                 [ngClass]="(config.fullCatalog) ? 'large-5' : 'large-9'">
+              <span>{{ item.productDetail.name }}</span>
+              <div class="cart-item-description"
+                   *ngIf="item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && !isMobile">
+                <div>
+                  <a href="javascript:void(0)" [attr.aria-expanded]="cartProductDetailsExpanded"
+                     attr.aria-label="{{ (!cartProductDetailsExpanded ? 'showProductDetails' : 'hideProductDetails') | translate }} of {{ item.productDetail.name }}"
+                     role="button"
+                     (click)="cartProductDetailsExpanded = !cartProductDetailsExpanded"
+                     class="show-hide-details toggle-button g-icons">
+                                            <span
+                                              *ngIf="!cartProductDetailsExpanded">{{ 'showProductDetails' | translate
+                                              }}<span class="drop-down-icon-collapsed"></span></span>
+                    <span *ngIf="cartProductDetailsExpanded">{{ 'hideProductDetails' | translate
+                      }}<span class="drop-down-icon-expanded"></span></span>
+
+                  </a>
+                </div>
+                <ul
+                  [ngClass]="{'cart-prod-details-collapsed':!cartProductDetailsExpanded ,'cart-prod-details-expanded':cartProductDetailsExpanded}"
+                >
+                  <li *ngFor="let options of item.productDetail.options | orderBy:'desc'">{{ options.value }}</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cart-item-qty-price small-12 item-section"
+                 [ngClass]="(config.fullCatalog) ? 'large-7' : 'large-3 single-cart-item-qty-price'">
+              <div class="cart-item-wrap" *ngIf="config.fullCatalog">
+                <div class="cart-item-quantity small-12 large-5">
+                  <div class="clearfix"
+                       *ngIf="(!singleItemPurchase || (singleItemPurchase && item.maxQuantity > 1)) && config.fullCatalog">
+                    <div class="cart-item-desc" aria-hidden="true">{{ 'qty' | translate }}</div>
+                    <span *ngIf=!isMobile>&nbsp;</span>
+                    <span class="hideFromDOM">{{ 'quantityFor' | translate }} {{ item.productDetail.name }}</span>
+                    <span>{{item.quantity}}</span>
+                  </div>
+                </div>
+                <div class="cart-item-subtotal small-12 large-7" [attr.title]="setCartTaxFeeTitle">
+                  <!-- new pricingTemplate -->
+                  <app-cart-pricing-temp ext="qty_" [offers]="item.productDetail.offers[0]"
+                                         [item]="item"></app-cart-pricing-temp>
+                </div>
+              </div>
+              <div class="cart-item-description-container">
+                <div class="cart-item-description"
+                     *ngIf="item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && isMobile">
+                  <div>
+                    <a href="javascript:void(0)" [attr.aria-expanded]="cartProductDetailsExpanded"
+                       attr.aria-label="{{ (!cartProductDetailsExpanded ? 'showProductDetails' : 'hideProductDetails') | translate }} of {{ item.productDetail.name }}"
+                       role="button"
+                       (click)="cartProductDetailsExpanded = !cartProductDetailsExpanded"
+                       class="show-hide-details toggle-button g-icons">
+                                            <span
+                                              *ngIf="!cartProductDetailsExpanded">{{ 'showProductDetails' | translate
+                                              }}<span class="drop-down-icon-collapsed"></span></span>
+                      <span *ngIf="cartProductDetailsExpanded">{{ 'hideProductDetails' | translate
+                        }}<span class="drop-down-icon-expanded"></span></span>
+
+                    </a>
+                  </div>
+                  <ul
+                    [ngClass]="{'cart-prod-details-collapsed':!cartProductDetailsExpanded ,'cart-prod-details-expanded':cartProductDetailsExpanded}"
+                  >
+                    <li *ngFor="let options of item.productDetail.options | orderBy:'desc'">{{ options.value }}</li>
+                  </ul>
+                </div>
+                <div
+                  *ngIf="!(item.productDetail.categories[0].parents[0].slug === 'mac' && item.productDetail.options.length > 0 && isMobile)"></div>
+                <p *ngIf="!config.fullCatalog && singleItemPurchase && (!item.maxQuantity || item.maxQuantity <= 1)">
+                  <a id="btn-remove-item-{{item.productDetail.psid}}-{{item.id}}" class="remove-link"
+                     [ngClass]="buttonColor" href="javascript:void(0)" (click)="changeItemSelection(item)"
+                     attr.aria-label="{{messages.remove}} {{item.productDetail.name}}">{{ 'remove' | translate }}</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- APPLE CARE TEMPLATE -->
+          <app-apple-care *ngIf="item.selectedAddOns.servicePlan"
+                          [selectedServicePlan]="item.selectedAddOns.servicePlan"
+                          [cartItem]="item"
+                          [readOnly]="true"
+                          [isProductView]="false">
+          </app-apple-care>
+          <div class="cart-item-engrave"
+               *ngIf="item.productDetail.additionalInfo.engravable === 'true' && item.engrave.line1 !== '' && item.quantity === 1">
+            <div class="cart-engrave-options flex">
+              <div class="cart-engraving-section">
+                <span class="cart-engraving-icon"></span>
+                <span class="cart-engraving-title">{{ 'engraved' | translate }}</span>
+                <div class="engrave-text-view">
+                  <p>{{ item.engrave.line1 }}</p>
+                  <p>{{ item.engrave.line2 }}</p>
+                </div>
+              </div>
+              <div class="free-caption-section">
+                <span class="free-caption uppercase">{{ 'free' | translate }}</span>
+              </div>
+            </div>
+          </div>
+          <div class="cart-item-availability">
+            <p class="icon-shipping"
+               *ngIf="showShippingAvailability !== false && item.engrave.line1 === ''">{{ 'availableToShip' | translate }} {{ item.productDetail.shippingAvailabilityMessage ? item.productDetail.shippingAvailabilityMessage : ('inStock' | translate) }}</p>
+            <p class="icon-shipping"
+               *ngIf="showShippingAvailability !== false && item.engrave.line1 !== ''">{{ 'engravedProducts' | translate }}</p>
+          </div>
+          <app-cart-gift-promo *ngIf="item.productDetail.isEligibleForGift"
+                               [item]="item" [giftItem]="item.selectedAddOns.giftItem"
+                               [messages]="messages" [review]="true"
+                               [showShippingAvailability]="showShippingAvailability"
+          >
+          </app-cart-gift-promo>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

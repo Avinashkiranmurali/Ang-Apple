@@ -1,0 +1,4 @@
+INSERT INTO var_program_credit_adds_filter (var_id,program_id,filter,lastupdate_user,lastupdate_time,workstation_id,row_id) VALUES ('HK','HKPSTIGE','479110','admin',{ts '2017-10-20 19:39:54.320000'},'ATL-MANAGER',1244);
+INSERT INTO var_program_credit_adds_filter (var_id,program_id,filter,lastupdate_user,lastupdate_time,workstation_id,row_id) VALUES ('HK','HKPSTIGE','479111','admin',{ts '2017-10-20 19:39:54.377000'},'ATL-MANAGER',1284);
+INSERT INTO var_program_credit_adds_filter (var_id,program_id,filter,lastupdate_user,lastupdate_time,workstation_id,row_id) VALUES ('HK','HKPSTIGE','540204','admin',{ts '2017-10-20 19:39:54.417000'},'ATL-MANAGER',1324);
+INSERT INTO var_program_credit_adds_filter (var_id,program_id,filter,lastupdate_user,lastupdate_time,workstation_id,row_id) VALUES ('HK','HKPSTIGE','541096','admin',{ts '2017-10-20 19:39:54.407000'},'ATL-MANAGER',1314);

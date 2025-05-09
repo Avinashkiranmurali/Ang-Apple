@@ -1,0 +1,201 @@
+@import "~styles/mixins";
+@import "~styles/typography";
+
+.quick-links-component-container {
+  font-family: $font-family-text-icon;
+  background: white;
+  padding: rem(24px) rem(8px) rem(22px);
+  border-bottom-left-radius: rem(18px);
+  border-bottom-right-radius: rem(18px);
+  @include for-mobile-to-tablet {
+    background: inherit;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: rem(14px) rem(40px) rem(8px) rem(40px);
+    overflow-y: auto;
+    height: calc(50vh - 1.069rem);
+  }
+}
+
+.animate {
+  -webkit-animation: show-quicklinks 0.4s both;
+  animation: show-quicklinks 0.4s both;
+
+  &:nth-child(1) {
+    -webkit-animation-delay: .22s;
+    animation-delay: .22s;
+  }
+
+  &:nth-child(2) {
+    -webkit-animation-delay: .24s;
+    animation-delay: .24s;
+  }
+
+  &:nth-child(3) {
+    -webkit-animation-delay: .26s;
+    animation-delay: .26s;
+  }
+
+  &:nth-child(4) {
+    -webkit-animation-delay: .28s;
+    animation-delay: .28s;
+  }
+
+  &:nth-child(5) {
+    -webkit-animation-delay: .3s;
+    animation-delay: .3s;
+  }
+
+  &:nth-child(6) {
+    -webkit-animation-delay: .32s;
+    animation-delay: .32s;
+  }
+
+  &:nth-child(7) {
+    -webkit-animation-delay: .34s;
+    animation-delay: .34s;
+  }
+
+  &:nth-child(8) {
+    -webkit-animation-delay: .36s;
+    animation-delay: .36s;
+  }
+
+  &:nth-child(9) {
+    -webkit-animation-delay: .38s;
+    animation-delay: .38s;
+  }
+
+  &:nth-child(10) {
+    -webkit-animation-delay: .4s;
+    animation-delay: .4s;
+  }
+
+  @include for-mobile-to-tablet {
+    -webkit-animation: mobile-show-quicklinks 0.4s cubic-bezier(0.32, 0.08, 0.24, 1) both;
+    animation: mobile-show-quicklinks 0.4s cubic-bezier(0.32, 0.08, 0.24, 1) both;
+  }
+}
+
+.quick-links-component-container {
+  width: 100%;
+}
+
+.quick-links-header {
+  text-transform: uppercase;
+  margin: 0;
+  padding-left: rem(32px);
+  @include text-styling(#666666, 12px, $font-weight-regular, rem(15px), rem(-0.24px));
+
+  .animate {
+    -webkit-animation-delay: .22s;
+    animation-delay: .22s;
+  }
+
+  @include for-mobile-to-tablet {
+    font-size: rem(13px);
+    padding: 0;
+    line-height: rem(16px);
+  }
+}
+
+.quick-links-list {
+  list-style: none;
+  padding-top: rem(12px);
+  padding-left: 0;
+  @include for-mobile-to-tablet {
+    padding-top: rem(5px);
+  }
+
+  li {
+    display: list-item;
+    padding: rem(3px) 0;
+    @include for-mobile-to-tablet {
+      visibility: visible;
+      padding: 0;
+      border-top: rem(1px) solid #B3B3B3;
+    }
+
+    &:first-child {
+      padding-top: 0;
+      @include for-mobile-to-tablet {
+        border: 0;
+        padding: 0;
+      }
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+
+    a {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: block;
+      padding: rem(6px) 0 rem(6px) rem(48px);
+      text-decoration: none;
+      @include text-styling(#111111, 14px, inherit, rem(17px), 0);
+      @include for-mobile-to-tablet {
+        padding: rem(14px) 0 !important;
+        font-size: rem(14px);
+        color: #111;
+      }
+
+      &:hover {
+        color: #0070C9;
+        background: #F5F5F7 0 0 no-repeat padding-box;
+        @include for-mobile-to-tablet {
+          background-color: inherit;
+        }
+      }
+    }
+  }
+}
+
+@-webkit-keyframes show-quicklinks {
+  0% {
+    opacity: 0;
+    @include transform(translateX(rem(100px)));
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    @include transform(none);
+  }
+}
+
+@keyframes show-quicklinks {
+  0% {
+    opacity: 0;
+    @include transform(translateX(rem(100px)));
+    -webkit-animation-timing-function: ease;
+    animation-timing-function: ease;
+  }
+  100% {
+    opacity: 1;
+    @include transform(none);
+  }
+}
+
+@-webkit-keyframes mobile-show-quicklinks {
+  0% {
+    @include transform(translateY(rem(-44px)));
+    opacity: 0;
+  }
+  100% {
+    @include transform(none);
+    opacity: 1;
+  }
+}
+
+@keyframes mobile-show-quicklinks {
+  0% {
+    @include transform(translateY(rem(-44px)));
+    opacity: 0;
+  }
+  100% {
+    @include transform(none);
+    opacity: 1;
+  }
+}

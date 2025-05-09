@@ -1,0 +1,594 @@
+{
+  "response": {
+    "groups": {
+      "DEFAULT_GROUP": {
+        "offset": 0,
+        "totalFound": 1,
+        "documents": [
+          {
+            "psid": "30001MD776LL/A",
+            "bsin": "10C475BCC7B6A7",
+            "sku": "MD776LL/A",
+            "upc": "885909612369",
+            "name": "iPod shuffle Green",
+            "brand": "Apple®",
+            "manufacturer": "apple",
+            "shortDescription": "iPod shuffle Green",
+            "priceInfo": {
+              "basePrice": "USD 49.00",
+              "displayPrice": "USD 49.00",
+              "msrp": "USD 49.00",
+              "shippingCost": "USD 0.00",
+              "fixedPoints": null,
+              "priceType": "SUPPLIER",
+              "suppliersSalesTax": "USD 0.00",
+              "fees": null,
+              "msrpDisplayPrice": null,
+              "unpromotedDisplayPrice": null,
+              "splitTenderEligible": false,
+              "pointFloor": null
+            },
+            "groupId": "E6516A22C76C",
+            "groupName": "iPod shuffle",
+            "hasVariations": true,
+            "inStoreEligible": false,
+            "shippingEligible": true,
+            "reserveAndPickupEligible": false,
+            "hasOffer": true,
+            "offerTypes": ["FREE_SHIPPING"],
+            "imageUrls": {
+              "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-green-2013",
+              "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-green-2013",
+              "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-green-2013",
+              "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-green-2013"
+            },
+            "productType": "MERCHANDISE",
+            "categorySlugs": ["ipod-shuffle"],
+            "appliedChanges": [
+              {
+                "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                "createdDatetime": "2015-05-26T02:28:38.336Z",
+                "payload": {
+                  "payloadType": "SPLIT_TENDER",
+                  "splitTenderEligibility": {"splitTenderEligible": false}
+                },
+                "override": false
+              }
+            ],
+            "merchant": "APPLE",
+            "totalReviews": 0,
+            "sourceCountry": "USA",
+            "variations": [
+              {
+                "psid": "30001MD774LL/A",
+                "bsin": "102BED7EA17FBA",
+                "sku": "MD774LL/A",
+                "upc": "885909611966",
+                "name": "iPod shuffle Yellow",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Yellow",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-yellow-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-yellow-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-yellow-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-yellow-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.344Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Yellow",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MD777LL/A",
+                "bsin": "1093ADBC4E4728",
+                "sku": "MD777LL/A",
+                "upc": "885909612567",
+                "name": "iPod shuffle Purple",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Purple",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-purple-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-purple-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-purple-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-purple-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.346Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Purple",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001ME949LL/A",
+                "bsin": "1068041F8B868F",
+                "sku": "ME949LL/A",
+                "upc": "885909749898",
+                "name": "iPod shuffle Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-spacegray-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-spacegray-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-spacegray-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-spacegray-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.347Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MD775LL/A",
+                "bsin": "104A28A7A71121",
+                "sku": "MD775LL/A",
+                "upc": "885909612161",
+                "name": "iPod shuffle Blue",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Blue",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-blue-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-blue-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-blue-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-blue-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.341Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Blue",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MD778LL/A",
+                "bsin": "10C6A62E18E1BE",
+                "sku": "MD778LL/A",
+                "upc": "885909612765",
+                "name": "iPod shuffle Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Silver",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-silver-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-silver-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-silver-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-silver-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.338Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MD780LL/A",
+                "bsin": "10B08CD349BA2A",
+                "sku": "MD780LL/A",
+                "upc": "885909614370",
+                "name": "iPod shuffle (PRODUCT)RED",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle (PRODUCT)RED",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-red-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-red-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-red-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-red-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.340Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Red",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MD773LL/A",
+                "bsin": "10BEE20F240C8D",
+                "sku": "MD773LL/A",
+                "upc": "885909611768",
+                "name": "iPod shuffle Pink",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPod shuffle Pink",
+                "priceInfo": {
+                  "basePrice": "USD 49.00",
+                  "displayPrice": "USD 49.00",
+                  "msrp": "USD 49.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "E6516A22C76C",
+                "groupName": "iPod shuffle",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": true,
+                "offerTypes": ["FREE_SHIPPING"],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-pink-2013",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-pink-2013",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-pink-2013",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/po/ipodshuffle/product/ipodshuffle-product-pink-2013"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipod-shuffle"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:28:38.343Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "color": {
+                    "value": "Pink",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "2GB",
+                    "label": "Storage"
+                  }
+                }
+              }
+            ],
+            "options": {
+              "color": {
+                "value": "Green",
+                "label": "Color"
+              },
+              "storage": {
+                "value": "2GB",
+                "label": "Storage"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "facets": [
+      {
+        "name": "offerTypes",
+        "entries": [
+          {
+            "value": "FREE_SHIPPING",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "name": "hasOffer",
+        "entries": [
+          {
+            "value": "true",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "name": "merchant",
+        "entries": [
+          {
+            "value": "apple",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "name": "deliveryMethod",
+        "entries": [
+          {
+            "value": "USA-DOMESTIC",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "name": "brand",
+        "entries": [
+          {
+            "value": "Apple®",
+            "count": 8
+          }
+        ]
+      },
+      {
+        "name": "categories",
+        "entries": []
+      },
+      {
+        "name": "productType",
+        "entries": [
+          {
+            "value": "MERCHANDISE",
+            "count": 8
+          }
+        ]
+      }
+    ]
+  }
+}

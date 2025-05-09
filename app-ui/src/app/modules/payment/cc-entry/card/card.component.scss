@@ -1,0 +1,241 @@
+@import "~styles/mixins";
+@import "~styles/typography";
+@import "~styles/common/payment-module";
+
+.app-card {
+  display: block;
+
+  .card-component-title {
+    margin-top: 0;
+    margin-bottom: rem(4px);
+  }
+
+  .title-desc{
+    font-size: rem(18px);
+    color: #111;
+    line-height: rem(21px);
+  }
+
+  .card-information{
+    font-size: rem(17px);
+    font-weight: 600;
+    line-height: rem(20px);
+    color: #333;
+    padding-top: rem(42px);
+    margin: 0;
+    padding-bottom: rem(14px);
+  }
+
+  .error-wrapper {
+    position: relative;
+    padding-top: rem(10px);
+    display: flex;
+    flex-direction: column;
+    .error-text {
+      @include red-txt;
+      padding: rem(2px) rem(3px) rem(1px) rem(20px);
+      &:before {
+        content: "\e902";
+        @include error-icon;
+        margin-left: rem(-18px);
+        margin-top: rem(3px);
+        padding-right: .3em;
+        display: inline-block;
+        font-weight: bold;
+        font-size: rem(13px);
+      }
+    }
+  }
+
+  article {
+    .field-row{
+      margin-bottom: rem(16px);
+      &.error {
+        color: $error-text-color;
+        input {
+          background: #fef0f0;
+          border-color: $input-border-error;
+        }
+      }
+      &.input-entered {
+
+        label{
+          font-size: rem(14px);
+          top: rem(8px);
+          color: #333;
+        }
+
+      }
+
+      input, select {
+
+        width: 100%;
+        display: block;
+        font-size: rem(17px);
+        line-height: 1.23543;
+        font-weight: 400;
+        letter-spacing: -.022em;
+        box-sizing: border-box;
+        height: 3.3em;
+        padding-top: rem(18px);
+        padding-left: rem(16px);
+        padding-right: rem(22px);
+        color: #333;
+        text-align: left;
+        border: rem(1px) solid #D6D6D6;
+        border-radius: rem(12px);
+
+        &:focus ~ label{
+          font-size: rem(14px);
+          top: rem(8px);
+          color: #333;
+        }
+
+
+      }
+
+      label {
+        @include responsive-field-row-label;
+        font-size:rem(18px);
+        top:rem(14px);
+      }
+
+    }
+
+    .card-details {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include for-mobile {
+        flex-direction: column;
+      }
+
+      .expiration-container {
+        width: 50%;
+        padding-right: rem(10px);
+        @include for-mobile {
+          width: 100%;
+          padding-right: 0;
+        }
+      }
+      .security-code-container {
+        position: relative;
+        padding-left: rem(10px);
+        width: 50%;
+        @include for-mobile {
+          width: 100%;
+          padding-left: 0;
+        }
+        .security-code-icon{
+          margin: 0;
+          list-style: none;
+          display: flex;
+          position: absolute;
+          top: rem(18px);
+          right: rem(20px);
+          pointer-events: none;
+          font-size: rem(21px);
+          color: #999999;
+        }
+      }
+    }
+  }
+
+  .creditcard-cardimages{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    position: absolute;
+    top: rem(15px);
+    right: rem(10px);
+    pointer-events: none;
+    .creditcard-cardimage {
+      opacity: .3;
+      @include for-mobile {
+        opacity: 0;
+      }
+      transition-property: opacity,transform;
+      transition: .5s ease;
+    }
+    .creditcardlogo {
+      background-image: url('../../../../../assets/images/cards_sprite.png');
+      background-repeat: no-repeat;
+      background-size: auto rem(24.8px);
+      width: rem(44.8px);
+      height: rem(25px);
+    }
+    .visuallyhidden {
+      position: absolute;
+      clip: rect(rem(1px),rem(1px),rem(1px),rem(1px));
+      -webkit-clip-path: inset(0 0 99.9% 99.9%);
+      clip-path: inset(0 0 99.9% 99.9%);
+      overflow: hidden;
+      height: rem(1px);
+      width: rem(1px);
+      padding: 0;
+      border: 0;
+    }
+    .creditcard-cardimage-active {
+      opacity: 1;
+    }
+    .creditcard-cardimage-inactive {
+      opacity: 0;
+      transition: opacity .5s ease;
+    }
+    .creditcardlogo[data-logo=VISA] {
+      background-position: 0 50%;
+    }
+    .creditcardlogo[data-logo=MASTERCARD] {
+      background-position: rem(-44px) 50%;
+    }
+    .creditcardlogo[data-logo=AMEX] {
+      background-position: rem(-88px) 50%;
+    }
+    .creditcardlogo[data-logo=DISCOVER] {
+      background-position: rem(-132px) 50%;
+    }
+    .creditcardlogo[data-logo=DINERS] {
+      background-position: rem(-176px) 50%;
+    }
+    .creditcardlogo[data-logo=MAESTRO] {
+      background-position: rem(-396px) 50%;
+    }
+    .creditcardlogo[data-logo=DANKORT] {
+      background-position: rem(-440px) 50%;
+    }
+    .creditcardlogo[data-logo=JCB] {
+      background-position: rem(-660px) 50%;
+    }
+    .creditcardlogo[data-logo=UNIONPAY] {
+      background-position: rem(-1138px) 50%;
+    }
+
+    /*cards animation flow dynamically transform to end of the input box [max 5 cards] */
+    .cc-active-transform-4 {
+      transform: translate(400%);
+    }
+
+    .cc-active-transform-3 {
+      transform: translate(300%);
+    }
+
+    .cc-active-transform-2 {
+      transform: translate(200%);
+    }
+
+    .cc-active-transform-1 {
+      transform: translate(100%);
+    }
+
+    .cc-active-transform-0 {
+      transform: translate(0%);
+    }
+  }
+
+  .field-row{
+    input:-moz-ui-invalid {
+      box-shadow: none;
+    }
+  }
+}

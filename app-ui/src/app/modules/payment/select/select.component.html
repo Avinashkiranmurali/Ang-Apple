@@ -1,0 +1,128 @@
+<div class="app-select">
+<form name="selectPaymentsForm" class="payment-module">
+
+  <section [ngSwitch]="isDesktop || isTablet">
+    <!-- mobile to tablet view -->
+    <div class="contain" *ngSwitchCase="false">
+      <div class="hero-container">
+        <h2 class="title-header">{{'paymentPageHeading' | translate}}</h2>
+        <p class="title-desc" (click)="toggleOrderSummary($event)"
+           [ngClass]="{ 'show-order-summary': (displayOrderSummOnMobile && isUnbundled), 'title-desc-active': isUnbundled }"
+           [innerHTML]="'paymentPageDescription' | translate: translateParams">
+        </p>
+      </div>
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-select-option></app-select-option>
+            <app-order-summary
+                               [hidden]="!displayOrderSummOnMobile"
+                               [paySumExt]="''"
+                               [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+                               [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+                               [totals]="state.cart.displayCartTotal.price"
+                               [payFrequency]="payFrequency"
+                               *ngIf="(state.cart | json) !== '{}' && isUnbundled"
+                               [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+                               [totalFees]="state.cart.displayCartTotal.totalFees"
+                               [paymentRequired]="paymentRequired"
+                               [pointsUsed]="pointsUsed"
+                               [displayOrderSummOnMobile]="displayOrderSummOnMobile"
+                               (displayOrderSummary)="toggleOrderSummary($event)"
+            >
+            </app-order-summary>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half"></div>
+          <div class="bottom-half">
+            <div class="content-container">
+              <app-payment-summary *ngIf="state"
+                role="region"
+                aria-live="polite"
+                [state]="state"
+                heading="paymentSummaryComponentHeading"
+                template="{{(state.selections.payment && state.selections.payment.paySummaryTemplate)
+                ? state.selections.payment.paySummaryTemplate : '' }}"
+                subtitle="{{(state.selections.payment && state.selections.payment.paySummarySubtitle)
+                ? state.selections.payment.paySummarySubtitle  : 'paymentSummarySubtitleDefault'}}">
+              </app-payment-summary>
+                <div class="button-component"
+                     *ngIf="state.selections && state.selections.payment">
+                  <div class="button-container-flex buttons-full-width">
+                    <button ng-disabled="$ctrl.continueDisabledFn()"
+                            *ngIf="state.selections  && state.selections.payment"
+                            class="btn-base blue-btn"
+                            [innerHTML]="state.selections.payment.actionPanel.nextStepBtnLabel | translate: translateParamsWithTitleCase"
+                            (click)="routeChange()"
+                    ></button>
+                    <!--Cancel button will not be visible for select payment page -->
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- default all desktop view -->
+    <div class="contain"  *ngSwitchDefault> <!-- ng-switch-default -->
+      <div class="hero-container">
+        <h2 class="title-header">{{'paymentPageHeading' | translate}}</h2>
+        <p class="title-desc" [innerHTML]="'paymentPageDescription' | translate: translateParams"></p>
+      </div>
+
+      <div class="main-container">
+        <div class="left-container">
+          <div class="content-container">
+            <app-select-option></app-select-option>
+
+            <div class="button-component"
+                       *ngIf="state.selections && state.selections.payment">
+              <div class="button-container-flex buttons-full-width">
+                <button ng-disabled="$ctrl.continueDisabledFn()"
+                        *ngIf="state.selections  && state.selections.payment"
+                        class="btn-base blue-btn"
+                        [innerHTML]="state.selections.payment.actionPanel.nextStepBtnLabel | translate: translateParamsWithTitleCase"
+                        (click)="routeChange()"
+                ></button>
+                <!--Cancel button will not be visible for select payment page -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="top-half" *ngIf="isUnbundled">
+
+            <app-order-summary
+              [paySumExt]="''"
+              [cartSubtotal]="state.cart.displayCartTotal.itemsSubtotalPrice"
+              [shippingCost]="state.cart.displayCartTotal.shippingPrice"
+              [totals]="state.cart.displayCartTotal.price"
+              [payFrequency]="payFrequency" *ngIf="(state.cart | json) !== '{}'"
+              [totalTaxes]="state.cart.displayCartTotal.totalTaxes"
+              [totalFees]="state.cart.displayCartTotal.totalFees"
+              [paymentRequired]="paymentRequired"
+              [pointsUsed]="pointsUsed"
+              >
+            </app-order-summary>
+
+          </div>
+          <div class="bottom-half"
+               [ngClass]="{ 'bottom-half-shift-to-top': !isUnbundled }"
+          >
+            <app-payment-summary *ngIf="state"
+              heading="paymentSummaryComponentHeading"
+              [state]="state"
+              subtitle="{{(state.selections.payment && state.selections.payment?.paySummarySubtitle) ?
+              state.selections.payment.paySummarySubtitle  : 'paymentSummarySubtitleDefault'}}"
+              template="{{(state.selections.payment && state.selections.payment.paySummaryTemplate) ?
+              state.selections.payment.paySummaryTemplate : '' }}"
+            ></app-payment-summary>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</form>
+</div>

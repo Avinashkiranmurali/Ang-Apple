@@ -1,0 +1,165 @@
+@import "~styles/mixins";
+
+.bg-color-black {
+  background-color: $fc-black !important;
+}
+
+.bg-color-white {
+  background-color: $fc-white !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.p-0 {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.uk-dotnav-black {
+  @extend .bg-color-black, .border-none;
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+}
+
+.uk-dotnav-white {
+  @extend .bg-color-white;
+}
+
+::ng-deep {
+  html, body {
+    background-color: $page-bg;
+    font-size: 0.935413rem;
+    font-family: $font-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
+
+  :focus-visible {
+    outline: none !important;
+  }
+
+  :focus:not([tabindex^='-']) {
+    outline: none !important;
+  }
+
+  #slideShowComponent {
+    .uk-position-bottom {
+      bottom: rem(16px) !important;
+      @include for-mobile-to-tablet {
+        bottom: rem(20px) !important;
+      }
+    }
+
+    .uk-position-center-right, .uk-position-center-left {
+      top: 50% !important;
+    }
+
+    .uk-slideshow-items {
+      min-height: rem(325px) !important;
+      max-height: rem(325px) !important;
+      @include for-mobile-to-tablet {
+        min-height: rem(450px) !important;
+        max-height: rem(450px) !important;
+      }
+    }
+
+    .uk-position-center-right {
+      @extend .p-0;
+
+      margin-right: rem(40px) !important;
+    }
+
+    .uk-position-center-left {
+      @extend .p-0;
+
+      margin-left: rem(40px) !important;
+    }
+
+    .uk-slidenav-next, .uk-slidenav-previous {
+      svg {
+        display: none;
+      }
+
+      span {
+        display: inline-block;
+
+        &.uk-slidenav-previous-icon {
+          background: transparent url('../../../assets/images/carousel/carouselLeftArrowIcon.svg') 0 0 no-repeat padding-box;
+          height: rem(52px);
+          width: rem(52px);
+        }
+
+        &.uk-slidenav-next-icon {
+          background: transparent url('../../../assets/images/carousel/carouselRightArrowIcon.svg') 0 0 no-repeat padding-box;
+          height: rem(52px);
+          width: rem(52px);
+        }
+      }
+    }
+
+
+    @media (max-width: $screen-phone-max) {
+      .uk-slidenav-next, .uk-slidenav-previous {
+        display: none !important;
+      }
+    }
+
+    .uk-dotnav {
+      margin-top: 0 !important;
+      margin-left: 0;
+
+      li {
+        &:not(:first-child) {
+          padding-left: rem(20px) !important;
+        }
+
+        a {
+          background: transparent;
+          border: rem(1px) solid rgba(102, 102, 102, 0.4);
+          border-radius: 50%;
+          box-sizing: border-box;
+          display: block;
+          height: rem(12px);
+          overflow: hidden;
+          text-indent: 100%;
+          transition: 0.2s ease-in-out;
+          transition-property: background-color, border-color;
+          width: rem(12px);
+          white-space: nowrap;
+
+          @extend .uk-dotnav-black;
+          opacity: 0.33;
+
+          &:hover {
+            @extend .bg-color-black, .border-none;
+          }
+        }
+      }
+
+      .uk-active {
+        a {
+          opacity: 1;
+        }
+      }
+    }
+
+    &.iphone-iphone-13-pro, &.ipad-air, &.macbook-pro-13 {
+      .uk-dotnav {
+        li {
+          a {
+            @extend .uk-dotnav-white;
+          }
+        }
+
+        .uk-active {
+          a {
+            @extend .uk-dotnav-white;
+          }
+        }
+      }
+    }
+  }
+}

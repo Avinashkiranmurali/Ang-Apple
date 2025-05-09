@@ -1,0 +1,58 @@
+<ng-container [ngSwitch]="template">
+  <!-- Place Order Error Template -->
+  <div id="error-placeOrder.htm" *ngSwitchCase="'placeOrderError'">
+    <div class="modal-header">
+      <h3 class="modal-title" id="oops-modal-title">{{ 'oopsSorry' | translate }}</h3> </div>
+    <div class="modal-body">
+      <p class="text-semibold">{{ 'unableCompleteOrder' | translate }}</p>
+      <p>{{ 'returnToCart' | translate }}</p>
+      <p *ngIf="pData">{{ 'errorCodeLabel' | translate }}: {{ pData['errorCode'] }}</p>
+    </div>
+    <div class="modal-footer white-background text-right">
+      <button id="btn-order-error-continue" class="btn-base blue-btn" (click)="complete('store/cart')" autofocus>{{ 'continue' | translate }}</button>
+    </div>
+  </div>
+  <!-- Discount Error Template -->
+  <div id="error-discount.htm" *ngSwitchCase="'discountError'">
+    <div class="modal-header">
+      <h3 class="modal-title" id="oops-modal-title">{{ pData['header'] }}</h3> </div>
+    <div class="modal-body no-pad-bottom" ng-bind-html="pData['message']"></div>
+    <div class="modal-footer white-background text-right">
+      <button id="btn-discount-error-continue" class="btn-base blue-btn" (click)="cancel()" autofocus>{{ 'continue' | translate }}</button>
+    </div>
+  </div>
+  <!-- Promotion Use Exceeded Error Template -->
+  <div id="error-promoUseExceeded.htm" *ngSwitchCase="'promoUseExceeded'">
+    <div class="modal-header">
+      <h3 class="modal-title" id="oops-modal-title">{{ 'promoUseExceedHeader' | translate }}</h3> </div>
+    <div class="modal-body">
+      <p>{{ 'promoUseExceedBody' | translate }}</p>
+    </div>
+    <div class="modal-footer white-background text-right">
+      <button id="btn-promo-used-error-continue" class="btn-base blue-btn" (click)="complete('navigateBack')" autofocus>{{ 'continue' | translate }}</button>
+    </div>
+  </div>
+  <!-- Promotion Use Exceeded Error Template -->
+  <div id="error-shipAddress.htm" *ngSwitchCase="'shippingAddressError'">
+    <div class="modal-header">
+      <h3 class="modal-title" id="oops-modal-title">{{ 'unableToProcessRequest' | translate }}</h3> </div>
+    <div class="modal-body">
+      <p>{{ 'tryAgainLater' | translate }}</p>
+    </div>
+    <div class="modal-footer white-background text-right">
+      <button id="btn-error-close" ng-class="buttonColor" class="btn-base blue-btn" (click)="cancel()" autofocus role="button">{{ 'close' | translate }}</button>
+    </div>
+  </div>
+  <div id="cartItemEmpty-cartItemFailed" *ngSwitchCase="'cartItemEmpty' || 'cartItemFailed'"> </div>
+  <!-- Shipping Address Loading Error Template -->
+  <div id="error-addressLoad.htm" *ngSwitchDefault>
+    <div class="modal-header">
+      <h3 class="modal-title" id="oops-modal-title">{{ 'oopsSorry' | translate }}</h3> </div>
+    <div class="modal-body">
+      <p>{{ 'shippingAddressError' | translate }}</p>
+    </div>
+    <div class="modal-footer white-background text-right">
+      <button id="btn-address-error-continue" class="btn-base blue-btn" (click)="complete('store/cart')" autofocus>{{ 'continue' | translate }}</button>
+    </div>
+  </div>
+</ng-container>

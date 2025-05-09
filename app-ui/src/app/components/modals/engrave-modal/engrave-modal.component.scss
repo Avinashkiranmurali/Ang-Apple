@@ -1,0 +1,348 @@
+@import "~styles/mixins";
+
+.engrave-overlay-wrapper {
+  padding: rem(74px) 0 rem(50px);
+  min-height: rem(450px);
+  @include for-mobile{
+    padding: 0 0 rem(50px);
+  }
+  .engrave-header-container {
+    margin-top: (-74px);
+    .engrave-overlay-close {
+      margin-top: rem(30px);
+      margin-left: rem(30px);
+      height: rem(30px);
+      width: rem(30px);
+      cursor: pointer;
+      .close-button {
+        position: absolute;
+        &::before {
+          font-size: 1.85rem;
+          color: #808080;
+          height: rem(30px);
+          top: rem(3px);
+          font-weight: $font-weight-semi-bold;
+          @include for-mobile {
+            top: 0;
+            left: 0;
+            font-weight: $font-weight-regular;
+           }
+        }
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    .engrave-header-txt {
+      margin-top: rem(13px);
+      h2 {
+        margin: 0 rem(66px) rem(24px);
+        font-family: SF Pro Display;
+        @include text-styling(#333, 48px, $font-weight-semi-bold, 1.1, -0.003em, center);
+        @include for-mobile {
+          margin: 0;
+          padding: rem(30px) rem(30px);
+          @include text-styling(#333, 32px, $font-weight-semi-bold, 1.125, -0.004em, center);
+        }
+      }
+      @include for-mobile{
+        margin-top: 0;
+      }
+    }
+    @include for-mobile{
+      margin-top: 0;
+    }
+  }
+  .engrave-body {
+    .engraving-image-wrapper {
+      justify-content: center;
+      overflow: hidden;
+      min-height: rem(200px);
+      max-height: rem(345px);
+      height: auto;
+      text-align: center;
+      display: flex;
+      align-items: baseline;
+      @include for-mobile {
+        height: rem(200px);
+      }
+      img.engraving-image {
+        margin: auto 0;
+        width: auto;
+        max-width: 100%;
+      }
+      &.pencil-engraving {
+        justify-content: space-between;
+        img.engraving-image {
+          width: 80%;
+          left: 0;
+          @include for-mobile {
+            max-width: 100%;
+            width: auto;
+            margin-left: -7%;
+          }
+        }
+      }
+      &.ipads, &.ipad-mini, &.ipad-air {
+        @include for-mobile {
+          min-height: rem(80px);
+          height: rem(175px);
+        }
+      }
+      &.ipad-pro {
+        @include for-mobile {
+          max-height: rem(200px);
+        }
+      }
+      &.all-accessories {
+        @include for-mobile {
+          min-height: rem(80px);
+          height: rem(160px);
+        }
+      }
+    }
+    .overlay-engraving-content {
+      position: absolute;
+      margin-top: rem(143px);
+      width: rem(300px);
+      > p {
+        color: #666;
+        font-size: 0.75em;
+        line-height: 1.5;
+        &.dkgray-txt {
+          color: #666666;
+        }
+        &.engraving-text-edit {
+          width: rem(167px);
+          overflow: hidden;
+          margin: 0 auto;
+        }
+      }
+      @include for-mobile {
+        .single-line {
+          line-height: 1.5;
+        }
+        margin-top: rem(80px);
+      }
+      &.ipad-mini-4 {
+        top: rem(115px);
+      }
+    }
+    .overlay-engraving-content.apple-pencil {
+      margin-top: rem(87px);
+      font-size: rem(25px);
+      margin-left: 25%;
+      @include for-mobile {
+        font-size: rem(16px);
+        width: 100%;
+        margin: rem(91px) 0 auto 0;
+      }
+    }
+    .engraving-content {
+      padding: rem(30px) rem(163px) rem(10px);
+      transition: opacity 0.4s ease-in-out;
+      @include for-mobile {
+        width: 100%;
+        padding: rem(30px) rem(25px) 0;
+      }
+    }
+    .engraving-edit {
+      .engraving-error {
+        background: #ffffcf;
+        border: rem(1px) solid #c0c0c0;
+        border-radius: rem(3px);
+        font-size: 0.8em;
+        font-weight: $font-weight-semi-bold;
+        margin-bottom: rem(10px);
+        padding: rem(5px) rem(10px);
+        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#ffffdd), to(#ffffc0));
+        background: -moz-linear-gradient(top, #ffffdd, #ffffc0);
+        background: linear-gradient(to bottom, #ffffdd 0, #ffffc0 100%);
+      }
+      .engraving-message-inputs {
+        .form-message-wrapper {
+          margin-bottom: rem(12px);
+          margin-top: rem(8px);
+          font-family: SF Pro Text;
+          @include text-styling(#e30000, 12px, $font-weight-regular, 1.33337, -0.01em);
+        }
+      }
+      .field-row {
+        position: relative;
+        margin-bottom: rem(14px);
+
+        input:focus {
+          background: #ffffff;
+          outline: none;
+          @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+        }
+
+        &.input-entered {
+          label {
+            font-size: rem(12px);
+            top: rem(8px);
+            color: #333;
+          }
+        }
+        &.input-error-row {
+          margin-bottom: 0;
+
+          label {
+            color: $error-text-color;
+          }
+
+          input {
+            background: #fff2f4;
+            border-color: $input-border-error;
+          }
+          .error-text {
+            padding: rem(2px) rem(3px) 0;
+            font-family: SF Pro Text;
+            @include text-styling(#e30000, 12px, $font-weight-regular, 1.33337, -0.01em);
+            &:before {
+              content: "\e902";
+              padding-right: 0.3em;
+              display: inline-block;
+              top: rem(1px);
+              font-weight: $font-weight-semi-bold;
+              font-size: rem(13px);
+            }
+          }
+        }
+        select {
+          padding: rem(18px) rem(11px) 0;
+          @include dropdown-icon;
+          @include appearance(none);
+          &:focus {
+            background: #ffffff;
+            @include focus-border;
+            @include dropdown-icon;
+          }
+        }
+        input,
+        select {
+          @include responsive-input-select;
+          //to stop firefox from adding red border around form input without errors
+          //stops browser feature from adding red border
+          &:invalid {
+            box-shadow: none;
+          }
+          &:required {
+            box-shadow: none;
+          }
+
+          &:focus ~ label {
+            font-size: rem(12px);
+            top: rem(8px);
+            color: #333;
+          }
+          &:focus {
+            background: #ffffff;
+            @include focus-border;
+          }
+        }
+        label {
+          @include responsive-field-row-label;
+          &.text-bold {
+            font-weight: $fw-bold;
+          }
+        }
+      }
+      h3 {
+        padding-top: rem(7px);
+        line-height: 1.5em;
+        margin-bottom: 0;
+        margin-top: rem(15px);
+      }
+      .engrave-subtitle {
+        font-size: rem(20px);
+      }
+      .engrave-message {
+        font-size: rem(16px);
+        font-weight: normal;
+
+        span:first-of-type {
+          margin-bottom: rem(10px);
+        }
+        span {
+          display: inline-block;
+        }
+      }
+      h5 {
+        padding-top: rem(24px);
+        font-size: rem(16px);
+      }
+    }
+    .engraving-disclaimer {
+      font-family: SF Pro Text;
+      @include text-styling(#333333, 12px, $font-weight-regular, 1.33337, -0.01em, left);
+      margin: 0;
+      padding: rem(15px) 0 rem(18px);
+      white-space: normal;
+      div p {
+        color: #333333;
+      }
+    }
+    .engraving-actions {
+      padding: 0 rem(163px);
+      @include for-mobile {
+        padding: 0 1.67039rem;
+      }
+      .btn-engraving-cancel {
+        padding: 0;
+        margin: rem(20px) auto rem(8px) auto;
+        text-align: center;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      .btn-engraving-action{
+        min-height: 3.3em;
+      }
+    }
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .close-btn {
+    float: right;
+    width: rem(15px);
+    height: rem(15px);
+    margin: rem(-34px) rem(15px) 0 0;
+  }
+
+  .close-btn:before {
+    font-size: rem(14px);
+  }
+
+}
+
+.engrave-loading {
+  opacity: 0.5;
+  position: relative;
+
+  &:after {
+    content: '';
+    background: url('../../../../assets/images/loading_40x40.gif') 50% 50% no-repeat;
+    background-size: rem(20px) rem(20px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
+
+@media only screen and (max-width: 683px) {
+  .overlay-engraving-content {
+      margin-top: rem(122px);
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .overlay-engraving-content {
+    margin-top: rem(80px);
+  }
+}

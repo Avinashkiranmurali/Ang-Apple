@@ -1,0 +1,107 @@
+<div class="loading-tile" *ngIf="loader; else carouselProducts">
+  <span class="loading-image medium"></span>
+</div>
+<ng-template #carouselProducts>
+  <ng-container
+    *ngFor="let carouselData of carouselDataArray | orderBy: 'asc': 'carouselData.displayOrder'; let carouselId = index">
+    <div class="carousel-wrapper" *ngIf="carouselData.showCarousel"
+         [ngClass]="{'mini-tile': carouselData.config.styleType === 'miniTile'}"
+         [style]="{'background-color': carouselData.config.backgroundColor}">
+      <div class="carousel-section container visibility-style-carousel" #carouselElem>
+        <h2 class="carousel-heading" id="carousel-heading"
+            [innerHTML]="messages[carouselData.name + '_' + pageName.toLowerCase() + '_' + carouselData.config.titleText] || messages[carouselData.name + '_' + carouselData.config.titleText] || messages[carouselData.config.titleText]"></h2>
+        <div class="banner-container"></div>
+        <div class="carousel-container" [ngClass]="carouselData.config.wrapperClass || 'dots'"
+             [class.firstSlide]="carousel.activeId === carouselId +'-0'"
+             [class.lastSlide]="carousel.activeId === carouselId + '-' +(carouselData.tilesPerSlide.length-1).toString()">
+          <ngb-carousel #carousel=ngbCarousel [interval]="0" [wrap]="false" role="group"
+                        [showNavigationArrows]="carouselData.config.showNavigationArrows"
+                        [showNavigationIndicators]="carouselData.config.showNavigationIndicators">
+            <ng-container *ngFor="let slide of carouselData.tilesPerSlide; let i = index">
+              <ng-template ngbSlide id="{{carouselId}}-{{i}}">
+                <ng-container [ngSwitch]="carouselData.config.styleType">
+                  <ng-container *ngSwitchCase="'miniTile'">
+                    <ng-container
+                      *ngTemplateOutlet="miniTileTemplate; context:{slide: slide, index: i, carouselData: carouselData, carouselId: carouselId}">
+                    </ng-container>
+                  </ng-container>
+                  <ng-container *ngSwitchDefault>
+                    <ng-container
+                      *ngTemplateOutlet="defaultTemplate; context:{slide: slide, index: i, carouselData: carouselData, carouselId: carouselId}">
+                    </ng-container>
+                  </ng-container>
+                </ng-container>
+              </ng-template>
+            </ng-container>
+          </ngb-carousel>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</ng-template>
+
+<ng-template #defaultTemplate let-slide="slide" let-carouselData="carouselData" let-carouselId="carouselId">
+  <div class="product-slide" role="list" aria-labelledby="carousel-heading">
+    <ng-container *ngFor="let tile of slide">
+      <div class="product-section-container" [style]="{'background-color': carouselData.config.tileBackgroundColor}"
+           role="listitem">
+        <div class="product-section">
+          <section class="product-tile" tabindex="-1" [routerLink]="sharedService.constructRouterUrl(tile)">
+            <div class="product-image-section">
+              <img [src]="tile.image + '&qlt=95'" alt=""/>
+            </div>
+            <div class="product-content-section">
+              <a id="{{carouselId}}-link-goto-details-{{tile.psid}}"
+                 [routerLink]="sharedService.constructRouterUrl(tile)">{{ tile.name }}</a>
+              <app-pricing-temp
+                parentClass="default-carousel-template {{ carouselData.config.wrapperClass }}"
+                ext=""
+                [offer]="tile.offers[0]"
+                [item]="tile"
+                [hideStrikethroughPrice]="carouselData.config.hideStrikethroughPrice">
+              </app-pricing-temp>
+            </div>
+          </section>
+          <div class="btn-container product-CTA-section" *ngIf="carouselData.config.showCTA">
+            <span [ngClass]="carouselData.config.ctaLabelStyle">
+              <a
+                [style]="{'background-color': carouselData.config.tileCTABackgroundColor, 'color': carouselData.config.tileCTATextColor}"
+                attr.aria-label="{{ carouselData.config.ctaLabelText | translate }} {{ tile.name }}"
+                [routerLink]="carouselData.config.ctaTargetType === 'link'? sharedService.constructRouterUrl(tile):[]"
+                [attr.role]="carouselData.config.ctaTargetType"
+                (click)="carouselData.config.ctaTargetType === 'link'? '' : addToCart(tile)">{{ carouselData.config.ctaLabelText | translate
+                }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</ng-template>
+
+<ng-template #miniTileTemplate let-slide="slide" let-carouselData="carouselData" let-carouselId="carouselId">
+  <div class="product-slide d-flex" role="list" aria-labelledby="carousel-heading">
+    <ng-container *ngFor="let tile of slide">
+      <section class="product-tile d-flex flex-row align-items-center" tabindex="-1" role="listitem"
+               [routerLink]="sharedService.constructRouterUrl(tile)">
+        <div class="image-container d-flex flex-column">
+          <img class="product-image" [src]="tile.image + '&qlt=95'" alt="product image placeholder"/>
+          <span class="align-self-center" *ngIf="tile.optionsConfigurationData?.color?.length > 1">
+              <app-swatches-color [item]="tile"></app-swatches-color>
+            </span>
+        </div>
+        <div class="product-info-container d-flex">
+          <a [routerLink]="sharedService.constructRouterUrl(tile)"
+             id="{{carouselId}}-link-to-detail-config-page-{{tile.psid}}" class="title">{{ tile.name }}</a>
+          <app-pricing-temp
+            parentClass="miniTile-carousel-template"
+            ext=""
+            [offer]="tile.offers[0]"
+            [item]="tile"
+            [hideStrikethroughPrice]="carouselData.config.hideStrikethroughPrice">
+          </app-pricing-temp>
+        </div>
+      </section>
+    </ng-container>
+  </div>
+</ng-template>

@@ -1,0 +1,26 @@
+<h3 class="m-0 payment-module-main-title">{{'splitPaymentComponentHeading' | translate}}</h3>
+<p class="payment-module-subtitle" [innerHTML]="'splitPaymentComponentSubHeading' | translate: translateParams"></p>
+<article>
+  <ul class="split-option-wrapper" role="listbox" [attr.aria-label]="'splitPaymentComponentSubHeading' | translate: translateParams">
+    <li *ngFor="let splitPayOption of getsplitPayOptionsJson()" class="split-container option-container" role="group">
+      <input type="radio" name="splitPayOption" id="{{splitPayOption.name}}" role="option"
+        [checked]="splitPayOption.checked"
+        [(ngModel)]="state.selections.payment.splitPayOption"
+        (change)="changeSplitPayOption()"
+        [value]="splitPayOption"
+        [attr.aria-checked]="(state.selections.payment.splitPayOption?.name === splitPayOption.name)"
+        [ngClass]="{ 'disabled': splitPayOption.isDisabled,
+        'selected':state.selections.payment.splitPayOption && state.selections.payment.splitPayOption.name
+        === splitPayOption.name }">
+
+      <label for="{{splitPayOption.name}}">
+        <span class="option-header"
+          [innerHTML]="splitPayOption.optionHeading | translate: translateParamsWithTitleCase">
+        </span>
+        <span class="option-desc"
+          [innerHTML]="splitPayOption.optionDescription | translate: translateParams">
+        </span>
+      </label>
+    </li>
+  </ul>
+</article>

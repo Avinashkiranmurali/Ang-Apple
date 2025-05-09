@@ -1,0 +1,116 @@
+<section class="contain product-feature-container product-information-container" [ngClass]="parentClass">
+    <button class="product-information"
+      (keydown.enter)="prodInfoSection.toggle(); $event.preventDefault();"
+      (click)="prodInfoSection.toggle()"
+      [ngClass]="{'collapsed': infoAccordian.prodInfo}"
+      [attr.aria-label]="'productInfo' | translate"
+      [attr.aria-expanded]="!infoAccordian.prodInfo">
+        {{ 'productInfo' | translate }}
+    </button>
+
+    <div id="product-toggle" #prodInfoSection="ngbCollapse" [(ngbCollapse)]="infoAccordian.prodInfo">
+        <!--Overview-->
+        <article class="product-description" *ngIf="details.longDescription">
+            <div class="product-description-wrapper">
+                <h3 id="product-overview">{{ 'overviewTitle' | translate }}</h3>
+                <div class="product-description-content overview-content">
+                    <div *ngIf="details.longDescription" [innerHTML]="details.longDescription | safe"></div>
+                </div>
+            </div>
+        </article>
+        <ng-container *ngFor="let additionalInfo
+                of details.additionalInfo | keyvalue : sharedService.returnZero">
+            <article class="product-description" *ngIf="details.additionalInfo[additionalInfo['key']] &&
+
+            messages.excludeAdditionalInfoKeys.split(',').indexOf(additionalInfo['key']) === -1">
+                <ng-container>{{validateAdditionInfoData(additionalInfo['value'])}}
+                    <ng-container [ngSwitch]="additionalInfo1['type']">
+                        <div class="product-description-wrapper">
+                            <h3
+                                [innerHTML]="(additionalInfo.key +'Title' | translate) ? (additionalInfo.key +'Title' | translate) :  additionalInfo.key">
+                            </h3>
+                            <div class="product-description-content">
+                                <div [innerHTML]="additionalInfo1['data'] | safe" *ngSwitchDefault></div>
+                                <div *ngSwitchCase="'object'" class="object-content">
+                                    <ng-container *ngFor="let additionalInfoData of additionalInfo1.data | keyvalue : sharedService.returnZero">
+                                        {{validateAdditionInfoData(additionalInfoData['value'])}}
+                                        <ng-container [ngSwitch]="additionalInfo1['type']">
+                                            <h5>{{ (additionalInfo1.key | translate) ? (additionalInfo1.key | translate) : additionalInfo1[key] }}
+                                            </h5>
+                                            <p class="p-t-5" [innerHTML]="additionalInfo1.data.value | safe"
+                                                *ngSwitchCase="'object'"></p>
+                                            <ul *ngSwitchCase="'array'">
+                                                <li *ngFor="let data of additionalInfo1.data"><span
+                                                        [innerHTML]="data | safe"></span></li>
+                                            </ul>
+                                            <p class="p-t-5" [innerHTML]="additionalInfo1.data | safe" *ngSwitchDefault></p>
+                                        </ng-container>
+                                    </ng-container>
+                                </div>
+                                <div *ngSwitchCase="'array'">
+                                    <ul>
+                                        <li *ngFor="let additionalInfoArray of additionalInfo1.data">
+                                            <span [innerHTML]="additionalInfoArray | safe"></span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </ng-container>
+                </ng-container>
+            </article>
+        </ng-container>
+        <article class="product-description">
+            <div class="product-description-wrapper">
+                <h3 id="product-manufacturer" class="product-manufacturer">{{ 'manufacturer' | translate }}</h3>
+                <div class="product-description-content overview-content">
+                    <div>
+                        <h4>{{ 'partNumber' | translate }}</h4>
+                        <p class="p-t-5 p-b-0">{{ 'manufacturerPartNumber' | translate }}: {{ configItemSku || 'N/A' }}</p>
+                        <p class="p-t-5">{{ 'upcEANnumber' | translate }}: {{ configItemUpc || 'N/A' }}</p>
+                    </div>
+                    <div [hidden]="!details.additionalInfo.manufacturerSupportNote">
+                        <h4>{{ 'manufacturerSupportNoteTitle' | translate }}</h4>
+                        <div class="p-t-5" [innerHTML]="details.additionalInfo.manufacturerSupportNote | safe"></div>
+                    </div>
+                    <div [hidden]="!details.additionalInfo?.warranty">
+                        <h4>{{ 'warrantyTitle' | translate }}</h4>
+                        <div class="p-t-5" [innerHTML]="details.additionalInfo.warranty | safe"></div>
+                    </div>
+                    <div [hidden]="!details.additionalInfo.manufacturerNote?.data"
+                         [ngSwitch]="details.additionalInfo.manufacturerNote?.type">
+                        <h4>{{ 'manufacturerNoteTitle' | translate }}</h4>
+
+                        <p class="p-t-5" *ngSwitchDefault>
+                            <span *ngFor="let notes of details.additionalInfo.manufacturerNote?.data" [innerHTML]="notes | safe"></span>
+                        </p>
+                        <p class="p-t-5" *ngSwitchCase="'text'" [innerHTML]="details.additionalInfo.manufacturerNote?.data | safe"></p>
+                    </div>
+                    <div [hidden]="!details.additionalInfo.manufacturerServiceNote">
+                        {{details.additionalInfo.manufacturerServiceNote}}
+                        <h4>{{ 'manufacturerServiceNoteTitle' | translate }}</h4>
+                        <div class="p-t-5 service-notes" [innerHTML]="details.additionalInfo.manufacturerServiceNote | safe"></div>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+<section *ngIf="details.merchantSpecificData && details.merchantSpecificData.compatibility" class="contain product-feature-container product-compatibility-container">
+    <button class="product-information" (keydown.enter)="prodCompSection.toggle(); $event.preventDefault();"
+            (click)="prodCompSection.toggle()" [ngClass]="{'collapsed' : infoAccordian.prodComp}"
+            [attr.aria-label]="'productCompatibility' | translate"
+            [attr.aria-expanded]="!infoAccordian.prodComp">  {{ 'productCompatibility' | translate }} </button>
+    <div id="product-compatibility-toggle" #prodCompSection="ngbCollapse" [(ngbCollapse)]="infoAccordian.prodComp">
+        <article class="product-compatibility">
+            <div class="product-models" *ngFor="let product of objectKeys(details.merchantSpecificData.compatibility) ">
+                <h3>{{details.merchantSpecificData.compatibility[product]['label']}}</h3>
+                <ul class="product-list">
+                    <li class="product-list-items" *ngFor="let item of details.merchantSpecificData.compatibility[product]['value']">{{item['value']}}</li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</section>

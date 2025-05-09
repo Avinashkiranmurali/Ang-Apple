@@ -1,0 +1,100 @@
+@import "~styles/mixins";
+@import "~styles/common/cart-container";
+@import "~styles/common/total-breakdown";
+@import "~styles/common/payment-summary";
+
+.cart-module-container {
+  @media(min-width: 900px) {
+    width: rem(1010px);
+    max-width: 100%;
+  }
+}
+
+.cart-container {
+  .summary-breakdown {
+    .cart-totals-breakdown {
+      margin: 0;
+    }
+
+    .subtotal-breakdown {
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      @include for-mobile-to-tablet {
+        padding-left: 0;
+      }
+
+      .items, .shipping-total, .sub-total {
+        display: inherit;
+        justify-content: space-between;
+        align-items: flex-end;
+        font-size: $s-reg-l1;
+        line-height: 1.47059;
+        font-weight: $fw-regular1;
+        letter-spacing: -.022em;
+        margin-bottom: rem(10px);
+
+        p {
+          font-size: $s-regN;
+          font-weight: $fw-regular1;
+          margin: 0;
+        }
+      }
+
+      .sub-total {
+        border-top: rem(1px) solid #e6e6e6;
+        margin-top: rem(16px);
+        padding-top: rem(18px);
+        align-items: baseline;
+
+        > div {
+          display: inherit;
+          justify-content: inherit;
+        }
+
+        .subtotal-text {
+          letter-spacing: 0;
+        }
+      }
+    }
+  }
+}
+
+.cart-no-items {
+  text-align: center;
+  vertical-align: middle;
+  padding: rem(50px) rem(15px) rem(100px);
+  border-bottom: rem(1px) solid #e6e6e6;
+
+  > p {
+    color: #333;
+    font-size: rem(14px);
+    outline: none;
+  }
+
+  .btn-base {
+    font-size: $s-reg1;
+
+    &.continue-shop-btn {
+      color: #333333;
+
+      &:disabled {
+        background: #f6f6f6;
+        background: -webkit-linear-gradient(#fff, #f6f6f6);
+        background: -moz-linear-gradient(#fff, #f6f6f6);
+        background-image: linear-gradient(#fff, #f6f6f6);
+        border-color: #e6e6e6;
+        box-shadow: none;
+        color: #cccccc;
+      }
+    }
+  }
+
+  .no-item-disclaimer {
+    border-top: rem(1px) solid #e6e6e6;
+    margin-top: rem(100px);
+    padding: rem(15px) 0 rem(10px);
+    text-align: left;
+    width: 100%;
+  }
+}

@@ -1,0 +1,52 @@
+  <span role="complementary">
+    <a id="skipNavigation" href="javascript:void(0)" (keyup.enter)="skipMainContent()" aria-label="Skip to main content">Skip to main content</a>
+  </span>
+  <div id="views-content" class="wrapper {{pageData['theme']}}" [class.anonymous-browsing]="config.loginRequired" [ngClass]="user.programId">
+  <div class="globalOverlay" id="global-overlay"></div>
+  <app-transition *ngIf="showOverlay" @transition></app-transition>
+  <header class="header-container" role="banner">
+
+    <div class="wrapper-header" *ngIf="config.displayClientHeader">
+      <app-header [messages]="messages" [config]="config" [program]="program" [user]="user"></app-header>
+    </div>
+
+    <div class="header-disclaimer" *ngIf="messages.headerDisclaimerMsg">
+      <div class="contain">
+        <p>{{ messages.headerDisclaimerMsg }}</p>
+      </div>
+    </div>
+
+    <!-- Nav goes here -->
+    <app-nav *ngIf="config.showNavBar" ></app-nav>
+
+  </header>
+
+  <!-- Notification Ribbon -->
+  <app-notification-banner class="nr-sticky"
+    [isEnableCustomNotificationRibbon]="isEnableCustomNotificationRibbon"
+    [isEnableNotificationRibbon]="isEnableNotificationRibbon"
+    [persistCustomNotificationRibbon]="persistCustomNotificationRibbon"
+    [isShowNotificationRibbon]="isShowNotificationRibbon"
+    [notificationRibbonMessage]="notificationRibbonMessage"
+    [config]="config">
+  </app-notification-banner>
+
+  <div class="globalOverlay" id="cart-popupbg"></div>
+  <div class="landing-main-container">
+    <div class="body-container" className='Comments' id="mainContent" role="main">
+      <router-outlet (activate)="onActivate($event)"></router-outlet>
+    </div>
+  </div>
+
+  <footer class="footer-container" role="contentinfo" appFooter *ngIf="config.displayFooter">
+    <app-footer [messages]="messages" [config]="config"></app-footer>
+  </footer>
+
+<ng-container *ngIf="kountEnabled">
+  <iframe src="/apple-gr/service/kount/data-collector" style="display: none" title="" sandbox="allow-same-origin"></iframe>
+</ng-container>
+</div>
+
+
+
+

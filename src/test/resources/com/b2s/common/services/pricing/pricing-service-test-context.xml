@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- Dependencies for the Unit Test -->
+    <bean id="mockSimplePricingClient" name="mockSimplePricingClient" class="org.easymock.EasyMock" factory-method="createMock">
+        <constructor-arg value="com.b2s.service.pricing.client.simple.SimpleClient" />
+    </bean>
+
+    <bean id="mockUserToPricingContextTransformer" name="mockUserToPricingContextTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+        <constructor-arg value="com.b2s.common.services.pricing.transformers.UserToPricingContextTransformer" />
+    </bean>
+
+    <bean id="mockProductToProductRequestTransformer" name="mockProductToProductRequestTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+        <constructor-arg value="com.b2s.common.services.pricing.transformers.ProductToProductRequestTransformer" />
+    </bean>
+
+    <bean id="mockShoppingCartToCartRequestTransformer" name="mockShoppingCartToCartRequestTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+    </bean>
+
+    <bean id="mockProductResponseToProductTransformer" name="mockProductResponseToProductTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+        <constructor-arg value="com.b2s.common.services.pricing.transformers.ProductResponseToProductTransformer" />
+    </bean>
+
+    <bean id="mockProductPricingErrorToProductTransformer" name="mockProductPricingErrorToProductTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+        <constructor-arg value="com.b2s.common.services.pricing.transformers.ProductPricingErrorToProductTransformer" />
+    </bean>
+
+    <bean id="mockCartResponseToShoppingCartTransformer" name="mockCartResponseToShoppingCartTransformer" class="org.easymock.EasyMock" factory-method="createMock">
+    </bean>
+
+    <bean id="mockTravelProductToProductRequestTransformer"
+          name="mockTravelProductToProductRequestTransformer"
+          class="org.easymock.EasyMock"
+          factory-method="createMock">
+        <constructor-arg
+                value="com.b2s.common.services.pricing.transformers.TravelProductToProductRequestTransformer" />
+    </bean>
+
+    <bean id="mockProductResponseToTravelProductTransformer"
+          name="mockProductResponseToTravelProductTransformer"
+          class="org.easymock.EasyMock"
+          factory-method="createMock">
+        <constructor-arg
+                value="com.b2s.common.services.pricing.transformers.ProductResponseToTravelProductTransformer" />
+    </bean>
+
+    <bean id="pricingServiceV1FacadeWithMockDependencies"
+          name="pricingServiceV1FacadeWithMockDependencies"
+          class="com.b2s.common.services.pricing.impl.LocalPricingServiceV1">
+        <property name="pricingClient" ref="mockSimplePricingClient"/>
+        <property name="userToPricingContextTransformer" ref="mockUserToPricingContextTransformer"/>
+        <property name="productToProductRequestTransformer" ref="mockProductToProductRequestTransformer"/>
+        <property name="shoppingCartToCartRequestTransformer" ref="mockShoppingCartToCartRequestTransformer"/>
+        <property name="productResponseToProductTransformer" ref="mockProductResponseToProductTransformer"/>
+        <property name="productPricingErrorToProductTransformer" ref="mockProductPricingErrorToProductTransformer"/>
+        <property name="cartResponseToShoppingCartTransformer" ref="mockCartResponseToShoppingCartTransformer"/>
+    </bean>
+    <!-- END Dependencies for the Unit Test -->
+
+    <!-- Dependencies for the Integration Test -->
+    <context:component-scan base-package="com.b2s.common.services.pricing.transformers"/>
+
+    <context:property-placeholder file-encoding="UTF-8" ignore-unresolvable="true"
+            location="classpath:environment.properties" order="10000000"/>
+
+    <bean id="simplePricingClient" name="simplePricingClient" class="com.b2s.service.pricing.client.simple.SimpleClient">
+        <constructor-arg name="targetUrl" value="${PRICING_SERVICE_URL}"/>
+    </bean>
+
+    <bean id="pricingServiceV1Facade" name="pricingServiceV1Facade" class="com.b2s.common.services.pricing.impl.LocalPricingServiceV1">
+        <property name="pricingClient" ref="simplePricingClient"/>
+        <property name="userToPricingContextTransformer" ref="userToPricingContextTransformer"/>
+        <property name="productToProductRequestTransformer" ref="productToProductRequestTransformer"/>
+        <property name="shoppingCartToCartRequestTransformer" ref="shoppingCartToCartRequestTransformer"/>
+        <property name="productResponseToProductTransformer" ref="productResponseToProductTransformer"/>
+        <property name="productPricingErrorToProductTransformer" ref="productPricingErrorToProductTransformer"/>
+        <property name="cartResponseToShoppingCartTransformer" ref="cartResponseToShoppingCartTransformer"/>
+    </bean>
+    <!-- END Dependencies for the Integration Test -->
+
+</beans>

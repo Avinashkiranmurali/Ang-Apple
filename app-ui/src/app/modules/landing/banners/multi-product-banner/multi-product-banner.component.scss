@@ -1,0 +1,269 @@
+@import "~styles/mixins";
+
+//Multi Product Banner
+.app-multi-product-banner-container, .multi-banner-container {
+
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /* padding: rem(91px) 0 rem(29px) 0; */
+  padding: rem(40px) 0;
+  color: #111111;
+  border-bottom: #eaeaea rem(1px) solid;
+
+  .contain {
+    padding-bottom: 3.340775rem;
+
+    &.tiles-5 { //all other tiles-[1 to 4 and 6 to n] will be addressed in Phase II
+      max-width: 88.7rem;
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .title-container {
+    text-align: center;
+    color: #111111;
+    margin: 0 0 rem(37px) 0;
+
+    h2 {
+      font-size: 3.204rem;
+      line-height: rem(58px);
+      font-weight: 500;
+      margin: 0 0 rem(13px) 0;
+      padding: 0;
+      letter-spacing: 0;
+      color: inherit;
+    }
+
+    p {
+      font-size: 1.402rem;
+      line-height: rem(25px);
+      font-weight: 400;
+      letter-spacing: rem(0.21px);
+      margin: 0;
+    }
+
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      .multi-product-banner-tile {
+        padding: rem(37px) 0;
+        display: flex;
+        flex-flow: column;
+        height: 100%;
+        text-align: center;
+
+        .img-container {
+          padding: 0;
+          margin: 0 auto rem(43px) auto;
+          max-width: rem(200px);
+
+          @include for-mobile {
+            padding: 0 rem(8px);
+            max-width: none;
+          }
+
+          img {
+            width: 100%;
+            max-width: rem(200px);
+            height: auto;
+
+            @include for-mobile {
+              max-width: none;
+            }
+          }
+        }
+
+        .txt-container {
+          flex-grow: 0;
+          align-items: center;
+          margin-bottom: rem(11px);
+          padding: 0 rem(8px);
+
+          p {
+            font-size: rem(24px);
+            line-height: rem(29px);
+            font-weight: 600;
+            letter-spacing: rem(0.24px);
+            color: #111111;
+            padding: 0;
+            margin: 0;
+          }
+
+          .additional-info-container {
+            font-family: $font-family-text-display;
+            margin-top: rem(6.8px);
+            margin-bottom: rem(3px);
+            opacity: 1;
+
+            &.black-bold {
+              color: #111111;
+              font-weight: $font-weight-bold;
+              font-size: rem(24px);
+              letter-spacing: 0;
+              line-height: rem(29px);
+            }
+
+            &.orange-thin {
+              color: #CE3000;
+              font-weight: $font-weight-regular;
+              font-size: rem(17px);
+              letter-spacing: rem(0.17px);
+              line-height: rem(20px);
+            }
+          }
+        }
+
+        .btn-container {
+          .link-base {
+            font-size: rem(18px);
+            line-height: rem(22px);
+          }
+
+          .icon-arrow-right {
+            > a {
+              padding-right: rem(3px);
+            }
+
+            &:after {
+              font-size: rem(22px);
+            }
+          }
+        }
+      }
+    }
+
+    /*-------------------------
+         Used to control grid
+           do not add styles
+      -------------------------*/
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+
+    li {
+      flex-grow: 0;
+      flex-shrink: 3;
+      flex-basis: 20%;
+      max-width: 20%;
+
+      @include for-mobile {
+        flex-basis: 50%;
+        max-width: 50%;
+      }
+    }
+
+    &.tiles-5 {
+      li {
+        flex-basis: 20%;
+        max-width: calc(20% - 1.3348rem);
+        margin: 0 0.6674rem 0 0.6674rem;
+      }
+
+      @include for-tablet {
+        li {
+          flex-basis: 25%;
+          max-width: 25%;
+          margin: 0;
+        }
+      }
+      @include for-mobile {
+        li {
+          flex-basis: 50%;
+          max-width: 50%;
+          margin: 0;
+        }
+      }
+      //Phase II
+      /*@include for-extra-large-desktop {
+        li {
+          max-width: 17%;
+        }
+      }*/
+    }
+  }
+
+  .contain {
+    @include for-mobile-to-tablet {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  /*-------------------------
+            end grid
+    -------------------------*/
+
+  /*-------------*/
+  /*   DEBUG     */
+  /*-------------*/
+
+  &.debug {
+    border: rem(1px) solid #e4e4e4;
+
+    .title-container {
+      border: rem(1px) solid #e4e4e4;
+
+      h2 {
+        border: rem(1px) solid #e4e4e4;
+      }
+
+      p {
+        border: rem(1px) solid #e4e4e4;
+      }
+    }
+
+    ul {
+      li {
+        border: rem(1px) solid #e4e4e4;
+
+        .multi-product-banner-tile {
+          border: rem(1px) solid #e4e4e4;
+
+          .btn-container, .txt-container {
+            border: rem(1px) solid #e4e4e4;
+          }
+
+          .img-container {
+            position: relative;
+
+            &::after {
+              content: "";
+              position: absolute;
+              z-index: 1;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background-image: linear-gradient(120deg, #e4e4e4, #000000);
+              opacity: .7;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.multi-banner-container {
+  .txt-container {
+    font-size: rem(24px);
+    line-height: rem(29px);
+    font-weight: 600;
+    letter-spacing: rem(0.24px);
+    color: #111111;
+    padding: 0;
+    margin: 0 0 rem(11px) 0;
+  }
+}

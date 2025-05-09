@@ -1,0 +1,113 @@
+<div class="order-summary-component">
+  <h4 class="m-0 payment-module-main-title">{{'yourOrderSummary'| translate}}</h4>
+
+  <div>
+    <!-- -------------------------------
+     Templates - Cart/Checkout
+  ------------------------------- -->
+    <div>
+      <div class="main-breakdown variable-payment rs-summary"
+           [ngClass]="{'on': pricingOption === 'unbundledCheckout' || 'showCartSplitUp' }">
+        <div class="unbundled-breakdown small-12 small-offset-0 bottom-border-e6 rs-summary-break-down"
+             >
+          <div>
+              <div class="rs-summary-content">
+                <div class="rs-summary-label">
+                  {{ 'items' | translate}}
+                </div>
+                <div *ngIf="!config.showDollars" class="rs-summary-value">
+                  <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="cartSubtotal" [payFrequency]="payFrequency" [showTaxDisclaimer]="false" >
+
+                  </app-pricing-temp>
+                </div>
+                <div *ngIf="config.showDollars && (cartSubtotal.amount > 0)" class="rs-summary-value">
+                  <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="cartSubtotal" [payFrequency]="payFrequency" [showTaxDisclaimer]="false" >
+
+                  </app-pricing-temp>
+                </div>
+              </div>
+              <div class="rs-summary-content">
+                <div class="rs-summary-label">{{ 'free_Shipping' | translate }}</div>
+                <div *ngIf="!config.showDollars" class="rs-summary-value">
+                  <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="shippingCost" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                  </app-pricing-temp>
+                </div>
+                <div *ngIf="config.showDollars" class="rs-summary-value">
+                  <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="shippingCost" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                  </app-pricing-temp>
+                </div>
+              </div>
+              <ng-container *ngIf="config.combineTaxAndFees">
+                <div class="rs-summary-content">
+                  <span class="rs-summary-label" title="{{ 'setEHFtitle' }}">{{ 'taxesAndFees' | translate }}</span>
+                  <span class="rs-summary-value" *ngIf="!config.showDollars">{{ totals.points - cartSubtotal.points | number }} {{ pointLabel }}</span>
+                  <span class="rs-summary-value" *ngIf="config.showDollars">{{ totals.amount - cartSubtotal.amount | currency }}</span>
+                </div>
+              </ng-container>
+              <ng-container *ngIf="!config.combineTaxAndFees">
+                <div [hidden]="!config.showTotalTaxes" class="rs-summary-content">
+                  <div class="rs-summary-label">{{ 'taxes' | translate }}</div>
+                  <div *ngIf="!config.showDollars" class="rs-summary-value">
+                    <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="totalTaxes" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                    </app-pricing-temp>
+                  </div>
+                  <div *ngIf="config.showDollars" class="rs-summary-value">
+                    <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="totalTaxes" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                    </app-pricing-temp>
+                  </div>
+                </div>
+                <div [hidden]="!config.showTotalFees" class="rs-summary-content">
+                  <div title="{{ 'setEHFtitle' }}"  class="rs-summary-label">{{ 'fees' | translate }}
+                  </div>
+                  <div *ngIf="!config.showDollars" class="rs-summary-value">
+                    <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="totalFees" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                    </app-pricing-temp>
+                  </div>
+                  <div *ngIf="config.showDollars" class="rs-summary-value">
+                    <app-pricing-temp parentClass="order-summary-component" ext="dual_" [offer]="totalFees" [payFrequency]="payFrequency" [showTaxDisclaimer]="false">
+
+                    </app-pricing-temp>
+                  </div>
+                </div>
+              </ng-container>
+            </div>
+        </div>
+        <div>
+          <div>
+              <div class="unbundled-total rs-summary-content">
+                <div class="rs-summary-label">
+                  <span class="rs-bold-label">{{ 'Total' | translate }}</span>
+                </div>
+                <div class="rs-summary-value">
+                  <app-cart-total-temp parentClass="order-summary-component" ext="cart_" [totalVal]="totals" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="false"></app-cart-total-temp>
+                </div>
+              </div>
+          </div>
+        </div>
+        <div class="cart-total rs-summary-content small-12 small-offset-0 top-border-e6 rs-summary-total"
+             *ngIf="isPointsFixed()"
+             [hidden]="!negativeBalance || !paymentRequired">
+          <span [ngClass]="{'red-txt':negativeBalance}" class="rs-summary-label">
+            <label class="rs-big-text">{{ 'additionalPaymentDue' | translate }}</label>
+            <p [hidden]="!negativeBalance" class="rs-sub-text"> {{'maxLimitReached' | translate }} </p>
+          </span>
+          <span [ngClass]="{'red-txt':negativeBalance}" class="rs-summary-value rs-big-text">
+            <span class="total-payment-amount"> {{'totalPaymentAmt' | translate }} </span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="button-container p-t-15 p-b-25" [hidden]="!displayOrderSummOnMobile">
+    <button id="btn-hide" class="btn-base btn-cancel small-12"  (click)="toggleOrderSummary()">{{messages.hideOrderSummary}}</button>
+  </div>
+
+
+</div>
+
+<div class="spacer"></div>

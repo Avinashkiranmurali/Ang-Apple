@@ -1,0 +1,79 @@
+<div class="app-card" [formGroup]="cardForm">
+<h4 class="payment-module-main-title card-component-title">{{ 'payment-splitpay' | translate}}</h4>
+<span class="title-desc">{{ 'cardPayment' | translate : translateParams }}</span>
+
+<div class="error-wrapper" *ngIf="postCardDetailsError?.length">
+  <div role="alert" class="error-text" *ngFor="let errorObj of postCardDetailsError"> <!-- ng-repeat track by $index -->
+    <span [innerHTML]="('auth-error-' + errorObj['code'] | translate) ? ('auth-error-' + errorObj['code'] | translate) : ('auth-error' | translate)"></span>
+  </div>
+</div>
+
+<h4 class="card-information">{{ 'enterYourCard' | translate }}</h4>
+
+<article>
+
+  <fieldset>
+    <legend class="hideFromDOM">{{ 'enterYourCard' | translate }}</legend>
+    <section>
+
+      <div class="field-row" [ngClass]="{'input-entered': cardNumberControl.value || cardNumberControl.dirty, 'error': cardNumberControl.errors && cardNumberControl.dirty}">
+        <input type="text" id="cardNumber"  name="cardNumber" maxLength="16" formControlName="cardNumber" class="card-number"
+            appCardType (keyup)="getCardType($event)" (paste)="getCardType($event)" [libCardMask] = "cardNumberControl.value"
+            [attr.data-maskValue]= "cardNumberControl.value" maskPosition="start" maskLength="-4" maskChar="*" minMaskRequirement="0" join='.{1,4}' joiner='-'
+            [attr.aria-invalid]="cardNumberControl.invalid" [attr.aria-describedby]="cardNumberControl.invalid ? 'cardNumber_msg' : 'cardNumber'">
+        <label for="cardNumber">{{ 'cardNumber' | translate }}</label>
+        <ul class="creditcard-cardimages" *ngIf="creditCardTypes">
+          <li attr.aria-hidden="true" class="creditcardlogo creditcard-cardimage cc-active-transform-{{cardInfo.type === card ? this.creditCardTypes.length - (index+1): ''}}" attr.data-logo="{{card}}"
+            [ngClass]="{'creditcard-cardimage-active': cardInfo.type === card, 'creditcard-cardimage-inactive': (cardInfo.type && cardInfo.type !== card) }"
+              *ngFor="let card of creditCardTypes; let index = index;">
+             <span class="visuallyhidden">{{card}}</span>
+          </li>
+        </ul>
+
+          <div class="error-wrapper" id="cardNumber_msg" *ngIf="cardNumberControl.errors && cardNumberControl.dirty">
+            <span class="error-text" *ngIf="cardNumberControl.errors.required"> {{ 'invalidEntry' | translate }} </span>
+            <span class="error-text" *ngIf="cardNumberControl.errors.creditCardPattern"> {{ 'invalidCardNumber' | translate }} </span>
+          </div>
+
+      </div>
+
+      <div class="card-details">
+
+        <div class="field-row expiration-container" [ngClass]="{'input-entered': expirationControl.value || expirationControl.dirty, 'error': expirationControl.errors && expirationControl.dirty}">
+          <input type="text" id="expiration" name="expiration" maxLength="5" (keyup)="formatExpDate($event)" (paste)="formatExpDate($event)" class="mini-input expiration"
+            formControlName="expiration" [attr.aria-invalid]="expirationControl.invalid" [attr.aria-describedby]="expirationControl.invalid ? 'expiration_msg' : 'expiration'"
+                 [libCardExpirationMask] = "expirationControl.value" [attr.data-maskValue]= "expirationControl.value" [maskPattern]="'([^\/])'" [maskChar]="'*'"  [useMask]="config.maskInputs">
+          <label for="expiration">{{ 'expiration' | translate }}</label>
+          <div class="error-wrapper" id="expiration_msg" *ngIf="expirationControl.errors && expirationControl.dirty">
+            <span class="error-text" *ngIf="expirationControl.errors.required">{{ 'invalidEntry' | translate }}</span>
+            <span class="error-text" *ngIf="expirationControl.errors.pattern">{{ 'invalidExpirationDate' | translate }}</span>
+          </div>
+
+        </div>
+
+          <div class="field-row security-code-container" [ngClass]="{'input-entered': securityCodeControl.value || securityCodeControl.dirty, 'error': securityCodeControl.errors && securityCodeControl.dirty}">
+            <input type="password" id="securityCode" name="securityCode" maxLength="4" class="mini-input security-code" formControlName="securityCode"
+             [attr.aria-invalid]="securityCodeControl.invalid" [attr.aria-describedby]="securityCodeControl.invalid ?
+              'securityCode_msg' : 'securityCode'">
+          <label for="securityCode">{{ 'securityCode' | translate }}</label>
+          <em class="security-code-icon g-icons icon-help-grey-icon"></em>
+          <div class="error-wrapper" id="securityCode_msg" *ngIf="securityCodeControl.errors &&
+          securityCodeControl.dirty">
+            <span class="error-text" *ngIf="securityCodeControl.errors.required">{{'invalidEntry' | translate }}</span>
+            <span class="error-text" *ngIf="securityCodeControl.errors.pattern">{{ 'invalidSecurityCode' | translate }}</span>
+          </div>
+
+        </div>
+
+     </div>
+
+    </section>
+  </fieldset>
+
+</article>
+<app-billing-address *ngIf="true"
+  [state]="state"
+  [shippingAddress]="state.cart.shippingAddress"
+  [postCardDetailsError]=postCardDetailsError
+  formGroupName="billingAddress"></app-billing-address>
+</div>

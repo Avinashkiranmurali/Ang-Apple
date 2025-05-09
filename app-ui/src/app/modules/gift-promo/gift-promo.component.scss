@@ -1,0 +1,41 @@
+@import "~styles/mixins";
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: rem(32.5px);
+  margin-bottom: rem(99px);
+
+  @include for-mobile-to-tablet {
+    display: flex;
+    flex-direction: unset;
+    margin-left: rem(10px);
+    margin-right: rem(10px);
+  }
+
+  @include for-mobile {
+    display: flex;
+    flex-direction: unset;
+    margin-left: rem(10px);
+    margin-right: rem(10px);
+  }
+
+  .btn-gift-selection-cancel {
+    max-width: rem(200px);
+    background: #eeeeee;
+    margin: 0;
+   // border-radius: 4px;
+  }
+}
+.gift-promo-component-container {
+ .link-cancel-gift-selection {
+    margin: 0 0 0 0;
+    font-size: rem(16px);
+    font-family: $font-base;
+    line-height: rem(19px);
+    font-weight: $font-weight-regular;
+    color: #0070C9;
+    letter-spacing: 0px;
+    display: inline-block;
+  }
+}

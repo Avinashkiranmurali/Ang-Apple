@@ -1,0 +1,32 @@
+<div class="uk-visible-toggle uk-light" uk-slider
+     (keydown.escape)="onResize();"
+     id="zoomableSlideShowComponent"
+     [ngClass]="{'zoom-activated uk-lightbox uk-open' : zoomActivated, 'zoom-not-activated': !zoomActivated}"
+     #zoomSlideShow>
+  <div *ngIf="zoomActivated" class="close-icon-container">
+    <button class="uk-lightbox-toolbar-icon uk-close-large uk-icon uk-close" type="button" uk-close=""
+            (click)="deActivateZoom()" tabindex="0" aria-label="Close"></button>
+  </div>
+  <div class="uk-position-relative">
+    <section class="uk-zoom-content  uk-slider uk-slider-container">
+      <ul class="uk-slider-items" role="list" aria-label="Gallery"
+          [ngClass]="{'uk-child-width-auto uk-child-width-1-6@m': !zoomActivated,
+          'uk-width-1 uk-child-width-1': zoomActivated }">
+        <li *ngFor="let image of carouselImages; let id = index" role='listitem' (click)="activateZoom(id);" (keydown.enter)="activateZoom(id);">
+          <div class="banner-image-content" role="presentation">
+            <img src="{{ imageServerUrl + image }}" alt="" role="button" attr.aria-label="{{'Show Image ' + (id+1) + ' of ' + carouselImages?.length}}" loading="lazy"/>
+          </div>
+        </li>
+      </ul>
+    </section>
+  </div>
+  <a class="uk-position-center-left slider-nav" role="button" aria-label="Previous" href="#"
+     uk-slidenav-previous
+     uk-slider-item="previous">
+    <span class="uk-slidenav-previous-icon"></span>
+  </a>
+  <a class="uk-position-center-right slider-nav" role="button" aria-label="Next" href="#" uk-slidenav-next
+     uk-slider-item="next">
+    <span class="uk-slidenav-next-icon"></span>
+  </a>
+</div>

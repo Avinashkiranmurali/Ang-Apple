@@ -1,0 +1,155 @@
+@import "~styles/mixins";
+
+/* CART GIFT PROMO CART LEFT MODULE */
+
+.gift-promo-cart-left {
+  &.pricing-module {
+    padding-top: rem(6px);
+
+    &.discounted {
+      .price-content {
+        > div {
+          display: inline-flex;
+          flex-direction: column-reverse;
+
+          .discount-container {
+            padding-top: 4px;
+          }
+        }
+      }
+    }
+
+    .price-container {
+      display: flex;
+      padding: 0;
+
+      .local-currency {
+        margin-left: rem(4px);
+      }
+    }
+
+    * {
+      font-size: rem(14px);
+      line-height: rem(16px);
+      color: #111111;
+      font-weight: $font-weight-semi-bold;
+    }
+
+    .discount-container {
+      display: flex;
+      padding: 0;
+
+      * {
+        font-size: rem(14px);
+        line-height: rem(16px);
+        color: #111111;
+        font-weight: $font-weight-regular;
+      }
+
+      .amount-discount {
+        margin-left: rem(4px);
+      }
+    }
+  }
+}
+
+/* CART GIFT PROMO CART RIGHT MODULE */
+
+.gift-promo-cart-right {
+  &.pricing-module {
+    text-align: right;
+
+    .gift-promo-free-caption {
+      font-size: rem(17px);
+      line-height: rem(20px);
+      font-weight: $font-weight-semi-bold;
+      color: #111111;
+      letter-spacing: 0;
+    }
+
+    ::ng-deep {
+      .price-content {
+        &.qty_ext {
+          .discount-container {
+            &.dual-price {
+              .discount-module {
+                .discount-amount {
+                  font-size: rem(14px);
+                  line-height: rem(16px);
+                  font-weight: $font-weight-regular;
+                  color: #111111;
+                }
+              }
+
+              .amount-discount {
+                font-size: rem(14px);
+                line-height: rem(16px);
+                font-weight: $font-weight-regular;
+                color: #111111;
+              }
+            }
+          }
+
+          > .dual-price {
+            .price-container {
+              padding-bottom: rem(11px);
+            }
+          }
+        }
+
+        .discount-module {
+          .discount-amount {
+            font-size: rem(14px);
+            line-height: rem(16px);
+            font-weight: $font-weight-semi-bold;
+            color: #111111;
+
+          }
+        }
+
+        .price-amount {
+          font-size: rem(16px);
+          line-height: rem(19px);
+          font-weight: $font-weight-semi-bold;
+          color: #111111;
+        }
+
+        .local-currency {
+          font-size: rem(14px);
+          line-height: rem(16px);
+          font-weight: $font-weight-regular;
+          color: #111111;
+        }
+      }
+    }
+  }
+}
+
+.order-items {
+  .local-currency {
+    margin-top: rem(2px);
+  }
+  .gift-promo-free-caption {
+    font-size: rem(17px);
+    line-height: rem(20px);
+    font-weight: $font-weight-semi-bold;
+    color: #111111;
+    letter-spacing: 0;
+  }
+  @include for-mobile-to-tablet {
+    &.pricing-module.discounted .discount-container .amount-discount {
+      text-align: left;
+    }
+  } 
+  &.pricing-module.discounted {
+    .price-content.qty_ext {
+      .discount-container.gift{
+        display: none;
+          }
+        }
+    }
+}
+
+.pricing-module.discounted .discount-container .amount-discount {
+  text-align: right;
+}

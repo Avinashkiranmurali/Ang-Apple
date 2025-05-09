@@ -1,0 +1,107 @@
+@import "~styles/mixins";
+
+.order-detail-payment-summary-section {
+  border-top: rem(1px) solid #E6E6E6;
+  padding-top: rem(48px);
+
+  .summary-details, .summary-total, .additional-payment {
+    .summary-content {
+      display: flex;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: rem(6px);
+      @include for-mobile {
+        align-items: baseline;
+      }
+
+      .summary-label {
+        font-size: rem(17px);
+        line-height: rem(20px);
+        font-weight: $fw-regular;
+        letter-spacing: 0;
+        color: #111111;
+
+        &.total-payment {
+          font-weight: $font-weight-semi-bold;
+        }
+
+        &.additional-payment-label {
+          font-size: rem(24px);
+          font-weight: $font-weight-semi-bold;
+          line-height: rem(29px);
+          @include for-mobile {
+            margin-right: rem(12px);
+          }
+        }
+      }
+
+      .summary-value {
+        font-size: rem(17px);
+        line-height: rem(20px);
+        font-weight: $font-weight-semi-bold;
+        letter-spacing: 0;
+        color: #111111;
+
+        &.additional-payment-value {
+          font-size: rem(24px);
+          font-weight: $font-weight-semi-bold;
+          line-height: rem(29px);
+        }
+      }
+    }
+  }
+
+  .summary-total {
+    .summary-content.total-amount {
+      margin-bottom: rem(11px);
+      align-items: flex-end;
+    }
+
+    .summary-content.payment-amount {
+      margin-bottom: rem(25px);
+    }
+  }
+
+  .additional-payment {
+    padding-top: rem(18px);
+
+    .summary-content {
+      margin-bottom: 0;
+    }
+
+    label {
+      display: inherit;
+      margin-bottom: 0;
+      font-weight: inherit;
+    }
+  }
+
+  .collapsibleLink {
+    font-size: rem(17px);
+    font-weight: $font-weight-regular;
+    line-height: rem(20px);
+    color: #0070C9;
+    margin-left: rem(5px);
+  }
+
+  .card-info {
+    margin-top: rem(8px);
+    font-size: rem(16px);
+    font-weight: $font-weight-regular;
+    line-height: rem(19px);
+    text-align: right;
+    color: #111111;
+
+    ::ng-deep {
+      .semi-bold {
+        font-weight: $font-weight-semi-bold;
+      }
+    }
+
+    @include for-mobile {
+      text-align: left;
+    }
+
+  }
+}

@@ -1,0 +1,517 @@
+@import "~styles/mixins";
+.hero-container {
+    padding-bottom: rem(45px);
+    padding-top: rem(81px);
+
+    * {
+      overflow:visible;
+    }
+
+    @include for-mobile-to-tablet {
+      margin-top: rem(0px);
+      padding-top: rem(40px);
+    }
+
+    @include for-mobile{
+      margin-top: rem(0px);
+      padding-top: rem(40px);
+    }
+
+    .title-header{
+      font-size: rem(36px);
+      color: #111111;
+      font-weight: 600;
+      line-height: rem(43px);
+      margin:0;
+    }
+    .title-desc {
+      font-size: rem(16px);
+      color: #111111;
+      margin:0;
+      padding-top:rem(10px);
+      @include for-mobile-to-tablet{
+        ::ng-deep {
+          span:last-child {
+            padding-right: rem(10px);
+          }
+        }
+        &.title-desc-active {
+          &:after {
+            -webkit-transform: rotate(-270deg);
+            -moz-transform: rotate(-270deg);
+            position: absolute;
+            content: "\203A";
+            font-size: rem(20px);
+            -ms-transform: rotate(-270deg);
+            -webkit-transform-origin: 50% 50%;
+            -moz-transform-origin: 50% 50%;
+            -ms-transform-origin: 50% 50%;
+          }
+        }
+        &.show-order-summary {
+          &:after {
+            -webkit-transform: rotate(-90deg);
+            -moz-transform: rotate(-90deg);
+            -ms-transform: rotate(-90deg);
+            -webkit-transform-origin: 30% 50%;
+            -moz-transform-origin: 30% 50%;
+            -ms-transform-origin: 30% 50%;
+          }
+        }
+      }
+    }
+  }
+
+  .main-container {
+    display: flex;
+    width: 100%;
+    @include for-all-desktops {
+      min-height: rem(628px);
+      margin-bottom: rem(36px);
+      padding-bottom: rem(14px);
+    }
+
+    * {
+      overflow:visible;
+    }
+
+    @include for-mobile-to-tablet() {
+      flex-direction: column;
+    }
+
+    .left-container {
+      flex: 0 1 62%;
+      @include for-mobile{
+        flex: 100%;
+      }
+    }
+
+
+    .right-container {
+      flex: 0 1 38%;
+      max-width: 38%;
+      flex-wrap: wrap;
+      align-items: stretch;
+      border-left: rem(1px) solid #ccc;
+      @include for-mobile{
+        border-left: none;
+        flex: 100%;
+        max-width: inherit;
+      }
+
+      @include for-mobile-to-tablet() {
+        border-left: none;
+        flex: 100%;
+        max-width: inherit;
+      }
+
+      .top-half {
+        flex: 0 0 100%;
+        border-bottom: 1px solid #ccc;
+        padding: 0 0 rem(10px) rem(30px);
+      }
+      .bottom-half {
+        flex: 0 0 100%;
+        padding: rem(50px) 0 0 rem(30px);
+        min-height: rem(338px);
+        @include for-mobile-to-tablet {
+          padding: rem(50px) 0 0 0px;
+        }
+        &.bottom-half-shift-to-top {
+          padding: 0 0 0 rem(30px);
+        }
+        .content-container {
+          background: none;
+        }
+      }
+    }
+  }
+
+  .content-container {
+    max-width: rem(490px);
+
+    @include for-mobile-to-tablet {
+      position: relative;
+      ::ng-deep {
+        app-order-summary {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 1000;
+          .order-summary-component {
+            background: #FFF;
+            box-shadow: 0 0 0 rem(2px) #FFF;
+            .button-container {
+              background: #FFF;
+            }
+          }
+          .spacer {
+            height: 100vh;
+            background: #000;
+            opacity: 0.2;
+            margin-left: rem(-15px);
+            margin-right: rem(-15px);
+          }
+        }
+      }
+    }
+  }
+
+  .payment-module-main-title {
+    font-size: rem(21px);
+    font-weight: 600;
+    color: #111;
+    line-height: rem(25px);
+  }
+
+  .payment-module-subtitle{
+    margin: 0;
+    font-size: rem(17px);
+    font-weight: 600;
+    color: #111;
+    line-height: rem(20px);
+    padding-top: rem(35px);
+  }
+
+  .option-container {
+    position: relative;
+    margin-top: rem(15px);
+    list-style: none;
+
+    input[type=radio], .payment-radio {
+      //hidden radio button input but receives focus
+      opacity: 0; //take it out of view but leave it in the tabbing order
+      margin: 0;
+      padding: 0;
+      height: 0;
+      width: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      &:checked {
+        &:after {
+          content: "";
+        }
+      }
+
+      &:focus:not(:checked) {
+        + label {
+          border-radius: rem(12px);
+          border: 1px solid #117ACB;
+          -webkit-box-shadow: 0 0 0 rem(3px) rgba(181,212,242,1);
+          -moz-box-shadow: 0 0 0 rem(3px) rgba(181,212,242,1);
+          box-shadow: 0 0 0 rem(3px) rgba(181,212,242,1);
+        }
+      }
+      + label {
+        cursor: pointer;
+        color: #333333;
+        margin-bottom: 0;
+        padding: rem(17px) rem(19px);
+        width: 100%;
+
+        position: relative;
+        display: block;
+        border: rem(1px) solid #cccccc;
+        border-radius: rem(12px);
+      }
+      //resting state radio buttons
+      &:not(:disabled):not(:checked){
+        + label {
+
+          //hover and focus
+          &:hover {
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              border-radius: rem(12px);
+              -moz-box-shadow: 0 0 0 rem(1px) #333333;
+              -webkit-box-shadow: 0 0 0 rem(1px) #333333;
+              box-shadow: 0 0 0 rem(1px) #333333;
+            }
+          }
+        }
+      }
+
+
+      //disabled resting state radio button
+      &:disabled {
+        + label {
+          -webkit-appearance: initial;
+          background: #f2f2f2;
+          color: #333;
+          -webkit-text-fill-color: #333;
+          text-shadow: rem(1px) rem(1px) 0 #FFF;
+          border-color: #cccccc;
+          cursor: default;
+
+          &:hover {
+            &:after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              border-radius: rem(12px);
+              -moz-box-shadow: 0 0 0 rem(1px)  #cccccc;
+              -webkit-box-shadow: 0 0 0 rem(1px) #cccccc;
+              box-shadow: 0 0 0 rem(1px)  #cccccc;
+            }
+          }
+        }
+      }
+
+      //selected state radio button
+      &:checked{
+        + label {
+          border-color: #117ACB;
+          // -webkit-box-shadow: 0 0 0 3px rgba(181,212,242,1);
+          // -moz-box-shadow: 0 0 0 3px rgba(181,212,242,1);
+          // box-shadow: 0 0 0 3px rgba(181,212,242,1);
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            border-radius: rem(12px);
+            -moz-box-shadow: 0 0 0 rem(2px) #117ACB;
+            -webkit-box-shadow: 0 0 0 rem(2px) #117ACB;
+            box-shadow: 0 0 0 rem(2px) #117ACB;
+          }
+
+          &:hover {
+            border-color: #117ACB;
+          }
+        }
+      }
+
+    }
+
+    .option-header{
+      display: block;
+      margin: 0;
+      font-size: rem(18px);
+      font-weight: 500;
+    }
+    .option-desc{
+      display: block;
+      margin: 0;
+      font-size: rem(14px);
+      font-weight: 400;
+    }
+  }
+
+  .msg-container{
+    padding-top:rem(23px);
+    .msg-box{
+      display: flex;
+    }
+    .info-icon{
+      background: #999;
+      border-radius: 50%;
+      height: rem(21px);
+      width: rem(21px);
+      margin-right: rem(14px);
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+
+      &:before{
+        // content: '\e902';
+        content: #{symbol(e902)};
+        color: white;
+        font-size: rem(23px);
+        width: rem(21px);
+        height: rem(21px);
+        top: rem(-1px);
+      }
+    }
+    .info-msg{
+      font-size: rem(16px);
+      font-weight: 400;
+      color: #333333;
+      letter-spacing: 0;
+
+    }
+  }
+
+  .button-component {
+    display: block;
+
+    /****************
+      BUTTON HELPERS
+      ****************/
+    $button-text-black: #333333 !default;
+    $button-text-white: #fff !default;
+    $button-text-blue: #0070c9 !default;
+    $button-background-default: #e3e3e3 !default;
+    $button-background-default-second: #fff !default;
+    $button-background-blue: #0070c9 !default;
+    $button-background-second: #42a1ec !default;
+    $button-default-border: #d6d6d6 !default;
+    $button-blue-border: #07c !default;
+
+    @mixin background-gradient($startColor: $button-background-default-second, $endColor: $button-background-default) {
+      background-color: $startColor;
+      background: linear-gradient($startColor,$endColor);
+      background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+      background: -webkit-linear-gradient(top, $startColor, $endColor);
+      background: -moz-linear-gradient(top, $startColor, $endColor);
+      background: -ms-linear-gradient(top, $startColor, $endColor);
+      background: -o-linear-gradient(top, $startColor, $endColor);
+    }
+
+    @mixin active-state {
+      outline: none;
+      -moz-box-shadow: none;
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+
+    @mixin button-base {
+      font-size: rem(17px);
+      line-height: 1.47059;
+      font-weight: 400;
+      letter-spacing: -.022em;
+      border: 1px solid transparent;
+      border-radius: rem(12px);
+      cursor: pointer;
+      padding: rem(4px) rem(15px);
+      text-align: center;
+    }
+
+
+    /**********************
+      BUTTON VISUAL STYLING
+      **********************/
+
+    .button {
+      @include button-base;
+      &:focus {
+        @include focus-border();
+      }
+
+      &.button-default {
+        @include background-gradient();
+        border-color: $button-default-border;
+        color: $button-text-black;
+
+        &:active {
+          @include background-gradient(#f7f7f7, #dcdcdc);
+          border-color: #d0d0d0;
+          @include active-state();
+        }
+        &:hover {
+          @include background-gradient(#fff, #eee);
+          border-color: #d9d9d9;
+        }
+
+      }
+
+      &.button-blue {
+        @include background-gradient($button-background-second, $button-background-blue);
+        border-color: $button-blue-border;
+        color: $button-text-white;
+
+        &:active {
+          @include background-gradient(#3d94d9, #0067b9);
+          border-color: #006dbc;
+          @include active-state();
+        }
+
+        &:hover {
+          @include background-gradient(#51a9ee, #147bcd);
+          border-color: #1482d0;
+          text-decoration: none;
+        }
+
+        &:focus {
+          -webkit-box-shadow: 0 0 0 3px rgba(181,212,242,1);
+          -moz-box-shadow: 0 0 0 3px rgba(181,212,242,1);
+          box-shadow: 0 0 0 3px rgba(181,212,242,1);
+          border-radius: rem(12px);
+        }
+      }
+
+      &.button-disabled, &.button-disabled:hover {
+        cursor: default;
+        opacity: .3;
+      }
+    }
+
+    /********************
+      BUTTON POSITIONING
+      ********************/
+    .button-container-flex {
+      display: flex;
+      flex-direction: row-reverse;
+      margin-top: rem(32.5px);
+
+      @include for-mobile-to-tablet {
+        flex-direction: column;
+      }
+
+      > * {
+        min-height:3.3em;
+        margin:rem(7.5px);
+        flex: 0 1 50%;
+
+        @include grid-spacing-flex(1, 2);
+
+        &:first-child{
+          margin-right: 0;
+        }
+        &:last-child{
+          margin-left: 0;
+        }
+
+        @include for-mobile-to-tablet {
+
+          &:first-child{
+            margin-left: 0;
+            margin-right: 0;
+          }
+          &:last-child{
+            margin-left: 0;
+            margin-right: 0;
+          }
+        }
+      }
+
+      &.buttons-full-width {
+        flex-direction: column;
+
+        .btn-base {
+          margin-left: 0;
+          margin-right: 0;
+        }
+        .btn-base{
+          &.cancel{
+            &.cta-link-type{
+              margin-top: 0 !important;
+              padding-top: 0 !important;
+            }
+          }
+        }
+      }
+
+      &.button-single-50 {
+        > * {
+          @include grid-spacing-flex-override(1, 50%);
+        }
+      }
+    }
+
+  }

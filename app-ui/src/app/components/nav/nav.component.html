@@ -1,0 +1,231 @@
+<section role="application" class="wrapper-nav" [ngClass]="{ 'overlay-srch' : showSearchBox, 'remove-overlay-srch' : !showSearchBox && !isMobile }">
+  <div class="ie-clear-appearance-text">
+    <div>
+
+      <div class="container-fluid nav-container" role="navigation"
+          [ngStyle]="{'background': config.navBarBackgroundColor }" [ngClass]="[
+          (navTemplate && navTemplate['class'])? navTemplate['class'] : '',
+          (persistCartAbandonNotification && !isMobile)? 'cartAbandonPopup' : '']">
+        <div class="contain">
+          <div class="new-cont" [ngClass]="{'no-mobile-header' : !config.displayMobileHeader }">
+
+            <div [ngClass]="{'new-nav-desktop': (isDesktop || isTablet), 'new-nav-mobile': (!(isDesktop || isTablet) && config.displayMobileHeader) }">
+              <div class="nav-items" [ngClass]="{'mobile-header': !(isDesktop || isTablet)}">
+
+                <div class="nav-searchbar" *ngIf="showSearchBox && !isMobile">
+                  <app-search-box [searchPage]="false" (closeSearchEvent)="focusSearchIcon()" (escKeyPressed)="showHideSearchBar()" [quickLinks]="quickLinks" [searchFromNavBar]="true"></app-search-box>
+                </div>
+
+                <ul class="new-nav-list" [ngStyle]="{'color': config.navBarTextColor, 'background': config.navBarBackgroundColor }">
+                  <li class="new-head  nav-animation" *ngIf="!config.showProgramTitle" aria-hidden="true"><!--placeholder to push the basket right-->
+                  </li>
+                  <li class="two-line-icon" *ngIf="(isMobile && config.displayTwoLineIcon)">
+                    <a id="mobile-nav" role="button" [attr.aria-label]="navLabel" popoverClass="mobile-main-nav-menu"
+                       class="" [ngClass]="{'active': mobileNav.isOpen()}"
+                       #mobileNav="ngbPopover" triggers="manual" placement="bottom-left" [ngbPopover]="menuContent"
+                       [autoClose]="'outside'" (shown)="mobileNavOpen()" (hidden)="mobileNavClose()"
+                       (click)="mobileNavToggle(mobileNav)">
+                      <span class="line first" [ngStyle]="{'background':config.navBarTextColor}"></span>
+                      <span class="line second" [ngStyle]="{'background':config.navBarTextColor}"></span>
+                    </a>
+                  </li>
+                  <li class="new-head nav-animation" *ngIf="config.showProgramTitle">
+                    <h1 class="nav-animation" [ngStyle]="{'color': config.navBarTextColor }" role="definition">
+                      <ng-container [ngSwitch]="config.enableProgramTitleAction">
+                        <ng-container *ngSwitchCase="true">
+                          <a class="program-title g-icon" routerLink="/store" *ngIf="messages.brandingLogoUrl"
+                             [attr.aria-label]="messages.brandingName + ' Go to Store landing page'">
+                            <img src="{{config.imageServerUrl}}/{{ messages.brandingLogoUrl }}"
+                                 alt="{{messages.brandingName}}" aria-hidden="true"/>
+                          </a>
+                          <a class="program-title g-icon" routerLink="/store" *ngIf="!messages.brandingLogoUrl"
+                             [innerHTML]="messages.siteDisplayName">
+                          </a>
+                        </ng-container>
+                        <ng-container *ngSwitchCase="false">
+                          <a class="program-title g-icon pointer-events-none" href="javascript:void(0)"
+                             *ngIf="messages.brandingLogoUrl"
+                             [attr.aria-label]="messages.brandingName + ' Store Landing'">
+                            <img src="{{config.imageServerUrl}}/{{ messages.brandingLogoUrl }}"
+                                 alt="{{messages.brandingName}}" aria-hidden="true"/>
+                          </a>
+                          <a class="program-title g-icon pointer-events-none" href="javascript:void(0)"
+                             *ngIf="!messages.brandingLogoUrl"
+                             [innerHTML]="messages.siteDisplayName">
+                          </a>
+                        </ng-container>
+                      </ng-container>
+                    </h1>
+                  </li>
+                  <ng-container *ngIf="(isDesktop || isTablet) && config.showFamilyNav">
+                    <li class="main nav-animation" *ngFor="let link of mainNav; let i = index">
+                      <a class="main-nav-link" appCustomHoverLink
+                         [navBarColors]="config.navBarColors"
+                         [ngStyle]="{'color': config.navBarTextColor }" [ngClass]="link.slug" [routerLink]="['browse/', link.slug ]"
+                         *ngIf="link.templateType === 'LANDING' && link.configurable === false" [attr.aria-label]="'Category ' + link.i18nName"
+                         (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+                      </a>
+                      <a class="main-nav-link" appCustomHoverLink
+                         [navBarColors]="config.navBarColors"
+                         [ngStyle]="{'color': config.navBarTextColor }" [ngClass]="link.slug" [attr.aria-label]="'Category ' + link.i18nName"
+                         [routerLink]="['configure/', link.slug ]" routerLinkActive="active"
+                         *ngIf="link.configurable === true" (click)='changeSubnav(i)' [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+                      </a>
+                      <a class="main-nav-link" appCustomHoverLink
+                         [navBarColors]="config.navBarColors"
+                         [ngStyle]="{'color': config.navBarTextColor }" [ngClass]="link.slug" [attr.aria-label]="'Category ' + link.i18nName"
+                         [routerLink]="['curated/', link.slug, link.subCategories[0].slug ]"
+                         *ngIf="link.templateType === '' || link.templateType === 'CATEGORYLIST'"
+                         (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+                      </a>
+                      <a class="main-nav-link" appCustomHoverLink
+                         [navBarColors]="config.navBarColors"
+                         [ngStyle]="{'color': config.navBarTextColor }" [ngClass]="link.slug" [attr.aria-label]="'Category ' + link.i18nName"
+                         [routerLink]="['curated/', link.slug, link.subCategories[0].slug ]"
+                         *ngIf="link.templateType === '' || link.templateType === 'CATEGORY'"
+                         (click)="changeSubnav(i)" routerLinkActive="active" [innerHTML]="messages['main-nav-' + link.slug] || link.i18nName">
+                      </a>
+                    </li>
+                  </ng-container>
+
+                  <li class="main nav-animation" *ngIf="(isDesktop || isTablet) && config.showNavBarSearch"
+                      [ngStyle]="{'color': config.navBarTextColor }" >
+                    <a class="mainnav-search g-icons nav-icon icon-global-search nav-icon-search chaseanalytics-track-link"
+                       #search href="javascript:void(0)" role="button" [attr.aria-expanded]="showSearchBox"
+                       aria-label="Global Search" data-pt-name='cc_apple_searchicon' (click)="showHideSearchBar()"></a>
+                  </li>
+
+                  <li class="user-cart nav-animation" *ngIf="config.showCartMenu"
+                      [ngClass]=" !config.showNavCartIcon ? 'invisible' : '' "
+                      [ngStyle]="{'color': config.navBarTextColor }">
+                    <div class="user-cart-icon" #cartIcon>
+
+                      <ng-container
+                        [ngSwitch]="(navTemplate && navTemplate['bag']) ? navTemplate['bag']['template'] : ''">
+                        <div *ngSwitchCase="'anon'">
+                          <a href (click)="openModal()" class="popup-cta nav-icon g-icons icon-ShoppingCartIcon"></a>
+                        </div>
+                        <div *ngSwitchDefault>
+                          <!-- Bag icon/button -->
+                          <a href="javascript:void(0)" [attr.aria-expanded]="isOpen" placement="bottom"
+                             class="chaseanalytics-track-link popup-cta btn-cart-popup nav-icon g-icons icon-ShoppingCartIcon cart-with-items"
+                             role="button" data-pt-name='cc_apple_carticon' #bagMenu="ngbPopover" triggers="manual"
+                             [ngbPopover]="popContent" [autoClose]="isMobile ? true : 'outside'" [container]="'body'"
+                             (click)="sessionService.getSession();bagMenu.toggle();setPositionForBagPopup();" (shown)="popupTabEvent()"
+                             (hidden)="closePopover()"
+                             popoverClass="
+                            {{ persistCartAbandonNotification && !isMobile ? 'cartAbandonPopup cartPopup' : 'cartPopup' }}
+                            {{ emptyCart ? 'emptyCart' : '' }}
+                            {{ !emptyCart && cartItemsTotalCount > 9 ? 'twoDigitItemCount' : ''}}"
+                             attr.aria-label="{{ (cartItemsTotalCount > 1 ? 'bagItems' : cartItemsTotalCount === 1 ? 'bagItem' : 'emptyBagMsg') | translate : { 'cartItemsTotalCount' :  cartItemsTotalCount } }}">
+                            <!-- Quantity indicator -->
+                            <div class="item-count-container"
+                                 [ngClass]="{'two-digit-item-count-container': cartService.cartItemsTotalCount > 9 }"
+                                 *ngIf="!emptyCart && cartService.cartItemsTotalCount > 0"><span
+                              class="item-count-number">{{ cartService.cartItemsTotalCount }}</span></div>
+                          </a>
+                          <div class="hideFromDOM" role="alert" aria-live="polite">{{ cartUpdateMsg }}</div>
+                          <div class="cart-popupbg-new" [style.display]="bagMenu.isOpen() ? 'block' : 'none'"></div>
+                        </div>
+                      </ng-container>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div><!-- end ngRepeat: item in navData().navItems -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="search-popupbg-new" [style.display]="displayCurtain ? 'block' : 'none'" (click)="showHideSearchBar()"></div>
+<div id="cart-popover-backdrop" [style.display]="persistCartAbandonNotification && isOpen && !isMobile ? 'block' : 'none'"></div>
+<app-sub-nav *ngIf="config.showSubNavBar"
+  [mainNav]="mainNav"
+  [subNav]="subNav"
+  [currentSubcat]="currentSlug"
+  [currentSlug]="currentSlug"
+  [categories]="mainNav"
+  [showSubNavBar]="showSubNavBar"
+  [messages]="messages"
+  [subNavTextColor]="config.subNavTextColor"
+  [subNavHoverTextColor]="config.subNavHoverTextColor"
+  [newIndicatorColor]="config.newIndicatorColor"
+  [displayNewIndicator]="config.displayNewIndicator"
+  [subNavColors]="config.subNavColors"
+  [subNavBackgroundColor]="config.subNavBackgroundColor">
+</app-sub-nav>
+
+<ng-template #menuContent>
+  <div class="search-overlay" [ngClass]="{'open':showQuickLinks}">
+    <div>
+      <app-search-box [searchPage]="false" [quickLinks]="quickLinks" [mobileNav]="mobileNav" [searchFromNavBar]="true"
+                      (showQuickLinksChanged)="toggleQuickLinks($event)"></app-search-box>
+    </div>
+    <div class="mobile-nav-container" [ngClass]="{ 'mobile-nav-down' : showQuickLinks }">
+      <app-main-nav [mobileNav]="mobileNav" *ngIf="!showQuickLinks"
+                    (changeSubNav)="changeSubnav($event)"></app-main-nav>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #popContent>
+  <div class="triangle"></div>
+  <div class="popover-content" id="bag-content" cdkTrapFocus [cdkTrapFocusAutoCapture]="true" role="definition" aria-label="Shopping Bag Preview">
+    <div class="cart-close-icon" role="button"
+         *ngIf="persistCartAbandonNotification && isMobile"
+         (click)="closeBagMenu(bagMenu)"></div>
+    <div class="cart-popup" [ngClass]="{'lower-opacity' : loadingItems}">
+      <div *ngIf="persistCartAbandonNotification"
+           id="bag-notification"
+           class="bag-notification" role="alert" aria-live="polite"
+           [attr.aria-expanded]="isOpen"
+           attr.aria-label="{{ (cartItemsTotalCount > 1 ? 'bagItems' : cartItemsTotalCount === 1 ? 'bagItem' : 'emptyBagMsg') | translate : { 'cartItemsTotalCount' :  cartItemsTotalCount } }} expanded"
+      > {{ 'abandonBagNotificationMsg' | translate }}</div>
+      <div *ngIf="!cartTooltipLoadError">
+        <ul class="top-hat-list">
+          <li class="empty-cart" *ngIf="emptyCart">
+            <p>{{ 'emptyCart' | translate }}</p>
+          </li>
+          <li *ngFor="let item of cartItems | slice:0:3" (click)="closeBagMenu(bagMenu)">
+            <a id="link-goto-details-{{item.id}}" role="link"
+               [routerLink]="sharedService.constructRouterUrl(item.productDetail)">
+              <img src="{{ item['productDetail'].images['small'] | aplImgSize : '75' }}" alt=""/>
+              <span>{{item['productDetail'].name}}<br>
+                  <span *ngIf="item['quantity'] > 1" class="cart-quantity">x{{ item['quantity'] }}</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+        <div class="more-items-cart" *ngIf="cartItems.length > 3">
+          <span class="more-items-cart-msg">
+            <div>{{ shoppingCartItemsMessage }}</div>
+          </span>
+        </div>
+		    <div class="bag-total-section" *ngIf="smartPrice && !emptyCart">
+          <div class="bag-summary">
+            <span class="bag-summary-label">{{ 'cartTotal' | translate }}</span>
+            <span class="bag-summary-value" *ngIf="!cartDiscountedSubtotal">
+                <app-cart-total-temp ext="''" [totalVal]="(pricingOption === 'unbundledCheckout') ? cartSubtotal : cartTotals" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="true"></app-cart-total-temp>
+            </span>
+            <span class="bag-summary-value" *ngIf="cartDiscountedSubtotal && config.SingleItemPurchase">
+                <app-cart-total-temp ext="''" [totalVal]="cartDiscountedSubtotal" [cartSubtotal]="cartSubtotal" [showTaxDisclaimer]="true"></app-cart-total-temp>
+            </span>
+          </div>
+          <app-smart-price [smartPrice]="smartPrice" [ext]="''" [parentClass]="'bagMenu'" [placement]="'bagMenu'"></app-smart-price>
+        </div>
+        <div class="button-container" *ngIf="cartItems.length > 0">
+          <button class="btn-base blue-btn chaseanalytics-track-link" data-pt-name='cc_apple_checkoutbutton' role="button"
+                  (click)="goToCart(bagMenu)">{{ messages['checkOutNow'] }}</button>
+        </div>
+      </div>
+      <app-user-dropdown [messages]="messages" [config]="config" [user]="user" [popupClose]="bagMenu"
+                         [cartItemsTotalCount]="cartService.cartItemsTotalCount"></app-user-dropdown>
+      <div class="tooltip-load-error" *ngIf="cartTooltipLoadError">
+        <p>{{ messages['cartLoadingError'] }} {{ messages['tryAgainLater'] }}</p>
+      </div>
+    </div>
+  </div>
+</ng-template>

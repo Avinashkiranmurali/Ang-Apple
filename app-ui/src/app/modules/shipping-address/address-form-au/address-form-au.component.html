@@ -1,0 +1,131 @@
+<div [formGroup]="changeShipAddress">
+  <div class="field-row" [ngClass]="{'input-error-row':errorMessage.name,'input-entered':recipientName.value}">
+    <input type="text" id="name" name="name" formControlName="name" maxlength="35" class="lrg-text-field"
+           [ngClass]="{'input-error':errorMessage.name}" #recipientName attr.aria-describedby="{{errorMessage.name ? 'name_msg': 'name'}}" aria-invalid="false">
+    <label for="name">{{ 'recipientName' | translate }}<span class="hideFromDOM">{{ 'maxLengthText' | translate}} 35</span></label>
+    <div *ngIf="errorMessage.name || nameField.errors?.pattern">
+      <p class="error-text g-icons" id="name_msg">{{ errorMessage.name || ((nameField.errors?.pattern) ? ('invalidName' | translate) : '') }}</p>
+    </div>
+  </div>
+  <div class="field-row" [hidden]="!(config.fullCatalog && !user.addresses)" [ngClass]="{'input-error-row':errorMessage.businessName,'input-entered':businessName.value}">
+    <input type="text" id="businessName" name="businessName" maxlength="35" formControlName="businessName" class="lrg-text-field"
+           [ngClass]="{'input-error':errorMessage.businessName}" #businessName attr.aria-describedby="{{errorMessage.businessName ? 'companyName_msg' : 'businessName'}}">
+    <label for="businessName">{{ 'companyName' | translate }} ({{ 'optional' | translate }})<span class="hideFromDOM">{{ 'maxLengthText' | translate}} 35</span></label>
+    <div *ngIf="errorMessage.businessName">
+      <p class="error-text g-icons" id="companyName_msg">{{ errorMessage.businessName }}</p>
+    </div>
+  </div>
+  <div class="field-row" [ngClass]="{'input-error-row':errorMessage.email,'input-entered':email.value}">
+    <input type="email" id="email" name="email" formControlName="email" class="lrg-text-field"
+           [ngClass]="{'input-error':errorMessage.email}" #email autocomplete= "off"
+           [libEmailMask] = "changeShipAddress.controls.email.value" [attr.data-maskValue]= "changeShipAddress.controls.email.value"
+           [useMask] = "config.maskInputs" attr.aria-describedby="{{errorMessage.email ? 'email_msg' : 'email'}}" aria-invalid="false">
+
+    <label for="email">{{ 'emailAddress' | translate }}</label>
+    <div *ngIf="errorMessage.email">
+      <p class="error-text g-icons" id="email_msg">{{ errorMessage.email }}</p>
+    </div>
+  </div>
+  <div class="field-row"
+       [ngClass]="{'input-error-row':errorMessage.phoneNumber,'input-entered': phoneNumber.value}">
+    <input type="text" id="phoneNumber" name="phoneNumber"  class="lrg-text-field" maxlength="21" formControlName="phoneNumber"
+           [ngClass]="{'input-error':errorMessage.phoneNumber}" aria-invalid="false" #phoneNumber
+           [libMask] = "changeShipAddress.controls.phoneNumber.value" [attr.data-maskValue]= "changeShipAddress.controls.phoneNumber.value" maskChar="*"
+           [useMask] = "config.maskInputs" [maskPattern]="'(?!^\\\\d*)[^\\s+\\-\\(\\)](?=.{5})'" attr.aria-describedby="{{errorMessage.phoneNumber ? 'phoneNumber_msg' : 'phoneNumber'}}">
+    <label for="phoneNumber">{{ 'phoneNumber' | translate }} <span
+      class="hideFromDOM">{{ 'maxLengthText' | translate }} 21</span></label>
+    <div *ngIf="errorMessage.phoneNumber">
+      <p class="error-text g-icons" id="phoneNumber_msg">{{ errorMessage.phoneNumber }}</p>
+    </div>
+  </div>
+
+  <article class="multi-address-select" *ngIf="isMultiAddress && shipAddress">
+    <div class="field-row ng-b-dropdown" ngbDropdown [ngClass]="{'input-error-row':errorMessage.selectedAddressName,'input-entered':shipAddress.selectedAddressId}">
+      <button type="button" role="combobox" ngbDropdownToggle class="custom-select display-address" id="addressContainer">
+        <div class="select-selected">
+          <p>
+            <span>{{ shipAddress.address1 }}</span>
+            <span *ngIf="shipAddress.address2">{{ ", " + shipAddress.address2 }}</span>
+            <span *ngIf="moreAddressLocales.indexOf(user.locale.toLowerCase()) < 0 && shipAddress.address3">{{ ", " + shipAddress.address3 }}</span>
+            <span>{{ ", " + shipAddress.city }}</span>
+            <span *ngIf="shipAddress.state">{{ ", " + shipAddress.state }}</span>
+            <span *ngIf="shipAddress.address3 && (moreAddressLocales.indexOf(user.locale.toLowerCase()) >=0)">{{ ", " + shipAddress.address3 }}</span>
+            <span *ngIf="shipAddress.zip5">{{ ", " + (shipAddress.zip5 | mask :'': 'all' : 0 : '*' : 0 : config.maskInputs) }}</span>
+          </p>
+        </div>
+      </button>
+      <ul class="select-items" role="list" ngbDropdownMenu aria-labelledby="addressContainer">
+        <button type="button" role="listitem" ngbDropdownItem *ngFor=" let address of user.addresses" class="select-option" (click)="multiAddressSelect(address.addressId)">
+          <span class="bold-label">{{address.addressName}}</span>
+          <span>{{address.address1}}</span>
+          <span *ngIf="address.address2">{{address.address2}}</span>
+          <span>{{address.city}}, {{address.state}} {{address.zip5}}{{address.zip4? '-'+address.zip4 : ''}}</span>
+        </button>
+      </ul>
+      <label for="addressContainer">{{ 'selectAddress' | translate }} <span class="hideFromDOM"></span></label>
+      <div *ngIf="errorMessage.selectedAddressName">
+        <p class="error-text g-icons" id="selectedAddressName_msg">{{ errorMessage.selectedAddressName }}</p>
+      </div>
+    </div>
+    <div class="field-row" *ngIf="overrideShipping">
+      <a class="diff-address" href="javascript:" (click)="multiAddressSelect(null)">{{ 'enterDiffAddress' | translate }}</a>
+    </div>
+  </article>
+
+  <article [hidden]="isMultiAddress && extras.hideAddressFields">
+    <div class="field-row"
+         [ngClass]="{'input-error-row':errorMessage.address1,'input-entered': address1.value}">
+      <input type="text" id="address1" name="address1" maxLength="35" class="lrg-text-field" formControlName="address1"
+             [ngClass]="{'input-error':errorMessage.address1}" #address1 attr.aria-describedby="{{errorMessage.address1 ? 'address1_msg' : 'address1'}}">
+      <label for="address1">{{ 'addressLine1' | translate }}<span
+        class="hideFromDOM">{{ 'maxLengthText' | translate }} 35</span></label>
+      <div *ngIf="errorMessage.address1 || address1Field.errors?.pattern">
+        <p class="error-text g-icons" id="address1_msg">{{ errorMessage['address1'] || ((address1Field.errors?.pattern) ? ('invalidAddressLine1' | translate) : '') }}</p>
+      </div>
+    </div>
+    <div class="field-row"
+         [ngClass]="{'input-error-row':errorMessage.address2,'input-entered': address2.value}">
+      <input type="text" id="address2" name="address2" formControlName="address2" maxlength="35" [ngClass]="{'input-error':errorMessage.address2}" #address2
+      attr.aria-describedby="{{errorMessage.address2 ? 'address2_msg' : 'address2'}}">
+      <label for="address2">{{ 'addressLine2' | translate }} ({{ 'optional' | translate }})<span
+        class="hideFromDOM">{{ 'maxLengthText' | translate}} 35</span></label>
+      <div *ngIf="errorMessage.address2 || address2Field.errors?.pattern">
+        <p class="error-text g-icons" id="address2_msg">{{ errorMessage.address2 || ((address2Field.errors?.pattern) ? ('invalidAddressLine1' | translate) : '') }}</p>
+      </div>
+    </div>
+    <div class="field-row" [ngClass]="{'input-error-row':errorMessage.city,'input-entered': city.value}">
+      <input type="text" id="city" name="city" formControlName="city" aria-invalid="false"
+             [attr.maxlength]="35" [ngClass]="{'input-error':errorMessage.city, 'large':isPostalCode}" #city attr.aria-describedby="{{errorMessage.city ? 'city_msg' : 'city'}}">
+      <label for="city">{{ 'city' | translate }}<span class="hideFromDOM">{{ 'maxLengthText' | translate }} 35</span></label>
+      <div *ngIf="errorMessage.city || cityField.errors?.pattern">
+        <p class="error-text g-icons" id="city_msg">{{ errorMessage.city || ((cityField.errors?.pattern) ? ('patternCityError' | translate) : '') }}</p>
+      </div>
+    </div>
+    <div class="field-row" [ngClass]="{'input-error-row':errorMessage.state, 'input-entered': state.value}">
+      <select id="state" name="state" formControlName="state" #state [ngClass]="{'input-error':errorMessage.state}" aria-invalid="false"
+        attr.aria-describedby="{{errorMessage.state ? 'state_msg' : 'state'}}">
+        <option *ngFor="let state of shippingStates | keyvalue: sharedService.returnZero" [ngValue]="state.value" [label]="state.key">{{ state.value }}</option>
+      </select>
+      <label for="state">{{ 'stateProvince' | translate }}</label>
+
+      <div *ngIf="errorMessage.state">
+        <p class="error-text g-icons" id="state_msg">{{ errorMessage.state }}</p>
+      </div>
+    </div>
+    <div class="field-row" [ngClass]="{'input-error-row':errorMessage.zip5,'input-entered': zip5.value}">
+      <input type="text" id="zip5" name="zip5" maxlength="4" formControlName="zip5"
+             [ngClass]="{'input-error':errorMessage.zip5, 'postal-code':isPostalCode}" #zip5
+             [libMask] = "changeShipAddress.controls.zip5.value" [attr.data-maskValue]= "changeShipAddress.controls.zip5.value" [maskPattern]="''"  maskPosition="all" maskLength="0" maskChar="*" minMaskRequirement="0"
+             [useMask] = "config.maskInputs" attr.aria-describedby="{{errorMessage.zip5 ? 'zip5_msg' : 'zip5'}}" aria-invalid="false">
+      <label for="zip5">{{ 'zipPostal' | translate }}<span class="hideFromDOM">{{ 'maxLengthText' |translate }} {{ zipMaxLength }}</span></label>
+      <div *ngIf="errorMessage.zip5">
+        <p class="error-text g-icons" id="zip5_msg">{{ errorMessage.zip5 }}</p>
+      </div>
+    </div>
+    <div class="field-row input-entered">
+      <input type="hidden" class="country-field hidden" name="country" aria-hidden="true">
+      <input type="text" name="country" disabled id="country" value="{{ 'country' | translate}}"/>
+      <label for="country">{{ 'countryLabel' | translate }}</label>
+    </div>
+  </article>
+</div>

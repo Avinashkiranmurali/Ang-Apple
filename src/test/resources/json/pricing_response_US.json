@@ -1,0 +1,587 @@
+{
+  "products":[
+    {
+      "index":227,
+      "merchant":"Apple",
+      "sku":"MPTL2LL/A",
+      "quantity":1,
+      "appliedPromotions":{
+
+      },
+      "prices":{
+        "basePrice":{
+          "unitPoints":29600,
+          "totalPoints":29600,
+          "unpromotedUnitPoints":29600,
+          "unpromotedTotalPoints":29600,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 159.00",
+              "totalPrice":"USD 159.00",
+              "unpromotedUnitPrice":"USD 159.00",
+              "unpromotedTotalPrice":"USD 159.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 29600",
+              "totalPrice":"PNT 29600",
+              "unpromotedUnitPrice":"PNT 29600",
+              "unpromotedTotalPrice":"PNT 29600"
+            }
+          }
+        },
+        "supplierFees":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "bridge2Tax":{
+          "unitPoints":2200,
+          "totalPoints":2200,
+          "unpromotedUnitPoints":2200,
+          "unpromotedTotalPoints":2200,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 11.13",
+              "totalPrice":"USD 11.13",
+              "unpromotedUnitPrice":"USD 11.13",
+              "unpromotedTotalPrice":"USD 11.13"
+            },
+            "PNT":{
+              "unitPrice":"PNT 2200",
+              "totalPrice":"PNT 2200",
+              "unpromotedUnitPrice":"PNT 2200",
+              "unpromotedTotalPrice":"PNT 2200"
+            }
+          }
+        },
+        "varPrice":{
+          "unitPoints":31800,
+          "totalPoints":31800,
+          "unpromotedUnitPoints":31800,
+          "unpromotedTotalPoints":31800,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 170.13",
+              "totalPrice":"USD 170.13",
+              "unpromotedUnitPrice":"USD 170.13",
+              "unpromotedTotalPrice":"USD 170.13"
+            },
+            "PNT":{
+              "unitPrice":"PNT 31800",
+              "totalPrice":"PNT 31800",
+              "unpromotedUnitPrice":"PNT 31800",
+              "unpromotedTotalPrice":"PNT 31800"
+            }
+          }
+        },
+        "hstTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "gstTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "pstTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "ehfFee":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "cityTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "cityDistrictTax":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "countyTax":{
+          "unitPoints":400,
+          "totalPoints":400,
+          "unpromotedUnitPoints":400,
+          "unpromotedTotalPoints":400,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 1.59",
+              "totalPrice":"USD 1.59",
+              "unpromotedUnitPrice":"USD 1.59",
+              "unpromotedTotalPrice":"USD 1.59"
+            },
+            "PNT":{
+              "unitPrice":"PNT 400",
+              "totalPrice":"PNT 400",
+              "unpromotedUnitPrice":"PNT 400",
+              "unpromotedTotalPrice":"PNT 400"
+            }
+          }
+        },
+        "countyDistrictTax":{
+          "unitPoints":600,
+          "totalPoints":600,
+          "unpromotedUnitPoints":600,
+          "unpromotedTotalPoints":600,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 3.18",
+              "totalPrice":"USD 3.18",
+              "unpromotedUnitPrice":"USD 3.18",
+              "unpromotedTotalPrice":"USD 3.18"
+            },
+            "PNT":{
+              "unitPrice":"PNT 600",
+              "totalPrice":"PNT 600",
+              "unpromotedUnitPrice":"PNT 600",
+              "unpromotedTotalPrice":"PNT 600"
+            }
+          }
+        },
+        "stateTax":{
+          "unitPoints":1200,
+          "totalPoints":1200,
+          "unpromotedUnitPoints":1200,
+          "unpromotedTotalPoints":1200,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 6.36",
+              "totalPrice":"USD 6.36",
+              "unpromotedUnitPrice":"USD 6.36",
+              "unpromotedTotalPrice":"USD 6.36"
+            },
+            "PNT":{
+              "unitPrice":"PNT 1200",
+              "totalPrice":"PNT 1200",
+              "unpromotedUnitPrice":"PNT 1200",
+              "unpromotedTotalPrice":"PNT 1200"
+            }
+          }
+        },
+        "bridge2ItemMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "varItemMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "bridge2ShippingMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "varShippingMarkup":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayItemPrice":{
+          "unitPoints":29600,
+          "totalPoints":29600,
+          "unpromotedUnitPoints":29600,
+          "unpromotedTotalPoints":29600,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 159.00",
+              "totalPrice":"USD 159.00",
+              "unpromotedUnitPrice":"USD 159.00",
+              "unpromotedTotalPrice":"USD 159.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 29600",
+              "totalPrice":"PNT 29600",
+              "unpromotedUnitPrice":"PNT 29600",
+              "unpromotedTotalPrice":"PNT 29600"
+            }
+          }
+        },
+        "displayShippingCost":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayFees":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        },
+        "displayPrice":{
+          "unitPoints":31800,
+          "totalPoints":31800,
+          "unpromotedUnitPoints":31800,
+          "unpromotedTotalPoints":31800,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 170.13",
+              "totalPrice":"USD 170.13",
+              "unpromotedUnitPrice":"USD 170.13",
+              "unpromotedTotalPrice":"USD 170.13"
+            },
+            "PNT":{
+              "unitPrice":"PNT 31800",
+              "totalPrice":"PNT 31800",
+              "unpromotedUnitPrice":"PNT 31800",
+              "unpromotedTotalPrice":"PNT 31800"
+            }
+          }
+        },
+        "displayTaxes":{
+          "unitPoints":2200,
+          "totalPoints":2200,
+          "unpromotedUnitPoints":2200,
+          "unpromotedTotalPoints":2200,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 11.13",
+              "totalPrice":"USD 11.13",
+              "unpromotedUnitPrice":"USD 11.13",
+              "unpromotedTotalPrice":"USD 11.13"
+            },
+            "PNT":{
+              "unitPrice":"PNT 2200",
+              "totalPrice":"PNT 2200",
+              "unpromotedUnitPrice":"PNT 2200",
+              "unpromotedTotalPrice":"PNT 2200"
+            }
+          }
+        },
+        "bridge2Fee":{
+          "unitPoints":0,
+          "totalPoints":0,
+          "unpromotedUnitPoints":0,
+          "unpromotedTotalPoints":0,
+          "currencies":{
+            "USD":{
+              "unitPrice":"USD 0.00",
+              "totalPrice":"USD 0.00",
+              "unpromotedUnitPrice":"USD 0.00",
+              "unpromotedTotalPrice":"USD 0.00"
+            },
+            "PNT":{
+              "unitPrice":"PNT 0",
+              "totalPrice":"PNT 0",
+              "unpromotedUnitPrice":"PNT 0",
+              "unpromotedTotalPrice":"PNT 0"
+            }
+          }
+        }
+      },
+      "conversionRates":{
+        "costPerPoint":"USD 0.0054",
+        "fxRates":{
+          "USD":{
+            "rate":1,
+            "inverseRate":1
+          },
+          "PNT":{
+            "rate":185.1851851851852,
+            "inverseRate":0.0054
+          }
+        }
+      },
+      "pricingParameters":{
+        "roundingIncrement":1,
+        "b2sMargin":0E-9,
+        "varMargin":0E-9,
+        "retailUnitBasePrice":"USD 159.00",
+        "retailUnitTaxPrice":"USD 0.00"
+      }
+    }
+  ],
+  "errors":[
+
+  ],
+  "prices":{
+    "displayShippingCost":{
+      "totalPoints":0,
+      "unpromotedTotalPoints":0,
+      "currencies":{
+        "USD":{
+          "totalPrice":"USD 0.00",
+          "unpromotedTotalPrice":"USD 0.00"
+        },
+        "PNT":{
+          "totalPrice":"PNT 0",
+          "unpromotedTotalPrice":"PNT 0"
+        }
+      }
+    },
+    "displayTaxes":{
+      "totalPoints":2200,
+      "unpromotedTotalPoints":2200,
+      "currencies":{
+        "USD":{
+          "totalPrice":"USD 11.13",
+          "unpromotedTotalPrice":"USD 11.13"
+        },
+        "PNT":{
+          "totalPrice":"PNT 2200",
+          "unpromotedTotalPrice":"PNT 2200"
+        }
+      }
+    },
+    "displayPrice":{
+      "totalPoints":31800,
+      "unpromotedTotalPoints":31800,
+      "currencies":{
+        "USD":{
+          "totalPrice":"USD 170.13",
+          "unpromotedTotalPrice":"USD 170.13"
+        },
+        "PNT":{
+          "totalPrice":"PNT 31800",
+          "unpromotedTotalPrice":"PNT 31800"
+        }
+      }
+    },
+    "displayItemPrice":{
+      "totalPoints":29600,
+      "unpromotedTotalPoints":29600,
+      "currencies":{
+        "USD":{
+          "totalPrice":"USD 159.00",
+          "unpromotedTotalPrice":"USD 159.00"
+        },
+        "PNT":{
+          "totalPrice":"PNT 29600",
+          "unpromotedTotalPrice":"PNT 29600"
+        }
+      }
+    },
+    "displayFees":{
+      "totalPoints":0,
+      "unpromotedTotalPoints":0,
+      "currencies":{
+        "USD":{
+          "totalPrice":"USD 0.00",
+          "unpromotedTotalPrice":"USD 0.00"
+        },
+        "PNT":{
+          "totalPrice":"PNT 0",
+          "unpromotedTotalPrice":"PNT 0"
+        }
+      }
+    }
+  },
+  "splitTenderResult":{
+    "ccBuyInAmount":"USD 0.00",
+    "ccBuyInPoints":0,
+    "preCCMarkupAmount":"USD 0.00",
+    "ccB2sProfit":"USD 0.00",
+    "ccVarProfit":"USD 0.00",
+    "ccB2sMargin":0E-7,
+    "ccVarMargin":0.3500000,
+    "effectiveB2sMargin":0E+2,
+    "effectiveVarMargin":0E+2,
+    "ccVarPrice":"USD 0.00",
+    "effectiveConversionRate":0.00535,
+    "pointPurchaseRate":0.007222500000000000,
+    "ccBuyInPointsLimit":15900,
+    "ccBuyInAmountLimit":"USD 114.84",
+    "ccTaxAmount":"USD 0.00"
+  }
+}

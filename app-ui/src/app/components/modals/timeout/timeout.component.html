@@ -1,0 +1,17 @@
+<div class="modal-close-action-content">
+            <a href class="g-icons icon-icon-close icon-close" (click)="continue()" auto-focus role="button"
+                  aria-label="close modal window"></a>
+</div>
+<div class="modal-header">
+  <h4 class="modal-title" id="timeout-modal-title">{{ 'sessionExpired' | translate }}</h4>
+</div>
+<div class="modal-body split-container ">
+  <div class="info-block">
+    <h5><span [innerHTML]="'sessionExpiredText' | translate"></span>&nbsp;<span [innerHTML]="'returnToLogin' | translate"></span></h5>
+  </div>
+</div>
+<div class="modal-footer">
+  <div class="modal-btn-container-stacked-flex modal-btn-container">
+    <button class="btn-base blue-btn action-item" (click)="continue()">{{ 'continue' | translate }}</button>
+  </div>
+</div>

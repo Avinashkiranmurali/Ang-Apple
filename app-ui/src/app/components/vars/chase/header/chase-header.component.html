@@ -1,0 +1,7 @@
+<ng-container *ngIf="!scriptsLoading">
+    <chase-header *ngIf="!displayDynamicHeaderFooter" [baseUrl]="baseUrl" [updatePoints]="(userStoreService.get() | async).balance"></chase-header>
+    <ur-nav-header *ngIf="displayDynamicHeaderFooter" [pointBalance]="(userStoreService.get() | async).balance"></ur-nav-header>
+</ng-container>
+<app-chase-promo-banner *ngIf="isPromoBannerVisible()" [promotionalDiscount]="promotionalDiscount" [updatedPoints]="updatePoints"
+                    (bannerStateEmitter)="updateBannerStateValue($event)"></app-chase-promo-banner>
+

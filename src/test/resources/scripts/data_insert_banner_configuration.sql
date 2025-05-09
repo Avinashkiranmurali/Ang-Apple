@@ -1,0 +1,4 @@
+INSERT into `banner_template` (`var_id`, `program_id`, `locale`, `name`, `active_ind`, `description`, `value`) VALUES ('RBC', '-1',  'en_CA', 'apple_banner_en_CA', 'Y', 'Banners for RBC', N'banner value');
+INSERT into `banner_template` (`var_id`, `program_id`, `locale`, `name`, `active_ind`, `description`, `value`) VALUES ('VitalityCA', '-1',  'en_CA', 'apple_banner_en_CA', 'Y', 'Banners for VitalityCA', N'banner value');
+INSERT into `banner_template` (`var_id`, `program_id`, `locale`, `name`, `active_ind`, `description`, `value`) VALUES ('UA', '-1',  'en_CA', 'apple_banner_en_US', 'Y', 'Banners for UA', N'banner value');
+INSERT into `banner_template` (`var_id`, `program_id`, `locale`, `name`, `active_ind`, `description`, `value`) VALUES ('-1', '-1',  'en_CA', 'apple_banner_en_CA', 'Y', 'Banners for RBC', N'banner value');

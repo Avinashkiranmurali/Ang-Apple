@@ -1,0 +1,47 @@
+
+<article class="content-container banner-theme {{getBannerClass(cat, category)}} {{category}}"
+         *ngFor="let cat of familyBanner | filterBanner : messages | orderBy : 'asc' : 'displayOrderBy';first as isFirst; last as isLast"
+         [ngClass]="{'last_banner': isLast, 'first_banner': isFirst}"
+         [ngStyle]="{'background-color': messages[cat['templateBgColor']]}">
+  <section role="presentation" class="contain banner-inner-container" tabindex="-1"
+           [ngClass]="messages[cat['ctaClass']]" [routerLink]="buildBannerLink(cat)"
+           [ngStyle]="{'background-color': messages[cat['templateTileBgColor']]}"
+           *ngIf="displayBanner(cat)">
+    <div class="cta">
+      <span class="new-indicator" *ngIf="cat['new']"
+        [ngStyle]="{'color': messages[cat['newIndicatorColor']]}">
+        {{ messages['new'] }}
+      </span>
+      <h2 *ngIf="messages[cat['titleImg']]">
+        <img [src]="imageServerUrl +'/'+ messages[cat['titleImg']]" alt="{{ messages[cat['title']] }}"/>
+      </h2>
+      <h2 *ngIf="!messages[cat['titleImg']] && messages[cat['title']]" [innerHTML]="messages[cat['title']]"></h2>
+      <h3 class="tagline" *ngIf="messages[cat['tagLine']]" [innerHTML]="messages[cat['tagLine']]"></h3>
+      <div class="upg-costs" *ngIf="messages[cat['priceStartsFrom']] || messages[cat['viewAllOptionsTxt']] || messages[cat['upgradeText']]">
+        <span class="sub-msg price-starts-from" *ngIf="messages[cat['priceStartsFrom']]" [innerHTML]="messages[cat['priceStartsFrom']]"></span>
+        <span *ngIf="messages[cat['viewAllOptionsTxt']]">&nbsp;</span> <!-- Need Space between two span tags-->
+        <span class="sub-msg viewall-options-txt" *ngIf="messages[cat['viewAllOptionsTxt']]" [innerHTML]="messages[cat['viewAllOptionsTxt']]"></span>
+        <span class="sub-msg upgrade-text" *ngIf="messages[cat['upgradeText']]" [innerHTML]="messages[cat['upgradeText']]"></span>
+      </div>
+      <div class="btn-container">
+        <span class="link-base" [ngClass]="messages[cat['btnClass']]" [ngStyle]="{'color': messages[cat['btnTxtColor']] || '#0070c9'}" >
+          <a [routerLink]="buildBannerLink(cat)" (click)="preventChildClick($event)"
+             [innerHTML]="cat['btnTxt'] | translate: { messages: messages}"
+             [attr.aria-label]="(cat['btnTxt'] | translate: { messages: messages}) + ' for ' + (messages[cat['title']])"></a>
+        </span>
+      </div>
+    </div>
+    <img [src]="imageServerUrl + '/' + messages[cat['imageUrl']]" alt="{{ messages[cat['imageTxt']] }}" class="shared-image">
+    <div class="img">
+      <img ng-if="!cat['params']['subcat']" [src]="familyBannerOnMobile[cat['name']]['images']['medium'] + '&qlt=95'" alt="{{familyBannerOnMobile[cat['name']]['i18nName']}}"/>
+    </div>
+    <div class="mobile-cta">
+      <h4>{{ familyBannerOnMobile[cat['name']]['i18nName'] }}</h4>
+      <div class="upg-costs"  *ngIf="messages[cat['priceStartsFrom']] || messages[cat['viewAllOptionsTxt']] || messages[cat['upgradeText']]">
+        <span class="sub-msg price-starts-from" *ngIf="messages[cat['priceStartsFrom']]" [innerHTML]="messages[cat['priceStartsFrom']]"></span>
+        <span class="sub-msg viewall-options-txt" *ngIf="messages[cat['viewAllOptionsTxt']]" [innerHTML]="messages[cat['viewAllOptionsTxt']]"></span>
+        <span class="sub-msg upgrade-text" *ngIf="messages[cat['upgradeText']]" [innerHTML]="messages[cat['upgradeText']]"></span>
+      </div>
+    </div>
+  </section>
+</article>

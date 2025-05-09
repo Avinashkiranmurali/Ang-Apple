@@ -1,0 +1,708 @@
+html {
+    font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    background: #fff;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%; }
+
+body {
+    background: #fff;
+    color: #666666;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    overflow-y: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; }
+
+html, body {
+    height: 100%; }
+
+input, textarea, select, button {
+    font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1, h2, h3, h4,
+p, blockquote,
+figure, ol, ul,
+header, main, footer {
+    margin: 0;
+    padding: 0; }
+
+header, main, footer {
+    display: block;
+    box-sizing: border-box; }
+
+h1, h2, h3, h4 {
+    font-size: inherit; }
+
+button, input[type="submit"] {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: inherit;
+    cursor: pointer; }
+
+img {
+    max-width: 100%;
+    height: auto;
+    border: 0; }
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh; }
+
+/* Header styles */
+#header {
+    background: #f2f2f2;
+    padding: 32px 0 30px;
+    display: none;
+    width: 100%; }
+
+.header-wrap {
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
+    margin: 0;
+    overflow: visible;
+    width: 100%; }
+
+.header-container {
+    display: table;
+    margin: 0 auto;
+    max-width: 1100px;
+    min-height: 99px;
+    overflow: visible;
+    width: 100%; }
+
+.header-container > * {
+    display: table-cell;
+    vertical-align: middle;
+    position: relative; }
+
+.header-container h1, .header-container .platform-title {
+    z-index: 2; }
+
+.header-container h1 {
+    box-shadow: 3px 0 5px -2px #ccc;
+    padding: 0 15px;
+    width: 221px; }
+
+.header-container .platform-logo {
+    display: table-cell;
+    background: #f2f2f2;
+    overflow: visible;
+    position: relative;
+    text-align: center;
+    width: 83px;
+    z-index: 1; }
+
+.header-container .platform-logo:before {
+    content: '';
+    background: #f2f2f2;
+    height: 8px;
+    width: auto;
+    position: absolute;
+    top: -8px;
+    left: 2px;
+    right: 2px; }
+
+.header-container .platform-logo:after {
+    content: '';
+    background: #f2f2f2;
+    height: 8px;
+    width: auto;
+    position: absolute;
+    bottom: -8px;
+    left: 2px;
+    right: 2px; }
+
+.header-container .platform-title {
+    box-shadow: -3px 0 5px -2px #ccc; }
+
+.header-container .platform-title h2 {
+    font-size: 18px;
+    padding-right: 15px;
+    text-align: right;
+    display: none; }
+
+.header-container .platform-title h2 span {
+    display: block;
+    font-size: 14px; }
+
+/* Body styles */
+#body {
+    background: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    width: 100%; }
+
+.body-container {
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 35px 15px 30px; }
+
+.body-container h3 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0 auto;
+    max-width: 370px;
+    text-align: center;
+    width: 100%; }
+
+.body-container > p {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 370px;
+    text-align: center;
+    width: 100%; }
+
+.body-container form {
+    margin: 35px auto 0;
+    max-width: 360px;
+    width: 100%; }
+
+.body-container form div {
+    padding-bottom: 20px; }
+
+.body-container form div div {
+    padding: 20px 0 0; }
+
+.body-container form div label, .body-container form div input[type='text'] {
+    display: block; }
+
+.body-container form div label {
+    color: #333;
+    font-size: 14px;
+    padding-bottom: 4px; }
+
+.body-container form div label span {
+    display: inline-block;
+    padding-left: 5px;
+    width: 90%; }
+
+.body-container form div input[type='text'], .body-container form div input[type='password'] {
+    border: 1px solid #b6b6b6;
+    border-radius: 2px;
+    box-shadow: inset 0 0 2px #ccc;
+    font-size: 14px;
+    text-indent: 5px;
+    padding: 3px 0;
+    width: 100%; }
+
+.body-container form div input[type='checkbox'] {
+    vertical-align: top; }
+
+.body-container form div select {
+    border: 1px solid #b6b6b6;
+    border-radius: 2px;
+    box-shadow: inset 0 0 2px #ccc;
+    font-size: 14px;
+    padding: 2px 0;
+    width: 100%; }
+
+.body-container form .submit-button {
+    padding-top: 10px;
+    text-align: center; }
+
+/*.body-container .button-container button,
+.body-container form .submit-button input {
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 5px;
+  text-transform: uppercase;
+  width: 100%;
+  background: #3bade6;
+  box-shadow: inset 0 -10px 10px -6px rgba(16, 129, 199, 0.5);
+  outline-color: #1472FF;
+}
+
+.body-container .button-container button:active,
+.body-container form .submit-button input:active {
+  background: #1081C7;
+}
+
+.body-container .button-container button:hover,
+.body-container form .submit-button input:hover {
+  box-shadow: inset 1px 0 15px rgba(70, 70, 100, 0.6);
+}*/
+.body-container .button-container {
+    margin: 40px auto 0;
+    max-width: 360px;
+    text-align: center;
+    width: 100%; }
+
+.body-container .button-container button {
+    padding: 7px 35px;
+    width: auto; }
+
+.body-container form .tooltip-container {
+    display: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%; }
+
+.body-container form .tooltip-container .tooltip-email-error,
+.body-container form .tooltip-container .tooltip-pass-error {
+    background-color: #fff2e4;
+    border-radius: 4px;
+    box-shadow: 0 0 10px 1px #666666;
+    margin: 0 auto;
+    padding: 10px 15px !important;
+    position: relative;
+    width: fit-content; }
+
+.body-container form .tooltip-container .tooltip-email-error:before,
+.body-container form .tooltip-container .tooltip-pass-error:before {
+    background-color: #fff2e4;
+    box-shadow: -2px -2px 3px -1px #666666;
+    content: ' ';
+    display: block;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    top: -8px;
+    left: 49%; }
+
+.body-container form .tooltip-container .tooltip-email-error p.error-msg,
+.body-container form .tooltip-container .tooltip-pass-error p.error-msg {
+    color: #333333;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 0; }
+
+.body-container form.hiddenForm {
+    margin: 0 auto !important;
+    opacity: 0; }
+
+/* Footer styles */
+#footer {
+    background: #fff;
+    box-shadow: 0 -2px 3px #e6e6e6;
+    width: 100%; }
+
+.footer-container {
+    font-size: 14px;
+    margin: 0 auto;
+    max-width: 380px;
+    padding: 25px 0;
+    text-align: center;
+    width: 100%; }
+
+.footer-container p {
+    padding-bottom: 10px; }
+
+.footer-container p b {
+    font-weight: 600; }
+
+/* START: One Time Password Styles */
+.otp-login .body-container.passwordForm, .otp-login .body-container.employeeGroupForm {
+    display: none; }
+
+.otp-login .body-container h3 {
+    max-width: 600px; }
+
+.otp-login .body-container h4 {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 20px 0 10px;
+    text-align: center; }
+
+.otp-login .body-container > p {
+    padding: 20px 0 0;
+    max-width: 600px; }
+
+.otp-login .body-container > p.error-msg,
+.otp-login .body-container form div p.error-msg {
+    color: red;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 10px 0 0;
+    display: none; }
+
+.otp-login .body-container form div label span {
+    display: inline;
+    padding: 0;
+    width: auto; }
+
+.otp-login .body-container form div input.error {
+    border-color: red; }
+
+/*
+.otp-login .body-container form .submit-button input {
+  opacity: 1;
+}
+
+.otp-login .body-container form .submit-button input:disabled {
+  opacity: 0.5;
+}
+*/
+.otp-login .body-container > p.error-msg {
+    display: block;
+    font-size: 14px;
+    max-width: 450px; }
+
+/* END: One Time Password Styles */
+/* START: AWP OTP Login Styles */
+#awp-login {
+    color: #ffffff; }
+
+#awp-login, #awp-login #body, #awp-login #footer {
+    background: #4d4d4d; }
+
+#awp-login #footer {
+    box-shadow: none; }
+
+#awp-login h1 {
+    margin: 0 auto;
+    padding: 0;
+    text-align: center; }
+
+#awp-login h1 span {
+    display: block;
+    padding: 10px 0 0;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 400; }
+
+#awp-login h1 img {
+    width: 90px; }
+
+#awp-login .body-container {
+    margin-top: 40px;
+    padding: 0; }
+
+#awp-login .body-container h3 {
+    font-size: 21px;
+    font-weight: 300; }
+
+#awp-login .body-container > p {
+    font-size: 19px; }
+
+#awp-login .body-container form div {
+    padding-bottom: 30px; }
+
+#awp-login .body-container form > div {
+    position: relative; }
+
+#awp-login .body-container form div label {
+    height: 0;
+    text-indent: -99999px; }
+
+#awp-login .body-container form {
+    margin-top: 25px; }
+
+#awp-login .body-container form div input[type='text'],
+#awp-login .body-container form div input[type='password'],
+#awp-login .body-container form div .employee-group {
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 15px;
+    max-width: 330px; }
+
+#awp-login .body-container form div .employee-group .disabled-opt {
+    font-size: 18px;
+    color: #999; }
+
+#awp-login .body-container form div input[type='text']:focus,
+#awp-login .body-container form div input[type='password']:focus {
+    border: 3px solid #0088cc;
+    padding: 12px;
+    outline: none; }
+
+#awp-login .body-container form div .employee-group {
+    height: 48px;
+    max-width: 360px;
+    padding: 0px 15px; }
+
+#awp-login .body-container form .submit-button {
+    padding-bottom: 0; }
+
+#awp-login .body-container form .submit-button input {
+    text-transform: capitalize; }
+
+#awp-login .body-container form .tooltip-container {
+    padding: 0;
+    position: absolute;
+    top: 48px;
+    z-index: 5; }
+
+#awp-login .otp-login .body-container > p {
+    padding: 0;
+    max-width: 800px; }
+
+#awp-login .otp-login .body-container > h3 + p {
+    padding: 50px 0 0; }
+
+#awp-login .otp-login .body-container form .submit-button input:disabled {
+    opacity: 0; }
+
+/* END: AWP OTP Login Styles */
+@media (min-width: 480px) {
+    #awp-login .body-container {
+        margin-top: 20px; }
+    #awp-login h2 {
+        margin: 0 auto;
+        padding: 20px 0 0;
+        text-align: center;
+        font-size: 50px; } }
+
+@media (min-width: 720px) {
+    .header-container h1, .header-container .platform-title h2 {
+        text-align: right; }
+    .header-container h1 {
+        padding: 0 25px 0 15px; }
+    .header-container .platform-title h2 {
+        display: block; }
+    .body-container {
+        padding: 67px 0 30px; }
+    .body-container h3 {
+        font-size: 38px; }
+    .body-container form .submit-button {
+        padding-top: 5px; }
+    .body-container form .submit-button input {
+        padding: 7px 35px;
+        width: auto; }
+    /*  .body-container form .submit-button input:active {
+      background: #3bade6;
+      box-shadow: inset 0 -8px 8px -5px rgba(16, 129, 199, 0.5), inset 0 5px 5px -4px #777;
+      padding: 8px 35px 6px;
+    }*/
+    /* One Time Password */
+    .otp-login .body-container {
+        padding: 150px 0; }
+    .otp-login .body-container h3 {
+        font-size: 48px; }
+    #awp-login .body-container form .submit-button input {
+        font-size: 17px;
+        font-weight: 600;
+        padding: 12px;
+        width: 200px; }
+    #awp-login .body-container form .submit-button input:active {
+        padding: 13px 12px 11px; } }
+
+/**Buton style css**/
+/*
+.btn-base {
+  min-width: 125px;
+  color: #000;
+  font-size: 17px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  padding: 12px 24px;
+  border: 1px solid #b5b5b7;
+  border-radius: 3px;
+  background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));
+  background: -moz-linear-gradient(top, white, #ebebeb);
+  background: linear-gradient(to bottom, #fff 0, #ebebeb 100%);
+}
+.btn-base:hover,
+.btn-base:focus {
+  background: #d7d7d7;
+  background: -webkit-linear-gradient(#fff, #d7d7d7);
+  background: -moz-linear-gradient(#fff, #d7d7d7);
+  background-image: linear-gradient(#fff, #d7d7d7);
+}
+.btn-base:active {
+  box-shadow: 0 1px 0 #fff, inset 0 0 9px rgba(0, 0, 0, 0.5);
+}
+.btn-base:disabled,
+.btn-base.disabled {
+  opacity: 0.5;
+}
+.btn-base.blue-text-btn {
+  color: #337ab7;
+}
+.btn-base.blue-btn {
+  color: #fff;
+  background: #117ed2;
+  background: -webkit-gradient(linear, left top, left bottom, from(#37aaea), to(#117ed2));
+  background: -moz-linear-gradient(top, #37aaea, #117ed2);
+  background-image: linear-gradient(to bottom, #37aaea 0, #117ed2 100%);
+  border-color: #0c75bb;
+  border-top-color: #1992da;
+  border-bottom-color: #00589c;
+}
+.btn-base.blue-btn:hover,
+.btn-base.blue-btn:focus {
+  background: #1c5bad;
+  background: -webkit-gradient(linear, left top, left bottom, from(#2488d4), to(#1c5bad));
+  background: -moz-linear-gradient(top, #2488d4, #1c5bad);
+  background-image: linear-gradient(to bottom, #2488d4 0, #1c5bad 100%);
+}
+.btn-base.blue-btn:active {
+  box-shadow: inset 0 1px 9px 0 rgba(0, 0, 0, 0.6);
+}
+*/
+.btn-base {
+    cursor: pointer;
+    color: #000;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.44em;
+    padding: 8px 28px 10px;
+    border: 1px solid #b5b5b7;
+    border-radius: 4px;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(#ebebeb));
+    background: -moz-linear-gradient(top, white, #ebebeb);
+    background: linear-gradient(to bottom, #fff 0, #ebebeb 100%); }
+.btn-base:hover, .btn-base:focus {
+    background: #d7d7d7;
+    background: -webkit-linear-gradient(#fff, #d7d7d7);
+    background: -moz-linear-gradient(#fff, #d7d7d7);
+    background-image: linear-gradient(#fff, #d7d7d7); }
+.btn-base:active {
+    box-shadow: 0 1px 0 #fff, inset 0 0 9px rgba(0, 0, 0, 0.5); }
+.btn-base:disabled, .btn-base.disabled {
+    opacity: 0.5; }
+.btn-base.blue-btn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: -0.374px;
+    background-color: #0070c9;
+    background: #0070C9 -webkit-gradient(linear, left top, left bottom, from(#42a1ec), to(#0070c9));
+    background: #0070C9 -moz-linear-gradient(top, #42a1ec, #0070c9);
+    background-image: linear-gradient(to bottom, #42a1ec 0, #0070c9 100%);
+    margin-top: 40px;
+    border: 1px solid #07c;
+    border-radius: 4px;
+    text-align: center;
+    white-space: nowrap;
+    box-shadow: none;
+    border-bottom: none;
+    border-top: none; }
+.btn-base.blue-btn.search-btn {
+    height: 30px; }
+.btn-base.blue-btn:hover, .btn-base.blue-btn:focus {
+    background-color: #147bcd;
+    background: #147bcd -webkit-gradient(linear, left top, left bottom, from(#51a9ee), to(#147bcd));
+    background: #147bcd -moz-linear-gradient(top, #51a9ee, #147bcd);
+    background: linear-gradient(#51a9ee 0, #147bcd 100%);
+    text-decoration: none;
+    border-color: #1482d0; }
+.btn-base.blue-btn:active {
+    background-color: #0067b9;
+    background: linear-gradient(#3d94d9, #0067b9);
+    border-color: #006dbc;
+    outline: none; }
+.btn-base.blue-btn:disabled {
+    background-color: #0070c9;
+    background: -webkit-gradient(linear, left top, left bottom, from(#42a1ec), to(#0070c9));
+    background: -moz-linear-gradient(top, #42a1ec, #0070c9);
+    border-color: #07c;
+    color: white;
+    cursor: default;
+    opacity: .3; }
+
+.hidden {
+    display: none !important; }
+
+/**Jquery UI- modal CSS*/
+.ui-widget {
+    font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+    font-family: "SF Pro Display", "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.ui-dialog {
+    padding: 0; }
+
+.ui-widget-content a {
+    color: #0070c9; }
+
+.ui-dialog p {
+    display: block;
+    margin: 14px 0px; }
+
+.ui-dialog.ui-corner-all {
+    border-radius: 0px; }
+
+.ui-dialog .ui-dialog-buttonpane,
+.ui-dialog .ui-dialog-titlebar {
+    display: none; }
+
+.ui-dialog .ui-dialog-content {
+    padding: 0;
+    font-size: 14px; }
+
+.ui-dialog .ui-dialog-content .modal-header .dialog-close {
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    background: url(../../images/close.png) no-repeat;
+    cursor: pointer;
+    margin: 20px 0 0 20px; }
+
+.ui-dialog .ui-dialog-content .modal-header h2 {
+    text-align: center;
+    margin-top: 0; }
+
+.ui-dialog .ui-dialog-content .modal-body {
+    padding: 5px 50px; }
+
+.ui-dialog .ui-dialog-content .modal-body p {
+    text-align: center;
+    line-height: 1.5; }
+
+.ui-dialog .ui-dialog-content #login-agreement-modal-body p {
+    text-align: left;
+    line-height: 1.5;
+    font-size: 14px; }
+
+.ui-dialog .ui-dialog-content #login-agreement-modal-body p.aggrement-heading {
+    font-weight: bold; }
+
+.ui-dialog .ui-dialog-content .modal-footer {
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px; }
+
+.ui-dialog .ui-dialog-content .modal-footer .btn-base {
+    font-size: 16px; }
+
+.ui-dialog .ui-dialog-content .modal-footer .btn-base.blue-btn {
+    font-weight: 500; }
+
+.ui-widget-overlay {
+    background: #0c0c0c !important;
+    opacity: 0.5 !important; }
+
+#agreement-form .modal-header {
+    border-bottom: 1px solid #c5c5c5; }
+
+#agreement-form .modal-header .dialog-close {
+    float: left;
+    margin: 15px; }
+
+#agreement-form .modal-header .modal-title-panel {
+    width: 85%;
+    margin: 0 auto;
+    padding: 3% 0px;
+    text-align: center;
+    font-size: 16px; }
+
+#agreement-form .modal-header .modal-title {
+    font-weight: 500;
+    font-size: 24px; }
+
+#agreement-form .modal-body {
+    border-bottom: 1px solid #c5c5c5;
+    max-height: 40vh;
+    overflow: auto;
+    padding: 20px 75px 0; }
+
+#agreement-form .modal-footer {
+    text-align: right;
+    padding: 0 20px; }
+
+#agreement-form .modal-footer .btn-base.btn-cancel {
+    margin-right: 10px; }

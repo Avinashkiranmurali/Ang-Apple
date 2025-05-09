@@ -1,0 +1,1311 @@
+{
+  "response": {
+    "groups": {
+      "DEFAULT_GROUP": {
+        "offset": 0,
+        "totalFound": 1,
+        "documents": [
+          {
+            "psid": "30001MH392LL/A",
+            "bsin": "10DB58587C8803",
+            "sku": "MH392LL/A",
+            "upc": "888462046527",
+            "name": "iPad mini 3 Wi-Fi + Cellular 64GB - Gold",
+            "brand": "Apple®",
+            "manufacturer": "apple",
+            "shortDescription": "iPad mini 3 Wi-Fi + Cellular 64GB - Gold",
+            "priceInfo": {
+              "basePrice": "USD 629.00",
+              "displayPrice": "USD 629.00",
+              "msrp": "USD 629.00",
+              "shippingCost": "USD 0.00",
+              "fixedPoints": null,
+              "priceType": "SUPPLIER",
+              "suppliersSalesTax": "USD 0.00",
+              "fees": null,
+              "msrpDisplayPrice": null,
+              "unpromotedDisplayPrice": null,
+              "splitTenderEligible": false,
+              "pointFloor": null
+            },
+            "groupId": "A2BEE3400916",
+            "groupName": "iPad mini 3",
+            "hasVariations": true,
+            "inStoreEligible": false,
+            "shippingEligible": true,
+            "reserveAndPickupEligible": false,
+            "hasOffer": false,
+            "offerTypes": [],
+            "imageUrls": {
+              "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+              "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+              "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+              "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+            },
+            "productType": "MERCHANDISE",
+            "categorySlugs": ["ipad-mini-3"],
+            "appliedChanges": [
+              {
+                "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                "createdDatetime": "2015-05-26T02:29:16.313Z",
+                "payload": {
+                  "payloadType": "SPLIT_TENDER",
+                  "splitTenderEligibility": {"splitTenderEligible": false}
+                },
+                "override": false
+              }
+            ],
+            "merchant": "APPLE",
+            "totalReviews": 0,
+            "sourceCountry": "USA",
+            "variations": [
+              {
+                "psid": "30001MGYK2LL/A",
+                "bsin": "10A1B65EC05D97",
+                "sku": "MGYK2LL/A",
+                "upc": "888462043120",
+                "name": "iPad mini 3 Wi-Fi 128GB - Gold",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 128GB - Gold",
+                "priceInfo": {
+                  "basePrice": "USD 599.00",
+                  "displayPrice": "USD 599.00",
+                  "msrp": "USD 599.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.343Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Gold",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3E2LL/A",
+                "bsin": "10D4ED20B12340",
+                "sku": "MH3E2LL/A",
+                "upc": "888462046541",
+                "name": "iPad mini 3 Wi-Fi + Cellular 16GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 16GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 529.00",
+                  "displayPrice": "USD 529.00",
+                  "msrp": "USD 529.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.334Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGGT2LL/A",
+                "bsin": "10B80E4377C706",
+                "sku": "MGGT2LL/A",
+                "upc": "888462021852",
+                "name": "iPad mini 3 Wi-Fi 64GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 64GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 499.00",
+                  "displayPrice": "USD 499.00",
+                  "msrp": "USD 499.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.337Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "64GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3L2LL/A",
+                "bsin": "10915A3860CEDA",
+                "sku": "MH3L2LL/A",
+                "upc": "888462046602",
+                "name": "iPad mini 3 Wi-Fi + Cellular 128GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 128GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 729.00",
+                  "displayPrice": "USD 729.00",
+                  "msrp": "USD 729.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.324Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGGQ2LL/A",
+                "bsin": "10DF3EBE2C0127",
+                "sku": "MGGQ2LL/A",
+                "upc": "888462021548",
+                "name": "iPad mini 3 Wi-Fi 64GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 64GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 499.00",
+                  "displayPrice": "USD 499.00",
+                  "msrp": "USD 499.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.339Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "64GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3G2LL/A",
+                "bsin": "10356691E206A9",
+                "sku": "MH3G2LL/A",
+                "upc": "888462046589",
+                "name": "iPad mini 3 Wi-Fi + Cellular 16GB - Gold",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 16GB - Gold",
+                "priceInfo": {
+                  "basePrice": "USD 529.00",
+                  "displayPrice": "USD 529.00",
+                  "msrp": "USD 529.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.328Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Gold",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH382LL/A",
+                "bsin": "1044897FA36154",
+                "sku": "MH382LL/A",
+                "upc": "888462046503",
+                "name": "iPad mini 3 Wi-Fi + Cellular 64GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 64GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 629.00",
+                  "displayPrice": "USD 629.00",
+                  "msrp": "USD 629.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.333Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "64GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGP32LL/A",
+                "bsin": "10826588264F2F",
+                "sku": "MGP32LL/A",
+                "upc": "888462022903",
+                "name": "iPad mini 3 Wi-Fi 128GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 128GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 599.00",
+                  "displayPrice": "USD 599.00",
+                  "msrp": "USD 599.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.317Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGYE2LL/A",
+                "bsin": "10B3428A4C8219",
+                "sku": "MGYE2LL/A",
+                "upc": "888462042789",
+                "name": "iPad mini 3 Wi-Fi 16GB - Gold",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 16GB - Gold",
+                "priceInfo": {
+                  "basePrice": "USD 399.00",
+                  "displayPrice": "USD 399.00",
+                  "msrp": "USD 399.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.331Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Gold",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGP42LL/A",
+                "bsin": "1069FC4C45ACB9",
+                "sku": "MGP42LL/A",
+                "upc": "888462023214",
+                "name": "iPad mini 3 Wi-Fi 128GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 128GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 599.00",
+                  "displayPrice": "USD 599.00",
+                  "msrp": "USD 599.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.326Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3M2LL/A",
+                "bsin": "10B460535A29CD",
+                "sku": "MH3M2LL/A",
+                "upc": "888462046626",
+                "name": "iPad mini 3 Wi-Fi + Cellular 128GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 128GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 729.00",
+                  "displayPrice": "USD 729.00",
+                  "msrp": "USD 729.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.322Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH372LL/A",
+                "bsin": "10E0BB99021806",
+                "sku": "MH372LL/A",
+                "upc": "888462046480",
+                "name": "iPad mini 3 Wi-Fi + Cellular 64GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 64GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 629.00",
+                  "displayPrice": "USD 629.00",
+                  "msrp": "USD 629.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.323Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "64GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3N2LL/A",
+                "bsin": "10844BB9B26D6A",
+                "sku": "MH3N2LL/A",
+                "upc": "888462046640",
+                "name": "iPad mini 3 Wi-Fi + Cellular 128GB - Gold",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 128GB - Gold",
+                "priceInfo": {
+                  "basePrice": "USD 729.00",
+                  "displayPrice": "USD 729.00",
+                  "msrp": "USD 729.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.319Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Gold",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "128GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGY92LL/A",
+                "bsin": "109C77476A0E4A",
+                "sku": "MGY92LL/A",
+                "upc": "888462042444",
+                "name": "iPad mini 3 Wi-Fi 64GB - Gold",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 64GB - Gold",
+                "priceInfo": {
+                  "basePrice": "USD 499.00",
+                  "displayPrice": "USD 499.00",
+                  "msrp": "USD 499.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gold"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.342Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Gold",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "64GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGNV2LL/A",
+                "bsin": "105A34F0687101",
+                "sku": "MGNV2LL/A",
+                "upc": "888462022538",
+                "name": "iPad mini 3 Wi-Fi 16GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 16GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 399.00",
+                  "displayPrice": "USD 399.00",
+                  "msrp": "USD 399.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.336Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MH3F2LL/A",
+                "bsin": "109D3996370AC7",
+                "sku": "MH3F2LL/A",
+                "upc": "888462046565",
+                "name": "iPad mini 3 Wi-Fi + Cellular 16GB - Silver",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi + Cellular 16GB - Silver",
+                "priceInfo": {
+                  "basePrice": "USD 529.00",
+                  "displayPrice": "USD 529.00",
+                  "msrp": "USD 529.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-silver"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.329Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi + Cellular",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Silver",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              },
+              {
+                "psid": "30001MGNR2LL/A",
+                "bsin": "10F020AB56ABC2",
+                "sku": "MGNR2LL/A",
+                "upc": "888462022224",
+                "name": "iPad mini 3 Wi-Fi 16GB - Space Gray",
+                "brand": "Apple®",
+                "manufacturer": "apple",
+                "shortDescription": "iPad mini 3 Wi-Fi 16GB - Space Gray",
+                "priceInfo": {
+                  "basePrice": "USD 399.00",
+                  "displayPrice": "USD 399.00",
+                  "msrp": "USD 399.00",
+                  "shippingCost": "USD 0.00",
+                  "fixedPoints": null,
+                  "priceType": "SUPPLIER",
+                  "suppliersSalesTax": "USD 0.00",
+                  "fees": null,
+                  "msrpDisplayPrice": null,
+                  "unpromotedDisplayPrice": null,
+                  "splitTenderEligible": false,
+                  "pointFloor": null
+                },
+                "groupId": "A2BEE3400916",
+                "groupName": "iPad mini 3",
+                "hasVariations": true,
+                "inStoreEligible": false,
+                "shippingEligible": true,
+                "reserveAndPickupEligible": false,
+                "hasOffer": false,
+                "offerTypes": [],
+                "imageUrls": {
+                  "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray",
+                  "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/i/pa/ipad/mini3/ipad-mini3-step1-wifi-gray"
+                },
+                "productType": "MERCHANDISE",
+                "categorySlugs": ["ipad-mini-3"],
+                "appliedChanges": [
+                  {
+                    "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+                    "createdDatetime": "2015-05-26T02:29:16.340Z",
+                    "payload": {
+                      "payloadType": "SPLIT_TENDER",
+                      "splitTenderEligibility": {"splitTenderEligible": false}
+                    },
+                    "override": false
+                  }
+                ],
+                "merchant": "APPLE",
+                "totalReviews": 0,
+                "sourceCountry": "USA",
+                "options": {
+                  "communication": {
+                    "value": "Wi-Fi",
+                    "label": "Communication"
+                  },
+                  "color": {
+                    "value": "Space Gray",
+                    "label": "Color"
+                  },
+                  "storage": {
+                    "value": "16GB",
+                    "label": "Storage"
+                  }
+                }
+              }
+            ],
+            "options": {
+              "communication": {
+                "value": "Wi-Fi + Cellular",
+                "label": "Communication"
+              },
+              "color": {
+                "value": "Gold",
+                "label": "Color"
+              },
+              "storage": {
+                "value": "64GB",
+                "label": "Storage"
+              }
+            }
+          }
+        ]
+      }
+    },
+    "facets": [
+      {
+        "name": "offerTypes",
+        "entries": []
+      },
+      {
+        "name": "hasOffer",
+        "entries": [
+          {
+            "value": "false",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "name": "merchant",
+        "entries": [
+          {
+            "value": "apple",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "name": "deliveryMethod",
+        "entries": [
+          {
+            "value": "USA-DOMESTIC",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "name": "brand",
+        "entries": [
+          {
+            "value": "Apple®",
+            "count": 18
+          }
+        ]
+      },
+      {
+        "name": "categories",
+        "entries": []
+      },
+      {
+        "name": "productType",
+        "entries": [
+          {
+            "value": "MERCHANDISE",
+            "count": 18
+          }
+        ]
+      }
+    ]
+  }
+}

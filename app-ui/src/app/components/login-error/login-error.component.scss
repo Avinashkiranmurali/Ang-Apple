@@ -1,0 +1,40 @@
+@import "~styles/mixins";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .login-error-container {
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    line-height: initial;
+    background-color: #FFFFFF;
+
+    .error-msg {
+      margin-bottom: rem(20px);
+
+      p {
+        text-align: center;
+        margin: 0;
+        font-size: rem(20px);
+      }
+    }
+  }
+
+  @media (min-width: 320px) and (max-width: 500px) {
+    .login-error-container {
+      .error-msg {
+        ::ng-deep {
+          p {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

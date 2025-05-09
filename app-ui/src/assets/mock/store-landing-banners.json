@@ -1,0 +1,419 @@
+{
+    "landing": [
+      {
+        "categoryId": "-1",
+        "categoryName": "programInfo",
+        "bannerType": "programInfo",
+        "config": {
+          "tileClass": "",
+          "mobileImageUrl": "/apple-gr/assets/img/banners/BannerImage-Chase-PIB-Mobile.png",
+          "template": "<style>@media (min-width: 766px) and (max-width: 1027px) { .banner-content.programInfo .banner-inner-container { padding: 0 1.33631rem; } } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container { display: block; } } .banner-content.programInfo .banner-inner-container .cta { display: block; margin: 5.879764rem 4.543454rem 5.879764rem 0; max-width: 33.40775rem; width: 33.40775rem; } @media (min-width: 766px) and (max-width: 1027px) { .banner-content.programInfo .banner-inner-container .cta { margin-right: 1.33631rem; } } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container .cta { margin: 0; max-width: 100%; width: 100%; } } .banner-content.programInfo .banner-inner-container .cta h2 { margin: 0; color: #111; font-size: 2.405358rem; font-weight: 500; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: left; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container .cta h2 { margin-top: 2.67262rem; color: #111; font-size: 1.603572rem; font-weight: 500; line-height: 1.9376495rem; letter-spacing: 0rem; text-align: center; } } .banner-content.programInfo .banner-inner-container .cta h2 sup { top: -0.35em; } .banner-content.programInfo .banner-inner-container .cta h3 { margin: 0.668155rem 0 0 0; color: #111; font-size: 1.33631rem; font-weight: 400; line-height: 1.603572rem; letter-spacing: 0rem; text-align: left; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container .cta h3 { margin: 0.267262rem 1.603572rem 0 1.603572rem; padding: 0; color: #111; font-size: 1.202679rem; font-weight: 400; line-height: 1.4031255rem; letter-spacing: 0rem; text-align: center; } } .banner-content.programInfo .banner-inner-container .cta .banner-description { margin: 1.603572rem 0 0 0; color: #111; font-size: 1.33631rem; font-weight: 700; line-height: 1.603572rem; letter-spacing: 0rem; text-align: left; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container .cta .banner-description { max-width: 100%; padding: 0 1.603572rem; margin: 0 0 5.0111625rem 0; text-align: center; } } .banner-content.programInfo .banner-inner-container .cta .image-container.default { display: none; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.programInfo .banner-inner-container .cta .image-container.default { max-width: 16.9043215rem; width: 16.9043215rem; padding: 1.6703875rem 0 2.405358rem; margin: 0 auto; display: flex; } } .banner-content.programInfo .banner-inner-container .image-container { max-width: 27.4611705rem; width: 27.4611705rem; align-items: center; margin: 4.00893rem 0 3.9421145rem; } @media (min-width: 766px) and (max-width: 1027px) { .banner-content.programInfo .banner-inner-container .image-container { max-width: 100%; } } .banner-content.programInfo .banner-inner-container .image-container img { width: auto; max-width: 100%; }</style><div class=\"banner-content categoryId tileClass desktop-only\" style=\"background-color: tileBgColor\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <h2>title</h2> <h3>tagLine</h3> <div class=\"banner-description\">shortDescription</div></div><div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div></section> </div><div class=\"banner-content categoryId tileClass mobile-only\" style=\"background-color: tileBgColor\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <h2>title</h2> <h3>tagLine</h3> <div class=\"image-container default\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div><div class=\"banner-description\">shortDescription</div></div></section> </div>",
+          "imageTxt": "Program Info Banner",
+          "carouselOrder": "1",
+          "tagLine": "Use your points to get the latest Apple products and choose how you want to pay!",
+          "ctaClass": "left-text justify-content-center",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": false,
+          "desktopImageUrl": "/apple-gr/assets/img/banners/BannerImage-Chase-PIB.png",
+          "shortDescription": "Buy with points or combine with cash.<br/>You can cover up to {{useMaxCash}} of your order using a card.",
+          "title": "Program – Apple<sup>®</sup> Store",
+          "btnEnabled": false
+        },
+        "products": null
+      },
+      {
+        "categoryId": "ipad-pro",
+        "categoryName": "iPad Pro",
+        "bannerType": "product",
+        "config": {
+          "template": "<style> #slideShowComponent.ipad-pro .uk-dotnav li a { background-color: #fff !important; } #slideShowComponent.ipad-pro .uk-dotnav .uk-active a { background-color: #fff !important; } .banner-content.ipad-pro .banner-inner-container .cta .new-indicator { padding: 0.3340775rem 0.935417rem; margin-bottom: 1.1358635rem; } .banner-content.ipad-pro .banner-inner-container .cta h2 { color: #fff; font-size: 1.8040185rem; font-weight: 600; line-height: 2.138096rem; letter-spacing: 0rem; text-align: center; margin: 0; } .banner-content.ipad-pro .banner-inner-container .cta h3 { color: #fff; font-size: 3.207144rem; font-weight: 500; line-height: 3.8084835rem; letter-spacing: 0rem; text-align: center; margin: 0; } .banner-content.ipad-pro .banner-inner-container .cta .btn-container { display: flex; justify-content: center; margin-top: 1.8040185rem; padding: 0; } .banner-content.ipad-pro .banner-inner-container .image-container > img { max-width: 30.73513rem; } .banner-content.ipad-pro .banner-inner-container .cta { display: flex; flex-direction: column; margin: 4.276192rem 3.340775rem 4.276192rem 0; padding: 0 !important; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.ipad-pro .banner-inner-container { flex-direction: column !important; margin-top: 1.6703875rem; } .banner-content.ipad-pro .banner-inner-container .cta { margin: 0 auto; } .banner-content.ipad-pro .banner-inner-container .cta .new-indicator { margin-bottom: 1.202679rem; } .banner-content.ipad-pro .banner-inner-container .cta h2 { color: #fff; font-size: 1.5367565rem; font-weight: 600; line-height: 1.8040185rem; letter-spacing: 0rem; text-align: center; } .banner-content.ipad-pro .banner-inner-container .cta h3 { color: #fff; font-size: 2.405358rem; font-weight: 500; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: center; } .banner-content.ipad-pro .banner-inner-container .cta .btn-container { margin-top: 1.33631rem; } .banner-content.ipad-pro .banner-inner-container .image-container { margin-top: -1.33631rem; } .banner-content.ipad-pro .banner-inner-container .image-container > img { width: 100%; max-width: 25.0558125rem; } } </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <h2 class=\"bannerTitle\">title</h2> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <h2 class=\"bannerTitle\">title</h2> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "Best and Brightest.",
+          "tileBgColor": "#000000",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/iPadPro/BannerImage-iPadPro.png",
+          "title": "iPad Pro",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/iPadPro/BannerImage-iPadPro-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/configure/ipad/ipad-pro",
+          "imageTxt": "iPad Pro",
+          "newIndicatorColor": "#FFFFFF",
+          "ctaClass": "justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "ipads-10-9",
+        "categoryName": "iPad (10th gen.)",
+        "bannerType": "product",
+        "config": {
+          "template": "<style>.banner-content.ipads-10-9 .banner-inner-container{background-color: inherit; display: flex; width: 100%;}@media (max-width: 765px){.banner-content.ipads-10-9 .banner-inner-container{flex-direction: column !important; align-self: baseline;}}.banner-content.ipads-10-9 .banner-inner-container .cta{align-items: center; display: flex; flex-direction: column; margin: 3.875299rem 1.4031255rem 3.875299rem 8.0846755rem; padding-left: 0 !important; z-index: 1;}@media (max-width: 765px){.banner-content.ipads-10-9 .banner-inner-container .cta{margin: 1.33631rem 0 0; padding-right: 0;}}.banner-content.ipads-10-9 .banner-inner-container .cta .new-indicator{margin-bottom: 0; padding: 0.3340775rem 0.935417rem;}.banner-content.ipads-10-9 .banner-inner-container .cta h2{margin: 1.0022325rem 0 0; color: #000; font-size: 2.806251rem; font-weight: 600; line-height: 3.340775rem; letter-spacing: 0rem; text-align: center;}@media (min-width: 0px) and (max-width: 767px){.banner-content.ipads-10-9 .banner-inner-container .cta h2{margin-top: 0.400893rem; color: #000; font-size: 2.405358rem; font-weight: 600; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: center;}}.banner-content.ipads-10-9 .banner-inner-container .cta h3{margin: -0.0668155rem 0 0; color: #000; font-size: 1.069048rem; font-weight: 600; line-height: 1.2694945rem; letter-spacing: 0rem; text-align: center;}@media (min-width: 0px) and (max-width: 767px){.banner-content.ipads-10-9 .banner-inner-container .cta h3{margin-top: -0.267262rem; color: #111111; font-size: 0.935417rem; font-weight: 400; line-height: 1.1358635rem; letter-spacing: 0rem; text-align: center;}}.banner-content.ipads-10-9 .banner-inner-container .cta .banner-description{margin: 0.7349705rem 0 0; color: #000; font-size: 1.603572rem; font-weight: 400; line-height: 1.9376495rem; letter-spacing: 0rem; text-align: center;}@media (min-width: 0px) and (max-width: 767px){.banner-content.ipads-10-9 .banner-inner-container .cta .banner-description{margin-top: 0.534524rem; color: #000; font-size: 1.33631rem; font-weight: 400; line-height: 1.603572rem; letter-spacing: 0rem; text-align: center;}}.banner-content.ipads-10-9 .banner-inner-container .cta .btn-container{padding: 0; margin-top: 1.4031255rem;}@media (min-width: 0px) and (max-width: 767px){.banner-content.ipads-10-9 .banner-inner-container .cta .btn-container{margin-top: 1.0022325rem;}}.banner-content.ipads-10-9 .banner-inner-container .image-container{margin: 0.935417rem 0 1.0022325rem 0;}@media (max-width: 765px){.banner-content.ipads-10-9 .banner-inner-container .image-container{margin: 1.6703875rem 0 0.8686015rem 0;}}.banner-content.ipads-10-9 .banner-inner-container .image-container > img{max-width: 17.238399rem;}@media (min-width: 0px) and (max-width: 767px){.banner-content.ipads-10-9 .banner-inner-container .image-container > img{max-width: 12.694945rem;}}</style><div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <h2 class=\"bannerTitle\">title</h2> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"banner-description\">shortDescription</div><div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div></div><div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div></section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <h2 class=\"bannerTitle\">title</h2> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"banner-description\">shortDescription</div><div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div></div><div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div></section> </div>",
+          "btnClass": "",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "10th Generation",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/iPad10Gen/BannerImage-iPad.png",
+          "shortDescription": "Lovable. Drawable. Magical.",
+          "title": "iPad",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/iPad10Gen/BannerImage-iPad-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/configure/ipad/ipads-10-9",
+          "imageTxt": "iPad 10th Generation",
+          "ctaClass": "flex-row-reverse justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "apple-tv-apple-tv-4k",
+        "categoryName": "Apple TV 4K",
+        "bannerType": "product",
+        "config": {
+          "template": "<style> .banner-content.apple-tv-apple-tv-4k{justify-content:center}.banner-content.apple-tv-apple-tv-4k .banner-inner-container{margin:0}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta{align-items:center;flex-direction:column;margin:4.409823rem 0 4.4766385rem;padding:0 6.3474725rem 0 0}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta .imageTitle{width:6.6147345rem}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta .new-indicator{padding:.3340775rem .935417rem;margin-bottom:1.33631rem}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta .btn-container{margin:0;padding:1.870834rem 0 0!important}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta h3{margin:.4677085rem 0 0;color:#000;font-size:2.405358rem;font-weight:600;line-height:2.87039388rem;letter-spacing:0;text-align:left}@media (max-width:765px){.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta h3{color:#000;font-size:1.603572rem;font-weight:600;line-height:1.91359592rem;letter-spacing:0;text-align:center;width:18.040185rem}}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container{margin-top:.8686015rem;margin-bottom:.7349705rem;max-width:30%}@media (min-width:766px) and (max-width:1027px){.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta{padding:0}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container{max-width:45%}}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container>img{max-width:29.1983735rem}@media (min-width:0px) and (max-width:767px){.banner-content.apple-tv-apple-tv-4k .banner-inner-container{flex-direction:column!important}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta{margin:2.004465rem 3.474406rem 0 3.5412215rem;padding:0}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta .new-indicator{margin-bottom:1.33631rem}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .cta .btn-container{padding:.935417rem 0 0!important}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container{margin:1.5367565rem 2.271727rem 1.603572rem 2.538989rem;max-width:93%}.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container>img{max-width:20.2450965rem}}@media (min-width:766px) and (max-width:1027px){.banner-content.apple-tv-apple-tv-4k .banner-inner-container .image-container>img{max-width:100%}} </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt - imageTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "titleImg": "/apple-gr/assets/img/productBanner/AppleTV4K/BannerTitleImage-AppleTV4K.svg",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "Cinematic in every sense.",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/AppleTV4K/BannerImage-AppleTV4K.png",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/AppleTV4K/BannerImage-AppleTV4K-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/configure/tv/apple-tv-apple-tv-4k",
+          "imageTxt": "Apple TV 4K",
+          "ctaClass": "justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone-iphone-14-pro",
+        "categoryName": "iPhone 14 Pro",
+        "bannerType": "product",
+        "config": {
+          "template": "<style>#slideShowComponent.iphone-iphone-14-pro .uk-dotnav li a {background-color: #fff !important;} #slideShowComponent.iphone-iphone-14-pro .uk-dotnav .uk-active a {background-color: #fff !important;} .banner-content.iphone-iphone-14-pro { justify-content: center; } .banner-content.iphone-iphone-14-pro .banner-inner-container { margin: 0; max-width: 128.28576rem; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta { align-items: center; flex-direction: column; margin: 4.3430075rem 0 4.2093765rem; white-space: nowrap; padding: 0 11.5590815rem 0 0; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .imageTitle { height: 1.2694945rem; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .new-indicator { padding: 0.3340775rem 0.935417rem; margin-bottom: 1.603572rem; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta h3 { margin: 0.3340775rem 0 0; opacity: 1; padding: 0; color: #fff; font-size: 3.207144rem; font-weight: 500; line-height: 3.8084835rem; letter-spacing: 0rem; text-align: left; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .btn-container { margin: 0; padding: 1.8040185rem 0 0 !important; } .banner-content.iphone-iphone-14-pro .banner-inner-container .image-container { margin-top: 0.8686015rem; max-width: 59%; } .banner-content.iphone-iphone-14-pro .banner-inner-container .image-container > img { max-width: 17.5724765rem; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.iphone-iphone-14-pro .banner-inner-container { flex-direction: column !important; align-self: baseline; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta { margin: 1.6703875rem 0 1.4031255rem 0; padding: 0; align-self: center; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .imageTitle { height: 1.069048rem; width: 100%; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .new-indicator { margin-bottom: 1.603572rem; } .banner-content.iphone-iphone-14-pro .banner-inner-container .cta .btn-container { padding: 1.33631rem 0 0 !important; } .banner-content.iphone-iphone-14-pro .banner-inner-container .image-container { margin-top: 0; } .banner-content.iphone-iphone-14-pro .banner-inner-container .image-container > img { max-width: 14.6325945rem; } } @media (min-width: 766px) and (max-width: 1027px) { .banner-content.iphone-iphone-14-pro .banner-inner-container .cta { padding-right: 10.69048rem; } .banner-content.iphone-iphone-14-pro .banner-inner-container .image-container { max-width: 34%; } } @media (max-width: 765px) { .banner-content.iphone-iphone-14-pro .banner-inner-container .cta h3 { color: #fff; font-size: 2.405358rem; font-weight: 500; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: center; margin: 0.267262rem 0 0; } } </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "titleImg": "/apple-gr/assets/img/productBanner/iPhone14Pro/BannerTitleImage-iPhone14Pro.svg",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "Pro. Beyond.",
+          "tileBgColor": "#000000",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/iPhone14Pro/BannerImage-iPhone14Pro.png",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/iPhone14Pro/BannerImage-iPhone14Pro-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/configure/iphone/iphone-iphone-14-pro",
+          "imageTxt": "iPhone 14 Pro",
+          "newIndicatorColor": "#FFFFFF",
+          "ctaClass": "justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone-iphone-14",
+        "categoryName": "iPhone 14",
+        "bannerType": "product",
+        "config": {
+          "template": "<style> .banner-content.iphone-iphone-14 .banner-inner-container{background-color:inherit;display:flex;width:100%}.banner-content.iphone-iphone-14 .banner-inner-container .cta .new-indicator{align-self:baseline;margin-bottom:1.1358635rem;padding:.3340775rem .935417rem}.banner-content.iphone-iphone-14 .banner-inner-container .cta{display:flex;z-index:1;flex-direction:column;margin:4.7439005rem 0 4.810716rem;padding-left:4.944347rem!important;padding-bottom:0}@media (min-width:0px) and (max-width:767px){.banner-content.iphone-iphone-14 .banner-inner-container{align-items:baseline;flex-direction:column!important;align-self:baseline}.banner-content.iphone-iphone-14 .banner-inner-container .cta{align-items:baseline;margin:1.6703875rem 0 .6013395rem;padding:0 0 0 2.3385425rem!important}.banner-content.iphone-iphone-14 .banner-inner-container .cta .new-indicator{margin-bottom:1.202679rem}}.banner-content.iphone-iphone-14 .banner-inner-container .cta .imageTitle{max-height:1.2694945rem;max-width:6.948812rem;padding-left:.267262rem}@media (max-width:765px){.banner-content.iphone-iphone-14 .banner-inner-container .cta .imageTitle{max-height:1.069048rem;margin-bottom:.133631rem;padding-left:0}}.banner-content.iphone-iphone-14 .banner-inner-container .cta h3{color:#111;font-size:3.207144rem;font-weight:600;line-height:3.8084835rem;letter-spacing:0;text-align:left;padding-left:.133631rem;margin:0}.banner-content.iphone-iphone-14 .banner-inner-container .cta .btn-container{padding-top:1.6703875rem;display:flex}.banner-content.iphone-iphone-14 .banner-inner-container .image-container{margin-top:.6013395rem;margin-left:-2.939882rem;}.banner-content.iphone-iphone-14 .banner-inner-container .image-container>img{max-width:23.8531335rem;}@media (min-width:766px) and (max-width:1027px){.banner-content.iphone-iphone-14 .banner-inner-container .cta{padding-right:.534524rem}.banner-content.iphone-iphone-14 .banner-inner-container .image-container>img{padding-left:.534524rem}}@media (min-width:0px) and (max-width:767px){.banner-content.iphone-iphone-14 .banner-inner-container .cta h3{padding-left:0;margin-left:-.2004465rem;color:#111;font-size:2.405358rem;font-weight:600;line-height:2.8730665rem;letter-spacing:0;text-align:left}.banner-content.iphone-iphone-14 .banner-inner-container .cta .btn-container{padding-top:1.0022325rem}.banner-content.iphone-iphone-14 .banner-inner-container .image-container{margin-top:0;margin-left:0;}.banner-content.iphone-iphone-14 .banner-inner-container .image-container>img{margin:0 2.7394355rem 0 2.8730665rem;max-width:19.4433105rem;padding-left:0;}} </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "titleImg": "/apple-gr/assets/img/productBanner/iPhone14/BannerTitleImage-iPhone14.svg",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "Big and bigger.",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/iPhone14/BannerImage-iPhone14.png",
+          "title": "iPhone 14",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/iPhone14/BannerImage-iPhone14-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/configure/iphone/iphone-iphone-14",
+          "imageTxt": "iPhone 14",
+          "ctaClass": "left-text flex-row-reverse justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "watch-apple-watch-series-8",
+        "categoryName": "Apple Watch Series 8",
+        "bannerType": "product",
+        "config": {
+          "template": "<style> .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta { flex-direction: column; margin: 4.00893rem 3.2% 4.8775315rem 0; padding: 0 !important; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta .new-indicator { padding: 0.3340775rem 0.935417rem; margin-bottom: 0.801786rem; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta .imageTitle { max-width: 7.616967rem; align-self: center; margin-bottom: 0.4677085rem; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta h3 { color: #000; font-size: 2.405358rem; font-weight: 600; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: center; margin: 0; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta .btn-container { padding-top: 1.469941rem; display: flex; justify-content: center; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .image-container { margin: 1.33631rem 5.1447935rem 1.4031255rem 0; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .image-container > img { max-width: 17.639292rem; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.watch-apple-watch-series-8 .banner-inner-container .image-container > img { max-width: 14.164886rem; } .banner-content.watch-apple-watch-series-8 .banner-inner-container { flex-direction: column !important; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta { margin: 1.6703875rem 0 1.069048rem 0; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .image-container { margin: 0 0 0.7349705rem 0; }  .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta .btn-container { padding-top: 1.0022325rem; } .banner-content.watch-apple-watch-series-8 .banner-inner-container .cta h3 { color: #000; font-size: 1.603572rem; font-weight: 600; line-height: 1.9376495rem; letter-spacing: 0rem; text-align: center; } } </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "titleImg": "/apple-gr/assets/img/productBanner/WatchSeries8/BannerTitleImage-WatchSeries8.svg",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "A healthy leap ahead.",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/WatchSeries8/BannerImage-WatchSeries8.png",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/WatchSeries8/BannerImage-WatchSeries8-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/browse/watch/watch-apple-watch-series-8",
+          "imageTxt": "Apple Watch Series 8",
+          "ctaClass": "flex-row-reverse justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "music-airpods-pro",
+        "categoryName": "AirPods Pro 2nd Generation",
+        "bannerType": "product",
+        "config": {
+          "template": "<style> .banner-content.music-airpods-pro .banner-inner-container .cta { flex-direction: column; margin: 3.6748525rem -3.5% 3.6748525rem 0; padding: 0 !important; } .banner-content.music-airpods-pro .banner-inner-container .cta .new-indicator { padding: 0.3340775rem 0.935417rem; margin-bottom: 0.7349705rem; } .banner-content.music-airpods-pro .banner-inner-container .cta .imageTitle { max-width: 12.694945rem; align-self: center; margin-bottom: 0.3340775rem; } .banner-content.music-airpods-pro .banner-inner-container .cta h3 { color: #111111; font-size: 1.33631rem; font-weight: 400; line-height: 1.603572rem; letter-spacing: 0rem; text-align: center; margin: 0; } .banner-content.music-airpods-pro .banner-inner-container .cta .banner-description { margin: 0.8686015rem 0 0 0; color: #111111; font-size: 2.405358rem; font-weight: 600; line-height: 2.8730665rem; letter-spacing: 0rem; text-align: center; } .banner-content.music-airpods-pro .banner-inner-container .cta .btn-container { padding-top: 1.737203rem; display: flex; justify-content: center; } .banner-content.music-airpods-pro .banner-inner-container .image-container { margin: 2.538989rem 8.2183065rem 2.538989rem 0; } .banner-content.music-airpods-pro .banner-inner-container .image-container > img { max-width: 15.1671185rem; } @media (min-width: 0px) and (max-width: 767px) { .banner-content.music-airpods-pro .banner-inner-container .image-container > img { max-width: 19.3096795rem; } .banner-content.music-airpods-pro .banner-inner-container .image-container { margin: 0; } .banner-content.music-airpods-pro .banner-inner-container .cta .new-indicator { margin-bottom: 1.0022325rem; } .banner-content.music-airpods-pro .banner-inner-container .cta .btn-container { padding-top: 1.202679rem; } .banner-content.music-airpods-pro .banner-inner-container .cta .imageTitle { max-width: 10.8909265rem; } .banner-content.music-airpods-pro .banner-inner-container .cta { margin: 1.737203rem 0 0.534524rem 0; } .banner-content.music-airpods-pro .banner-inner-container { flex-direction: column !important; } .banner-content.music-airpods-pro .banner-inner-container .cta .banner-description { margin-top: 0.7349705rem; color: #111111; font-size: 1.603572rem; font-weight: 600; line-height: 1.9376495rem; letter-spacing: 0rem; text-align: center; } .banner-content.music-airpods-pro .banner-inner-container .cta h3 { color: #111111; font-size: 1.202679rem; font-weight: 400; line-height: 1.4031255rem; letter-spacing: 0rem; text-align: center; } } </style> <div class=\"banner-content categoryId desktop-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"banner-description\">shortDescription</div> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"desktopImageUrl\"> </div> </section> </div><div class=\"banner-content categoryId mobile-only\" style=\"background-color: tileBgColor;\"> <section role=\"presentation\" tabindex=\"-1\" class=\"banner-inner-container ctaClass\"> <div class=\"cta\"> <span class=\"new-indicator\" style=\"color : newIndicatorColor; display: showNewIndicator\">newIndicatorText</span> <img role=\"heading\" aria-level=\"2\" class=\"imageTitle\" alt=\"title\" src=\"titleImg\"> <h3 class=\"bannerTagLine\">tagLine</h3> <div class=\"banner-description\">shortDescription</div> <div class=\"btn-container\" style=\"display: showBtn\"> <span class=\"link-base pill-shaped-cta btnClass\"> <a aria-label=\"btnTxt\" aria-disabled=\"btnEnabled\" href=\"btnLink\" style=\"color: btnTextColor;\">btnTxt</a> </span> </div> </div> <div class=\"image-container\"> <img alt=\"imageTxt\" src=\"mobileImageUrl\"> </div> </section> </div>",
+          "btnClass": "",
+          "titleImg": "/apple-gr/assets/img/productBanner/AirpodsPro/BannerTitleImage-AirPodsPro2ndGen.svg",
+          "btnTextColor": "#FFFFFF",
+          "btnTxt": "Shop Now",
+          "tagLine": "2nd Generation",
+          "tileBgColor": "#FFFFFF",
+          "showBtn": true,
+          "desktopImageUrl": "/apple-gr/assets/img/productBanner/AirpodsPro/BannerImage-AirPodsPro2ndGen.png",
+          "shortDescription": "Rebuilt from the sound up.",
+          "btnEnabled": true,
+          "newIndicatorText": "New",
+          "mobileImageUrl": "/apple-gr/assets/img/productBanner/AirpodsPro/BannerImage-AirPodsPro2ndGen-Mobile.png",
+          "showNewIndicator": true,
+          "btnLink": "/store/browse/music/music-airpods-pro/30001MQD83AM-A",
+          "imageTxt": "AirPods Pro 2nd Generation",
+          "ctaClass": "flex-row-reverse justify-content-center",
+          "btnType": "button"
+        },
+        "products": null
+      }
+    ],
+    "family": [
+      {
+        "categoryId": "music",
+        "categoryName": "Music",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Music.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Music.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "mac",
+        "categoryName": "Mac",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Mac.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Mac.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "watch",
+        "categoryName": "Watch",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Watch.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Watch.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone",
+        "categoryName": "iPhone",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-iPhone.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-iPhone.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "ipad",
+        "categoryName": "iPad",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-iPad.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-iPad.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "tv",
+        "categoryName": "TV",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-AppleTV.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-AppleTV.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone-airtag",
+        "categoryName": "AirTag",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-AirTag.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-AirTag.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "music-beats",
+        "categoryName": "Beats",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Beats.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Beats.png",
+          "minimumFontSize": "16"
+        },
+        "products": null
+      },
+      {
+        "categoryId": "all-accessories",
+        "categoryName": "Accessories",
+        "bannerType": "family",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Accessories.png",
+          "desktopImage": "/apple-gr/assets/img/familyBanner/FamilyBannerImage-Accessories.png",
+          "minimumFontSize": "11"
+        },
+        "products": null
+      }
+    ],
+    "whatsnew": [
+      {
+        "categoryId": "ipad-pro",
+        "categoryName": "iPad Pro",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPadPro.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPadPro.png",
+          "minimumFontSize": "19",
+          "overlayText": "Bientôt Disponible",
+          "isTileEnabled": false
+        },
+        "products": null
+      },
+      {
+        "categoryId": "ipads-10-9",
+        "categoryName": "iPad</br>(10th Generation)",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPad10Gen.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPad10Gen.png",
+          "minimumFontSize": "19",
+          "overlayText": "Coming in November",
+          "isTileEnabled": false
+        },
+        "products": null
+      },
+      {
+        "categoryId": "apple-tv-apple-tv-4k",
+        "categoryName": "Apple TV 4K",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-AppleTV4K.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-AppleTV4K.png",
+          "minimumFontSize": "11",
+          "overlayText": "Coming Soon",
+          "isTileEnabled": false
+        },
+        "products": null
+      },
+      {
+        "categoryId": "music-airpods-2nd-generation",
+        "categoryName": "AirPods Pro<br/>2nd Generation",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-AirPodsPro2Gen.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-AirPodsPro2Gen.png",
+          "minimumFontSize": "19",
+          "isTileEnabled": true
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone-iphone-14-pro",
+        "categoryName": "iPhone 14 Pro",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPhone14Pro.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPhone14Pro.png",
+          "minimumFontSize": "11",
+          "isTileEnabled": true
+        },
+        "products": null
+      },
+      {
+        "categoryId": "iphone-iphone-14",
+        "categoryName": "iPhone 14",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPhone14.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-iPhone14.png",
+          "minimumFontSize": "11",
+          "isTileEnabled": true
+        },
+        "products": null
+      },
+      {
+        "categoryId": "apple-watch-ultra",
+        "categoryName": "Watch Ultra",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchUltra.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchUltra.png",
+          "minimumFontSize": "11",
+          "isTileEnabled": true
+        },
+        "products": null
+      },
+      {
+        "categoryId": "watch-apple-watch-series-8",
+        "categoryName": "Watch Series 8",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchSeries8.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchSeries8.png",
+          "minimumFontSize": "11",
+          "isTileEnabled": true
+        },
+        "products": null
+      },
+      {
+        "categoryId": "apple-watch-se",
+        "categoryName": "Watch SE",
+        "bannerType": "whatsnew",
+        "config": {
+          "mobileImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchSE.png",
+          "desktopImage": "/apple-gr/assets/img/whatsNewBanner/WhatsNewBannerImage-WatchSE.png",
+          "minimumFontSize": "11",
+          "isTileEnabled": true
+        },
+        "products": null
+      }
+    ]
+  }

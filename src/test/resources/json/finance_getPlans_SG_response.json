@@ -1,0 +1,34 @@
+{
+  "financeOptions": [
+    {
+      "varId": "SG",
+      "programId": "b2s_qa_only",
+      "installment": 12,
+      "installmentPeriod": "month",
+      "messageCode": "finance.message.12.text",
+      "currency": "USD",
+      "installmentAmount": 102.78,
+      "active": true
+    },
+    {
+      "varId": "SG",
+      "programId": "b2s_qa_only",
+      "installment": 6,
+      "installmentPeriod": "month",
+      "messageCode": "finance.message.6.text",
+      "currency": "USD",
+      "installmentAmount": 205.57,
+      "active": true
+    },
+    {
+      "varId": "SG",
+      "programId": "b2s_qa_only",
+      "installment": 3,
+      "installmentPeriod": "month",
+      "messageCode": "finance.message.3.text",
+      "currency": "USD",
+      "installmentAmount": 411.15,
+      "active": true
+    }
+  ]
+}

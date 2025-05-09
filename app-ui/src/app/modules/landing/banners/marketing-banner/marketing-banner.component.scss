@@ -1,0 +1,431 @@
+@import "~styles/mixins";
+
+//Marketing Banner CSS
+.marketing-banner {
+  margin: 0 auto;
+  width: auto;
+
+  .product-container {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li.product-tile-container {
+      border-bottom: solid rem(1px) #ddd;
+      padding: rem(10px) 0;
+      &:first-child {
+        padding: 0 0 rem(10px) 0;
+      }
+    }
+
+    .product-tile-container {
+      display: flex;
+      width:100%;
+
+      .product-tile-content-child{
+        margin:0 rem(25px);
+      }
+      .product-image-container {
+        img {
+          max-width: rem(460px);
+          max-height: rem(460px);
+        }
+        max-width: rem(460px);
+        min-width: auto; // rem(460px);
+        max-height: rem(460px);
+        min-height: rem(460px);
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 rem(25px) 0 0;
+      }
+      .product-text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: inherit;
+
+        .title {
+          font-size: rem(36px);
+          line-height: rem(43px);
+          font-weight: 500;
+          color: inherit;
+          margin: 0;
+        }
+        .description {
+          font-size: rem(24px);
+          line-height: rem(29px);
+          font-weight: 400;
+          letter-spacing: rem(0.24px);
+          color: inherit;
+          margin: 0;
+          padding-top: rem(10px);
+        }
+        .product-image-container {
+          display: none;
+        }
+        .btn-container {
+          margin-top: rem(20px);
+
+          .icon-arrow-right {
+            > a {
+              padding-right: rem(3px);
+            }
+            &:after {
+              font-size: rem(26px);
+            }
+          }
+        }
+      }
+      .market-contain {
+        display: flex;
+        width: 100%;
+        max-width: rem(1040px);
+        padding: rem(20px) 0;
+        margin: 0 auto;
+
+        // multi marketing product banner
+        &.market-multi-banner-content  {
+          display: flex;
+          width: 100%;
+          padding: rem(65px) 0 rem(91px) 0;
+          @include for-mobile-to-tablet {
+            padding: rem(81px) rem(30px) rem(13px);
+          }
+          max-width: 100%;
+          margin: 0 auto;
+          flex-flow: column;
+          align-items: center;
+          text-align: center;
+
+
+          .banner-title-section{
+            .multi-banner-title{
+              font-size: rem(48px);
+              line-height: rem(58px);
+              font-weight: $font-weight-semi-bold;
+              letter-spacing: rem(0px);
+              color: #111111;
+              margin: 0;
+
+              @include for-mobile-to-tablet{
+                font-size: rem(32px);
+                line-height: rem(38px);
+                font-weight: $font-weight-semi-bold;
+                letter-spacing: rem(0px);
+                color: #111111;
+                margin: 0 auto 0;
+              }
+            }
+            .banner-subtitle{
+              font-size: rem(24px);
+              line-height: rem(29px);
+              font-weight: $font-weight-regular;
+              letter-spacing: rem(0px);
+              color: #111111;
+              margin: rem(3px) auto 0;
+              max-width:rem(519px);
+
+              @include for-mobile-to-tablet{
+                margin: rem(8px) auto 0 ;
+                max-width: unset;
+                font-size: rem(20px);
+                line-height: rem(24px);
+              }
+            }
+          }
+          .banner-content-section{
+            padding: rem(54px) 0 0;
+            @include for-mobile-to-tablet {
+              padding: rem(52px) 0 rem(79px);
+            }
+            ul {
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              display: flex;
+              flex-flow: row wrap;
+              justify-content: center;
+              align-items: stretch;
+              max-width: rem(1184px);
+              li {
+                border: none;
+                max-width: rem(506px);
+
+                @include for-tablet {
+                  max-width: rem(300px);
+                }
+
+                @include for-mobile {
+                  max-width: rem(315px);
+                }
+
+                &:nth-child(2) {
+                  margin-left: rem(172px);
+
+                  @include for-tablet {
+                    margin-left: rem(140px);
+                  }
+
+                  @include for-mobile {
+                    margin-left: 0;
+                  }
+
+                  @media (max-width: 1100px) and (min-width: 1028px) {
+                    margin-left: 0;
+                  }
+                }
+
+                @include for-mobile-to-tablet{
+                  &.banner-tile {
+                    &:first-child {
+                      margin: 0 0 rem(104px) 0;
+                    }
+                  }
+                }
+              }
+            }
+            .banner-tile{
+              @include for-mobile-to-tablet {
+                padding: 0 rem(16px);
+              }
+              .banner-img{
+                height: rem(341px);
+                width: rem(506px);
+                text-align: center;
+
+                @include for-tablet {
+                  height: rem(325px);
+                  width: rem(300px);
+                }
+
+                @include for-mobile {
+                  width: rem(315px);
+                  height: rem(212px);
+                }
+
+                img{
+                  max-height: rem(341px);
+                  max-width: rem(506px);
+
+                  @include for-tablet {
+                    max-height: rem(325px);
+                    max-width: rem(300px);
+                  }
+
+                  @include for-mobile {
+                    max-width: rem(315px);
+                    max-height: rem(212px);
+                  }
+                }
+              }
+              .pos-contain{
+                 margin: rem(30px) 0 0 0;
+
+                @include for-mobile-to-tablet{
+                  padding: 0 rem(16px);
+                  margin: rem(17px) 0 0;
+                }
+                .banner-title{
+                  font-size: rem(36px);
+                  line-height: rem(43px);
+                  font-weight: $font-weight-medium;
+                  letter-spacing: rem(0px);
+                  color: #111111;
+                  margin: 0;
+
+                  @include for-mobile-to-tablet{
+                    font-size: rem(28px);
+                    line-height: rem(34px);
+                  }
+                }
+                .banner-subtitle{
+                  font-size: rem(24px);
+                  line-height: rem(29px);
+                  font-weight: $font-weight-regular;
+                  letter-spacing: rem(0px);
+                  color: #111111;
+                  margin: rem(4px) 0 0;
+
+                  @include for-mobile-to-tablet{
+                    font-size: rem(20px);
+                    line-height: rem(24px);
+                  }
+                }
+                .txt-container{
+                   margin-top: rem(30px);
+                  @include for-mobile-to-tablet{
+                    margin-top: rem(22px);
+                  }
+                  .additional-info-container{
+                    font-size: rem(24px);
+                    line-height: rem(29px);
+                    font-weight: $font-weight-bold;
+                    color: #111111;
+                    margin: 0;
+
+                    @include for-mobile-to-tablet{
+                      font-size: rem(20px);
+                      line-height: rem(24px);
+                      margin-bottom: rem(8px);
+                    }
+                    &.orange-thin {
+                      color: #CE3000;
+                      font-weight: $font-weight-regular;
+                      font-size: rem(21px);
+                      letter-spacing: rem(0.21px);
+                      line-height: rem(25px);
+                    }
+                  }
+                }
+                .btn-container{
+                  margin-top: rem(8px);
+                  .link-base {
+                    font-size: rem(18px);
+                  }
+                  .icon-arrow-right {
+                    &:after{
+                      font-size: rem(22px);
+                    }
+                  }
+                  &.m-t-20 {
+                    margin-top: rem(20px);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      // Class Specfic Styles
+      &.row-reverse {
+        .market-contain {
+          flex-flow: row-reverse;
+          justify-content: space-between;
+
+          // Right margin for reversed row
+          .product-text-container {
+            margin-left: 2.1rem;
+            margin-right: rem(100px);
+
+            @include for-tablet {
+              margin-right: rem(50px);
+            }
+
+            @include for-mobile {
+              width: 100%;
+            }
+          }
+
+          .product-image-container {
+            margin: 0;
+          }
+        }
+      }
+      &.flex-column {
+        .market-contain {
+          flex-flow: column;
+          align-items: center;
+          .product-image-container {
+            margin: 0 rem(25px);
+          }
+          .product-text-container {
+            margin: 0 rem(25px);
+            text-align: center;
+          }
+        }
+      }
+      &.flex-column-reverse {
+        .market-contain {
+          flex-flow: column-reverse;
+          align-items: center;
+        }
+      }
+      .product-text-container {
+        &.text-left {
+           text-align:left;
+        }
+        &.text-right {
+          text-align:right;
+        }
+        &.text-center {
+          text-align:center;
+        }
+      }
+    }
+  }
+
+
+}
+
+@include for-mobile {
+  .marketing-banner {
+    width: auto;
+    .product-container {
+      .product-tile-container {
+        padding:0;
+        &:first-child {
+          padding:0;
+        }
+        &:last-child {
+          padding:0;
+        }
+        .market-contain{
+          padding-top: rem(77px);
+          padding-bottom:rem(63px);
+        }
+        .product-image-container {
+          display: none;
+        }
+        .product-text-container {
+          text-align: center;
+          align-items: center;
+          width: 100%;
+          .product-image-container {
+            display: block;
+            padding-top: rem(44px);
+            min-width: auto;
+            max-width: 100%;
+            max-height: rem(380px);
+            min-height: auto;
+            box-sizing: content-box;
+
+            img {
+              max-height: rem(380px);
+              width: auto;
+              max-width: 100%;
+              min-width: 100%;
+            }
+          }
+          .cta-text {
+            padding-top: rem(38px);
+          }
+        }
+        &.flex-column {
+          .market-contain {
+            .product-tile-content-child {
+              margin:0;
+              padding:0 rem(25px);
+            }
+          }
+        }
+        &.flex-column-reverse {
+          .market-contain {
+            .product-tile-content-child {
+              margin:0;
+              padding:0 rem(25px);
+            }
+          }
+        }
+        &.row-reverse {
+          .market-contain {
+            .product-text-container {
+              margin: 0 rem(25px);
+            }
+          }
+        }
+      }
+    }
+  }
+}

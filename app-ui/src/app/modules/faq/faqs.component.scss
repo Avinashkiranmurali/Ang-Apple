@@ -1,0 +1,141 @@
+@import "~styles/mixins";
+
+@media (min-width: 900px) {
+  .container {
+    width: 100%;
+  }
+}
+
+// browse user dropdown styles
+.user-info-content {
+  .info-title {
+    border-bottom: rem(1px) solid #dadada;
+    margin: 0 rem(20px);
+
+    h3 {
+      margin: rem(20px) 0;
+    }
+  }
+
+  ::ng-deep {
+    p {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul,
+    ol {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  .use-txt {
+    padding: rem(20px) 0;
+    margin: 0 rem(20px);
+    //border-bottom: 1px solid #dadada; angular fix
+    font-size: rem(14px);
+  }
+
+  .browse-content {
+    padding: 0 rem(20px);
+    overflow: auto;
+
+    .content-title {
+      font-size: rem(45px);
+      margin: rem(35px) 0;
+      text-align: center;
+    }
+
+    .infoDocument {
+      padding-bottom: rem(45px);
+
+      &.lesspad {
+        padding: 0;
+      }
+    }
+
+    .faqs-content {
+      padding-bottom: rem(10px);
+      padding-top: rem(2px); // angular fix
+      h3 {
+        font-size: rem(16px);
+        font-weight: bold;
+        margin: rem(20px) 0 rem(15px) 0;
+      }
+
+      .faq-cell {
+        margin-bottom: rem(15px);
+      }
+
+      .faq-input {
+        border: rem(1px) solid #dadada;
+        border-radius: rem(3px);
+
+        &.active {
+          border: rem(1px) solid #08c;
+          box-shadow: 0 0 rem(2px) #08c;
+        }
+
+        .question-cell {
+          display: block;
+          padding: rem(15px) rem(20px) rem(15px) rem(42px);
+          color: #333;
+          text-decoration: none;
+
+          &:before {
+            content: "Q:";
+            font-weight: bold;
+            padding-right: rem(10px);
+            margin-left: rem(-22px);
+          }
+        }
+
+        .answer-cell {
+          border-top: rem(1px) solid #dadada;
+          background: #f2f2f2;
+          padding: rem(15px) rem(20px) 0;
+          overflow: auto;
+
+          .answer-wrap {
+            padding: rem(10px) 0 0 rem(20px);
+
+            ::ng-deep {
+              p {
+                font-size: rem(14px);
+
+                &:nth-child(even) {
+                  margin-top: rem(10px);
+                }
+              }
+
+              ul {
+                list-style: disc;
+                margin-top: rem(10px);
+                margin-left: rem(16px);
+              }
+            }
+
+            &:before {
+              content: "A:";
+              font-weight: bold;
+              padding-right: rem(10px);
+              margin-left: rem(-20px);
+              position: absolute;
+            }
+          }
+
+          .hide-link {
+            float: right;
+            margin-bottom: rem(10px);
+          }
+        }
+      }
+    }
+  }
+
+  .missing {
+    color: red;
+  }
+}

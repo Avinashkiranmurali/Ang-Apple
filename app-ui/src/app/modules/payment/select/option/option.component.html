@@ -1,0 +1,36 @@
+<h3 class="m-0 payment-module-main-title">{{'paymentComponentHeading' | translate}}</h3>
+<article>
+  <ul class="select-option-wrapper" role="listbox" aria-label="Select your payment options.">
+    <li class="payment-container option-container" role="group" *ngFor="let redemptionOption of payments; let i = index;">
+      <input role="option"
+        type="radio"
+        name="payOption"
+        id="{{redemptionOption.name}}"
+        checked="{{redemptionOption.checked}}"
+        [(ngModel)]="state.selections.payment"
+        (change)="selectionChanged()"
+        [value]="redemptionOption"
+        [disabled]="redemptionOption.isDisabled"
+        [attr.aria-checked]="(state.selections.payment?.name === redemptionOption.name)"
+        [ngClass]="{ 'disabled': redemptionOption.isDisabled, 'selected': state.selections && state.selections.payment && state.selections.payment.name === redemptionOption.name }">
+
+      <label for="{{redemptionOption.name}}">
+        <span class="option-header"
+            [attr.aria-label]="redemptionOption.isDisabled ? 'disable-'+redemptionOption.optionHeading : redemptionOption.optionHeading"
+            [translate]="redemptionOption.isDisabled ? 'disable-'+redemptionOption.optionHeading : redemptionOption.optionHeading"
+            [translateParams]="translateParamsWithTitleCase">
+        </span>
+        <span class="option-desc"
+            [translate]="redemptionOption.isDisabled ? 'disable-'+redemptionOption.optionDescription : redemptionOption.optionDescription"
+            [translateParams]="redemptionOption.isDisabled ? disablePaymentPointsOnlyDescParams: translateParams"
+        ></span>
+      </label>
+    </li>
+  </ul>
+  <div class="msg-container" *ngIf="state['paymentInfo'] && state['paymentInfo']['pointsSplitUnavailable']">
+    <div class="msg-box">
+      <span class="g-icons icon-icon-warning info-icon" role="presentation" tabindex="0" aria-labelledby="points-split-unavailable-msg"></span>
+      <p id="points-split-unavailable-msg" [innerHTML]="'points-split-unavailable-msg' | translate: translateParams" class="info-msg"></p>
+    </div>
+  </div>
+</article>

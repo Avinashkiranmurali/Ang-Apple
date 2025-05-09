@@ -1,0 +1,37 @@
+<!-- Custom Notification Ribbon -->
+<div class="nr-sticky nr-notificationbanner custom-note-ribbon"
+     [ngClass]="isEnableCustomNotificationRibbon ? 'custom-notification-ribbon': ''"
+     *ngIf="!persistCustomNotificationRibbon && isEnableCustomNotificationRibbon">
+  <div class="nr-notificationbanner-content"
+       [ngStyle]="{ 'background': config.ribbonBackgroundColor }">
+    <div class="nr-notificationbanner-message nr-notificationbanner-message-container">
+      <p [ngStyle]="{ 'color': config.ribbonTextColor, 'text-align': config.ribbonTextAlignment }">
+        <span [innerHTML]="'customNotificationRibbonMessage' | translate"></span>
+      </p>
+      <a class="g-icons icon-close-circle nr-notificationbanner-close"
+        [ngStyle]="{ 'color': config.ribbonCloseIconColor }"
+        (click)="onCustomNotificationRibbonClose($event); persistNotificationRibbon()"
+        attr.aria-label="{{ 'closeNotification' | translate }}" role="button" tabindex="0" href>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- Notification Ribbon -->
+<div class="nr-sticky nr-notificationbanner regular-note-ribbon"
+     [ngClass]="isShowNotificationRibbon ? 'nr-load-fadein': 'nr-load-fadeout'"
+     *ngIf="isEnableNotificationRibbon">
+  <div class="nr-notificationbanner-content"
+       [ngStyle]="{ 'background': config.ribbonBackgroundColor }">
+    <div class="nr-notificationbanner-message nr-notificationbanner-message-container">
+      <p [ngStyle]="{ 'color': config.ribbonTextColor, 'text-align': config.ribbonTextAlignment }">
+        <span [innerHTML]="notificationRibbonMessage"></span>
+      </p>
+      <a class="g-icons icon-close-circle nr-notificationbanner-close"
+        [ngStyle]="{ 'color':config.ribbonCloseIconColor }"
+        (click)="onNotificationRibbonClose($event)"
+        attr.aria-label="{{ 'closeNotification' | translate }}" role="button" tabindex="0" href>
+      </a>
+    </div>
+  </div>
+</div>

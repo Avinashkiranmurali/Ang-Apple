@@ -1,0 +1,8 @@
+@import "~styles/common/items-list";
+
+@media (max-width: 767px) and (min-width: 0px){
+    .cart-item-description-container {
+        justify-content: space-between;
+        padding: 22px 0 0 0;
+    }
+}

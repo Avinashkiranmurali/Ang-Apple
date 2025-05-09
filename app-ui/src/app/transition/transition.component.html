@@ -1,0 +1,76 @@
+<div class="modal-processing" @fadeInOut (@fadeInOut.done)="animationDone($event)">
+    <div role="dialog" id="innerContent" class="inner-content" [ngSwitch]="overlayName">
+        <div *ngSwitchCase="'startup-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'firstLoadPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'firstLoadSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'processing-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'processingPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'processingSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'processing-cc-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'processingPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'processingSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'processing-payment-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'processingPaymentPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'processingPaymentSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'transfer-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'transferPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'transferSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'return-temp.htm'" role="alert" aria-live="polite">
+            <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'returnPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'returnSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'success-temp.htm'" role="alert" aria-live="polite">
+            <img [src]="imageServerUrl + '/apple-gr/assets/img/CircleCheck.png'" alt="{{ 'successAlt' | translate }}" />
+            <div class="spin-primary-msg">{{ 'successPrimary' | translate }}</div>
+            <div class="spin-secondary-msg">{{ 'successSecondary' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'failure-temp.htm'" role="alert" aria-live="polite">
+            <img [src]="imageServerUrl + '/apple-gr/assets/img/CircleX.png'" alt="{{ 'failureAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'failurePrimary' | translate  }}</div>
+            <div class="spin-secondary-msg">{{ 'failureSecondary' | translate  }}</div>
+            <a class="btn-base blue-btn"  (click)="closeTransition('return')">{{ 'ok' | translate  }}</a>
+        </div>
+
+        <div *ngSwitchCase="'failure-code-temp.htm'" role="alert" aria-live="polite">
+            <img [src]="imageServerUrl + '/apple-gr/assets/img/CircleX.png'" alt="{{ 'failureAlt' | translate }}"/>
+            <div class="spin-primary-msg">{{ 'failurePrimary' | translate  }}</div>
+            <div class="spin-secondary-msg">{{ 'failureSecondaryCode' | translate  }}</div>
+            <div class="spin-secondary-msg">{{ 'errorCodeLabel' | translate  }}:
+                <span class="spin-secondary-error-msg">{{ errorCode }}</span></div>
+            <a class="btn-base blue-btn" (click)="closeTransition('return')">{{ 'returnToPrevious' | translate  }}</a>
+        </div>
+
+        <div *ngSwitchCase="'address-form-success-temp.htm'" role="alert" aria-live="polite">
+            <div class="hideFromDOM">{{ 'addressFormStatus' | translate }}</div>
+        </div>
+
+        <div *ngSwitchCase="'credit-form-success-temp.htm'" role="alert" aria-live="polite">
+            <div class="hideFromDOM">{{ 'cardPaymentFormStatus' | translate }}</div>
+        </div>
+
+        <div *ngSwitchDefault>
+            <ng-container *ngIf="imageServerUrl">
+                <img class="spin" [src]="imageServerUrl + '/apple-gr/assets/img/loading-icon-blue.gif'" alt="{{ 'loadingAlt' | translate }}" role="alert" [attr.aria-label]="'loadingAlt' | translate"/>
+            </ng-container>
+        </div>
+    </div>
+    <span id="offscreen-text-dialog" class="offscreen" aria-live="assertive" aria-atomic="true" *ngIf="offscreenTransitionText && offscreenTransitionText?.msg">{{ offscreenTransitionText.msg }}</span>
+</div>

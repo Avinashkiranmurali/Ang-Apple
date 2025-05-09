@@ -1,0 +1,114 @@
+{
+  "configData": {
+    "additional": {},
+    "templates": {
+      "userDropdownLinks": {
+        "authenticated": [
+          "bag",
+          "navigate-back",
+          "sign-out"
+        ],
+        "unAuthenticated": []
+      },
+      "body": null,
+      "detail": {},
+      "orderHistory": {},
+      "cart": {
+        "cartItems": {},
+        "cartItemsList": {
+          "template": "cart-default.htm"
+        },
+        "cartItemsButtons": {
+          "template": "cart-button-simple.htm"
+        }
+      },
+      "checkout": {
+        "checkoutItemsList": {
+          "template": "checkout-default.htm"
+        },
+        "checkoutButtons": {
+          "template": "",
+          "class": "cart-buttons"
+        }
+      },
+      "orderConfirmation": {
+        "orderConfirmItemsList": {
+          "template": "order-confirm-default.htm"
+        },
+        "orderConfirmShippingDetails": {
+          "template": "order-confirm-shipping-details-default.html"
+        }
+      },
+      "footer": {
+        "class": "",
+        "template": ""
+      },
+      "header": {
+        "class": "dual-header",
+        "logoTemplate": {
+          "template": "logo-container.htm",
+          "class": "logo-container"
+        },
+        "userLineTemplate": {
+          "template": "default",
+          "class": "user-nav",
+          "btnClass": "",
+          "welcomeMsg": {
+            "template": "default"
+          }
+        }
+      }
+    },
+    "productConfiguration": {
+      "mac": {
+        "categoryShowOptions": true,
+        "subCategoryExclusions": [
+          "macbook"
+        ]
+      },
+      "ipad": {
+        "categoryShowOptions": false
+      },
+      "iphone": {
+        "categoryShowOptions": false
+      },
+      "watch": {
+        "categoryShowOptions": false
+      },
+      "tv": {
+        "categoryShowOptions": false
+      },
+      "music": {
+        "categoryShowOptions": false
+      },
+      "accessories": {
+        "categoryShowOptions": false
+      }
+    }
+  },
+  "anon": {
+    "configData": {
+      "templates": {
+        "navigation": {
+          "bag": {
+            "template": "anon"
+          }
+        },
+        "header": {
+          "class": "",
+          "logoTemplate": {
+            "template": "logo-container.htm",
+            "class": "logo-container"
+          },
+          "userLineTemplate": {
+            "template": "anonymous",
+            "anonTemplate": "default",
+            "class": "user-nav",
+            "btnClass": "sign-in blue-btn",
+            "welcomeMsg": null
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import "~styles/mixins";
+
+app-tile {
+  .product-item-tile, .product-item-tile .product-link {
+    cursor: pointer;
+  }
+
+  .product-item-tile .product-info-grid .smart-price-container + app-swatches-color .swatch-container,
+  .product-item-tile .product-info-grid .smart-price-container + app-swatches-color + .more-option:not(.more-options-with-color) {
+    padding-top: rem(30px);
+  }
+}

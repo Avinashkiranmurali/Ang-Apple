@@ -1,0 +1,92 @@
+{
+  "response": {
+    "additionalInfo": {
+      "manufacturerNote": "[\"This playback component requires QuickTime 7 or QuickTime 7 Pro.\",\"A more powerful computer will deliver improved performance.\"]",
+      "technicalSpecifications": "{\"tsOtherSoftwareRequired\":{\"label\":\"MOCK tsOtherSoftwareRequired\",\"values\":[\"QuickTime 7.6 or later (Pro not required)\"]}}",
+      "engravable": "false",
+      "features": "<p>   The QuickTime MPEG-2 Playback Component provides QuickTime users with the ability to import and play back MPEG-2 content, including both multiplexed (also known as muxed, where the audio and video tracks are interleaved together into one track) and non-multiplexed (also known as elementary) streams. </p><br />  <h4>   Frequently Asked Questions about this product:  </h4>  <p>   <strong>Do I need QuickTime Pro for the MPEG-2 Playback Component to work? </strong><br>   No, QuickTime Pro is not necessary for playback of MPEG-2 content with the MPEG-2 Playback Component. You need only QuickTime Player and the MPEG-2 Playback Component to view MPEG-2 content.   </p>  <p>   <strong>Can I create MPEG-2 content with the QuickTime MPEG-2 Playback Component? </strong><br>   No, the QuickTime MPEG-2 Playback Component does not contain an MPEG-2 encoder; therefore, encoding or creating MPEG-2 content is not supported. The component is only a decoder, enabling playback of MPEG-2 content.   </p>  <p>   <strong>What types of streams can be played back with the QuickTime MPEG-2 Playback Component? </strong><br>   The MPEG-2 Playback Component can play back both elementary audio and video streams, as well as multiplexed program streams.   </p>  <p>   <strong>What file types can be played back with the QuickTime MPEG-2 Playback Component? </strong><br>   There are a number of MPEG-2 file types that the QuickTime MPEG-2 Playback Component can play back, including .mpg, .mpeg, .vob, .vro, .m2v, .m2a, and .m2s files.   </p>  <p>   <strong>Can the QuickTime MPEG-2 Playback Component play back DVDs? </strong><br>   The MPEG-2 Playback Component can play back MPEG-2 files on non-encrypted DVDs. Professionally produced, commercial DVDs (such as Hollywood movies) are usually encrypted with special anti-piracy software, called Content Scramble System (CSS). In order to view these DVDs, decryption software is required and is included in DVD players. But decryption software is not included in QuickTime or the QuickTime MPEG-2 Playback Component.   </p>  <p>   <strong>Can transport streams be played? </strong><br>   The MPEG-2 specification defines two forms of data streams, program streams and transport streams. While the QuickTime MPEG-2 Playback Component will play program streams, playback of transport streams is not supported.   </p>  <p>   <strong>Can the QuickTime MPEG-2 Playback Component play back AC3 audio? </strong><br>   No, MPEG-2 files containing AC3 audio cannot be played back with the QuickTime MPEG-2 Playback Component.   </p>  <p>   <strong>What audio formats does the QuickTime MPEG-2 playback component support? </strong><br>   The QuickTime MPEG-2 Playback Component supports the playback of MPEG-2 files (.mpg, .mpeg, .vob, .vro, .m2v, .m2a, and .m2s) that contain MPEG audio layers I or II. The MPEG-2 Playback Component does not support audio playback for MPEG-2 files containing PCM, DTS, or AC3 audio.   </p>",
+      "exchangeRate": "1"
+    },
+    "availabilityInformation": {
+      "availabilityMessage": "Now",
+      "availabilityStatus": "IN_STOCK",
+      "available": true
+    },
+    "brand": "Apple®",
+    "bsin": "1069EEE5471CFA",
+    "customizable": false,
+    "hasVariations": false,
+    "imageUrls": {
+      "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/m/pe/mpeg2/125/mpeg2-125",
+      "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/m/pe/mpeg2/125/mpeg2-125",
+      "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/m/pe/mpeg2/125/mpeg2-125",
+      "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/m/pe/mpeg2/125/mpeg2-125"
+    },
+    "inStoreEligible": false,
+    "longDescription": "<p>This add-on to QuickTime or QuickTime Pro provides the ability to import and play back MPEG-2 content, including both multiplexed (also known as muxed, where the audio and video tracks are interleaved together into one track) and non-multiplexed (also known as elementary) streams.</p>  <p><strong>Note</strong>: On OS X Lion and later, MPEG-2 playback functionality is built into QuickTime X. The QuickTime MPEG-2 Playback Component is not required and cannot be installed.</p>",
+    "manufacturer": "apple",
+    "merchant": "apple",
+    "name": "QuickTime MPEG-2 Playback Component for Mac OS X",
+    "offers": [],
+    "productType": "MERCHANDISE",
+    "psid": "30001D2187Z/A",
+    "shippingEligible": true,
+    "shippingInformation": {
+      "deliveryInformation": {
+        "destinations": [
+          {
+            "country": "USA",
+            "method": "DOMESTIC",
+            "shippingPriceInfo": {"shippingCost": "USD 0.00"}
+          }
+        ],
+        "source": {
+          "country": "USA",
+          "supplier": "apple"
+        }
+      }
+    },
+    "shortDescription": "QuickTime MPEG-2 Playback Component for Mac OS X",
+    "sku": "D2187Z/A",
+    "status": "ACTIVE",
+    "totalReviews": 0,
+    "upc": "D2187Z/A",
+    "categories": [
+      {
+        "ancestors": [
+          {
+            "slug": "accessories",
+            "name": "Accessories",
+            "depth": 0.0
+          }
+        ],
+        "slug": "acc-accessories",
+        "name": "Accessories",
+        "depth": 1.0
+      }
+    ],
+    "importDatetime": "2015-05-19T20:09:34.617Z",
+    "modifiedDatetime": "2015-05-19T20:09:34.617Z",
+    "appliedChanges": [
+      {
+        "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+        "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+        "createdDatetime": "2015-05-26T02:31:23.109Z",
+        "payload": {
+          "payloadType": "SPLIT_TENDER",
+          "splitTenderEligibility": {"splitTenderEligible": false}
+        },
+        "override": false
+      }
+    ],
+    "priceInfo": {
+      "splitTenderEligible": false,
+      "basePrice": "USD 19.99",
+      "msrp": "USD 19.99",
+      "suppliersSalesTax": "USD 0.00",
+      "shippingCost": "USD 0.00",
+      "displayPrice": "USD 19.99",
+      "priceType": "SUPPLIER"
+    }
+  }
+}

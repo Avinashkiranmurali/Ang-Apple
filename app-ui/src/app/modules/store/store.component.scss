@@ -1,0 +1,80 @@
+@import "~styles/mixins";
+
+.landing-main-container {
+  position: relative;
+
+  .mobile-overlay {
+    position: absolute;
+
+    &.active {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.48;
+      background: #000;
+      display: block;
+      z-index: 4;
+    }
+  }
+
+  .body-container {
+    clear: both;
+    flex: 1;
+    -ms-flex: none;
+  }
+}
+
+#skipNavigation {
+  position: absolute;
+  top: rem(-1000px);
+  left: 0;
+
+  &:focus {
+    background-color: gray;
+    top: 0;
+    left: 0;
+    padding: rem(5px);
+    color: white;
+    z-index: 10;
+  }
+}
+
+.nav-container {
+  display: flex;
+  height: rem(44px);
+  margin: 0;
+  background-color: #e6e6e6;
+  align-items: center;
+
+  .nav-link {
+    list-style: none;
+    padding-right: rem(20px);
+
+    a {
+      color: #000000;
+      text-decoration: none;
+
+      sup {
+        font-size: 75%;
+        top: 0.2em;
+        position: relative;
+      }
+
+      &:hover, .active {
+        color: #333333;
+      }
+    }
+  }
+}
+
+app-notification-banner {
+  z-index: 4;
+
+  &.nr-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+}

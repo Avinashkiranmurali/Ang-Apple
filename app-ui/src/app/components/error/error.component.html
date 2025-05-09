@@ -1,0 +1,6 @@
+<div class="login-error-container" role="main">
+  <div class="error-msg">
+    <p *ngIf="publicMessages && publicMessages.offerNoLongerValid"
+       [innerHTML]="publicMessages.offerNoLongerValid | safe"> </p>
+  </div>
+</div>

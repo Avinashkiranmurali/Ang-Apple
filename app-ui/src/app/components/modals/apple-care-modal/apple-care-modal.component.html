@@ -1,0 +1,30 @@
+<section class="apple-care-modal-container" [ngClass]="{'loading': isProcessing}">
+  <div class="hideFromDOM" *ngIf="isProcessing" role="alert" [attr.aria-label]="'loadingAlt' | translate"></div>
+  <div class="modal-close-action-content" aria-hidden="true">
+    <a href="javascript:void(0)" (click)="cancel()" (keydown.enter)="cancel()"
+       class="g-icons icon-icon-close icon-close" role="button" auto-focus
+       aria-label="close modal window"></a>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body-content apple-care-body-container">
+      <div class="text-center">
+        <img class="apple-care-logo"
+             [src]="config.imageServerUrl + '/apple-gr/assets/img/apple-care/apple-care-plus.png'" alt="">
+      </div>
+      <h2 class="apple-care-modal-title" id="apple-care-modal-title" [innerHTML]="appleCareService['name'] || appleCareService['productName']"></h2>
+      <p class="apple-care-description" [innerHTML]="appleCareService['learnMore'] || appleCareService['productDetail']['learnMore']"></p>
+    </div>
+  </div>
+  <div class="modal-footer apple-care-footer-container d-flex flex-column align-items-center">
+    <div class="btn-container">
+      <span class="link-base pill-shaped-cta" *ngIf="!appleCareService['selected']">
+        <a href="javascript:void(0);"
+          role="button"
+          attr.aria-label="{{ 'add' | translate }} {{ appleCareService['name'] || appleCareService['productName'] }}"
+          (click)="doAppleCareSubscription()">
+             {{ 'add' | translate }}
+        </a>
+      </span>
+    </div>
+  </div>
+</section>

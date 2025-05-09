@@ -1,0 +1,235 @@
+@import "src/styles/mixins";
+
+@media (max-width: 766px) and (min-width: 576px) {
+  .user-info-popup {
+    max-width: none;
+  }
+}
+
+.user-info-popup {
+  ::ng-deep {
+    ul.terms-list {
+      padding: rem(20px) 0;
+      border-top: rem(1px) solid #dcdcdc;
+
+      li {
+        width: 100%;
+        color: #0070c9;
+        padding: rem(8px) 0 rem(8px) rem(5px);
+
+        a {
+          color: #0070c9;
+          padding: 0;
+          line-height: normal;
+          height: auto;
+
+          &:before {
+            line-height: normal;
+          }
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+    ul {
+      list-style: none;
+      box-sizing: border-box;
+      position: relative;
+      width: auto;
+
+      li {
+        margin-top: 0;
+        height: auto;
+        line-height: normal;
+        display: flex;
+        text-align: left;
+        vertical-align: middle;
+        width: auto;
+      }
+    }
+  }
+
+  ul.action-item-list {
+    padding: 0;
+    margin: 0;
+
+    li {
+      width: 100%;
+      color: #0070c9;
+      border-bottom: rem(1px) solid #dcdcdc;
+      padding: 0 0 0 rem(5px);
+
+      p {
+        margin: 0;
+      }
+
+      a, div {
+        color: #0070c9;
+        padding: rem(13px) rem(0) rem(14px) rem(28px);
+        position: relative;
+        font-size: rem(14px);
+        display: block;
+
+        &:before {
+          line-height: normal;
+        }
+
+        &:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        &.icon-UserBagIcon, &.icon-SignIn, &.icon-Orders, &.icon-LiveChat, &.icon-navigateHome {
+          &:before {
+            position: absolute;
+            left: 0;
+          }
+        }
+
+        &.icon-UserBagIcon {
+          &:before {
+            top: rem(11px);
+            font-size: rem(16px);
+          }
+        }
+
+        &.icon-SignIn, &.icon-Orders, &.icon-LiveChat {
+          &:before {
+            top: rem(16px);
+            font-size: rem(17px);
+          }
+        }
+
+        &.icon-LiveChat {
+          &:before {
+            top: rem(12px);
+            left: rem(-6px);
+          }
+        }
+
+        &.icon-SignIn {
+          &:before {
+            top: rem(11px);
+            left: rem(-2px);
+          }
+        }
+
+        &.icon-Orders {
+          &:before {
+            top: rem(12px);
+            font-size: rem(17px);
+          }
+        }
+
+        &.icon-navigateHome {
+          &:before {
+            font-size: rem(19px);
+            top: rem(10px);
+            left: rem(-3px);
+          }
+        }
+      }
+    }
+
+    li:last-child {
+      border-bottom: none;
+    }
+  }
+}
+
+@include for-phablet-only {
+  // 2nd child from nav
+  ::ng-deep {
+    .cartPopup {
+      &.popover {
+        .user-info-popup {
+          max-width: none;
+          background: #fff;
+
+          ul {
+            li {
+              padding: rem(20px);
+              display: inline-block;
+
+              a {
+                color: #0070C9;
+                padding-left: 0;
+                padding-top: 0;
+                font-size: rem(14px);
+              }
+            }
+
+            &.terms-list {
+              li {
+                padding: rem(8px) 0;
+              }
+            }
+          }
+
+          .top-hat-list {
+            li {
+              p {
+                font-size: rem(14px);
+              }
+            }
+          }
+
+          .button-container {
+            button {
+              font-size: rem(14px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// FIREFOX: BAG ICON DROPDOWN - ICON & TEXT MISALIGNMENT FIX
+@-moz-document url-prefix() {
+  ::ng-deep {
+    ngb-popover-window .cart-popup .user-info-popup ul.action-item-list li,
+    .popover .cart-popup .user-info-popup ul.action-item-list li {
+      a, div {
+        &.icon-UserBagIcon {
+          &:before {
+            top: rem(9px);
+          }
+        }
+
+        &.icon-SignIn, &.icon-Orders, &.icon-LiveChat {
+          &:before {
+            top: rem(14px);
+          }
+        }
+
+        &.icon-LiveChat {
+          &:before {
+            top: rem(10px);
+          }
+        }
+
+        &.icon-SignIn {
+          &:before {
+            top: rem(9px);
+          }
+        }
+
+        &.icon-Orders {
+          &:before {
+            top: rem(10px);
+          }
+        }
+
+        &.icon-navigateHome {
+          &:before {
+            top: rem(8px);
+          }
+        }
+      }
+    }
+  }
+}

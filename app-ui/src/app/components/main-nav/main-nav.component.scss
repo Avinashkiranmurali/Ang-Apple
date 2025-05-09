@@ -1,0 +1,44 @@
+@import "~styles/mixins";
+
+@include for-phablet-only {
+  ul {
+    &.mobile-main-nav {
+      li:not(.nav-searchbar) {
+        opacity: 1;
+        -webkit-transition: opacity 0.28s 0.36s cubic-bezier(0.52, 0.16, 0.24, 1), -webkit-transform 0.44s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transition: opacity 0.28s 0.36s cubic-bezier(0.52, 0.16, 0.24, 1), -webkit-transform 0.44s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+        transition: transform 0.44s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96), opacity 0.28s 0.36s cubic-bezier(0.52, 0.16, 0.24, 1);
+        transition: transform 0.44s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96), opacity 0.28s 0.36s cubic-bezier(0.52, 0.16, 0.24, 1), -webkit-transform 0.44s 0.2s cubic-bezier(0.04, 0.04, 0.12, 0.96);
+      }
+      li {
+        width: auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: inherit;
+        a {
+          &.main-nav-link {
+            display: flex;
+            font-weight: $font-weight-regular;
+            font-size: rem(17px);
+            line-height: rem(17.9px);
+            color: inherit;
+            padding: 0 0 0 rem(3px);
+            border-bottom: rem(1px) solid #ccc;
+            width: 100%;
+            height: rem(44px);
+            &:before {
+              line-height: rem(44px);
+            }
+          }
+        }
+        &:last-child {
+          a {
+            border-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+}

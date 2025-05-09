@@ -1,0 +1,45 @@
+<div class="content-container bottom-border-e6">
+    <section class="cart-container m-b-0">
+        <div class="cart-title">
+            <h2>{{ 'ReviewYourOrderDetails' | translate }}</h2>
+        </div>
+        <div class="order-verify-text">
+            <p><strong class="red-txt" [ngClass]="buttonColor" *ngIf="messages.importantNote.trim()!==''">{{ 'importantNote' | translate }} </strong>
+                <span [innerHTML]="'verifyShippingAndEmailAddress' | translate">
+                </span>
+            </p>
+        </div>
+        <div class="order-info-details">
+            <div class="order-details-wrapper">
+                <div class="order-addresses">
+                    <div *ngIf="checkoutAddress">
+                        <h3>{{ 'shippingAddress' | translate }}</h3>
+                        <p><em>{{ 'checkoutSummaryUserName' | translate:userNameParam }}</em></p>
+                        <p *ngIf="checkoutAddress.businessName">{{ checkoutAddress.businessName }}</p>
+                        <p>{{ checkoutAddress.address1 }}</p>
+                        <p *ngIf="checkoutAddress.address2">{{ checkoutAddress.address2 }}</p>
+                        <p><span *ngIf="(['en_gb','en_za'].indexOf(currLocale) < 0) && checkoutAddress.address3">{{ checkoutAddress.address3 }}</span><span *ngIf="checkoutAddress.subCity">{{ ', ' + checkoutAddress.subCity }}</span></p>
+                        <p><span>{{ checkoutAddress.city }}</span><span *ngIf="checkoutAddress.state">{{ ', ' + checkoutAddress.state }}</span></p>
+                        <p *ngIf="checkoutAddress.address3 && (['en_gb','en_za'].indexOf(currLocale) >= 0) ">{{ checkoutAddress.address3 }}</p>
+                        <p *ngIf="checkoutAddress.zip5">{{ checkoutAddress.zip5 | mask :'' : 'all': 0 : '*' : 0 : false }}</p>
+                        <p class="m-b-0">{{ 'country' | translate }}</p>
+                        <div class="contact-info">
+                            <p>{{ checkoutAddress.phoneNumber }}</p>
+                            <p class="m-b-0">{{ checkoutAddress.email }}</p>
+                        </div>
+                        <div class="edit-shipping-address">
+                            <p><a [routerLink]="['/store', 'shipping-address']" [ngClass]="buttonColor" id="btn-edit-shipping-contact">{{ isAddressFormEditable? ('EditShippingAddress' | translate) : (isMultiAddress? ('selectDifferentAddress' | translate) : ('ViewShippingAddress' | translate)) }}</a></p>
+                        </div>
+                    </div>
+                    <div *ngIf="(config.fullCatalog  && ['cash_subsidy'].indexOf(this.paymentTemplate) === -1 && (pointsUsed > 0 || totalPayment > 0))">
+                        <h3>{{ messages.paymentMethod }}</h3>
+                        <p class="selected-payment" [innerHTML]="'use-' + selectedRedemptionOption | translate: translateParamsWithCase"></p>
+                        <p *ngIf="pointsUsed > 0" [innerHTML]="'applyPoints' | translate: translateParams"></p>
+                        <p *ngIf="totalPayment > 0" [innerHTML]="'payBalanceWithCard' | translate: translateParams"></p>
+                        <p *ngIf="selectedRedemptionOption === 'splitpay' && totalPayment === 0" [innerHTML]="'payZero' | translate: translateParams"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

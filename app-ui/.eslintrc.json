@@ -1,0 +1,109 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json",
+          "e2e/tsconfig.json"
+        ],
+        "createDefaultProgram": true,
+        "warnOnUnsupportedTypeScriptVersion": false
+      },
+      "extends": [
+        "plugin:@angular-eslint/recommended",
+        "plugin:@angular-eslint/template/process-inline-templates"
+      ],
+      "rules": {
+        "@angular-eslint/no-empty-lifecycle-method": "off",
+        "@angular-eslint/component-selector": [
+          "error",
+          {
+            "type": "element",
+            "prefix": "app",
+            "style": "kebab-case"
+          }
+        ],
+        "@angular-eslint/directive-selector": [
+          "error",
+          {
+            "type": "attribute",
+            "prefix": "app",
+            "style": "camelCase"
+          }
+        ],
+        "@typescript-eslint/dot-notation": "off",
+        "@typescript-eslint/quotes": [
+          "error",
+          "single",
+          {
+            "avoidEscape": true
+          }
+        ],
+        "jsdoc/no-types": "off",
+        "max-len": "off",
+        "no-underscore-dangle": "off",
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": {
+              "memberTypes": [
+                "static-field",
+                "instance-field",
+                "static-method",
+                "instance-method"
+              ]
+            }
+          }
+        ],
+        "@typescript-eslint/naming-convention": [
+          "error",
+          {
+            "selector": ["default"],
+            "format": [
+              "camelCase",
+              "PascalCase",
+              "snake_case",
+              "UPPER_CASE"
+            ],
+            "filter": {
+              "regex": "^(Property-Name-One|Property-Name-Two)$",
+              "match": true
+            }
+          }
+        ],
+        "@typescript-eslint/ban-types": [
+          "error",
+          {
+            "types": {
+              "{}": false,
+              "object": false
+            },
+            "extendDefaults": true
+          }
+        ],
+        "@typescript-eslint/no-unused-expressions": [
+          "error",
+          {
+            "allowTernary": true
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ],
+      "extends": [
+        "plugin:@angular-eslint/template/recommended"
+      ],
+      "rules": {}
+    }
+  ]
+}

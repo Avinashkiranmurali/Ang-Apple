@@ -1,0 +1,95 @@
+<ng-container [ngSwitch]="banner['categoryId']">
+  <!-- Template for Program info banner -->
+  <ng-container *ngSwitchCase="'dual-cta'">
+    <div class="banner-content desktop-only" [ngClass]="banner['categoryId']" [ngStyle]="{'background-color': banner['config']['tileBgColor']}">
+      <section role="presentation" tabindex="-1" class="banner-inner-container" [ngClass]="banner['config']['ctaClass']">
+        <div class="cta">
+          <h2 [innerHTML]="banner['config']['title'] | safe"></h2>
+          <h3 [hidden]="!banner['config']['tagLine']" [innerHTML]="banner['config']['tagLine'] | safe"></h3>
+          <span class="short-desc" [hidden]="!banner['config']['shortDescription']"  [innerHTML]="banner['config']['shortDescription'] | safe"></span>
+        </div>
+        <div class="multi-image-container">
+          <div class="image-btn-container">
+            <div class="image-container"><img [alt]="banner['config']['image1Txt']" [src]="imageServerUrl + banner['config']['desktopImageUrl1']" /></div>
+            <div class="btn-container">
+                    <span class="link-base pill-shaped-cta" [ngClass]="[banner['config']['productCTA1Class'] || '', !banner['config']['productCTA1Enabled'] ? 'grayed-out': '']">
+                        <a class="nowrap" [routerLink]="banner['config']['productLink1']" [innerHTML]="banner['config']['productCTA1Text']"
+                           [attr.aria-disabled]="!banner['config']['productCTA1Enabled']"
+                           [ngStyle]="{ color: banner['config']['productCTA1Color'] }"
+                           attr.aria-label="{{ banner['config']['productCTA1Text'] }}"></a>
+                    </span>
+            </div>
+          </div>
+          <div class="image-btn-container second-image-btn-container">
+            <div class="image-container"><img [alt]="banner['config']['image2Txt']" [src]="imageServerUrl + banner['config']['desktopImageUrl2']" /></div>
+            <div class="btn-container">
+              <span class="link-base pill-shaped-cta" [ngClass]="[banner['config']['productCTA2Class'] || '', !banner['config']['productCTA2Enabled'] ? 'grayed-out': '']">
+                <a class="nowrap" [routerLink]="banner['config']['productLink2']" [innerHTML]="banner['config']['productCTA2Text']"
+                   [attr.aria-disabled]="!banner['config']['productCTA2Enabled']"
+                   [ngStyle]="{ color: banner['config']['productCTA2Color'] }"
+                   attr.aria-label="{{ banner['config']['productCTA2Text'] }}"></a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="banner-content mobile-only" [ngClass]="banner['categoryId']" [ngStyle]="{'background-color': banner['config']['tileBgColor']}">
+      <section role="presentation" tabindex="-1" class="banner-inner-container" [ngClass]="banner['config']['ctaClass']">
+        <div class="cta">
+          <h2 [innerHTML]="banner['config']['title'] | safe"></h2>
+          <h3 [hidden]="!banner['config']['tagLine']" [innerHTML]="banner['config']['tagLine'] | safe"></h3>
+          <span class="short-desc" [hidden]="!banner['config']['shortDescription']" [innerHTML]="banner['config']['shortDescription'] | safe"></span>
+        </div>
+        <div class="multi-image-container">
+          <div class="image-btn-container">
+            <div class="image-container"><img [alt]="banner['config']['image1Txt']" [src]="imageServerUrl + banner['config']['mobileImageUrl1']" /></div>
+            <div class="btn-container">
+                  <span class="link-base pill-shaped-cta" [ngClass]="[banner['config']['productCTA1Class'] || '', !banner['config']['productCTA1Enabled'] ? 'grayed-out': '']">
+                      <a class="nowrap" [routerLink]="banner['config']['productLink1']" [innerHTML]="banner['config']['productCTA1Text']"
+                         [attr.aria-disabled]="!banner['config']['productCTA1Enabled']"
+                         [ngStyle]="{ color: banner['config']['productCTA1Color'] }"
+                         attr.aria-label="{{ banner['config']['productCTA1Text'] }}"></a>
+                  </span>
+            </div>
+          </div>
+          <div class="image-btn-container second-image-btn-container">
+            <div class="image-container"><img [alt]="banner['config']['image2Txt']" [src]="imageServerUrl + banner['config']['mobileImageUrl2']" /></div>
+            <div class="btn-container">
+                <span class="link-base pill-shaped-cta" [ngClass]="[banner['config']['productCTA2Class'] || '', !banner['config']['productCTA2Enabled'] ? 'grayed-out': '']">
+                  <a class="nowrap"
+                     [routerLink]="banner['config']['productLink2']" [innerHTML]="banner['config']['productCTA2Text']"
+                     [attr.aria-disabled]="!banner['config']['productCTA2Enabled']"
+                     [ngStyle]="{ color: banner['config']['productCTA2Color'] }"
+                     attr.aria-label="{{ banner['config']['productCTA2Text'] }}"></a>
+                </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </ng-container>
+  <!-- Template for Product banner -->
+  <ng-container *ngSwitchDefault> <!-- default-pib -->
+    <div class="banner-content desktop-only" [ngClass]="banner['categoryId']" [ngStyle]="{'background-color': banner['config']['tileBgColor']}">
+      <section role="presentation" tabindex="-1" class="banner-inner-container" [ngClass]="banner['config']['ctaClass']">
+        <div class="cta">
+          <h2 [innerHTML]="banner['config']['title'] | safe"></h2>
+          <h3 [hidden]="!banner['config']['tagLine']" [innerHTML]="banner['config']['tagLine'] | safe"></h3>
+          <div class="banner-description" [hidden]="!banner['config']['shortDescription']"  [innerHTML]="banner['config']['shortDescription'] | safe"></div>
+        </div>
+        <div class="image-container"><img [alt]="banner['config']['imageTxt']" [src]="imageServerUrl + banner['config']['desktopImageUrl']" /></div>
+      </section>
+    </div>
+    <div class="banner-content mobile-only" [ngClass]="banner['categoryId']" [ngStyle]="{'background-color': banner['config']['tileBgColor']}">
+      <section role="presentation" tabindex="-1" class="banner-inner-container" [ngClass]="banner['config']['ctaClass']">
+        <div class="cta">
+          <h2 [innerHTML]="banner['config']['title'] | safe"></h2>
+          <h3 [hidden]="!banner['config']['tagLine']" [innerHTML]="banner['config']['tagLine'] | safe"></h3>
+          <div class="image-container default"><img [alt]="banner['config']['imageTxt']" [src]="imageServerUrl + banner['config']['mobileImageUrl']" /></div>
+          <div class="banner-description" [hidden]="!banner['config']['shortDescription']"  [innerHTML]="banner['config']['shortDescription'] | safe"></div>
+        </div>
+      </section>
+    </div>
+  </ng-container>
+</ng-container>

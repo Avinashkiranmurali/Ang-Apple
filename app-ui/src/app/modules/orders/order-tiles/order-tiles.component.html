@@ -1,0 +1,25 @@
+<div class="order-tiles-wrapper" *ngIf="orderItems && orderItems.length > 0">
+    <ul class="order-tiles" role="list" [attr.aria-label]="'orders' | translate">
+        <li role="listitem" class="order-tile" *ngFor="let item of orderItems | orderBy:'desc':'orderId';">
+            <a [routerLink]="item.displayOrderId" role="link"
+                attr.aria-label="{{ item.items | number }} {{ (item.items > 1 ? 'items' : 'item') | translate }}
+                with {{ 'orderNumberHeading' | translate }} {{ item.displayOrderId }}
+                and {{ 'orderDateHeading' | translate }} {{ item.orderDate | date: 'MMMM d yyyy' :'':locale }}">
+                <div class="item-image">
+                  <img [src]="item.imageURL | aplImgSize : '188'" alt="" />
+                </div>
+                <div class="item-details">
+                    <div class="item-order-info-line">
+                        <span class="items-count text-align-left">{{ item.items | number }} {{ (item.items > 1 ? 'items' : 'item') | translate }}</span>
+                        <app-cart-total-temp parentClass="order-tile-section" [cartSubtotal]="item.orderTotal" [totalVal]="item.orderTotal" class="rs-summary-value" ext="" [showTaxDisclaimer]="false">
+                        </app-cart-total-temp>
+                    </div>
+                    <div class="item-order-info-section">
+                        <div [attr.aria-label]="'orderNumberHeading' | translate" class="item-orderDate">{{ item.orderDate | date: 'MMMM d yyyy' :'':locale }}</div>
+                        <div class="item-orderId">{{ item.displayOrderId }}</div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>

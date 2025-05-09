@@ -1,0 +1,78 @@
+<ng-container [ngSwitch]="modalTemplate['template']">
+
+  <div *ngSwitchCase="'anonymous-login-modal-join-anon.htm'">
+    <div class="modal-close-action-content">
+      <a href class="g-icons icon-icon-close icon-close" (click)="cancel()" auto-focus role="button"
+      aria-label="close modal window"></a>
+    </div>
+    <div class="modal-header">
+      <h4 class="modal-title" id="anon-modal-title">{{ 'anonAccountRequired' | translate }}</h4>
+    </div>
+    <div class="modal-body modal-body-info">
+      <div class="info-block">
+        <h5>{{ 'anonLoginInfo' | translate }}</h5>
+      </div>
+    </div>
+    <div class="modal-body-container ">
+      <div class="modal-body-contain flex-column">
+        <div class="modal-body-contain-content">
+          <h5 class="list-content-heading">{{ 'anonSignIn' | translate }}</h5>
+          <p class="list-content-description">{{ 'anonSignInInfo' | translate }}</p>
+          <p class="list-content-link"><a href (click)="doSignIn()">{{ 'signInNow' | translate }}</a></p>
+        </div>
+        <div class="modal-content-list-divider">
+          <div class="bottom-border"></div>
+        </div>
+        <div class="modal-body-contain-content">
+          <h5 class="list-content-heading">{{ 'joinAnonProgram' | translate }}</h5>
+          <p class="list-content-description">{{ 'anonJoinInfo' | translate }}</p>
+          <p class="list-content-link"><a [href]="messages['anonJoinUrl']" target="_blank" rel="noopener noreferrer">{{ 'joinNow' | translate }}</a></p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-footer link-only-btn-footer">
+      <div class="modal-btn-container-stacked-flex  modal-btn-container">
+        <div class="action-item">
+          <a href class="link-btn cancel" role="link" (click)="cancel()">{{ 'cancel' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngSwitchDefault>
+    <div class="modal-close-action-content">
+      <a href class="g-icons icon-icon-close icon-close" (click)="cancel()" role="button" aria-label="close modal window" auto-focus></a>
+    </div>
+    <div class="modal-header">
+      <h4 class="modal-title" id="anon-modal-title">{{ 'accountRequired' | translate }}</h4>
+    </div>
+    <div class="modal-body split-container ">
+      <div class="info-block">
+        <ng-container [ngSwitch]="messages['accountRequiredInfoTemplate']">
+          <div *ngSwitchCase="'WF_accountRequiredInfo'">
+            <h5>{{ 'please' | translate }}
+              <a href (click)="doSignIn()">{{ 'loginButtonText' | translate }}</a>
+              {{ 'toVieworRedeem' | translate }} <em> {{ 'goFarRewards' | translate }}</em> </h5>
+          </div>
+
+          <div *ngSwitchCase="'default_accountRequiredInfo'">
+            <h5 [innerHTML]="messages['accountRequiredInfo']"></h5>
+          </div>
+        </ng-container>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <div class="modal-btn-container-stacked-flex modal-btn-container">
+        <button class="btn-base blue-btn action-item" *ngIf="config['signinUrl']" (click)="doSignIn()" autofocus>
+          {{ 'loginButtonText'| translate }}
+        </button>
+        <div class="action-item">
+          <a href class="link-btn cancel" role="link" (click)="cancel()">
+            {{ 'cancel' | translate }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ng-container>

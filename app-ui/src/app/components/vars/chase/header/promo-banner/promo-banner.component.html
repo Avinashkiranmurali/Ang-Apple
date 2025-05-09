@@ -1,0 +1,64 @@
+<section class="chase-nav-container">
+    <div class="level-3-promo-banner">
+        <button type="button" class="close-promo-banner" aria-label="Close Promotional Banner"
+            (click)="closePromoBanner()">
+            <!-- <i class="fa fa-times" aria-hidden="true">&nbsp;</i> -->
+            <i class="g-icons icon-icon-close icon-close close-button"></i>
+        </button>
+
+        <div *ngIf="!isPhabletOrMobile()" class="promo-banner">
+            <div class="discount-area">
+                <div class="promo-text">+{{promotionalDiscount}}% more</div>
+            </div>
+
+            <div class="promo-detail-text" *ngIf="data">
+                <div class="current-points">Your {{ updatedPoints || (data?.loyaltyAccount.rewardsBalance.amount ?? 0) | number: '1.0-0' }} points
+                    <div class="sub-level-1">are worth</div>
+                    <div class="sub-level-2 blue-color">
+                        <span class="price">{{pointsToUsd() | currency}}</span>
+                        <span class="promo-symbol">+</span>
+                    </div>
+                </div>
+
+                <div class="promo-points">Your {{promotionalDiscount}}% bonus
+                    <div class="sub-level-1">gives you</div>
+                    <div class="sub-level-2 blue-color">
+                        <span class="price">{{discountToUsd() | currency}}</span>
+                        <span class="promo-symbol">=</span>
+                    </div>
+                </div>
+
+                <div class="after-discount">For Apple<sup>&reg;</sup> purchases
+                    <div class="sub-level-1">on Ultimate Rewards</div>
+                    <div class="sub-level-2 total-price">{{rewardsWithDiscount() | currency}}
+                        <span class="promo-symbol"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div *ngIf="isPhabletOrMobile()" class="promo-banner">
+            <div class="promo-detail-text">
+                <div class="current-points">Your points
+                    <div class="sub-level-2 blue-color">
+                        <span class="price">{{pointsToUsd() | currency}}</span>
+                        <span class="promo-symbol">+</span>
+                    </div>
+                </div>
+
+                <div class="promo-points">{{promotionalDiscount}}%
+                    <div class="sub-level-2">
+                        <span class="price">Bonus</span>
+                        <span class="promo-symbol">=</span>
+                    </div>
+                </div>
+
+                <div>Are worth
+                    <div class="sub-level-2 total-price">{{rewardsWithDiscount() | currency}}</div>
+                </div>
+            </div>
+
+            <div class="promo-info">When you shop Apple<sup>&reg;</sup> on Ultimate Rewards<sup>&reg;</sup></div>
+        </div>
+    </div>
+</section>

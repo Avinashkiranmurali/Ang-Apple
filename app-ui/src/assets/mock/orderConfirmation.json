@@ -1,0 +1,66 @@
+{
+  "b2sOrderId": 2100118077,
+  "varOrderId": "2100118077",
+  "b2rMessage": "",
+  "varMessage": "VAROrderManagerDelta successfully placed order: Order# VAR1ORDER4324",
+  "ccType": null,
+  "last4": null,
+  "emptyCart": true,
+  "discountCodes": null,
+  "discountCodeError": false,
+  "orderHoldDurationInDays": null,
+  "orderDate": 1598388412200,
+  "payrollDeduction": null,
+  "promotionUseExceeded": false,
+  "timedOut": false,
+  "showVarOrderId": false,
+  "errorCode": null,
+  "payrollAgreementId": null,
+  "payrollAgreementUrl": null,
+  "earnedPoints": 0,
+  "cartTotal": {
+    "price": {
+      "amount": 870.91,
+      "currencyCode": "USD",
+      "points": 348364
+    },
+    "discountedPrice": null,
+    "discountAmount": 0,
+    "shippingPrice": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "taxes": {},
+    "fees": {},
+    "expeditedShippingPrice": null,
+    "itemsSubtotalPrice": {
+      "amount": 814.98,
+      "currencyCode": "USD",
+      "points": 325992
+    },
+    "discountedItemsSubtotalPrice": null,
+    "totalTaxes": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "totalFees": {
+      "amount": 55.93,
+      "currencyCode": "USD",
+      "points": 22372
+    },
+    "currency": "USD",
+    "establishmentFees": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "payPerPeriod": 0,
+    "payPeriods": 0,
+    "discountCodePerOrder": 1,
+    "discountApplied": false,
+    "actual": true
+  },
+  "orderCompleted": true
+}

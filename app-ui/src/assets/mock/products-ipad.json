@@ -1,0 +1,2899 @@
+{
+  "products": [
+    {
+      "psid": "30001MYN92VC/A",
+      "sku": "MYN92VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 128GB - Gold",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 128GB - Gold",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810655",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN92VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sItemPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unitTotalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Gold",
+          "key": "gold",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN92VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sItemPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unitTotalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYN82VC/A",
+      "sku": "MYN82VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 128GB - Silver",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 128GB - Silver",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810631",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN82VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sItemPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unitTotalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Silver",
+          "key": "silver",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN82VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sItemPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unitTotalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYN72VC/A",
+      "sku": "MYN72VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 128GB - Space Grey",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 128GB - Space Grey",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810617",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN72VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sItemPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unitTotalPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 719,
+            "currencyCode": "CAD",
+            "points": 110615
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Space Grey",
+          "key": "space_gray",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN72VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sItemPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unitTotalPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 719,
+          "currencyCode": "CAD",
+          "points": 110615
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYN62VC/A",
+      "sku": "MYN62VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 32GB - Gold",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 32GB - Gold",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810594",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN62VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sItemPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unitTotalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Gold",
+          "key": "gold",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN62VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sItemPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unitTotalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYN52VC/A",
+      "sku": "MYN52VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 32GB - Silver",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 32GB - Silver",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810570",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN52VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sItemPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unitTotalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Silver",
+          "key": "silver",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN52VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sItemPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unitTotalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYN32VC/A",
+      "sku": "MYN32VC/A",
+      "name": "10.2-inch iPad Wi-Fi + Cellular 32GB - Space Grey",
+      "shortDescription": "10.2-inch iPad Wi-Fi + Cellular 32GB - Space Grey",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199810556",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYN32VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sItemPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unitTotalPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 599,
+            "currencyCode": "CAD",
+            "points": 92154
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Space Grey",
+          "key": "space_gray",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi + Cellular",
+          "key": "nocarrier",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYN32VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sItemPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unitTotalPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 599,
+          "currencyCode": "CAD",
+          "points": 92154
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYLF2VC/A",
+      "sku": "MYLF2VC/A",
+      "name": "10.2-inch iPad Wi-Fi 128GB - Gold",
+      "shortDescription": "10.2-inch iPad Wi-Fi 128GB - Gold",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199808584",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYLF2VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sItemPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unitTotalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Gold",
+          "key": "gold",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYLF2VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sItemPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unitTotalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYLE2VC/A",
+      "sku": "MYLE2VC/A",
+      "name": "10.2-inch iPad Wi-Fi 128GB - Silver",
+      "shortDescription": "10.2-inch iPad Wi-Fi 128GB - Silver",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199808300",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYLE2VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sItemPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unitTotalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Silver",
+          "key": "silver",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYLE2VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sItemPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unitTotalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYLD2VC/A",
+      "sku": "MYLD2VC/A",
+      "name": "10.2-inch iPad Wi-Fi 128GB - Space Grey",
+      "shortDescription": "10.2-inch iPad Wi-Fi 128GB - Space Grey",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199808027",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYLD2VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sItemPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unitTotalPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 549,
+            "currencyCode": "CAD",
+            "points": 84462
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Space Grey",
+          "key": "space_gray",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "128GB",
+          "key": "128gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYLD2VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sItemPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unitTotalPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 549,
+          "currencyCode": "CAD",
+          "points": 84462
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYL92VC/A",
+      "sku": "MYL92VC/A",
+      "name": "10.2-inch iPad Wi-Fi 32GB - Space Grey",
+      "shortDescription": "10.2-inch iPad Wi-Fi 32GB - Space Grey",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199807181",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYL92VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sItemPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unitTotalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Space Grey",
+          "key": "space_gray",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915064000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYL92VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sItemPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unitTotalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYLC2VC/A",
+      "sku": "MYLC2VC/A",
+      "name": "10.2-inch iPad Wi-Fi 32GB - Gold",
+      "shortDescription": "10.2-inch iPad Wi-Fi 32GB - Gold",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199807747",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYLC2VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sItemPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unitTotalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Gold",
+          "key": "gold",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915069000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYLC2VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sItemPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unitTotalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    },
+    {
+      "psid": "30001MYLA2VC/A",
+      "sku": "MYLA2VC/A",
+      "name": "10.2-inch iPad Wi-Fi 32GB - Silver",
+      "shortDescription": "10.2-inch iPad Wi-Fi 32GB - Silver",
+      "longDescription": null,
+      "brand": "Apple®",
+      "manufacturer": "Apple",
+      "averageRating": 0,
+      "upc": "190199807464",
+      "shippingAvailabilityMessage": null,
+      "shipmentQuoteDate": null,
+      "promotion": null,
+      "categories": [
+        {
+          "imageUrl": "",
+          "i18nName": "iPad",
+          "slug": "ipads",
+          "name": "iPad",
+          "templateType": "CONFIGURABLE",
+          "defaultImage": "apple-gr/assets/img/customizable/ipads.jpg",
+          "summaryIconImage": "",
+          "displayOrder": 3,
+          "engraveBgImageLocation": "apple-gr/assets/img/engraving/",
+          "subCategories": [],
+          "parents": [
+            {
+              "imageUrl": "",
+              "i18nName": "iPad",
+              "slug": "ipad",
+              "name": "iPad",
+              "templateType": "LANDING",
+              "defaultImage": "",
+              "summaryIconImage": "",
+              "displayOrder": 2,
+              "engraveBgImageLocation": null,
+              "subCategories": [],
+              "parents": [],
+              "products": [],
+              "images": {},
+              "psid": null,
+              "depth": 0,
+              "new": false,
+              "configurable": true,
+              "active": true
+            }
+          ],
+          "products": [],
+          "images": {},
+          "psid": null,
+          "depth": 1,
+          "new": true,
+          "configurable": true,
+          "active": true
+        }
+      ],
+      "offers": [
+        {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": null,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MYLA2VC/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sItemPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "PNT",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "unpromotedVarPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "supplierTaxPrice": {
+            "amount": 0,
+            "currencyCode": "",
+            "points": 0
+          },
+          "totalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unitTotalPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 429,
+            "currencyCode": "CAD",
+            "points": 66000
+          },
+          "fees": {},
+          "tax": {},
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        }
+      ],
+      "options": [
+        {
+          "name": "color",
+          "value": "Silver",
+          "key": "silver",
+          "i18Name": "Color",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&qlt=95"
+        },
+        {
+          "name": "storage",
+          "value": "32GB",
+          "key": "32gb",
+          "i18Name": "Storage",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        },
+        {
+          "name": "communication",
+          "value": "Wi-Fi",
+          "key": "wifi",
+          "i18Name": "Communication",
+          "orderBy": 0,
+          "points": null,
+          "swatchImageUrl": null
+        }
+      ],
+      "additionalInfo": {},
+      "images": {
+        "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=30&hei=30",
+        "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=75&hei=75",
+        "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000&wid=150&hei=150",
+        "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-wifi-select?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915073000"
+      },
+      "variations": [],
+      "available": true,
+      "appleSku": null,
+      "merchantSpecificData": {},
+      "accessoryItem": false,
+      "optionsConfigurationData": null,
+      "hasVariations": false,
+      "addOns": {
+        "availableGiftItems": []
+      },
+      "isEngravable": false,
+      "engrave": null,
+      "hasOffers": true,
+      "productBasedPricingKey": "ipads|",
+      "defaultOffer": {
+        "basePrice": null,
+        "payPerPeriodPrice": null,
+        "payPeriods": 0,
+        "payDuration": null,
+        "upgradeCost": null,
+        "earnPoints": 0,
+        "convRate": null,
+        "orgSupplierTaxPrice": null,
+        "msrpPrice": null,
+        "sku": "MYLA2VC/A",
+        "appleSku": null,
+        "payPerPeriodTotalPrice": null,
+        "displayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sItemPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "b2sShippingPrice": {
+          "amount": 0,
+          "currencyCode": "PNT",
+          "points": 0
+        },
+        "varPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "unpromotedVarPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "supplierTaxPrice": {
+          "amount": 0,
+          "currencyCode": "",
+          "points": 0
+        },
+        "totalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unitTotalPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "unpromotedDisplayPrice": {
+          "amount": 429,
+          "currencyCode": "CAD",
+          "points": 66000
+        },
+        "fees": {},
+        "tax": {},
+        "discountApplied": 0,
+        "isEligibleForPayrollDeduction": false
+      }
+    }
+  ],
+  "totalFound": 12,
+  "categoryPrices": null,
+  "optionsConfigurationData": {
+    "color": [
+      {
+        "name": "color",
+        "value": "Silver",
+        "key": "silver",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-silver-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915066000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Gold",
+        "key": "gold",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-gold-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915067000&qlt=95"
+      },
+      {
+        "name": "color",
+        "value": "Space Grey",
+        "key": "space_gray",
+        "i18Name": "Color",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/ipad-2020-hero-space-cell-select_SW_COLOR?wid=32&hei=32&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1598915071000&qlt=95"
+      }
+    ],
+    "storage": [
+      {
+        "name": "storage",
+        "value": "32GB",
+        "key": "32gb",
+        "i18Name": "Storage",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": null
+      },
+      {
+        "name": "storage",
+        "value": "128GB",
+        "key": "128gb",
+        "i18Name": "Storage",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": null
+      }
+    ],
+    "communication": [
+      {
+        "name": "communication",
+        "value": "Wi-Fi",
+        "key": "wifi",
+        "i18Name": "Communication",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": null
+      },
+      {
+        "name": "communication",
+        "value": "Wi-Fi + Cellular",
+        "key": "nocarrier",
+        "i18Name": "Communication",
+        "orderBy": 0,
+        "points": null,
+        "swatchImageUrl": null
+      }
+    ]
+  },
+  "facetsFilters": null,
+  "searchRedirect": null
+}

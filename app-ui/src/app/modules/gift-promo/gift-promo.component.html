@@ -1,0 +1,57 @@
+<div class="gift-promo-component-container">
+<div class="result-title">
+  <div class="result-title-wrapper">
+    <app-page-title id="pageTitle" [pageTitle]="giftPromoPageName"></app-page-title>
+    <div>
+      <a class="link-cancel-gift-selection" id="link-cancel-gift-selection" href="javascript:void(0)"
+         (click)="cancelSelection()" aria-describedby="pageTitle">
+        {{ 'skipThisStep' | translate }} </a>
+    </div>
+  </div>
+</div>
+
+<div class="content-container product-tile-container nopad grid-container">
+  <div class="product-result-list contain">
+    <div class="product-grid-view open-categories">
+      <ul id="grid" *ngIf="!productLoadError">
+        <li class="loading-tile nopad" *ngIf="!giftPromoProducts"><p class="loading-image medium"></p></li>
+        <li class="nopad" *ngFor="let item of giftPromoProducts; let i=index;" [ngClass]="{'no-right-border' : !((i +1 ) % 3)}">
+          <section id="{{parseName(item.name)}}-promo-{{i}}" (click)="addGiftItem(item)">
+            <div class="product-tile">
+              <div class="product-image">
+                <img [src]="item.images?.large | aplImgSize : '431'" alt="{{ item.name }}" />
+              </div>
+              <div class="product-info-grid">
+                <div class="product-link" tabindex="0" (click)="addGiftItem(item)" attr.aria-label="Choose gift item {{ item.name }}">{{ item.name }}</div>
+              </div>
+              <app-pricing-temp
+                messages="messages"
+                ext=""
+                [offer]="item.offers[0]"
+                [item]="item"
+                [verifyFullDiscount] = 'true'
+                [hideFullDiscount] = 'true'
+              >
+              </app-pricing-temp>
+            </div>
+          </section>
+        </li>
+        <li *ngIf="productLoadError">
+          <strong>{{ 'noResultsFound' | translate }}</strong>
+        </li>
+      </ul>
+      <div class="btn-container btn-container-flex">
+        <button id="btn-cancel-gift-selection" class="btn-base cancel btn-gift-selection-cancel"
+                aria-describedby="pageTitle"
+                (keydown.enter)="cancelSelection()"
+                (click)="cancelSelection()">
+          <span>{{ 'skipThisStep' | translate }}</span>
+        </button>
+      </div>
+      <div class="page-error-container" *ngIf="productLoadError" role="alert" aria-live="polite">
+        <p role="presentation">{{ 'tryAgainLater' | translate }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

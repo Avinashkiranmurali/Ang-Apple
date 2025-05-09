@@ -1,0 +1,269 @@
+@import "../../../../styles/mixins";
+
+.templateBanner {
+  height: 100%;
+
+  .banner-content {
+    display: flex;
+    height: 100%;
+
+    &.mobile-only {
+      display: none;
+
+      @include for-mobile-to-tablet {
+        display: flex;
+      }
+    }
+
+    .banner-inner-container {
+      align-items: center;
+      background-color: inherit;
+      display: flex;
+      margin: 0 auto;
+      max-width: rem(1380px);
+      padding: 0;
+      width: 100%;
+
+      .cta {
+        display: flex;
+        z-index: 1;
+
+        .btn-container {
+          padding: rem(21px) 0 0;
+        }
+
+        .new-indicator {
+          display: inline-flex;
+          text-decoration: none;
+          border-radius: rem(18px);
+          border: rem(1px) solid;
+          padding: rem(6px) rem(14px);
+          opacity: 1;
+          margin-bottom: rem(24px);
+          align-self: center;
+          @include text-styling(#ce3000, 16px, $font-weight-medium, 19px, 0, center);
+          @include for-mobile-to-tablet {
+            margin-bottom: rem(16px);
+          }
+        }
+
+        h2 {
+          opacity: 1;
+          @include text-styling($fc-jet-black, 70px, $font-weight-semi-bold, 84px, 0);
+        }
+
+        h3 {
+          @include text-styling($fc-jet-black, 40px, $font-weight-semi-bold, 48px, 0);
+        }
+
+        /* BUTTON CONTAINER STYLE */
+        .btn-container {
+          .link-base {
+            @include text-styling(#0070c9, 24px, $font-weight-regular, 29px, 0);
+            display: inline-flex;
+
+            &.pill-shaped-cta {
+              &.grayed-out {
+                > a {
+                  pointer-events: none;
+                  background: #a5a5a5 0 0 no-repeat padding-box;
+
+                  &:hover {
+                    background: #a5a5a5 0 0 no-repeat padding-box;
+                  }
+                }
+              }
+
+              &.no-action {
+                pointer-events: none;
+              }
+
+              &.text-only {
+                > a {
+                  background: #737373 0 0 no-repeat padding-box;
+                  padding: rem(8px) rem(20px);
+
+                  &:hover {
+                    background: #737373 0 0 no-repeat padding-box;
+                  }
+                }
+              }
+
+              > a {
+                @include text-styling(#ffffff, 17px, $font-weight-regular, 20px, 0, center);
+                font-family: "SF Pro Text", "SF Pro Display", -apple-system, "Helvetica Neue", Helvetica,
+                Arial, sans-serif !important;
+                text-decoration: none;
+                background: #0070c9 0 0 no-repeat padding-box;
+                border-radius: rem(18px);
+                padding: rem(8px) rem(19px);
+                opacity: 1;
+
+                &:hover {
+                  background: #0077ed 0 0 no-repeat padding-box;
+                }
+              }
+
+              &.orange {
+                > a {
+                  background: #f15d22 0 0 no-repeat padding-box;
+
+                  &:hover {
+                    background: #b5461a 0 0 no-repeat padding-box;
+                  }
+                }
+              }
+
+              &.pink {
+                > a {
+                  background: #d00861 0 0 no-repeat padding-box;
+
+                  &:hover {
+                    box-shadow: 0 0 0 #d00861, inset 0 0 rem(9px) rgba(0, 0, 0, 0.5);
+                  }
+                }
+              }
+
+              &.orchid {
+                > a {
+                  background: #d6107e 0 0 no-repeat padding-box;
+
+                  &:hover {
+                    box-shadow: 0 0 0 #d6107e, inset 0 0 rem(9px) rgba(0, 0, 0, 0.5);
+                  }
+                }
+              }
+
+              &.white {
+                > a {
+                  background: #ffffff 0 0 no-repeat padding-box;
+                  color: $fc-jet-black;
+
+                  &:hover {
+                    background: #ffffff 0 0 no-repeat padding-box;
+                  }
+                }
+              }
+            }
+
+            &.icon-arrow-right {
+              position: relative;
+              color: #0070c9;
+
+              > a {
+                @include text-styling(#0070c9, 21px, $font-weight-regular, 25px, 0);
+                margin-right: rem(5px);
+
+                &:hover {
+                  text-decoration: underline;
+                  color: inherit;
+                }
+              }
+
+              &:after {
+                content: "\203A";
+                text-decoration: none;
+                font-size: rem(21px);
+                color: inherit;
+              }
+            }
+          }
+        }
+      }
+
+      .image {
+        width: 50%;
+      }
+
+      &.justify-center {
+        justify-content: center;
+      }
+
+      &.full-width {
+        max-width: 100%;
+      }
+
+      &.flex-column {
+        flex-direction: column;
+
+        .cta {
+          padding-bottom: rem(50px);
+        }
+      }
+
+      &.flex-column-reverse {
+        flex-direction: column-reverse;
+
+        .cta {
+          padding-top: rem(50px);
+        }
+      }
+
+      &.flex-row-reverse {
+        flex-direction: row-reverse;
+
+        .cta {
+          padding-left: rem(50px);
+        }
+      }
+
+      &.justify-content-space-around {
+        justify-content: space-around;
+      }
+
+      &.justify-content-flex-end {
+        justify-content: flex-end;
+      }
+
+      &.justify-content-center {
+        justify-content: center;
+      }
+
+      &.justify-content-space-evenly {
+        justify-content: space-evenly;
+        //IE
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          justify-content: space-around;
+        }
+        //Edge
+        @supports (-ms-ime-align: auto) {
+          justify-content: space-around;
+        }
+      }
+
+      &.left-text {
+        .cta {
+          text-align: left;
+        }
+      }
+
+      &.right-text {
+        .cta {
+          text-align: right;
+        }
+      }
+
+      &.cta-text-left {
+        .cta {
+          align-items: flex-start;
+
+          h2,
+          h3 {
+            text-align: left;
+          }
+        }
+      }
+
+      &.cta-text-right {
+        .cta {
+          align-items: flex-end;
+
+          h2,
+          h3 {
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}

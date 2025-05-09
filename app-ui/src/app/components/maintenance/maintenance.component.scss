@@ -1,0 +1,91 @@
+@import "~styles/mixins";
+
+:host {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+
+    .msg-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .msg-container-position {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: table;
+        @include box-shadow(inset 0 0 rem(15px) #C3C3C3);
+    }
+
+    .msg {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        color: #666666;
+
+
+        .msg-content {
+            margin-bottom: rem(20px);
+
+            ::ng-deep {
+                /* reset */
+                h1, h2, h3, p {
+                    margin: 0;
+                    padding: 0;
+                }
+
+                p:first-child {
+                    position: relative;
+                    top: rem(1px);
+                }
+
+                p:nth-of-type(2) {
+                    position: relative;
+                    top: rem(-1px);
+                }
+
+                /*Start - Splash Page Style Updates*/
+                .header {
+                    font-weight: $font-weight-heavy;
+                    font-size: rem(28px);
+                    line-height: rem(34px);
+
+                }
+
+                .description {
+                    font-size: rem(15px);
+                    line-height: rem(20px);
+                    font-family: "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+                    font-weight: $font-weight-regular;
+                }
+                /*End - Splash Page Style Updates*/
+
+                p {
+                    margin: 0 auto;
+                    font-size: rem(20px);
+                }
+
+            }
+        }
+    }
+
+    @media (min-width: 320px) and (max-width: 500px) {
+        .msg {
+            .msg-content {
+                ::ng-deep {
+                    p {
+                        width: rem(280px);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+apply plugin: 'java'
+apply plugin: 'maven-publish'
+
+task sourceJar(type: Jar) {
+    from sourceSets.main.allSource
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from tasks.findByPath('war') ? components.web : components.java
+
+            artifact sourceJar {
+                classifier "sources"
+            }
+        }
+    }
+
+    repositories {
+        maven {
+            credentials {
+                username mavenUser
+                password mavenPassword
+            }
+            url "${uploadRepository}/${uploadRepoKey}"
+        }
+    }
+}

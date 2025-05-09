@@ -1,0 +1,73 @@
+@import "mixins";
+
+// no reference in template
+.navbar-nav {
+  > li { > a {
+    font-size: $s-reg2;
+    &:hover {
+      color: #fff !important;
+      opacity: 0.65;
+    }
+  }
+    &.active {
+      > a {
+        background-color: transparent !important;
+        opacity: 0.5;
+      }
+    }
+  }
+  //Subnav
+  &.subnav {
+    float: none;
+    li {
+      margin-right: 65px;
+      float: none;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        color: #333 !important;
+        background-color: transparent;
+        padding: 0 0 10px;
+
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+
+      &.active {
+        background-color: transparent;
+        border-bottom: 1px solid #666;
+
+        a {
+          opacity: 1;
+          box-sizing: border-box;
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Header - No Search Bar */
+.no-search {
+  .new-cont {
+    .new-nav-desktop, .new-nav-mobile {
+      .nav-searchbar {
+        display: none;
+      }
+    }
+  }
+}
+
+.for-desktop {
+  display: block;
+}
+
+.for-non-desktop {
+  display: none;
+}

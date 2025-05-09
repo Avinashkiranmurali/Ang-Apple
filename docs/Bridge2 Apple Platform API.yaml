@@ -1,0 +1,275 @@
+swagger: '2.0'
+info:
+  title: Bridge2 Apple Platform Order API
+  description: Interact with orders on the Bridge2 Solutions Apple Platform.
+  version: 1.0.6
+host: als.bridge2rewards.com
+schemes:
+  - https
+securityDefinitions:
+  basicAuth:
+    type: basic
+basePath: /apple-gr/service
+produces:
+  - application/json
+paths:
+  /order/confirmPurchase/{orderId}:
+    put:
+      summary: Confirm Purchase
+      description:
+        The Confirm Purchase endpoint updates the status of an open order
+        and initiates any processing that should occur based on the new status
+        specified in the request. The response indicates if the status update
+        was successful.
+        
+        
+        **Endpoint Structure**
+        
+        
+        https ://**[host]**/apple-gr/service/order/confirmPurchase/**[orderID]**?paymentStatus=**[true/false]**
+        
+        
+        **UAT Hostname:** als.bridge2rewards.com
+        
+        
+        **Example UAT Request**
+        
+        
+        PUT https://als.bridge2rewards.com/apple-gr/service/order/confirmPurchase/123456789?paymentStatus=true 
+        HTTP/1.1
+        
+        
+
+      security:
+        - basicAuth: []
+      parameters:
+        - name: orderId
+          in: path
+          description: | 
+            Bridge2 Order ID
+          required: true
+          type: string
+        - name: paymentStatus
+          in: query
+          description: | 
+            Status of the payment attempt for the order
+            
+            **true** - Payment successful (order will be fulfilled)
+            
+            **false** - Payment failed (order will be marked failed)
+          required: true
+          type: boolean
+      tags:
+        - Order
+      responses:
+        '200':
+          description: Request successful
+
+        '404':
+          description: Bridge2 Order ID not found
+
+        '403':
+          description: Order ID does not belongs to user's entity
+
+        '400':
+          description: Bad Request
+
+        '409':
+          description: Conflict
+
+        '500':
+          description: Unexpected error
+  /orders/{orderId}:
+    get:
+      summary: Retrieve Order Detail
+      description:
+        The Retrieve Order Detail endpoint returns information about the order specified in the request URI.
+        
+        
+        **Endpoint Structure**
+        
+        
+        https ://**[host]**/apple-gr/service/orders/**[orderID]**
+        
+        
+        **UAT Hostname:** als.bridge2rewards.com
+        
+        
+        **Example UAT Request**
+        
+        
+        GET https://als.bridge2rewards.com/apple-gr/service/orders/123456789 
+        HTTP/1.1
+        
+      security:
+        - basicAuth: []
+      parameters:
+        - name: orderId
+          in: path
+          description: | 
+            B2S Order ID
+          required: true
+          type: string
+      tags: 
+        - Order
+      responses:
+        '200':
+          description: Request successful
+          schema:
+            $ref: "#/definitions/Order"
+        '404':
+          description: Bridge2 Order ID not found
+        '403':
+          description: Order ID does not belongs to user's entity
+        '400':
+          description: Bad Request
+        '409':
+          description: Conflict
+        '500':
+          description: Unexpected error
+          
+definitions:
+  Order:
+    type: object
+    properties:
+      orderID:
+        type: integer
+      userID:
+        type: string
+      entityID:
+        type: string
+      programID:
+        type: string
+      orderDate:
+        type: string
+        format: date-time
+      orderAttributes:
+        $ref: "#/definitions/OrderAttributes"
+      orderItems:
+        type: array
+        items:
+          $ref: "#/definitions/OrderItem"
+      orderTotals:
+        $ref: "#/definitions/OrderTotals"
+      paymentInfo:
+        $ref: "#/definitions/PaymentInfo"
+      deliveryAddress:
+        $ref: "#/definitions/DeliveryAddress"
+      contactInfo:
+        $ref: "#/definitions/ContactInfo"
+  OrderAttributes:
+    type: object
+    properties:
+      locale:
+        type: string
+      currencyCode:
+        type: string
+      employerID:
+        type: string
+  OrderItem:
+    type: object
+    properties:
+      orderLineID:
+        type: integer
+      sku:
+        type: string
+      itemName:
+        type: string
+      itemImageURL:
+        type: string
+      currencyType:
+        type: string
+      quantity:
+        type: integer
+      supplierItemPrice:
+        type: string
+      itemPrice:
+        type: string
+      itemTax:
+        type: string
+      itemFee:
+        type: string
+      status:
+        type: string
+      shipmentInfo:
+        $ref: "#/definitions/ShipmentInfo"
+  OrderTotals:
+    type: object
+    properties:
+      supplierItemTotal:
+        type: string
+      itemTotal:
+        type: string
+      taxTotal:
+        type: string
+      feeTotal:
+        type: string
+      orderTotal:
+        type: string
+  PaymentInfo:
+    type: object
+    properties:
+      paymentTotal: 
+        type: string
+      paymentTenders:
+        type: array
+        items:
+          $ref: "#/definitions/PaymentTender"
+  PaymentTender:
+    type: object
+    properties:
+      paymentType:
+        type: string
+      paymentTotal:
+        type: string
+      paymentPerPeriod:
+        type: string
+      payFrequency:
+        type: string
+      numberOfPayments:
+        type: integer
+      currencyCode:
+        type: string
+  DeliveryAddress:
+    type: object
+    properties:
+      firstName:
+        type: string
+      lastName:
+        type: string
+      addressLine1:
+        type: string
+      addressLine2:
+        type: string
+      addressLine3:
+        type: string
+      addressLine4:
+        type: string
+      city:
+        type: string
+      state:
+        type: string
+      country:
+        type: string
+      postalCode:
+        type: string
+  ContactInfo:
+    type: object
+    properties:
+      email:
+        type: string
+      phone:
+        type: string
+  ShipmentInfo:
+    type: object
+    properties:
+      shipmentDate:
+        type: string
+        format: date-time
+      trackingID:
+        type: string
+      carrierName:
+        type: string
+        
+      
+      

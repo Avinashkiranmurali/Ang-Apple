@@ -1,0 +1,107 @@
+{
+  "response": {
+    "additionalInfo": {
+      "whatsInTheBox": "[\"MacBook Pro with Retina display\",\"60W MagSafe 2 Power Adapter, AC wall plug, and power cord\"]",
+      "manufacturerNote": "[\"1. Weight varies by configuration and manufacturing process.\",\"2. 1GB = 1 billion bytes and 1TB = 1 trillion bytes; actual formatted capacity less.\",\"3. Requires Internet access. 802.11ac is based on an IEEE draft specification.\",\"4. Testing conducted by Apple in July 2014 using preproduction 2.5GHz quad-core Intel Core i7–based 15-inch MacBook Pro units, preproduction 2.2GHz quad-core Intel Core i7–based 15-inch MacBook Pro units, and preproduction 2.8GHz dual-core Intel Core i5–based 13-inch MacBook Pro units. The wireless web test measures battery life by wirelessly browsing 25 popular websites with display brightness set to 12 clicks from bottom or 75%. The HD movie playback test measures battery life by playing back HD 720p content with display brightness set to 12 clicks from bottom or 75%. The standby test measures battery life by allowing a system, connected to a wireless network and signed in to an iCloud account, to enter standby mode with Safari and Mail applications launched and all system settings left at default. Battery life varies by use and configuration. See www.apple.com/batteries for more information.\",\"5. PVC-free AC power cord available in all regions except India and South Korea.\",\"6. MacBook Pro achieved a Gold rating from EPEAT in the US and Canada.\"]",
+      "technicalSpecifications": "{\"tsExpansion\":{\"label\":\"MOCK tsExpansion\",\"values\":[\"MagSafe 2 power port\",\"Two Thunderbolt 2 ports (up to 20 Gbps)\",\"Two USB 3 ports (up to 5 Gbps)\",\"HDMI port\",\"Headphone port\",\"SDXC card slot\",\"Apple Thunderbolt to FireWire Adapter (sold separately)\",\"Apple Thunderbolt to Gigabit Ethernet Adapter (sold separately)\"]},\"tsCompareConnectionsImage\":{\"label\":\"MOCK tsCompareConnectionsImage\",\"values\":[\"macbookpro-retina-specs-io-2013\"]},\"tsMemory\":{\"label\":\"MOCK tsMemory\",\"values\":[\"16GB of 1600MHz DDR3L onboard memory\"]},\"tsInput\":{\"label\":\"MOCK tsInput\",\"values\":[\"Full-size backlit keyboard with 78 (US) or 79 (ISO) keys, including 12 function keys and 4 arrow keys (inverted \\\"T\\\" arrangement) with ambient light sensor\",\"Multi-Touch trackpad for precise cursor control; supports inertial scrolling, pinch, rotate, swipe, three-finger swipe, four-finger swipe, tap, double-tap and drag capabilities\"]},\"tsHeroBatteries\":{\"label\":\"MOCK tsHeroBatteries\",\"values\":[\"Up to 8 hours wireless web (4)\",\"Up to 8 hours iTunes movie playback\",\"Up to 30 days standby time\",\"Built-in 95-watt-hour lithium-polymer battery\",\"85W MagSafe 2 Power Adapter with cable management system; MagSafe 2 power port\"]},\"tsCommunications\":{\"label\":\"MOCK tsCommunications\",\"values\":[\"802.11ac Wi-Fi wireless networking (3); IEEE 802.11a/b/g/n compatible\",\"Bluetooth 4.0 wireless technology\"]},\"operatingRequirements\":{\"label\":\"MOCK operatingRequirements\",\"values\":[\"Line voltage: 100V to 240V AC\",\"Frequency: 50Hz to 60Hz\",\"Operating temperature: 50\\u00B0 to 95\\u00B0 F (10\\u00B0 to 35\\u00B0 C)\",\"Storage temperature: -13\\u00B0 to 113\\u00B0 F (-25\\u00B0 to 45\\u00B0 C)\",\"Relative humidity: 0% to 90% noncondensing\",\"Operating altitude: tested up to 10,000 feet\",\"Maximum storage altitude: 15,000 feet\",\"Maximum shipping altitude: 35,000 feet\"]},\"tsStorage\":{\"label\":\"MOCK tsStorage\",\"values\":[\"256GB PCIe-based flash storage (2)\",\"Configurable to 512GB or 1TB PCIe-based flash storage\"]},\"tsSoftware\":{\"label\":\"MOCK tsSoftware\",\"values\":[\"&nbsp;\"]},\"tsProcessor\":{\"label\":\"MOCK tsProcessor\",\"values\":[\"2.2GHz quad-core Intel Core i7 processor (Turbo Boost up to 3.4GHz) with 6MB shared L3 cache\",\"Configurable to 2.5GHz quad-core Intel Core i7 (Turbo Boost up to 3.7GHz) with 6MB shared L3 cache or 2.8GHz quad-core Intel Core i7 (Turbo Boost up to 4.0GHz) with 6MB shared L3 cache\"]},\"displayWidth\":{\"label\":\"MOCK displayWidth\",\"values\":[\"Width: 14.13 inches (35.89 cm)\"]},\"displayDepth\":{\"label\":\"MOCK displayDepth\",\"values\":[\"Depth: 9.73 inches (24.71 cm)\"]},\"displayHeight\":{\"label\":\"MOCK displayHeight\",\"values\":[\"Height: 0.71 inch (1.8 cm)\"]},\"displayWeight\":{\"label\":\"MOCK displayWeight\",\"values\":[\"Weight: 4.46 pounds (2.02 kg) (1)\"]},\"tsCtoCards\":{\"label\":\"MOCK tsCtoCards\",\"values\":[\"&nbsp;\"]},\"tsHdmiOutput\":{\"label\":\"MOCK tsHdmiOutput\",\"values\":[\"Support for 1080p resolution at up to 60Hz\",\"Support for 3840x2160 resolution at 30Hz\",\"Support for 4096x2160 resolution at 24Hz\"]},\"tsThunderboltOutput\":{\"label\":\"MOCK tsThunderboltOutput\",\"values\":[\"Native Mini DisplayPort output\",\"DVI output using Mini DisplayPort to DVI Adapter (sold separately)\",\"VGA output using Mini DisplayPort to VGA Adapter (sold separately)\",\"Dual-link DVI output using Mini DisplayPort to Dual-Link DVI Adapter (sold separately)\"]},\"tsGraphics\":{\"label\":\"MOCK tsGraphics\",\"values\":[\"Intel Iris Pro Graphics\",\"Dual display and video mirroring: Simultaneously supports full native resolution on the built-in display and up to 2560 by 1600 pixels on up to two external displays, both at millions of colors\",\"720p FaceTime HD camera\"]},\"tsAudioGeneral\":{\"label\":\"MOCK tsAudioGeneral\",\"values\":[\"Stereo speakers\",\"Dual microphones\",\"Headphone port<ul><li>Support for Apple iPhone headset with remote and microphone</li><li>Support for audio line out (digital/analog)</li></ul>\"]},\"tsDisplay\":{\"label\":\"MOCK tsDisplay\",\"values\":[\"Retina display: 15.4-inch (diagonal) LED-backlit display with IPS technology; 2880-by-1800 resolution at 220 pixels per inch with support for millions of colors\",\"Native resolution: 2880 by 1800 pixels (Retina); scaled resolutions: 1920 by 1200, 1680 by 1050, 1280 by 800, and 1024 by 640 pixels\"]}}",
+      "warranty": "Your MacBook Pro comes with 90 days of free telephone support and a one-year limited warranty. Purchase the AppleCare Protection Plan to extend your service and support to three years from your computer’s purchase date. Only the AppleCare Protection Plan provides you with direct telephone support from Apple technical experts and the assurance that repairs will be handled by Apple-authorized technicians using genuine Apple parts.",
+      "engravable": "false",
+      "exchangeRate": "1"
+    },
+    "availabilityInformation": {
+      "availabilityMessage": "3-5 business days",
+      "availabilityStatus": "IN_STOCK",
+      "available": true
+    },
+    "brand": "Apple®",
+    "bsin": "10357CB472B972",
+    "customizable": false,
+    "hasVariations": false,
+    "imageUrls": {
+      "large": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/M/E2/ME293/ME293",
+      "medium": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/M/E2/ME293/ME293",
+      "small": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/M/E2/ME293/ME293",
+      "thumbnail": "http://store.storeimages.cdn-apple.com/4572/as-images.apple.com/is/image/AppleInc/aos/published/images/M/E2/ME293/ME293"
+    },
+    "inStoreEligible": false,
+    "longDescription": "With top-of-the-line Intel processors, HD graphics, and ultrafast Thunderbolt ports, MacBook Pro does more than ever. Faster than ever.",
+    "manufacturer": "apple",
+    "merchant": "apple",
+    "name": "15-inch MacBook Pro with Retina display",
+    "offers": [],
+    "options": {
+      "processor": {
+        "value": "2.2GHz quad-core Intel Core i7 (Turbo Boost up to 3.4GHz)",
+        "label": "Processor"
+      },
+      "memory": {
+        "value": "16GB 1600MHz memory",
+        "label": "Memory"
+      },
+      "storage": {
+        "value": "256GB PCIe-based flash storage",
+        "label": "Storage"
+      }
+    },
+    "productType": "MERCHANDISE",
+    "psid": "30001MGXA2LL/A",
+    "shippingEligible": true,
+    "shippingInformation": {
+      "deliveryInformation": {
+        "destinations": [
+          {
+            "country": "USA",
+            "method": "DOMESTIC",
+            "shippingPriceInfo": {"shippingCost": "USD 0.00"}
+          }
+        ],
+        "source": {
+          "country": "USA",
+          "supplier": "apple"
+        }
+      }
+    },
+    "shortDescription": "15-inch MacBook Pro with Retina display",
+    "sku": "MGXA2LL/A",
+    "status": "ACTIVE",
+    "totalReviews": 0,
+    "upc": "888462018852",
+    "categories": [
+      {
+        "ancestors": [
+          {
+            "slug": "mac",
+            "name": "Mac",
+            "depth": 0.0
+          }
+        ],
+        "slug": "macbook-pro",
+        "name": "MacBook Pro",
+        "depth": 1.0
+      }
+    ],
+    "importDatetime": "2015-05-19T20:08:50.188Z",
+    "modifiedDatetime": "2015-05-19T20:08:50.188Z",
+    "appliedChanges": [
+      {
+        "changeId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+        "referenceId": "DEFAULT_SPLIT_TENDER_ELIGIBILITY",
+        "createdDatetime": "2015-05-26T02:29:34.898Z",
+        "payload": {
+          "payloadType": "SPLIT_TENDER",
+          "splitTenderEligibility": {"splitTenderEligible": false}
+        },
+        "override": false
+      }
+    ],
+    "priceInfo": {
+      "splitTenderEligible": false,
+      "basePrice": "USD 1999.00",
+      "msrp": "USD 1999.00",
+      "suppliersSalesTax": "USD 0.00",
+      "shippingCost": "USD 0.00",
+      "displayPrice": "USD 1999.00",
+      "priceType": "SUPPLIER"
+    }
+  }
+}

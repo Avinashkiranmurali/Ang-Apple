@@ -1,0 +1,66 @@
+<article *ngIf="!multiBanner" [ngClass]="messages[multiProductBanner.templateClass]" class="app-multi-product-banner-container">
+  <div class="contain tiles-5">
+    <div class="title-container">
+      <h2 [innerHTML]="messages[multiProductBanner.multiBannerTitle]" *ngIf="messages[multiProductBanner.multiBannerTitle]"></h2>
+      <p [innerHTML]="messages[multiProductBanner.multiBannerSubTitle]" *ngIf="messages[multiProductBanner.multiBannerSubTitle]"></p>
+    </div>
+    <ng-container *ngFor="let rows of items;">
+      <ul [ngClass]="[messages[multiProductBanner['ctaClass']] ? messages[multiProductBanner['ctaClass']] : '', 'tiles-5']">
+        <li *ngFor="let item of rows">
+          <div class="multi-product-banner-tile">
+            <div class="img-container">
+              <img
+                *ngIf="item.imageUrl && !item.externalImageUrl"
+                alt="{{ item.imageTxt }}"
+                [src]="config.imageServerUrl + item.imageUrl"
+                [ngClass]="item.imageClass"
+              />
+              <img
+                *ngIf="item.externalImageUrl"
+                alt="{{ item.imageTxt }}"
+                [src]="item.externalImageUrl"
+              />
+            </div>
+            <div class="txt-container">
+              <p *ngIf="isAdditionalInfoExist" [innerHTML]="(item.additionalInfo && item.additionalInfo.length > 0) ? item.additionalInfo : '&nbsp;'" class="additional-info-container orange-thin"></p>
+              <p [innerHTML]="item.title"></p> <!-- | htmlEncode -->
+            </div>
+            <div class="btn-container" [style.color]="item.btnTxtColor || '#0070c9'">
+              <span class='link-base' [ngClass]="item.btnClass">
+                <a [routerLink]="item.btnLink" attr.aria-label="{{ item.btnTxt }} - {{ item.title }}">{{ item.btnTxt }}</a>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </ng-container>
+  </div>
+</article>
+<section *ngIf="multiBanner" [ngClass]="multiBanner['config']['templateClass']" class="multi-banner-container"
+         [ngStyle]="{'background-color': multiBanner['config']['templateBgColor']}">
+  <div class="banner-wrapper">
+    <div class="title-container">
+      <h2 [innerHTML]="multiBanner['config']['title']" *ngIf="multiBanner['config']['title']"></h2>
+      <p [innerHTML]="multiBanner['config']['tagLine']" *ngIf="multiBanner['config']['tagLine']"></p>
+    </div>
+    <div class="product-banners">
+      <ul class="">
+        <li *ngFor="let product of multiBanner['products']">
+          <div class="multi-product-banner-tile">
+            <div class="img-container">
+              <img alt="{{ product['config']['imageTxt'] }}" class="product-image"
+                   [src]="product['config']['desktopImageUrl'] && !product['config']['externalImageUrl'] ? config.imageServerUrl + product['config']['desktopImageUrl'] : product['config']['externalImageUrl']"/>
+            </div>
+            <p class="txt-container" [innerHTML]="product['config']['title']"></p>
+            <div class="btn-container" [style.color]="product['config']['btnTxtColor'] || '#0070c9'">
+              <span class='link-base' [ngClass]="product['config']['btnClass']">
+                <a [routerLink]="product['config']['btnLink']"
+                   attr.aria-label="{{ product['config']['btnTxt'] }} - {{ product['config']['title'] }}">{{ product['config']['btnTxt'] }}</a>
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

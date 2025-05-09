@@ -1,0 +1,24 @@
+@import "~styles/mixins";
+
+.product-configure-page, .product-detail-page {
+  &.discount-amount {
+    font-size: rem(16px);
+    color: #111;
+    line-height: rem(19px);
+  }
+}
+
+/* MINITILE CAROUSEL TEMPLATE */
+.miniTile-carousel-template {
+  &.discount-amount {
+    font-size: rem(12px);
+    line-height: rem(14px);
+    font-weight: $font-weight-regular;
+  }
+}
+
+.config-from-price{
+  &.discount-amount {
+   display: none;
+  }
+}

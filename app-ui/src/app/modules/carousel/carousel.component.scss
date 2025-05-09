@@ -1,0 +1,450 @@
+@import "~styles/mixins";
+
+.carousel-wrapper {
+  background-color: #FFFFFF;
+  margin-bottom: rem(40px);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .carousel-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+    .carousel-heading {
+      margin: 0;
+      padding: rem(57px) 0 rem(28px) 0;
+      font-size: rem(40px);
+      line-height: rem(48px);
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  .container {
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 100%;
+    width: rem(980px);
+  }
+}
+
+.carousel-container {
+  width: rem(980px);
+
+  .carousel {
+    display: flex !important;
+    flex-direction: column-reverse;
+  }
+
+  &.left-justified {
+    .product-content-section,
+    .product-CTA-section {
+      width: rem(250px);
+      text-align: left;
+    }
+  }
+
+  &.centered {
+    .product-content-section,
+    .product-CTA-section {
+      text-align: center;
+    }
+  }
+
+  .product-slide {
+    display: flex;
+    height: 100%;
+
+    .product-section {
+      width: rem(320px);
+      text-align: center;
+      padding: rem(35px);
+      display: flex;
+      flex-direction: column;
+
+      .product-tile {
+        flex-grow: 1;
+        border-bottom: none;
+
+        &:hover {
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
+      .product-image-section {
+        max-height: rem(240px);
+        height: rem(240px);
+        max-width: rem(240px);
+        width: rem(240px);
+        margin: 0 rem(5px);
+        overflow: hidden;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .product-content-section {
+        padding-top: rem(16px);
+
+        a {
+          font-size: rem(18px);
+          line-height: rem(21.6px);
+          text-decoration: none;
+        }
+
+        a:first-child {
+          font-weight: $font-weight-semi-bold;
+          color: #111111;
+          letter-spacing: 0;
+          margin: 0 0 rem(12px);
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+          display: -webkit-box;
+          overflow: hidden;
+          white-space: normal;
+
+          @include for-mobile-and-tablet {
+            -webkit-line-clamp: 3;
+          }
+        }
+
+        a:last-child {
+          font-weight: $font-weight-medium;
+          color: #333333;
+          margin: 0;
+        }
+      }
+
+      .product-CTA-section {
+        padding-top: rem(34px);
+
+        .link-base {
+          font-size: rem(21px);
+          letter-spacing: 0;
+          line-height: rem(25px);
+        }
+
+        .btn-base.blue-btn {
+          letter-spacing: rem(-0.12px);
+          line-height: rem(20px);
+          align-items: center;
+          justify-content: center;
+          border: rem(1px) solid #0071E3;
+          padding: 0;
+          width: rem(247px);
+          display: flex;
+          font-family: $font-family-text-display;
+
+          a {
+            width: 100%;
+            display: inline-block;
+            height: 100%;
+            padding: rem(15px) rem(28px) rem(16px);
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            &:focus {
+              border-radius: rem(12px);
+            }
+          }
+        }
+      }
+
+      &.last {
+        margin-right: rem(0px);
+      }
+    }
+
+    .product-section-container {
+      align-items: center;
+      display: flex;
+      margin-right: rem(10px);
+    }
+  }
+}
+
+.mini-tile {
+  padding-bottom: rem(15px);
+
+  .container {
+    width: rem(1035px);
+
+    .carousel-heading {
+      padding: rem(50px) 0 0 rem(30px);
+      text-align: left;
+      align-self: flex-start;
+      font-size: rem(28px);
+      font-weight: $font-weight-semi-bold;
+      line-height: rem(34px);
+      color: #111111;
+
+      ::ng-deep {
+        .sub-title {
+          color: #6E6E73;
+        }
+      }
+    }
+
+    .carousel-container {
+      width: rem(1035px);
+
+      .product-slide {
+        height: 90%;
+        padding: rem(25px) rem(30px) rem(24px);
+
+        .product-tile {
+          background: #FFFFFF 0 0 no-repeat padding-box;
+          border-radius: rem(18px);
+          box-shadow: rem(2px) rem(4px) rem(12px) #00000014;
+          cursor: pointer;
+          min-width: rem(305px);
+          max-width: rem(305px);
+          padding: rem(25px) rem(18px);
+          transition: all .3s cubic-bezier(0, 0, .5, 1);
+
+          &:not(:last-child) {
+            margin-right: rem(30px);
+          }
+
+          &:hover, &:focus {
+            text-decoration: none;
+            box-shadow: rem(2px) rem(4px) rem(16px) rgba(0, 0, 0, .16);
+            transform: scale3d(1.01, 1.01, 1.01);
+            cursor: pointer;
+          }
+
+          &:focus[data-focus-method="key"] {
+            @include focus-border;
+          }
+
+          .image-container {
+            max-width: rem(100px);
+            margin-right: rem(11px);
+
+            .product-image {
+              height: rem(100px);
+              margin-bottom: rem(10px);
+              width: rem(100px);
+            }
+
+            ::ng-deep {
+              app-swatches-color {
+                .swatch-container {
+                  padding-top: 0;
+
+                  .swatch-img {
+                    width: rem(12px);
+                    height: rem(12px);
+                    margin: 0 rem(4px) rem(4px) 0;
+
+                    &:last-child {
+                      margin-right: 0;
+                    }
+                  }
+                }
+              }
+
+            }
+          }
+
+          .product-info-container {
+            flex-wrap: wrap;
+            align-content: center;
+
+            .title {
+              color: #111111;
+              font-size: rem(16px);
+              font-weight: 600;
+              line-height: rem(19px);
+              margin-bottom: rem(12px);
+              width: 100%;
+              -webkit-line-clamp: 3;
+              -webkit-box-orient: vertical;
+              display: -webkit-box;
+              overflow: hidden;
+              white-space: normal;
+              &:hover, &:focus {
+                text-decoration: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+::ng-deep {
+  app-carousel {
+    display: block;
+
+    .carousel-container {
+      &.dots {
+        .carousel-indicators {
+          button {
+            width: rem(8px);
+            height: rem(8px);
+            background: #888888 0 0 no-repeat padding-box;
+            border-radius: 50%;
+            border: 0;
+          }
+        }
+      }
+
+      &.dash {
+        .carousel-indicators {
+          button {
+            background: #333333 0 0 no-repeat padding-box;
+            width: rem(50px);
+            height: rem(2px);
+          }
+        }
+      }
+
+      &.firstSlide {
+        .carousel-control-prev {
+          display: none;
+        }
+      }
+
+      &.lastSlide {
+        .carousel-control-next {
+          display: none;
+        }
+      }
+    }
+  }
+
+  .carousel-indicators {
+    position: relative;
+    padding-top: rem(30px);
+    padding-bottom: rem(82px);
+    margin: 0;
+
+    button {
+      background: #333333 0 0 no-repeat padding-box;
+      width: rem(50px);
+      height: rem(2px);
+    }
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 0.9;
+
+    span {
+      &.carousel-control-prev-icon {
+        background: transparent url('../../../assets/images/carousel/carouselLeftArrowIcon.svg') 0 0 no-repeat padding-box;
+        height: rem(52px);
+        width: rem(52px);
+      }
+
+      &.carousel-control-next-icon {
+        background: transparent url('../../../assets/images/carousel/carouselRightArrowIcon.svg') 0 0 no-repeat padding-box;
+        height: rem(52px);
+        width: rem(52px);
+      }
+    }
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    width: 5.5%;
+    height: 8%;
+    top: 34.8%;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:focus {
+      box-shadow: none;
+
+      .carousel-control-prev-icon, .carousel-control-next-icon {
+        outline: none;
+        -moz-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        -webkit-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+        box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, 0.5);
+      }
+    }
+  }
+
+  .carousel-control-prev {
+    left: rem(10px);
+  }
+
+  .carousel-control-next {
+    right: rem(10px);
+  }
+
+  .mini-tile {
+    .carousel-indicators {
+      padding: 0;
+    }
+
+    .carousel-control-prev, .carousel-control-next {
+      top: 40%;
+    }
+
+    .carousel-control-prev {
+      left: rem(-54px);
+    }
+
+    .carousel-control-next {
+      right: rem(-54px);
+    }
+  }
+
+  .visibility-style-carousel {
+    .carousel-inner {
+      .carousel-item {
+        display: flex;
+        visibility: hidden;
+      }
+    }
+  }
+
+  .carousel-inner {
+    .carousel-item {
+      height: 100%;
+
+      &.active {
+        visibility: visible;
+      }
+    }
+  }
+}
+
+.loading-tile {
+  .loading-image {
+    &.medium {
+      margin-top: rem(130px);
+    }
+  }
+}
+
+@supports (-moz-appearance:none) {
+  ::ng-deep {
+    ngb-carousel {
+      .carousel-control-prev,
+      .carousel-control-next {
+        width: 6%;
+
+        span {
+          &.carousel-control-prev-icon,
+          &.carousel-control-next-icon {
+            width: 4rem;
+            height: 4rem;
+          }
+        }
+      }
+    }
+  }
+}

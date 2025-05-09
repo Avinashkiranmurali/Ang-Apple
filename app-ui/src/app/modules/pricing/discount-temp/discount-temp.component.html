@@ -1,0 +1,45 @@
+
+<div class="discount-amount" [ngClass]="parentClass"
+      [ngSwitch]="(['points_only', 'points_cash', 'cash_points', 'points_decimal'].indexOf(config['pricingTemplate']) >= 0) ? ext +'points_discount-template.htm' :  ext +'cash_discount-template.htm'">
+
+    <!-- -----------------
+            Templates
+      ----------------- -->
+
+  <!-- DISCOUNT - Cash Only Grid Page-->
+    <div *ngSwitchCase="'cash_discount-template.htm'">
+        <span class="offscreen">Original price was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.amount | currency }}</span>
+    </div>
+
+  <!-- DISCOUNT - Cash Only Detail Page-->
+    <div *ngSwitchCase="'full_cash_discount-template.htm'">
+        <span class="offscreen">Original price was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.amount | currency }}</span>
+    </div>
+
+  <!-- DISCOUNT - Cash Only Config Page-->
+    <div *ngSwitchCase="'alt_cash_discount-template.htm'">
+        <span class="offscreen">Original price was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.amount | currency }}</span>
+    </div>
+
+  <!--QTY DISCOUNT - Cash Only Cart, checkout and confirmation Page -->
+    <div *ngSwitchCase="'qty_cash_discount-template.htm'">
+        <span class="offscreen">Original price was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.amount * item.quantity | currency }}</span>
+    </div>
+
+  <!-- QTY DISCOUNT - Points Only -->
+    <div *ngSwitchCase="'qty_points_discount-template.htm'">
+        <span class="offscreen">Original point was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.points * item.quantity | number }} {{ messages[pointLabel] }}</span>
+    </div>
+
+  <!-- DISCOUNT - Points Only -->
+    <div *ngSwitchDefault>
+        <span class="offscreen">Original point was</span>
+        <span>{{ offers?.unpromotedDisplayPrice?.points | number }} {{ messages[pointLabel] }}</span>
+    </div>
+
+</div>

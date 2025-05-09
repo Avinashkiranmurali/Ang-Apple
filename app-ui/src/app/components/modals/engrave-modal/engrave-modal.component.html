@@ -1,0 +1,86 @@
+<div class="engrave-overlay-wrapper">
+  <div class="hideFromDOM" *ngIf="isLoading" role="alert" [attr.aria-label]="'loadingAlt' | translate"></div>
+  <div class="hideFromDOM" role="alert" aria-atomic="true" aria-live="assertive">{{ engraveFormStatus }}</div>
+  <div class="engrave-header-container">
+    <div class="engrave-overlay-close">
+      <a href="javascript: void(0);" (click)="cancel()" (keydown.enter)="cancel()" auto-focus role="button"
+         class="g-icons icon-icon-close icon-close close-button" aria-label="close modal window"></a>
+    </div>
+    <div class="engrave-header-txt" aria-live="assertive">
+      <h2 role="presentation" id="engrave-modal-title">{{ engraveHeader }}</h2>
+    </div>
+  </div>
+  <div class="engrave-body">
+    <div class="engraving-product {{subcat}} engraving-image-wrapper" [ngClass]="{ 'ipad-engraving':(slug==='ipad' && addCat === ''), 'pencil-engraving': engraveItemType === 'apple-pencil' }" *ngIf="!isImagePreview">
+      <img class="engraving-image" [src]="engravingImage" alt="{{engraveItemName}}" (load)="imagePreviewLoad()"/>
+      <div class="overlay-engraving-content {{ engraveItemType }}">
+        <p *ngIf="!engrave.line1 && !engrave.line2 && noOfLines>1" [ngClass]="engravingTxtColor">{{ 'yourEngrv' | translate }}<br/>{{ 'goesHere' | translate }}</p>
+        <p *ngIf="!engrave.line1 && !engrave.line2 && noOfLines === 1" class="single-line" [ngClass]="engravingTxtColor">{{ (isUpperCaseEnabled ? 'yourEngraving' : 'yourEngrv') | translate }}</p>
+        <p *ngIf="engrave.line1" [ngClass]="engravingTxtColor" class="engraving-text-edit" id="engraving-line1">{{ engrave.line1 }}</p>
+        <p *ngIf="engrave.line2" [ngClass]="engravingTxtColor" class="engraving-text-edit" id="engraving-line2">{{ engrave.line2 }}</p>
+      </div>
+    </div>
+    <div *ngIf="isImagePreview" class="engraving-image-wrapper {{subcat}}">
+      <img class="engraving-image" [src]="getEngraveImage()" alt="engraveItemName" (load)="imagePreviewLoad()"/>
+    </div>
+    <div *ngIf="engraveItemDisplayName" class="engraving-edit engraving-content" [ngClass]="subcat">
+      <div class="engraving-message-inputs" [attr.aria-label]="errorCountLabel">
+        <!-- FIRST LINE ENGRAVE SECTION -->
+        <div class="field-row" [ngClass]="{'input-error-row':( emptyFieldError || specialCharErrorLine1 || disallowedCharErrorLine1),'input-entered': engrave.line1}">
+          <input type="text" id="engraveLine1" name="engraveLine1" (keyup)="engraveLine1KeyUp()" [(ngModel)]="engrave.line1"
+             [ngModelOptions]="{ debounce: (isImagePreview)? 700 : 0 }" [maxlength]="engraveMaxLength"
+             class="lrg-text-field" aria-invalid="false" auto-fill-sync required (ngModelChange)="engrave.line1 =
+             convertToUpperCase(engrave.line1, isUpperCaseEnabled)" autocomplete="off"/>
+          <label for="engraveLine1" *ngIf="noOfLines>1">{{ 'lineOne' | translate }}
+            <span class="hideFromDOM">{{'maxLengthText' | translate}} {{engraveMaxLength}}</span>
+          </label>
+          <label for="engraveLine1" *ngIf="noOfLines === 1">{{ isUpperCaseEnabled ? ('yourEngraving' | translate) : ('yourEngrv' | translate ) }}
+            <span class="hideFromDOM">{{'maxLengthText' | translate}} {{engraveMaxLength}}</span>
+          </label>
+          <!-- ERROR SECTION -->
+          <div *ngIf="emptyFieldError" class="form-message-wrapper" [attr.aria-label]="'engraveErrorLine1' | translate" role="alert">
+            <p class="g-icons error-text">{{ 'enterMessageforEngravingShort' | translate }}</p>
+          </div>
+          <div *ngIf="specialCharErrorLine1" class="form-message-wrapper" [attr.aria-label]="'engraveErrorLine1' | translate" role="alert">
+            <p class="g-icons error-text">{{ hasBadWordsSpecialCharsLine1.message || ('illegalCharacters' | translate)}}</p>
+          </div>
+          <div *ngIf="disallowedCharErrorLine1" class="form-message-wrapper" [attr.aria-label]="'engraveErrorLine1' | translate" role="alert">
+            <p class="g-icons error-text">{{ 'invalidCharactersFound' | translate }} {{invalidCharactersLine1}}</p>
+          </div>
+        </div>
+        <!-- SECOND LINE ENGRAVE SECTION -->
+        <div class="field-row" *ngIf="noOfLines>1" [ngClass]="{'input-error-row':(specialCharErrorLine2 || disallowedCharErrorLine2),'input-entered': engrave.line2}">
+          <input type="text" id="engraveLine2" name="engraveLine2"  (keyup)="engraveLine2KeyUp()"[maxlength]="engraveMaxLength"
+             [(ngModel)]="engrave.line2" [ngModelOptions]="{ debounce: (isImagePreview)? 700 : 0 }"
+             class="lrg-text-field" aria-invalid="false" auto-fill-sync autocomplete="off">
+          <label for="engraveLine2">{{ 'lineTwo' | translate }}
+            <span class="hideFromDOM">{{ 'maxLengthText' | translate }} {{engraveMaxLength}}</span>
+          </label>
+          <!-- ERROR SECTION -->
+          <div *ngIf="specialCharErrorLine2" class="form-message-wrapper" [attr.aria-label]="'engraveErrorLine2' | translate" role="alert">
+            <p class="g-icons error-text">{{ hasBadWordsSpecialCharsLine2.message || ('illegalCharacters' | translate)}}</p>
+          </div>
+          <div *ngIf="disallowedCharErrorLine2" class="form-message-wrapper" [attr.aria-label]="'engraveErrorLine2' | translate" role="alert">
+            <p class="g-icons error-text">{{ 'invalidCharactersFound' | translate }} {{invalidCharactersLine2}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="engraving-disclaimer">
+        <div [innerHTML]="'engravingDisclaimer' | translate: { shippingAvailability: detailData.shippingAvailabilityMessage }"></div>
+      </div>
+    </div>
+    <div class="modal-btn-container-stacked-flex modal-btn-container engraving-actions">
+      <button id="btn-add-engraving" class="btn-base btn-engraving-action"
+        [disabled]="hasError"
+        [ngClass]="!hasError ? 'blue-btn':'disabled'"
+        attr.aria-label="Save {{ 'yourEngrv' | translate }}"
+        (click)="updateEngraving()" (keydown.enter)="updateEngraving()">{{ 'saveEngrv' | translate }}</button>
+      <button id="btn-cancel-engraving" class="btn-base cancel cta-link-type btn-engraving-cancel" role="button"
+        (keydown.enter)="cancel()"
+        (click)="cancel()">
+          <span *ngIf="!isEdit" attr.aria-label="{{ 'skipEngrv' | translate }}" >{{ 'skipEngrv' | translate }}</span>
+          <span *ngIf="isEdit" attr.aria-label="{{ 'cancel' | translate }} {{ 'yourEngrv' | translate }}">{{ 'cancel' | translate }}</span>
+        </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,71 @@
+@import "~styles/mixins";
+
+
+.banner-modal .modal-dialog { 
+     max-width: 710px;
+     width:710px; 
+     @include for-mobile {
+      max-width: 375px;
+      width:375px; 
+     }
+     }
+
+.banner-modal-wrapper {
+  @include for-mobile {
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+    overflow: auto;
+  }
+    
+  .banner-modal-overlay-close {
+    margin-top: rem(30px);
+    margin-left: rem(30px);
+    @include for-mobile-to-tablet {
+      margin-top: 0px;
+      margin-left: rem(20px);
+    }
+    height: rem(30px);
+    width: rem(30px);
+    cursor: pointer;
+    .close-button {
+      position: absolute;
+      @include for-mobile-to-tablet {
+        position:unset;
+        display: inline-block;
+      }
+      &::before {
+        font-size: 1.85rem;
+        color: #808080;
+        height: rem(30px);
+        top: rem(3px);
+        font-weight: $font-weight-thin;
+        @include for-mobile {
+          top: 0;
+          left: 0;
+          font-weight: $font-weight-regular;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+        @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+      }
+    }
+    }  
+
+  .banner-modal-body {     
+    .banner-modal-text {
+      min-height: rem(300px);
+    }
+    
+  } 
+  .close-modal-btn{
+    display: flex;
+    justify-content: center;
+    padding-bottom: 3.340775rem;
+}
+}
+

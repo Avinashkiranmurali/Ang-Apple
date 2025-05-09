@@ -1,0 +1,34 @@
+<div class="wrapper-footer">
+  <div id="default-footer" class="footer" [style]="{'background' : config['footerBackgroundColor'], 'color': config['footerTextColor']}">
+    <div class="base-foot upper-section" *ngIf="messages['footerTopContent']">
+      <p class="base-link large-12 small-12" [innerHTML]="'footerTopContent' | translate : { messages : messages }" [style]="{'border-right-color' : config['footerTextColor']}"></p>
+    </div>
+    <div class="base-foot">
+      <div class="inner" [style]="{'border-top-color' : config['footerDividerColor']}">
+        <div class="copy-right-to-top-section">
+          <p class="base-link copy-right" *ngIf="messages['footerCopyright']"
+              [innerHTML]="'footerCopyright' | translate :{ footerData : footerData }" ></p>
+          <p class="base-link to-top">
+            <a href (click)="scrollToTop()" title="" class="footer-to-top">
+              <span class="to-top-text">{{ 'footerLabelToTop' | translate }}</span>
+              <span class="to-top-icon"></span>
+            </a>
+          </p>
+        </div>
+        <p class="base-link large-2 small-2 text-right" *ngIf="five9SocialWidget && five9SocialWidget.widgetAdded && !isMobile">
+          <a href="javascript:void(0)" (click)="openFive9Chat()">
+            <span class="g-icons icon-LiveChat"></span>
+            <span>{{ 'liveChatLink' | translate }}</span>
+          </a>
+        </p>
+      </div>
+      <div *ngIf="messages['footerBottomContent']" [innerHTML]="'footerBottomContent' | translate"
+           class="footerDisclaimer"></div>
+      <div *ngIf="messages['footerExtendedDisclaimer'] && footerDisclaimerService.isWatchLanding() &&
+      footerDisclaimerService.displayFooterWatchExtendedDisclaimer"
+           [innerHTML]="'footerExtendedDisclaimer' | translate"
+           class="base-link large-12 small-12 extended-disclaimer">
+      </div>
+    </div>
+  </div>
+</div>

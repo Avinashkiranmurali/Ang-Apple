@@ -1,0 +1,55 @@
+<div class="refund-summary-container small-12" *ngIf="refundSummary">
+    <h4 class="title">{{ 'refundSummary' | translate }}</h4>
+    <div class="section-divider"></div>
+    <div class="line-item-section">
+        <ng-container *ngFor="let item of refundSummary.lineItems | orderBy: 'desc' : 'addedDate'; let index= index">
+                <div class="product-details small-12 small-offset-0">
+                    <ul class="item-container">
+                        <li class="order-item-name small-12 large-9">
+                            <span>{{ item.productName }}</span>
+                        </li>
+                        <li class="order-item-pricing small-12 large-3">
+                            <app-display-price [totalVal]="item.itemPrice"></app-display-price>
+                        </li>
+                    </ul>
+                </div>
+        </ng-container>
+    </div>
+    <div class="section-divider"></div>
+    <div class="subtotal-taxes-fees-section">
+        <div class="subtotal-section">
+            <span class="subtotal-label">{{ 'refundSubtotal' | translate }}</span>
+            <span class="subtotal-value text-semibold text-align-right">
+                <app-display-price [totalVal]="refundSummary.subTotal" [displayCurrencyPrice]="refundSummary.refunds.amount > 0" [displayPointsPrice]="refundSummary.refunds.points > 0"></app-display-price>
+            </span>
+        </div>
+        <div class="taxes-fees-section" *ngIf="pricingOption === 'unbundledCheckout'">
+            <span class="taxes-fees-label">{{ 'refundTaxesAndFees' | translate }}</span>
+            <span class="taxes-fees-value text-semibold text-align-right">
+                <app-display-price [totalVal]="refundSummary.taxesAndFees" [displayCurrencyPrice]="refundSummary.refunds.amount > 0" [displayPointsPrice]="refundSummary.refunds.points > 0"></app-display-price>
+            </span>
+        </div>
+    </div>
+    <div class="section-divider"></div>
+    <div class="total-section">
+        <span class="total-label">{{ 'refundTotal' | translate }}</span>
+        <span class="total-value text-semibold text-align-right">
+            <app-display-price  [totalVal]="refundSummary.total"></app-display-price>
+        </span>
+    </div>
+    <div class="section-divider"></div>
+    <div class="amount-points-refunded-section">
+        <div class="amount-refunded-section" *ngIf="refundSummary.refunds.amount > 0">
+            <span class="amount-refunded-label" [innerHTML]="'amountRefundedToYourCard' | translate : {'ccLast4': ccLast4  }"></span>
+            <span class="amount-refunded-value text-semibold text-align-right">
+               {{ refundSummary.refunds.amount | currency }}
+            </span>
+        </div>
+        <div class="points-refunded-section">
+            <span class="points-refunded-label">{{ 'pointsRefundedToYourAccount' | translate }}</span>
+            <span class="points-refunded-value text-semibold text-align-right">
+               {{ refundSummary.refunds.points | currencyFormat: pricingTemplate : user.locale}} {{ pointLabel }}
+            </span>
+        </div>
+    </div>
+</div>

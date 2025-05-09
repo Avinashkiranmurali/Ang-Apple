@@ -1,0 +1,358 @@
+@import "~styles/mixins";
+
+.cart-gift-promo-section {
+  margin: rem(20px) 0 0 0;
+
+  .gift-promo-cart-offer {
+    padding: rem(25px) 0 rem(23px) 0;
+    border-top: rem(1px) solid #e6e6e6;
+    margin: rem(26px) 0 0 0;
+    @include for-mobile-to-tablet {
+      display: flex;
+      padding: rem(17px) 0 rem(30px) 0;
+      justify-content: space-between;
+      margin: rem(24px) 0 0 0;
+    }
+
+    &.multi-gift-promo {
+      @include for-mobile-to-tablet {
+        padding: rem(16px) 0 rem(18px) 0;
+      }
+    }
+
+    .gift-with-purchase {
+      font-size: rem(16px);
+      line-height: rem(19px);
+      font-weight: $font-weight-semi-bold;
+      color: #111111;
+      letter-spacing: 0;
+    }
+
+    .cart-add-select-gift {
+      margin: 0 0 0 rem(9px);
+      font-size: rem(16px);
+      line-height: rem(19px);
+      font-weight: $font-weight-regular;
+      color: #0070c9;
+      letter-spacing: 0;
+
+      @include for-mobile-to-tablet {
+        text-align: right;
+        min-width: rem(125px);
+      }
+    }
+
+    .gift-promo-offer-list {
+      @include for-mobile-to-tablet {
+        width: 100%;
+      }
+
+      .gift-promo-offer-container {
+        display: flex;
+
+        .cart-gift-product-image {
+          width: rem(45px);
+          height: rem(60px);
+          margin-right: rem(15px);
+
+          img {
+            max-width: rem(45px);
+            max-height: rem(60px);
+          }
+        }
+
+        .gift-promo-offer-content {
+          width: 100%;
+
+          .gift-promo-offer-details {
+            display: flex;
+
+            &.flex-start {
+              justify-content: flex-start;
+            }
+
+            &.space-between {
+              justify-content: space-between;
+
+              .gift-promo-offer-right {
+                text-align: right;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gift-promo-cart {
+    background: #ffffff 0 0 no-repeat padding-box;
+    border: rem(1px) solid #e6e6e6;
+    opacity: 1;
+    margin-top: rem(26px);
+    padding: 0 rem(30px) 0 rem(31px);
+    @include for-mobile-to-tablet {
+      padding: 0 rem(9px) 0 rem(11px);
+      margin-bottom: rem(14px);
+    }
+
+    .gift-promo-cart-title {
+      display: flex;
+      justify-content: space-between;
+      @include for-mobile-to-tablet {
+        flex-direction: column;
+      }
+      margin: 0;
+      padding: rem(26px) 0 0 0;
+      font-size: rem(16px);
+      line-height: rem(19px);
+      font-weight: $font-weight-semi-bold;
+      color: #111111;
+      letter-spacing: 0;
+      @include for-mobile-to-tablet {
+        padding: rem(16px) 0 0 0;
+      }
+
+      .gift-promo-cart-title-text {
+        color: #111111;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        font-weight: $font-weight-semi-bold;
+        @include for-mobile-to-tablet {
+          margin-bottom: rem(5px);
+        }
+      }
+
+      .gift-return-note {
+        &:before {
+          content: '';
+          display: inline-block;
+          background: url('../../../assets/images/DisclaimerIcon.svg') 0 0 no-repeat;
+          background-size: rem(12px) rem(12px);
+          vertical-align: middle;
+          width: rem(12px);
+          height: rem(12px);
+          margin: rem(-2px) rem(5px) 0 0;
+        }
+
+        font-size: rem(16px);
+        color: #767676;
+        line-height: rem(19px);
+        font-weight: $font-weight-regular;
+
+        @include for-mobile-to-tablet {
+          font-size: rem(14px);
+          line-height: rem(17px);
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    .gift-promo-cart-container {
+      display: flex;
+      margin: rem(31px) 0 rem(38px) 0;
+      @include for-mobile-to-tablet {
+        flex-direction: column;
+        align-items: center;
+        margin: rem(20px) 0 rem(21px) 0;
+      }
+
+      .cart-gift-product-image {
+        text-align: center;
+        max-width: rem(200px);
+        padding: 0 rem(24px) 0 0;
+        @include for-mobile-to-tablet {
+          padding: 0 0 rem(17px) 0;
+          max-width: rem(100px);
+        }
+      }
+
+      .gift-promo-cart-content {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+
+        app-apple-care {
+          width: inherit;
+        }
+
+        .gift-promo-cart-details {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          padding-left: 0;
+          padding-bottom: rem(17px);
+          @include for-mobile-to-tablet {
+            padding-bottom: rem(24px);
+          }
+        }
+
+        .gift-promo-cart-left {
+          padding-left: 0;
+          width: 100%;
+
+          .gift-product-name {
+            margin: 0;
+            padding: 0;
+            font-size: rem(16px);
+            line-height: rem(19px);
+            font-weight: $font-weight-semi-bold;
+            color: #111111;
+            letter-spacing: 0;
+          }
+
+          .gift-selection-link {
+            margin: 0;
+            padding: rem(8px) 0 0 0;
+            line-height: rem(17px);
+            @include for-mobile-to-tablet {
+              padding: rem(13px) 0 0 0;
+            }
+
+            .gift-selection-change {
+              margin: 0;
+              padding: 0;
+              font-size: rem(14px);
+              line-height: rem(17px);
+              font-weight: $font-weight-regular;
+              color: #0070c9;
+              letter-spacing: 0;
+            }
+          }
+        }
+
+        .gift-promo-cart-right {
+          .gift-promo-cart-free {
+            text-align: right;
+
+            .gift-remove-link {
+              margin: 0;
+              padding: rem(8px) 0 0 0;
+              font-size: rem(14px);
+              line-height: rem(17px);
+              font-weight: $font-weight-regular;
+              color: #0070c9;
+              letter-spacing: 0;
+              @include for-mobile-to-tablet {
+                padding: rem(13px) 0 0 0;
+              }
+            }
+          }
+        }
+
+        app-apple-care {
+          width: inherit;
+        }
+
+        .gift-promo-cart-engraving {
+          width: 100%;
+          padding: rem(14px) rem(1px) rem(15px) 0;
+          display: flex;
+          align-items: flex-start;
+          flex-direction: row;
+          justify-content: space-between;
+          border-top: rem(1px) solid #e6e6e6;
+
+          .cart-engraving-icon {
+            background: url("../../../assets/images/engrave/icon-engraving.png") 0 0 no-repeat padding-box;
+            background-size: rem(19px) rem(19px);
+            color: #333;
+            padding-left: rem(26px);
+            padding-top: rem(2px);
+            padding-bottom: rem(4px);
+          }
+
+          .gift-promo-add-engraving {
+            margin: 0;
+            padding: 0;
+            font-family: $font-base;
+            font-size: rem(14px);
+            line-height: rem(17px);
+            font-weight: $font-weight-semi-bold;
+            color: #333333;
+            letter-spacing: 0;
+          }
+
+          .gift-promo-engraved-text {
+            display: inline-flex;
+            line-height: rem(16px);
+          }
+
+          .gift-engrave-edit-pipe {
+            font-family: $font-base;
+            font-size: rem(14px);
+            line-height: rem(17px);
+            color: #333333;
+            letter-spacing: 0;
+            margin: 0 rem(10px) 0 rem(6px);
+          }
+
+          .gift-engrave-add-link {
+            margin: 0;
+            padding: 0;
+            font-size: rem(14px);
+            line-height: rem(17px);
+            font-weight: $font-weight-regular;
+            color: #0070c9;
+            letter-spacing: 0;
+          }
+
+          .gift-engrave-free-caption {
+            font-family: $font-family-text-icon;
+            font-size: rem(14px);
+            line-height: rem(17px);
+            font-weight: $font-weight-semi-bold;
+            color: #333333;
+            letter-spacing: 0;
+          }
+        }
+
+        .add-edit-engraving {
+          .engrave-options {
+            padding: 0 0 rem(24px) 0;
+
+            &.view-mode {
+              padding: 0 0 rem(15px) rem(27px);
+              margin: rem(-11px) 0 0 0;
+
+              p {
+                line-height: rem(16px);
+                margin: 0;
+                color: #333333;
+              }
+            }
+          }
+        }
+
+        .gift-promo-cart-shipping {
+          width: 100%;
+          padding: rem(19px) 0 0 0;
+          border-top: rem(1px) solid #e6e6e6;
+
+          .gift-promo-shipping-note {
+            font-size: rem(14px);
+            line-height: rem(17px);
+            font-weight: $font-weight-regular;
+            color: #333333;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+
+    .gift-item-engrave-collapsed {
+      display: none;
+    }
+
+    .gift-item-engrave-expanded {
+      display: block;
+    }
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+}

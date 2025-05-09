@@ -1,0 +1,43 @@
+@import "~styles/mixins";
+
+.order-tile-section {
+  .local-currency {
+    margin: 0;
+    color: #111111;
+  }
+}
+
+/* ORDER PAYMENT SUMMARY SECTION */
+.order-payment-summary {
+  .subtotal-text {
+    text-align: right;
+    margin: 0;
+    color: #111111;
+    font-weight: $font-weight-semi-bold;
+    font-size: rem(17px);
+    line-height: rem(20px);
+  }
+
+  .local-currency {
+    margin: rem(3px) 0 0;
+    color: #111111;
+    font-weight: $font-weight-semi-bold;
+    font-size: rem(17px);
+    line-height: rem(20px);
+  }
+}
+
+/* ORDER SUMMARY COMPONENT */
+.order-summary-component {
+  .subtotal-text {
+    font-weight: $font-weight-semi-bold;
+    letter-spacing: 0;
+    font-size: rem(16px);
+
+    .local-currency {
+      font-weight: $font-weight-semi-bold;
+      font-size: rem(16px);
+      margin-bottom: 0;
+    }
+  }
+}

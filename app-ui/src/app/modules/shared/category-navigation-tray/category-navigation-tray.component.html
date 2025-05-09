@@ -1,0 +1,73 @@
+<div class="category-navigation-tray-section" [ngClass]="{ 'active expanded': showCategoryNavigationTray }">
+<div *ngIf="isMobile && isAccessoriesShown && shopByCategory.length" class="view-control-container pull-right">
+    <ul class="tool-toggle-buttons">
+      <li>
+        <a href="javascript:void(0)"
+           id="btn-filter-control"
+           attr.aria-label="{{ 'allCategories' | translate }} - {{ 'subcatName' | translate }}"
+           role="button"
+           [attr.aria-expanded]="showCategoryNavigationTray"
+           [attr.aria-controls]="categoryNavigationTray"
+           (click)="toggleCategoryNavigationTrayFucn()"
+           class="toggle-button g-icons"
+           [ngClass]="{'expanded' : showCategoryNavigationTray}">
+        </a>
+      </li>
+    </ul>
+  </div>
+  <div *ngIf="!isMobile && isAccessoriesShown && shopByCategory.length" class="btn-nav-tray-control">
+    <a href="javascript:void(0)"
+       id="btn-nav-tray-control"
+       attr.aria-label="{{ 'allCategories' | translate }} - {{ 'subcatName' | translate }}"
+       attr.aria-expanded="{{showCategoryNavigationTray}}"
+       aria-controls="btn-nav-tray-control"
+       (click)="toggleCategoryNavigationTrayFucn()"
+       class="toggle-button g-icons">
+      <span>{{'allCategories' | translate}}</span>
+      <span class="drop-down-icon" [ngClass]="{'expanded' : showCategoryNavigationTray}"></span>
+    </a>
+  </div>
+
+
+<div class="category-navigation-tray-wrapper">
+<div class="nav-tray">
+  <section class="nav-tray-container"  *ngIf="showCategoryNavigationTray" >
+    <section class="shop-by-products-tray">
+      <div class="shop-by-section-title">{{'shopByProduct' | translate}}</div>
+      <ul class="nav-product-list" role="list" attr.aria-label="{{'shopByProduct' | translate}}">
+        <li class="nav-product-list-item" *ngFor="let navCategory of shopByProduct" role="listitem">
+          <a  class="nav-product-link"
+              (click)="toggleCategoryNavigationTrayFucn()"
+              [ngClass]="{'current':navCategory.accCategory.slug === subCategory}"
+              [routerLink]="getRouterLink(navCategory, navCategory.accCategory.slug)"
+              >
+            {{ (navCategory['slug'] !== 'accessories' )? navCategory.i18nName : 'allProducts' | translate}}
+          </a>
+        </li>
+      </ul>
+    </section>
+    <section class="shop-by-category-tray">
+      <div class="shop-by-section-title">{{'shopByCategory' | translate}}</div>
+      <ul attr.aria-label="{{'shopByCategory' | translate}}"
+          class="nav-category-list nav-category-list-coumn-{{categoryListColumn}}"
+          role="list"
+          [ngStyle]="{'height' : isMobile ? '100%' : categoryListColumnHeight+'rem'}">
+        <li class="nav-category-list-item"
+            role="listitem"
+            *ngFor="let category of shopByCategory" >
+
+          <a class="nav-category-list-link"
+             attr.aria-label="{{ category.i18nName }}"
+             [ngClass]="{'current':category.slug === addtionalCategory}"
+             (click)="toggleCategoryNavigationTrayFucn()"
+             [routerLink]="getRouterLink('', '', category.slug)"
+             ui-sref-opts="{ reload: false }">
+            {{category.i18nName}}
+          </a>
+        </li>
+      </ul>
+    </section>
+  </section>
+</div>
+</div>
+</div>

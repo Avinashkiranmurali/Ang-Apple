@@ -1,0 +1,6 @@
+{
+  "signOutUrl": "https://wfbk-uat-mn.epsilon.com/home/LogOutRedir",
+  "keepAliveUrl": "https://wfbk-uat-mn.epsilon.com/home/keepalive",
+  "navigateBackUrl": "https://wfbk-uat-mn.epsilon.com/#/deeplink/B2S/Merchandise",
+  "timeOutUrl": "https://wfbk-uat-mn.epsilon.com/home/LogOutRedir"
+}

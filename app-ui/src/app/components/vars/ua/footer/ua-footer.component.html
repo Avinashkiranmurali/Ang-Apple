@@ -1,0 +1,38 @@
+<div class="inner-container container-fluid nav-container">
+  <div class="contain">
+    <div class="footer-nav">
+      <ul class="footer-nav-list">
+
+        <li>
+          <a [href]="'footerHomeLinkURL' | translate"  target="_blank" rel="noopener noreferrer">{{ 'footerHomeLink' | translate }}</a>
+        </li>
+        <li>
+          <a [routerLink]="'footerFAQsLinkURL' | translate">{{ 'footerFAQsLink' | translate}}</a>
+        </li>
+        <li>
+          <a [routerLink]="'footerTermsURL' | translate">{{ 'footerTerms' | translate }}</a>
+        </li>
+        <li>
+          <a [href]="'footerPrivacyPolicyURL' | translate" target="_blank" rel="noopener noreferrer">{{ 'footerPrivacyPolicy' | translate}}</a>
+        </li>
+        <li>
+          <a [href]="'footerLegalInfoURL' | translate" target="_blank" rel="noopener noreferrer">{{ 'footerLegalInfo' | translate }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <iframe id="uaiframe" height='1' width='1' title="UA analytics" aria-hidden="true" sandbox="allow-same-origin">
+    <img id="uaimage" width="1" height="1" src="" alt="" />
+  </iframe>
+  <iframe name="__bkframe" height="0" width="0" title="" style="display:none;position:absolute;clip:rect(0px 0px 0px 0px)" src="about:blank" aria-hidden="true" sandbox="allow-same-origin"></iframe>
+</div>
+<div class="inner-container container-fluid legal-container">
+  <div class="contain" >
+    <div [innerHTML]="'footerLegalDisclaimer' | translate" ></div>
+    <div *ngIf="messages['footerExtendedDisclaimer'] && footerDisclaimerService.isWatchLanding() &&
+    footerDisclaimerService.displayFooterWatchExtendedDisclaimer"
+         [innerHTML]="'footerExtendedDisclaimer' | translate"
+         class="base-link large-12 small-12 extended-disclaimer">
+    </div>
+  </div>
+</div>

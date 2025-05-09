@@ -1,0 +1,280 @@
+@import "~styles/mixins";
+
+.acknowledge-tc-wrapper {
+  padding: rem(4x) 0 rem(0px);
+  height: rem(779px);
+  overflow-wrap: normal;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: #000000;
+  @include for-mobile {
+    padding: 0;
+    margin: 0;
+    height: 90vh;
+  }
+
+  .acknowledge-tc-modal-icon-container {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+
+    @include for-mobile-to-tablet {
+      width: unset;
+      margin: unset;
+      justify-content: flex-start;
+      margin-top: rem(20px);
+    }
+  }
+  .acknowledge-tc-modal-btn-container {
+    display: flex;
+    flex-direction: row;
+    @include for-mobile-to-tablet {
+      flex-direction: column;
+      width: 100%;
+      margin-top: rem(40px);
+    }
+    justify-content: space-between;
+
+    .acknowledge-tc-modal-btn-base {
+      width: rem(215px);
+      height: rem(58px);
+      border-radius: rem(12px);
+      padding: 0;
+      white-space: nowrap;
+      &.btn-disabled {
+        opacity: 0.3;
+      }
+      @include  for-mobile-to-tablet {
+        width: unset;
+        margin-bottom: rem(17px);
+      }
+
+      &.decline {
+        color: #333333;
+        background: #eeeeee;
+        margin-right: rem(20px);
+        @include for-mobile-to-tablet {
+          margin-right: 0;
+        }
+        &:hover {
+          background: #dddddd;
+        }
+      }
+    }
+  }
+  .acknowledge-tc-overlay-close {
+    margin-top: rem(25px);
+    margin-left: rem(34px);
+    @include for-mobile-to-tablet {
+      margin-top: 0px;
+      margin-left: rem(20px);
+    }
+    height: rem(30px);
+    width: rem(30px);
+    cursor: pointer;
+    .close-button {
+      position: absolute;
+      @include for-mobile-to-tablet {
+        position:unset;
+        display: inline-block;
+      }
+      &::before {
+        font-size: 1.85rem;
+        color: #808080;
+        height: rem(30px);
+        top: rem(3px);
+        font-weight: $font-weight-thin;
+        @include for-mobile {
+          top: 0;
+          left: 0;
+          font-weight: $font-weight-regular;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+      }
+      &:focus {
+        text-decoration: none;
+        @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+      }
+    }
+  }
+
+  .acknowledge-tc-modal-header {
+    display: flex;
+    justify-content: center;
+    border-bottom: 0px;
+
+    .acknowledge-tc-modal-title {
+      color: #000000;
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(34px);
+      line-height: rem(41px);
+    }
+  }
+
+  .acknowledge-tc-modal-body {
+    font-size: rem(18px);
+    font-weight: 400;
+    line-height: rem(21px);
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    color: $fc-black;
+    padding: rem(3px) rem(25px) rem(25px) rem(37px);
+    margin: 0 0 rem(-15px) 0;
+    @include for-mobile-to-tablet {
+      padding: rem(3px) rem(11px) rem(25px) rem(8px);
+    }
+    overflow: auto;
+    height: inherit;
+
+    .mobile-print-icon {
+      @include  for-mobile-to-tablet {
+        margin-right: rem(30px);
+      }
+    }
+
+    .acknowledge-tc-modal-title-mobile {
+      color: #000000;
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(34px);
+      line-height: rem(41px);
+      text-align: center;
+      margin-top: rem(28px);
+      margin-bottom: rem(30px);
+    }
+
+    .acknowledge-tc-modal-tagline {
+      color: $fc-black !important;
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(24px);
+      line-height: rem(29px);
+      text-align: center;
+      @include for-mobile-to-tablet {
+        text-align: left;
+        margin-bottom: rem(3px);
+      }
+    }
+
+    .acknowledge-tc-modal-text {
+      font-size: rem(18px);
+      font-weight: 400;
+      line-height: rem(21px);
+      letter-spacing: 0em;
+      color: #000;
+      padding:  rem(3px) 0px rem(25px) 0px;
+
+      @include for-mobile-to-tablet {
+        padding:  rem(3px) 0px rem(65px) 0px;
+      }
+
+      ul {
+        margin-top: rem(19px);
+        margin-bottom: rem(-53PX);
+          li {
+            color: $fc-black;
+            margin: 0 0 rem(9px) 0;
+            font-style: normal;
+            font-weight: 400;
+            font-size: rem(18px);
+            line-height: rem(21px);
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    .error-text {
+        @include red-txt;
+        padding: 0 0 0 rem(20px);
+
+        top: rem(156px);
+        display: inline-block;
+        width: 100%;
+        text-align: start;
+        margin-bottom: rem(10px);
+        &:before {
+          content: '';
+          display: inline-block;
+          background: url('../../../../assets/images/errorIcon.svg') 0 0 no-repeat;
+          background-size: rem(12px) rem(12px);
+          vertical-align: middle;
+          width: rem(12px);
+          height: rem(12px);
+          margin: rem(-2px) rem(5px) 0 0;
+        }
+      }
+    .flex-navigation-wrapper {
+      display: flex;
+      flex-direction: row;
+      @include for-mobile-to-tablet {
+        flex-direction: column;
+        margin: 0 rem(9px) 0 rem(12px);
+      }
+      justify-content: space-between;
+      width: 98%;
+
+      .ack-tc-print{
+        margin-right: rem(30px);
+      }
+
+      .print-icon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: 19px;
+        margin: 0 0 0 rem(-18px);
+        color: #006EDB;
+        @include for-mobile-to-tablet {
+          margin: 0 rem(102px) 0 rem(-18px);
+        }
+      }
+
+      .save-icon {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        font-style: normal;
+        font-weight: 400;
+        font-size: rem(16px);
+        line-height: rem(19px);
+        margin-left: rem(-70px);
+        margin-bottom: rem(-2px);
+        color: #006EDB;
+
+        @include for-mobile-to-tablet {
+          margin-bottom: rem(1px);
+        }
+      }
+    }
+  }
+
+  .close-btn {
+    float: right;
+    width: rem(15px);
+    height: rem(15px);
+    margin: rem(-34px) rem(15px) 0 0;
+    &#btn-close {
+      &:focus {
+      }
+    }
+  }
+
+  .close-btn:before {
+    font-size: rem(14px);
+  }
+}
+

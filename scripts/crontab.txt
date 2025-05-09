@@ -1,0 +1,21 @@
+*/5 * * * * /usr/local/bin/rsyncdropbox.sh >/tmp/rsyncdropbox.out 2>&1
+*/10 * * * * /usr/local/bin/apple_static_files_rsync.sh >/tmp/apple_static_files_rsync.log 2>&1
+
+15 08 * * * /usr/local/bin/apple_PS_cache_purge.sh 2>&1
+
+00 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-hk-en apple apple-pc-fullFeed-hk-en 1
+01 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-hk-zh apple apple-pc-fullFeed-hk-zh 1
+02 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-ph-en apple apple-pc-fullFeed-ph-en 1
+03 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-tw-zh apple apple-pc-fullFeed-tw-zh 1
+04 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-mx-es apple apple-pc-fullFeed-mx-es 1
+05 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-sg-en apple apple-pc-fullFeed-sg-en 1
+06 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-us-en apple apple-pc-fullFeed-us-en 1
+07 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-ca-en apple apple-pc-fullFeed-ca-en 1
+08 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-ca-fr apple apple-pc-fullFeed-ca-fr 1
+09 09 * * * source ~/.bash_profile ; cd /usr/local/dropbox ; /usr/local/bin/rsyncdropbox.sh; /usr/local/bin/submit-json.sh apple-gb-en apple apple-pc-fullFeed-gb-en 1
+
+#no longer importing affiliate
+#25 08 * * * /usr/local/bin/applegr_import_mongo_purge.sh apple-us-en 2>&1 >> /tmp/applegr_import_mongo_purge.sh apple-us-en.out
+#30 08 * * * /usr/local/bin/applegr_import_mongo_purge.sh apple-ca-en 2>&1 >> /tmp/applegr_import_mongo_purge.sh apple-ca-en.out
+#35 08 * * * /usr/local/bin/applegr_import_mongo_purge.sh apple-ca-fr 2>&1 >> /tmp/applegr_import_mongo_purge.sh apple-ca-fr.out
+#40 08 * * * /usr/local/bin/applegr_import_mongo_purge.sh apple-gb-en 2>&1 >> /tmp/applegr_import_mongo_purge.sh apple-gb-en.out

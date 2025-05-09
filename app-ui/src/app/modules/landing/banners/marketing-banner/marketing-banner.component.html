@@ -1,0 +1,79 @@
+<article class="marketing-banner" [ngClass]="messages[marketingBanner.templateClass]">
+  <ul class="product-container">
+    <li *ngFor="let item of items;" [ngClass]="item.templateClass" class="product-tile-container"
+        [style.background-color]="item.templateBgColor || '#ffffff'"
+        [ngSwitch]="item.template">
+      <section class="market-contain market-multi-banner-content" *ngSwitchCase="'multi-product.htm'">
+        <div class="banner-title-section">
+          <h2 class="multi-banner-title" [innerHTML]="item.multiBannerTitle" *ngIf="item.multiBannerTitle"></h2>
+          <p  class="banner-subtitle" [innerHTML]="item.multiBannerSubTitle" *ngIf="item.multiBannerSubTitle"></p>
+        </div>
+        <div class="banner-content-section">
+          <ul>
+            <ng-container *ngFor="let listDetails of item.listDetails">
+              <li *ngFor="let product of listDetails" class="banner-tile">
+                <div class="banner-img">
+                  <img
+                    *ngIf="product.imageUrl && !product.externalImageUrl"
+                    alt="{{ product.imageTxt }}"
+                    [src]="config.imageServerUrl + product.imageUrl"
+                    [ngClass]="product.imageClass"
+                  />
+                  <img
+                    *ngIf="product.externalImageUrl"
+                    alt="{{ product.imageTxt }}"
+                    [src]="product.externalImageUrl + '&qlt=95'"
+                  />
+                </div>
+                <div class="pos-contain">
+                  <h3 class="banner-title" [innerHTML]="product.title | safe" *ngIf="product.title"></h3>
+                  <p class="banner-subtitle" [innerHTML]="product.tagLine | safe"   *ngIf="product.tagLine"></p>
+                  <div class="txt-container flex-grow-1" *ngIf="item.isAdditionalInfoExist">
+                    <p [innerHTML]="(product.additionalInfo && product.additionalInfo.length > 0) ? product.additionalInfo : '&nbsp;'"
+                      class="additional-info-container {{ product.additionalInfoClass ? product.additionalInfoClass : '' }}"></p>
+                  </div>
+                  <div class="btn-container cta-container" [ngClass]="{'m-t-20': !item.isAdditionalInfoExist}" [style.color]="product.btnTxtColor || '#0070c9'">
+                      <span class='link-base' [ngClass]="product.btnClass">
+                        <a [routerLink]="product.btnLink" attr.aria-label="{{ product.btnTxt }} - {{ product.title }}">{{ product.btnTxt }}</a>
+                      </span>
+                  </div>
+                </div>
+              </li>
+            </ng-container>
+          </ul>
+        </div>
+      </section>
+      <section class="market-contain" *ngSwitchDefault >
+        <div class="product-image-container mobile product-tile-content-child" [ngClass]="item.imageClass">
+          <img
+            *ngIf="item.imageUrl"
+            alt="{{ item.imageTxt }}"
+            [src]="config.imageServerUrl + item.imageUrl">
+          <img
+            *ngIf="!item.imageUrl && item.externalImageUrl"
+            alt="{{ item.imageTxt }}"
+            [src]="item.externalImageUrl + '&qlt=95'">
+        </div>
+        <div class="product-text-container product-tile-content-child" [ngClass]="item.ctaClass" [style.color]="item.ctaTxtColor || '#111111'">
+          <h2 class="title" [innerHTML]="item.title" *ngIf="item.title"></h2>
+          <p class="description" [innerHTML]="item.tagLine" *ngIf="item.tagLine"  [style.color]="item.tagLineTxtColor || 'inherit'"></p>
+          <div class="product-image-container" [ngClass]="item.imageClass">
+            <img
+              *ngIf="item.imageUrl"
+              alt="{{ item.imageTxt }}"
+              [src]="config.imageServerUrl + item.imageUrl">
+            <img
+              *ngIf="!item.imageUrl && item.externalImageUrl"
+              alt="{{ item.imageTxt }}"
+              [src]="item.externalImageUrl + '&qlt=95'">
+          </div>
+          <div class="btn-container" [style.color]="item.btnTxtColor || '#0070c9'">
+             <span class='link-base' [ngClass]="item.btnClass">
+              <a [routerLink]="item.btnLink">{{ item.btnTxt }}</a>
+            </span>
+          </div>
+        </div>
+      </section>
+    </li>
+  </ul>
+</article>

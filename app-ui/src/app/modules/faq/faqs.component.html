@@ -1,0 +1,71 @@
+<div class="container">
+  <div class="content-container user-info-content">
+    <div class="info-title">
+      <h3> {{ 'faqsTitleTxt' | translate }} </h3>
+    </div>
+    <div class="horizontal-split">
+      <p class="use-txt">{{ 'faqsLinkUseTxt' | translate }}</p>
+    </div>
+    <div class="browse-content" >
+      <ng-container [ngSwitch]="faqsTemplate.template">
+        <!-- faq with no browse links -->
+        <div *ngSwitchCase="'faqs-without-nav.htm'" >
+          <div>
+            <div class="infoDocument lesspad" *ngFor="let elements of faqsElements" [ngSwitch]="elements.template">
+              <!-- faq with no header -->
+              <div *ngSwitchCase="'faqs-without-header.htm'">
+                <div *ngFor="let elements of faqsElements">
+                  <div [attr.id]="elements.id" class="faqs-content" [ngClass]="elements.class">
+                    <ng-container *ngTemplateOutlet="faqsQuestionTemplate; context: {elements: elements}">
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- faq with browse links -->
+        <div *ngSwitchCase="'faqs-with-nav.htm'" >
+          <div class="left-nav">
+            <h3>{{ 'faqsBrowseTxt' | translate }}</h3>
+            <ul class="browselinks" >
+              <li *ngFor="let elements of faqsElements" >
+                <a [routerLink]="['/store', 'faqs']" [fragment]="elements.link" class="link" >{{ 'faqs-link-'+elements.id | translate }}</a>-->
+              </li>
+            </ul>
+          </div>
+          <div class="right-content">
+            <div class="infoDocument lesspad" *ngFor="let elements of faqsElements" [ngSwitch]="elements.template" >
+              <div *ngSwitchCase="'faqs-with-header.htm'" >
+                <div *ngFor="let elements of faqsElements">
+                  <div [attr.id]="elements.id" class="" [ngClass]="elements.class">
+                    <h3>{{ 'faq-title-'+elements.id | translate }}</h3>
+                    <ng-container *ngTemplateOutlet="faqsQuestionTemplate; context: {elements: elements}">
+                    </ng-container>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<ng-template #faqsQuestionTemplate let-elements = "elements">
+  <div class="faq-cell" *ngFor="let q of elements.elements; let i=index;" [ngSwitch]="'faqs-question.htm'">
+    <!-- faqs question template -->
+    <div *ngSwitchCase="'faqs-question.htm'" >
+      <div class="faq-input" [attr.aria-expanded]="expanded[i]" [attr.aria-controls]="i"
+           [ngClass]="{ expanded: expanded[i], collapsed: !expanded[i] }">
+        <a href="javascript:void(0)" (click)="expanded[i] = !expanded[i]" class="question-cell" [innerHTML]="'faq-'+q.q | translate" ></a>
+        <div class="animate-show answer-cell" [hidden]="!expanded[i]">
+          <div [innerHTML]="'faq-'+q.a | translate" class="answer-wrap" ></div>
+          <a href="javascript:void(0)" class="hide-link" (click)="expanded[i] = !expanded[i]" >{{ 'faqHide' | translate }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

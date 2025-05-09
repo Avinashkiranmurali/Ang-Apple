@@ -1,0 +1,130 @@
+{
+  "orderId": 2100118073,
+  "displayOrderId": "2100118073",
+  "showVarOrderId": false,
+  "orderDate": 1598368851263,
+  "shipments": 1,
+  "orderTotal": {
+    "amount": 999,
+    "currencyCode": "USD",
+    "points": 435564
+  },
+  "orderSubTotal": {
+    "amount": 999,
+    "currencyCode": "USD",
+    "points": 407592
+  },
+  "totalTax": {
+    "amount": 0,
+    "currencyCode": "USD",
+    "points": 0
+  },
+  "shippingCost": {
+    "amount": 0,
+    "currencyCode": "USD",
+    "points": 0
+  },
+  "totalFee": {
+    "amount": 0,
+    "currencyCode": "USD",
+    "points": 0
+  },
+  "paymentInfo": {
+    "awardsUsed": 435564,
+    "awardsPurchased": 0,
+    "awardsPurchasedPrice": 0,
+    "ccLast4": null
+  },
+  "items": 1,
+  "remainingBalance": 98380966,
+  "lineItems": [
+    {
+      "orderLineID": 1,
+      "sku": "MWTK2LL/A",
+      "itemName": "13-inch MacBook Air - Silver",
+      "itemImageURL": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/macbook-air-silver-select-201810?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1541713861325&wid=75&hei=75",
+      "currencyType": "USD",
+      "quantity": 1,
+      "isGift": false,
+      "unitPrice": {
+        "amount": 999,
+        "currencyCode": "USD",
+        "points": 407592
+      },
+      "price": {
+        "amount": 1088.91,
+        "currencyCode": "USD",
+        "points": 435564
+      },
+      "unpromotedUnitPrice": {
+        "amount": 1088.91,
+        "currencyCode": "USD",
+        "points": 435564
+      },
+      "unpromotedPrice": {
+        "amount": 1088.91,
+        "currencyCode": "USD",
+        "points": 435564
+      },
+      "status": "In Progress",
+      "shipmentInfo": null,
+      "delayedShippingInfo": null,
+      "engrave": {
+        "line1": "hello",
+        "line2": "world",
+        "font": "",
+        "fontCode": "",
+        "maxCharsPerLine": "",
+        "widthDimension": "",
+        "noOfLines": 2,
+        "engraveBgImageLocation": null,
+        "isSkuBasedEngraving": false,
+        "templateClass": null,
+        "engraveFontConfigurations": null
+      },
+      "orderLineProgress":{
+        "status":"processing",
+        "progressValue":2,
+        "progressBarText":[
+          "orderPlaced",
+          "awaitingShipment",
+          "shipped"
+        ],
+        "modifiedDate":null
+      },
+      "shippingMethod": "STANDARD",
+      "refund": null,
+      "refundStatus": false,
+      "shippingAvailability": "3–4 weeks"
+    }
+  ],
+  "deliveryAddress": {
+    "firstName": "Alexandar",
+    "lastName": "Selvaraj",
+    "businessName": "",
+    "addressLine1": "5900 Windward Pkwy",
+    "addressLine2": "",
+    "addressLine3": null,
+    "city": "Alpharetta",
+    "state": "GA",
+    "postalCode": "30005-8862",
+    "country": "US"
+  },
+  "contactInfo": {
+    "phone": "(91) 767-37571",
+    "email": "aselvaraj1@bridge2solutions.com"
+  },
+  "purchasedPriceCurrency": "$0.00",
+  "refundTotal": {
+    "amount": 0,
+    "currencyCode": "USD",
+    "points": 0
+  },
+  "totalDiscount": {
+    "amount": 0,
+    "currencyCode": "USD",
+    "points": 0
+  },
+  "gstAmount": null,
+  "earnedPoints": 0
+}

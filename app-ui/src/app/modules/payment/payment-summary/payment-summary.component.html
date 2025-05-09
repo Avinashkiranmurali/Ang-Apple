@@ -1,0 +1,95 @@
+<h4 class="m-0 payment-module-main-title">{{heading | translate}}</h4>
+<div class="payment-summary-subtitle">
+  <span [innerHTML]="subtitle | translate: translateParams"></span>
+</div>
+
+<ng-container [ngSwitch]="template" *ngIf="template">
+
+  <!-- This is for use Points selection on Select Page -->
+  <div *ngSwitchCase="'formula-view'" class="template-container">
+    <div>
+      <div class="balance">
+                <span>
+                    <div class="payment-summary-content-container">
+                        <div>{{'paymentSummaryRewardBalance' | translate}}</div>
+                    </div>
+                </span>
+
+        <span>
+                    <div class="payment-summary-content-container">
+                      <div class="right-side">{{ user.balance | currencyFormat: config.pricingTemplate : user.locale }} {{pointLabel}}</div>
+                    </div>
+                </span>
+      </div>
+    </div>
+
+    <div>
+      <div class="total">
+               <span>
+                   <div class="payment-summary-content-container">
+                       <div>{{'paymentSummaryRewardTotal' | translate}}</div>
+                   </div>
+               </span>
+
+        <span>
+                    <div class="payment-summary-content-container">
+                        <div class="right-side">
+                            <span class="minus">
+                                {{state.cart.cartTotals.points | currencyFormat: config.pricingTemplate : user.locale }} {{pointLabel}}
+                            </span>
+                        </div>
+                    </div>
+                </span>
+      </div>
+    </div>
+
+    <div>
+      <div class="remaining">
+                <span>
+                    <div class="payment-summary-content-container">
+                        <div>{{'paymentSummaryRewardRemainingRewardsBalance' | translate}}</div>
+                    </div>
+                </span>
+
+        <span>
+                    <div class="payment-summary-content-container">
+                        <div class="right-side">
+                            {{(user.balance - state.cart.cartTotals.points) | currencyFormat: config.pricingTemplate : user.locale }}
+                          {{pointLabel}}
+                        </div>
+                    </div>
+                </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- This is for use card selection on Select Page-->
+  <div *ngSwitchCase="'amount-due'" class="template-container">
+    <section class="bottom-wrapper">
+      <div class="payment-summary-label" >{{'paymentSummary-amoutDue' | translate}}</div>
+      <div class="payment-summary-value">{{state.cart.cartTotals.amount | currency}}</div>
+    </section>
+  </div>
+
+  <!-- This is for Maximum & Minimum & custom Points -->
+  <div *ngSwitchCase="'additional-amount'" class="template-container">
+    <section class="bottom-wrapper">
+      <div class="payment-summary-label"
+           [innerHTML]="'rewardPaymentPointLabel' | translate : translateParams"></div>
+      <div class="payment-summary-value"
+           *ngIf="state.selections.payment.splitPayOption.isValid">{{ pointsToUse  | currencyFormat: config.pricingTemplate : user.locale }}
+        {{pointLabel}}</div>
+      <div class="payment-summary-value" *ngIf="!state.selections.payment.splitPayOption.isValid">-----</div>
+
+      <div class="payment-summary-label">{{'additionalPaymentDue' | translate: translateParams}}</div>
+      <div class="payment-summary-value"
+           *ngIf="state.selections.payment.splitPayOption.isValid && config.showDecimal">{{state.selections.payment.splitPayOption.cashToUse | currency}}</div>
+      <div class="payment-summary-value"
+           *ngIf="state.selections.payment.splitPayOption.isValid && !config.showDecimal">{{state.selections.payment.splitPayOption.cashToUse | currency: '' : 'symbol' : '1.0-0'}}</div>
+      <div class="payment-summary-value" *ngIf="!state.selections.payment.splitPayOption.isValid">-----</div>
+
+    </section>
+  </div>
+
+</ng-container>
+

@@ -1,0 +1,21 @@
+ <div class="banner-content" [ngClass]="product" [ngStyle]="{'background-color': messages[product +'-'+ productBanner['templateBgColor']]}">
+    <section role="presentation" class="banner-inner-container" [ngClass]="messages[product +'-'+ productBanner['ctaClass']]" [ngStyle]="{'background-color': messages[product +'-'+ productBanner['templateTileBgColor']]}">
+      <div class="cta">
+        <img [src]="imageServerUrl +'/'+ messages[product + '-productBannerTitleImg']" alt="{{ messages[product + '-productBannerTitle'] }}" *ngIf="messages[product +'-'+ productBanner['titleImg']]" role="heading" aria-level="2" class="title-image"/>
+        <h2 *ngIf="!messages[product +'-'+ productBanner['titleImg']] && messages[product +'-'+ productBanner['title']]" [innerHTML]="messages[product + '-'+ productBanner['title']]"></h2>
+        <h3 class="tagline" [hidden]="!messages[product +'-'+ productBanner['tagLine']]" [innerHTML]="messages[product +'-'+ productBanner['tagLine']]"></h3>
+        <div class="btn-container" >
+          <span class="link-base pill-shaped-cta" [ngClass]="messages[product +'-'+ productBanner['btnClass']]">
+            <a [routerLink]="messages[product + '-' + productBanner['btnLink']]" [innerHTML]="product + '-' + productBanner['btnTxt'] | translate: { messages: messages}" attr.aria-label="{{ product + '-' + productBanner['btnTxt'] | translate: { messages: messages} }} - {{ messages[product + '-productBannerTitle'] }}"></a>
+          </span>
+        </div>
+      </div>
+      <img [src]="imageServerUrl+'/'+messages[product +'-'+ productBanner['imageUrl']]" alt="{{ messages[product +'-'+ productBanner['imageTxt']] }}" class="shared-image" [ngClass]="product">
+      <div class="img" [ngClass]="product">
+        <img [src]="imageServerUrl + '/' + messages[product +'-'+ productBanner['mobileImageUrl']]" alt="{{ messages[product +'-'+ productBanner['imageTxt']] }}"
+             *ngIf="messages[product +'-'+ productBanner['mobileImageUrl']]" class="mobile-image">
+        <img [src]="imageServerUrl+'/'+messages[product +'-'+ productBanner['imageUrl']]" alt="{{ messages[product +'-'+ productBanner['imageTxt']] }}"
+             *ngIf="!messages[product +'-'+ productBanner['mobileImageUrl']]" class="mobile-shared-image">
+      </div>
+    </section>
+  </div>

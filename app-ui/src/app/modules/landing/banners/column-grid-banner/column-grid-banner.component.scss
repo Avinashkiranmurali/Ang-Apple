@@ -1,0 +1,210 @@
+@import "~styles/mixins";
+
+app-column-grid-banner {
+  .column-grid-banner-container {
+    padding: rem(40px) 0 rem(100px) 0;
+    background-color: #EBEDEF;
+  
+    @include for-mobile {
+      padding: rem(30px) rem(22px) rem(50px) rem(22px);
+    }
+  
+    .column-grid-banner-wrapper {
+      width: 975px;
+      max-width: 975px;
+      padding: 0;
+      margin: 0 auto;
+  
+      @include for-mobile {
+        width: rem(386px);
+        max-width: rem(386px);
+      }
+  
+      @media (min-width: 766px) and (max-width: 767px) {
+        width: rem(654px);
+        max-width: rem(654px);
+      }
+  
+      /* ADA - ZOOM IN */
+      @media (min-width: 780px) and (max-width: 1093px) {
+        width: fit-content;
+      }
+  
+      .banner-header {
+        margin-bottom: rem(25px);
+        display: initial;
+  
+        .banner-title {
+          font-weight: $font-weight-semi-bold;
+          font-size: rem(28px);
+          text-align: left;
+          line-height: rem(33px);
+          color: #111111;
+          letter-spacing: 0;
+          margin: 0 0 rem(27px) 0;
+          // ::ng-deep {
+            .sub-title {
+              color: #6E6E73;
+            }
+          // }
+        }
+      }
+  
+      .column-grid-banner-tiles {
+        padding: 0;
+        display: flex;
+        flex-flow: wrap;
+        align-content: space-between;
+        .column-grid-banner {
+          display: flex;
+          flex-direction: column;
+          list-style: none;
+          -webkit-box-flex: 1;
+          flex-grow: 1;
+          width: rem(305px);
+          max-width: rem(305px);
+          height: rem(296px);
+          margin: rem(30px) rem(29.9px) 0 0;
+          @include for-mobile {
+            width: rem(187px);
+            max-width: rem(187px);
+            height: rem(231px);
+            margin: rem(12px) rem(12px) 0 0;
+  
+            &:nth-child(-n+2) {
+              margin-top: 0;
+            }
+  
+            &:nth-child(2n) {
+              margin-right: 0;
+            }
+          }
+          @include for-all-desktops {
+            &:nth-child(-n+3) {
+              margin-top: 0;
+            }
+  
+            &:nth-child(3n) {
+              margin-right: 0;
+            }
+          }
+          .product-tile {
+            width: inherit;
+            height: inherit;
+            background: #FFFFFF no-repeat padding-box;
+            box-shadow: rem(2px) rem(4px) rem(12px) rgba(0, 0, 0, .08);
+            border-radius: rem(18px);
+            display: flex;
+            flex-flow: column;
+            border: 0;
+            padding: 0 0 rem(30px) 0;
+            transition: all .3s cubic-bezier(0, 0, .5, 1);
+            position: relative;
+            justify-content: space-between;
+            @include for-mobile {
+              height: 100%;
+            }
+  
+            .image-container {
+              img {
+                width: 100%;
+                flex-shrink: 0;
+              }
+  
+              &.tile-overlay {
+                opacity: 0.15;
+              }
+            }
+  
+            .coming-soon-text {
+              position: absolute;
+              font-weight: $font-weight-black;
+              font-size: rem(28px);
+              line-height: rem(33px);
+              display: flex;
+              align-self: center;
+              color: #020202;
+              margin: 0;
+              top: 50%;
+              text-align: center;
+              transform: translate(0%, -50%);
+              @include for-mobile-to-tablet {
+                font-size: rem(21px);
+              }
+            }
+  
+            .category-name {
+              text-align: left;
+              font-size: rem(24px);
+              line-height: rem(30px);
+              font-weight: $font-weight-semi-bold;
+              letter-spacing: 0;
+              color: #111111;
+              margin: rem(30px) rem(30px) 0;
+              height: rem(59px);
+              word-break: break-word;
+              @include for-mobile {
+                font-size: rem(21px);
+                line-height: rem(25px);
+                margin: rem(20px) rem(20px) 0;
+                min-height: rem(50px);
+              }
+            }
+  
+            &:hover {
+              text-decoration: none;
+              box-shadow: rem(2px) rem(4px) rem(16px) rgba(0, 0, 0, .25);
+              transform: scale3d(1.01, 1.01, 1.01);
+            }
+            &:focus {
+              text-decoration: none;
+              @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+              transform: scale3d(1.01, 1.01, 1.01);
+            }
+            &.tile-disabled {
+              cursor: default;
+              pointer-events: none;
+            }
+          }
+        }
+      }
+    }
+  
+    &.whatsNewBanners {
+      padding-bottom: rem(40px);
+      .column-grid-banner-wrapper .column-grid-banner-tiles .column-grid-banner .product-tile {
+        padding-bottom: 0;
+      }
+    }
+  
+    &.whatsNewNPIBanners {
+      padding: rem(50px) 0 rem(40px) 0;
+      .column-grid-banner-wrapper .column-grid-banner-tiles .column-grid-banner .product-tile {
+        padding-bottom: 0;
+      }
+    }
+  }
+  
+  /** CSS STYLES FOR DEVICES BELOW 430 WIDTH **/
+  @media (min-width: 320px) and (max-width: 429px) {
+  
+    .column-grid-banner-container {
+      padding: 8% 0 14% 0;
+  
+      .column-grid-banner-wrapper {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 2%;
+  
+        .column-grid-banner-tiles {
+          justify-content: space-between;
+  
+          .column-grid-banner {
+            width: 100%;
+            max-width: 48%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+    "cards": [
+        {
+            "cardType": "VISA",
+            "displayCardNumber": "XXXXXXXXXXXX6361",
+            "expireMonth": "**",
+            "expireYear": "**",
+            "cardId": "44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d"
+        },
+        {
+            "cardType": "VISA",
+            "displayCardNumber": "XXXXXXXXXXXX8954",
+            "expireMonth": "**",
+            "expireYear": "**",
+            "cardId": "4141704f4c746c6253416d35483468563433754e64723177717871764c624f312b5647677741724f4739593d"
+        }
+    ]
+}

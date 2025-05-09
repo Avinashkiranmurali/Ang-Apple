@@ -1,0 +1,162 @@
+@import "~styles/mixins";
+
+.product-tile {
+  border: none;
+
+  .product-image {
+    img {
+      width: 100%;
+    }
+  }
+
+  .product-info-grid {
+    margin-top: rem(47px);
+    padding: 0 rem(11.5px) 0 rem(10.5px);
+    @include for-mobile-to-tablet(){
+      padding: 0 0 0 0;
+      margin-top: rem(20px)
+    }
+    .product-link {
+      @include text-styling(#111111, 18px, $font-weight-semi-bold, rem(21px), 0);
+      margin-bottom: rem(20px);
+    }
+
+    .product-variations {
+      .color-variant {
+        .dimensionColor {
+          border: none;
+          font-size: rem(16px);
+          line-height: rem(19px);
+          margin-bottom: rem(9px);
+
+          .selected-text {
+            text-transform: capitalize;
+          }
+        }
+
+        ul.bandColor-list {
+          list-style-type: none;
+          padding: 0;
+
+          li.item {
+            display: inline-block;
+            margin: 0 rem(13px) 0 0;
+
+            input[type="radio"] {
+              opacity: 0;
+              visibility: visible;
+              position: absolute;
+                &:focus-visible, &:focus {
+                  ::ng-deep {
+                    +label.item-details .swatch .swatch-img {
+                      border: 1px solid #0071E3;
+                    }
+                  }
+                }
+              }
+
+            ::ng-deep label.item-details {
+              &:hover {
+               cursor: pointer;
+              }
+              .swatch {
+                span.option-text {
+                  display: none;
+                }
+
+                img.swatch-img {
+                  width: rem(36px);
+                  height: rem(36px);
+                  padding: 2px;
+                  border: rem(1px) solid rgba(255,255,255,0.0);
+                  border-radius: rem(32px);
+                }
+              }
+
+              input.opt-cell {
+                display: none;
+              }
+            }
+
+            // Render blue border around selected swatch color
+            ::ng-deep label.item-details.selected {
+              .swatch {
+                img.swatch-img {
+                  border-color: #0071E3;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .language-variant {
+        margin-top: rem(26px);
+        margin-bottom: rem(20px);
+        position: relative;
+        min-height: rem(70px);
+
+        .language-label {
+          position: absolute;
+          left: rem(20px);
+          top: rem(17px);
+          font-size: rem(12px);
+          line-height: rem(14.32px);
+          font-weight: 400;
+          text-transform: capitalize;
+          margin-bottom: rem(4px);
+        }
+
+        select {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          position: absolute;
+          background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAVCAYAAAAjODzXAAAACXBIWXMAABYlAAAWJQFJUiTwAAADRklEQVRIib3WT2gjVRzA8e8ksuJEUJgXFHRApLSCoMFLqYc9NCtVmvYgNohKq6BpiqhtLtoWLz1vBqSIKLqdBqHaqogvYVHHetEOnjx4sWX3sDYnM3MQmsFd3Pw8tAMxdNs03fqDuf3+fPgN7/EMEeEgRoArwFX+n3gMuB/4DgARodVqPe153vUgCK6JyEMiwhl/g41Go+V53t8i8oyIgIhc8DwvKhQKMj8/L81m86qIPHiGiPG9vb1/lpaWpFAoiOd510UklwCeymQyd1mWRRiGlMvlh6Mo+hF44Ax+x6CIrG1sbCTr9TpKKTKZzDngfAJ4x7Ks90qlEpZlUa/XKZfLfVEUecB9txHRJyJ6fX3d9H0fpRRzc3NYlnUJeDsBCDCnlFruwDwSRdEPQPo2INIicllrnd7c3CSVSlEsFlFKfQEUAEkcJArwllLq/Q7Mo8D3gHUKhCkiWmvdV6vVMAyDyclJbNv+FngRuAmQaCsQ4A2l1AftGNd1H2f/iN3TAyIJrG1tbQ3GiHw+TyaT+Ql4FrgRJyY6CgV4XSn1YYzxfR/XdZ/oEbO8u7s7XqlUMAyDsbExhoeHfwVyQPTfyYcfMUNEPmo0GjI7OyuFQkFWVlZERH4Wkbu7PKazcf309LRUq1URkd9FJH1YfudG2jczrZT6pFQqYZpmvJkngRpgHrOJ8SAILjqOQxRFZLNZRkdH/wAuAI3DCm4FiTGv2bZ9qR2jtT4PfHMEZjAIgjXHcZJhGDIwMMDExMSfQBao32rYUZB2zEqMqVaraK2zwFfAnR35fc1mUzuOY4ZhiG3bFIvFv9jfxJWjBh0HAWgdYNwOzAjwJXDuIC8tIpcdx0mHYYhSipmZmcg0zRHgt+OGdAOB/bP+qm3blXw+DxBjRoHPgHtFRK+urvbFV3epVLphWdY48Es3A4y2Z0A3kQRc3/dfcl0XgFwuRy6XC7TWqlarkUqlWFhYuKmUeg74utvGJ4XEmIrv+y/EmP7+fnZ2djAMg8XFRbFt+2WgcpKmvUBizKe+7z8fYwzDYGpqiqGhoTeB5RN3PMW7Iikin2ut2y+sd3vtd9pHTlJE1re3t0VELp6mV6+/pj3uAF4BPmb/3ukp/gWzdh0i1g8NjwAAAABJRU5ErkJggg==') no-repeat right 20px center;
+          background-size: rem(17px) rem(10px);
+          height: rem(70px);
+          max-width: rem(368px);
+          width: 100%;
+          padding: rem(20px) rem(18px) 0 rem(18px);
+          border-radius: rem(12px);
+          border-color: #cccccc;
+          font-size: rem(16px);
+          line-height: rem(19.09px);
+          color: #333333;
+          @include for-mobile-to-tablet(){
+            max-width: 100%;
+          }
+        }
+
+        /* To remove button from IE11 */
+        select::-ms-expand {
+          display: none;
+        }
+      }
+    }
+
+    .btn-container {
+      margin-top: rem(20px);
+
+      button {
+        border-radius: 2rem;
+        width: auto;
+        &.blue-btn {
+          min-height: rem(40px);
+          font-size: rem(18px);
+          background: #0070C9;
+          border: none;
+          padding: 0 rem(33px);
+        }
+      }
+
+      .cart-added-message {
+        margin-left: rem(14px);
+        font-size: rem(16px);
+        line-height: rem(19.09px);
+        color: #333333;
+      }
+    }
+  }
+
+}

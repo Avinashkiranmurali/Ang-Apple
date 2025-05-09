@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd   http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd"
+       default-autowire="byName">
+
+    <import resource="classpath:/com/b2r/account/dao/test-context-dao.xml"/>
+
+    <bean id="serviceFactory" class="com.b2r.account.var.VARServicesFactory">
+        <property name="varServices" ref="VARServices"/>
+    </bean>
+
+    <bean id="accountInfoService" scope="session" factory-bean="serviceFactory" factory-method="getAccountInfoService">
+        <aop:scoped-proxy/>
+    </bean>
+
+
+    <bean scope="singleton" id="VARServices" class="java.util.HashMap">
+        <constructor-arg>
+            <map>
+                <!--dummy implementation for testing-->
+                <entry key="TEST">
+                    <ref bean="dummyServices"/>
+                </entry>
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <!-- dummy services map -->
+    <bean scope="singleton" id="dummyServices" class="java.util.HashMap">
+        <constructor-arg>
+            <map key-type="java.lang.Class">
+                <entry key="com.b2r.account.var.service.AccountInfoService">
+                    <bean class="com.b2r.account.var.service.impl.dummy.DummyAccountInfoService"/>
+                </entry>
+
+            </map>
+        </constructor-arg>
+    </bean>
+
+    <bean id="accountController" scope="request"
+          class="com.b2r.account.controller.AccountController">
+    </bean>
+    <bean id="ProductDetailController" class="com.b2s.rewards.apple.controller.ProductDetailController"/>
+    <bean id="messageSource" class="com.b2s.web.B2RReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>file:src/main/webapp/WEB-INF/i18n/b2r_rewardstep_resources</value>
+                <value>file:src/main/webapp/WEB-INF/i18n/b2r_rewardstep_admin_resources</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="cacheSeconds" value="60"/>
+    </bean>
+
+
+</beans>

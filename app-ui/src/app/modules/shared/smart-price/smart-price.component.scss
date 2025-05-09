@@ -1,0 +1,101 @@
+@import "~styles/mixins";
+
+.smart-price-wrapper {
+  padding: rem(20px) 0 rem(30px) 0;
+
+  .smart-price-section {
+    .split-payment-points-amount-desc {
+      margin: rem(2px) 0 0 0;
+      @include text-styling($fc-black, 16px, $font-weight-regular, 19px, 0);
+    }
+
+    .split-payment-header {
+      @include text-styling(#CE3000, 14px, $font-weight-medium, 17px, 0);
+    }
+
+    .split-payment-points-desc, .split-payment-desc {
+      margin: rem(2px) 0 0 0;
+      @include text-styling($fc-black, 16px, $font-weight-regular, 19px, 0);
+    }
+
+    .split-payment-amount-desc {
+      margin: 0;
+      @include text-styling($fc-black, 16px, $font-weight-regular, 19px, 0);
+    }
+  }
+
+  &.bagMenu {
+    padding: rem(5px) 0 rem(8px) 0;
+    .smart-price-section {
+      .split-payment-desc, .split-payment-points-desc, .split-payment-amount-desc {
+        margin: 0;
+        @include text-styling(#333333, 12px, $font-weight-regular, rem(14px), 0, right);
+      }
+    }
+  }
+
+  &.config-view, &.detail-view {
+    padding: 0;
+  }
+
+  &.cart-view {
+    &.header {
+      padding: rem(1px) 0 rem(5px) 0;
+      .split-pay-description {
+        @include text-styling($fc-jet-black, 16px, $font-weight-regular, rem(22px), 0);
+      }
+      ::ng-deep {
+        .split-you-payment-description {
+          @include text-styling($fc-jet-black, 16px, $font-weight-regular, rem(22px), 0);
+          .split-payment-header {
+            @include text-styling(#CE3000, 16px, $font-weight-semi-bold, rem(22px), 0);
+          }
+          .semi-bold {
+            font-weight: $font-weight-semi-bold;
+          }
+        }
+      }
+    }
+
+    &.cta {
+      padding: 0;
+      margin: rem(17px) 0 rem(22px) 0;
+      .smart-price-section {
+        text-align: right;
+        .split-payment-points-desc {
+          @include text-styling($fc-dark-charcoal, 16px, $font-weight-regular, rem(19px), 0, right);
+          ::ng-deep {
+            span {
+              font-weight: $font-weight-semi-bold;
+            }
+          }
+        }
+        .split-payment-amount-desc {
+          @include text-styling($fc-dark-charcoal, 16px, $font-weight-regular, rem(19px), 0, right);
+          ::ng-deep {
+            span {
+              font-weight: $font-weight-semi-bold;
+            }
+          }
+        }
+        .split-payment-option-msg {
+          margin: rem(2px) 0 0 0;
+          @include text-styling(#CE3000, 21px, $font-weight-medium, rem(25px), 0, right);
+        }
+      }
+    }
+  }
+
+  &.grid-view {
+    padding: rem(20px) 0 0 0;
+    .smart-price-section {
+      .split-payment-desc, .split-payment-points-desc, .split-payment-amount-desc {
+        margin: 0;
+        color: #333333;
+      }
+      .split-payment-header {
+        margin: 0 0 rem(2px) 0;
+      }
+    }
+  }
+}

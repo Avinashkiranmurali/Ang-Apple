@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context override="true" docBase="${WAR_FILE_LOCATION}">
+
+    <Resource auth="Container" description="user database"
+              driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              maxPoolSize="100" minPoolSize="10" acquireIncrement="1" name="jdbc/b2r"
+              user="${DB_USER_NAME}" password="${DB_PASSWORD}"
+              factory="org.apache.naming.factory.BeanFactory"
+              type="com.mchange.v2.c3p0.ComboPooledDataSource"
+              jdbcUrl="{JDBC_URL}"
+              closeMethod="close" />
+
+    <Resource auth="Container" description="reporting database"
+              driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              maxPoolSize="25" minPoolSize="10" acquireIncrement="1" name="jdbc/reporting"
+              user="${DB_USER_NAME}" password="${DB_PASSWORD}"
+              factory="org.apache.naming.factory.BeanFactory"
+              type="com.mchange.v2.c3p0.ComboPooledDataSource"
+              jdbcUrl="{JDBC_URL}"
+              closeMethod="close" />
+
+    <Resource auth="Container" description="Payment database"
+              driverClass="com.microsoft.sqlserver.jdbc.SQLServerDriver"
+              maxPoolSize="50" minPoolSize="10" acquireIncrement="1" name="jdbc/payment"
+              user="${DB_USER_NAME}" password="${DB_PASSWORD}"
+              factory="org.apache.naming.factory.BeanFactory"
+              type="com.mchange.v2.c3p0.ComboPooledDataSource"
+              jdbcUrl="{JDBC_URL}"
+              closeMethod="close" />
+
+</Context>

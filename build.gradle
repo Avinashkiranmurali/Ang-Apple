@@ -1,0 +1,524 @@
+plugins {
+    id "org.ajoberstar.grgit" version '1.6.0'
+    id "com.gorylenko.gradle-git-properties" version '1.4.17'
+    id 'java'
+    id 'war'
+    id 'groovy'
+    id 'maven-publish'
+    id 'idea'
+    id "org.sonarqube" version "2.8"
+    id "jacoco"
+    id 'com.adarshr.test-logger' version '2.1.0'
+    id 'de.undercouch.download' version '5.1.0'
+}
+
+repositories {
+    mavenLocal()
+    maven {
+        url = 'http://nexus.cp.bridge2solutions.net:8081/nexus/content/repositories/releases'
+    }
+
+    maven {
+        url = 'http://nexus.cp.bridge2solutions.net:8081/nexus/content/groups/mvn-releases-all/'
+    }
+    maven {
+        url = 'http://nexus.cp.bridge2solutions.net:8081/nexus/content/repositories/core-releases'
+    }
+
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/maven-public-release")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/libs-release")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/libs-snapshot")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/libs-thirdparty")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/maven-public-snapshot")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/opensaml")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/opensaml-cache")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/loyalty-releases")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+    maven {
+        setUrl("https://sherwoodforest.jfrog.io/sherwoodforest/loyalty-apps-released")
+        credentials {
+            username = project.property("artifactory_user") as String
+            password = project.property("artifactory_password") as String
+        }
+    }
+}
+
+apply from: 'gradle/publish.gradle'
+
+ext {
+    // Open the Git repository.
+    git = org.ajoberstar.grgit.Grgit.open(currentDir: project.rootDir)
+    // Get commit id of HEAD.
+    commitId = git.head().id
+    branch = project.hasProperty('branch') ? project.branch : git.branch.current.name
+    buildNumber = System.getenv('BUILD_NUMBER')
+    if (buildNumber == null) {
+        buildNumber = "BUILD_NUMBER"
+    }
+
+    gerritRefspec = System.getenv('GERRIT_REFSPEC')
+    if (gerritRefspec == null) {
+        gerritRefspec = "GERRIT_REFSPEC"
+    }
+    // Create $GRADLE_USER_HOME/gradle.properties; if not exist:$GRADLE_USER_HOME is usually $HOME/.gradle
+    // Add env=local to $GRADLE_USER_HOME/gradle.properties
+    isLocal = findProperty('env') == 'local'
+}
+
+
+dependencies {
+    //Sub Module dependency
+    implementation(project(':app-ui'))
+    implementation 'com.auth0:java-jwt:3.12.0'
+    implementation 'io.jsonwebtoken:jjwt:0.6.0'
+    implementation 'org.javassist:javassist:3.19.0-GA'
+    implementation('com.b2s.security:b2s-saml-security:2.0.3-46') {
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+        exclude group: 'javax.validation', module: 'validation-api'
+    }
+    implementation 'com.b2s.crypto:b2s-crypto-service-core:2.4.0'
+    implementation 'com.b2s.crypto:b2s-crypto-service-spring:2.4.0'
+    implementation('commons-beanutils:commons-beanutils:1.9.2') {
+        exclude group: 'commons-collections', module: 'commons-collections'
+    }
+    implementation 'org.apache.commons:commons-lang3:3.4'
+    implementation 'joda-time:joda-time:2.7'
+    implementation 'commons-io:commons-io:2.4'
+    implementation ('com.b2s.service:product-service-common:9.0.0-20230201.2'){
+        exclude group: 'com.b2s.service.pricing', module: 'pricing-api'
+        exclude group: 'com.b2s.service', module: 'b2s-service-commons'
+        exclude group: 'com.b2s.service.utils', module: 'lang-utils'
+    }
+    implementation 'ca.fwe.units:java-units:1.4'
+    implementation('com.b2s.service:product-service-client:9.0.0-20230201.2') {
+        exclude group: 'com.b2s.service', module: 'product-service-common'
+        exclude group: 'com.b2s.service', module: 'b2s-service-commons'
+        exclude group: 'ch.qos.logback', module: 'logback-classic'
+        exclude group: 'ch.qos.logback', module: 'logback-core'
+        exclude group: 'org.slf4j', module: 'jcl-over-slf4j'
+        exclude group: 'org.slf4j', module: 'jul-to-slf4j'
+        exclude group: 'org.glassfish', module: 'javax.servlet'
+        exclude group: 'org.eclipse.jetty.orbit', module: 'javax.servlet'
+        exclude group: 'com.sun.jersey.jersey-test-framework', module: 'jersey-test-framework-grizzly2'
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-core'
+        exclude group: 'org.apache.commons', module: 'commons-lang3'
+        exclude group: 'com.fasterxml.jackson.datatype', module: 'jackson-datatype-jdk8'
+        exclude group: 'org.springframework', module:'spring-webmvc'
+        exclude group: 'org.springframework', module:'spring-web'
+    }
+    implementation('com.b2s.service:b2s-service-commons:5.6.0-29') {
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-core'
+        exclude group: 'org.springframework', module: 'spring-orm'
+    }
+    implementation ('com.b2s.service.payroll:b2s-ppc-integration-api:0.0.10-12') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation('com.b2s:address-validation-service:2.0.0-4') {
+        exclude group: 'com.b2s', module: 'b2s-core-model'
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+        exclude group: 'c3p0', module: 'c3p0'
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'com.melissadata', module: 'melissadata-dqws-client'
+        exclude group: 'org.hibernate', module: 'hibernate-validator'
+        exclude group: 'org.hibernate', module: 'hibernate-annotations'
+        exclude group: 'org.hibernate', module: 'hibernate-c3p0'
+        exclude group: 'org.hibernate', module: 'hibernate-tools'
+        exclude group: 'javax.persistence', module: 'persistence-api'
+    }
+    implementation 'net.sf.ehcache:ehcache:2.10.4'
+    implementation('com.b2s.paymentserver:paymentserver-client:7.13.0-109') {
+        exclude group: 'javax.servlet.jsp.jstl', module:'jstl'
+    }
+    implementation('com.b2s.service:notification-service-api:2.10.8') {
+        exclude group: 'com.b2s.service', module: 'b2s-service-commons'
+    }
+    implementation 'com.b2s:b2s-common-util:1.5.0'
+    implementation 'org.apache.cxf:cxf-rt-transports-http:3.1.16'
+    implementation 'org.apache.cxf:cxf-rt-frontend-jaxws:3.1.16'
+    implementation 'org.apache.cxf:cxf-rt-transports-http-jetty:3.1.16'
+    implementation 'org.mortbay.jetty:jetty-util:6.1.25'
+    implementation('com.b2s:b2s-core-service:2.14.22') {
+        exclude group: 'com.microsoft', module: 'sqljdbc4'
+        exclude group: 'com.b2s', module: 'bestbuy-rest-client'
+        exclude group: 'com.b2s', module: 'bestbuy-store-service'
+        exclude group: 'com.b2s', module: 'datafeed-service'
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'org.springframework', module: 'spring-test'
+        exclude group: 'javax.servlet', module: 'servlet-api'
+        exclude group: 'com.b2s', module: 'b2s-core-model'
+        exclude group: 'c3p0', module: 'c3p0'
+        exclude group: 'org.apache.geronimo.specs', module: 'geronimo-servlet_2.5_spec'
+        exclude group: 'com.b2s', module: 'merchandise-store-service-adapter'
+        exclude group: 'org.apache.commons', module: 'commons-email'
+        exclude group: 'org.apache.axis2', module: 'axis2-kernel'
+    }
+    implementation ('com.melissadata:melissadata-dqws-integration:1.1') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation 'com.b2s.core:kount-client:2.0.0-18'
+    implementation('com.b2s:b2s-core-model:2.14.26') {
+        exclude group: 'com.microsoft', module: 'sqljdbc4'
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'org.hibernate', module: 'hibernate-validator'
+        exclude group: 'org.hibernate', module: 'hibernate-annotations'
+        exclude group: 'org.hibernate', module: 'hibernate-tools'
+        exclude group: 'c3p0', module: 'c3p0'
+        exclude group: 'org.springframework', module: 'spring-core'
+        exclude group: 'org.springframework', module: 'spring-aop'
+        exclude group: 'org.springframework', module: 'spring-asm'
+        exclude group: 'org.springframework', module: 'spring-orm'
+        exclude group: 'javax.persistence', module: 'persistence-api'
+    }
+    implementation 'org.json:json:20211205'
+    implementation('com.b2s:image-proxy-client:3.0') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation('com.b2s:b2r-landing-core:1.0.0') {
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'com.ibatis', module: 'ibatis2-sqlmap'
+        exclude group: 'com.ibatis', module: 'ibatis2-dao'
+        exclude group: 'com.ibatis', module: 'ibatis2-common'
+        exclude group: 'net.sf.ehcache', module: 'ehcache'
+    }
+    implementation('com.b2s:b2r-points-calculator-api:1.14.0') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation 'com.b2s:B2RTree:1.0.0'
+    implementation('org.apache.ws.commons.axiom:axiom-api:1.2.14') {
+        exclude group: 'org.apache.geronimo.specs', module: 'geronimo-javamail_1.4_spec'
+    }
+    implementation('org.apache.ws.commons.axiom:axiom-dom:1.2.14') {
+        exclude group: 'org.apache.geronimo.specs', module: 'geronimo-javamail_1.4_spec'
+    }
+    implementation('org.apache.ws.commons.axiom:axiom-impl:1.2.14') {
+        exclude group: 'org.apache.geronimo.specs', module: 'geronimo-javamail_1.4_spec'
+    }
+    implementation 'commons-codec:commons-codec:1.10'
+    implementation 'org.apache.commons:commons-collections4:4.2'
+    implementation 'commons-configuration:commons-configuration:1.10'
+    implementation 'commons-discovery:commons-discovery:0.5'
+    implementation 'commons-el:commons-el:1.0'
+    implementation 'commons-httpclient:commons-httpclient:3.1.1'
+    implementation 'org.apache.httpcomponents:httpcore-contrib:4.1'
+    implementation 'org.apache.httpcomponents:httpclient:4.5.3'
+    implementation 'org.apache.httpcomponents:httpcore:4.4.5'
+    implementation 'org.apache.httpcomponents:httpcore-nio:4.4.1'
+    implementation('org.owasp.esapi:esapi:2.1.0') {
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'commons-fileupload', module: 'commons-fileupload'
+    }
+    implementation 'commons-fileupload:commons-fileupload:1.3.3'
+
+    implementation 'com.mchange:c3p0:0.9.5.4'
+    implementation 'org.slf4j:slf4j-api:1.7.12'
+    implementation 'org.slf4j:jul-to-slf4j:1.7.12'
+    implementation 'org.scala-lang:scala-library:2.11.8'
+    implementation 'jboss:javassist:3.8.0.GA'
+    implementation 'legacy:payflow:2.0'
+    implementation 'legacy:paypal_base:1.0'
+    implementation 'legacy:paypal_console:1.0'
+    implementation 'legacy:paypal_stubs:1.0'
+    implementation 'org.bouncycastle:bcprov-jdk15on:1.60'
+    implementation('org.opensaml:opensaml:2.6.5') {
+        exclude group: 'org.slf4j', module: 'jcl-over-slf4j'
+        exclude group: 'org.slf4j', module: 'log4j-over-slf4j'
+        exclude group: 'org.bouncycastle', module: 'bcprov-jdk15on'
+    }
+    implementation 'org.apache.santuario:xmlsec:2.0.4'
+    implementation 'org.springframework:spring-core:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-context:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-context-support:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-aspects:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-beans:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-webmvc:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-web:5.2.20.RELEASE'
+    implementation('org.springframework.data:spring-data-jpa:2.1.9.RELEASE') {
+        exclude group: 'org.springframework', module: 'spring-aop'
+    }
+    implementation 'org.springframework:spring-jdbc:5.2.20.RELEASE'
+    implementation 'org.springframework:spring-test:5.2.20.RELEASE'
+    implementation 'org.springframework.security:spring-security-web:4.2.10.RELEASE'
+    implementation 'org.springframework.security:spring-security-config:4.2.10.RELEASE'
+    implementation 'com.b2s:idology-client:2.0.1-12'
+    implementation 'org.hibernate:hibernate-core:5.3.10.Final'
+    implementation 'org.hibernate:hibernate-validator:6.0.17.Final'
+    implementation 'org.hibernate:hibernate-c3p0:5.3.10.Final'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.1'
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.1'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.1'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.9.7'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-guava:2.9.7'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-joda:2.9.7'
+    implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.9.7'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-smile:2.9.7'
+    implementation 'com.fasterxml.jackson.module:jackson-module-jaxb-annotations:2.9.7'
+    implementation 'org.aspectj:aspectjrt:1.6.11'
+    implementation 'org.aspectj:aspectjweaver:1.6.11'
+    implementation 'com.jayway.jsonpath:json-path:2.0.0'
+    implementation 'javax.xml.bind:jsr173_api:1.0'
+    implementation 'xalan:xalan:2.7.2'
+    implementation 'xerces:xercesImpl:2.12.0'
+    implementation 'org.apache.ws.xmlschema:xmlschema-core:2.2.4'
+    implementation 'legacy:attributes:1.0'
+    implementation 'legacy:b2r-chart-20080605:1.0'
+    implementation 'legacy:b2r-service-bin_05052008:1.0'
+    implementation 'legacy:b2r-service-src_05052008:1.0'
+    implementation 'legacy:cindy:1.0'
+    implementation 'legacy:CurrencyRates-1.0:1.0'
+    implementation 'legacy:cXML-Fulfill-xmlbean-api:1.0'
+    implementation 'legacy:cybersource:1.0'
+    implementation 'legacy:jcert:1.0'
+    implementation 'legacy:jnet:1.0'
+    implementation 'legacy:js:1.0'
+    implementation 'legacy:jsse:1.0'
+    implementation 'javax.servlet:jstl:1.2'
+    implementation 'legacy:resolver-2.9.1:1.0'
+    implementation 'legacy:saleforce-partner-api:1.0'
+    implementation 'legacy:sftp:1.0'
+    implementation 'legacy:jvftplib:1.0'
+    implementation 'legacy:Tidy:1.0'
+    implementation 'concurrent:concurrent:1.3.4'
+    implementation('jasperreports:jasperreports:3.5.3') {
+        exclude group: 'bouncycastle', module: 'bcprov-jdk14'
+    }
+    implementation 'javax.mail:mail:1.5.0-b01'
+    implementation 'opensymphony:ognl:2.6.11'
+    implementation 'quartz:quartz:1.6.0'
+    implementation 'regexp:regexp:1.3'
+    implementation 'velocity:velocity:1.5'
+    implementation 'legacy:ws-b2r-api-local:1.0'
+    implementation 'legacy:ws-b2r-api:1.0'
+    implementation 'legacy:ws-b2r-prod-api:1.0'
+    implementation 'org.apache.xbean:xbean-spring:3.5'
+    implementation 'legacy:xbean_xpath:1.0'
+    implementation('net.sourceforge.jexcelapi:jxl:2.6.12') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation 'jgroups:jgroups-all:2.2.9.1'
+    implementation 'net.sourceforge.nekohtml:nekohtml:1.9.22'
+    implementation('com.b2s:credit-card-manager:1.2.0') {
+        exclude group: 'com.ibatis', module: 'ibatis2-sqlmap'
+        exclude group: 'com.ibatis', module: 'ibatis2-dao'
+        exclude group: 'com.ibatis', module: 'ibatis2-common'
+        exclude group: 'org.springframework', module: 'spring-jdbc'
+    }
+    implementation ('com.b2s.validation:commons-validator:1.0') {
+        exclude group: 'log4j', module: 'log4j'
+    }
+    implementation('commons-validator:commons-validator:1.4.1') {
+        exclude group: 'log4j', module: 'log4j'
+        exclude group: 'com.melissadata', module: 'melissadata-dqws-client'
+    }
+    implementation 'com.google.code.gson:gson:2.3.1'
+    implementation 'org.jdom:jdom:1.1'
+    implementation 'com.github.sommeri:less4j:1.11.0'
+    implementation 'com.googlecode.libphonenumber:libphonenumber:8.13.18'
+    implementation('com.b2s.spark:b2s-sparkpost-notification:0.1.8-20230710.4') {
+        exclude group: 'com.b2s', module: 'b2s-core-model'
+    }
+    implementation 'org.jsoup:jsoup:1.11.3'
+    implementation 'com.microsoft.sqlserver:mssql-jdbc:7.4.1.jre8'
+    implementation 'javax.annotation:javax.annotation-api:1.3.1'
+
+    implementation 'ch.qos.logback:logback-classic:1.2.3'
+    implementation 'net.logstash.logback:logstash-logback-encoder:7.2'
+
+    runtime 'com.b2s.logging:b2s-logback-ext:9.9.9'
+
+    testImplementation 'com.h2database:h2:2.1.212'
+    testImplementation 'org.hibernate:hibernate-entitymanager:5.2.9.Final'
+
+    testImplementation 'org.hamcrest:hamcrest-all:1.3'
+    testImplementation('org.easymock:easymock:3.1') {
+        exclude group: 'cglib', module: 'cglib-nodep'
+    }
+    testImplementation 'cglib:cglib-nodep:3.2.12'
+
+    testImplementation 'org.mockito:mockito-core:2.28.2'
+
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'org.spockframework:spock-core:1.0-groovy-2.4'
+    testImplementation 'org.spockframework:spock-spring:1.0-groovy-2.4'
+    testImplementation 'org.codehaus.groovy:groovy-all:2.4.5'
+    testImplementation 'org.tools4j:groovy-tables:1.6'
+    testImplementation('com.github.tomakehurst:wiremock:1.46') {
+        exclude group: 'com.fasterxml.jackson.core', module: 'jackson-databind'
+        exclude group: 'org.mortbay.jetty', module: 'servlet-api'
+        exclude group: 'log4j', module: 'log4j'
+    }
+
+    testImplementation 'org.powermock:powermock-module-junit4:2.0.2'
+    testImplementation 'org.powermock:powermock-api-mockito2:2.0.2'
+    testImplementation 'com.jayway.jsonpath:json-path-assert:2.0.0'
+    testImplementation('httpunit:httpunit:1.7') {
+        exclude group: 'javax.servlet', module: 'servlet-api'
+    }
+    testImplementation('net.sourceforge.jwebunit:jwebunit-core:3.2') {
+        exclude group: 'javax.servlet', module: 'servlet-api'
+    }
+    testImplementation('net.sourceforge.jwebunit:jwebunit-htmlunit-plugin:3.2') {
+        exclude group: 'javax.servlet', module: 'servlet-api'
+        exclude group: 'org.slf4j', module: 'slf4j-log4j12'
+    }
+    testImplementation 'org.dbunit:dbunit:2.4.9'
+
+    testImplementation 'org.apache.tomcat:tomcat-catalina:9.0.50'
+
+    providedCompile 'javax.servlet:javax.servlet-api:3.1.0'
+    providedCompile 'javax.servlet.jsp:jsp-api:2.2'
+    providedCompile 'org.apache.geronimo.specs:geronimo-javamail_1.4_spec:1.7.2-alpha-1'
+}
+
+test {
+    systemProperty "aplgr.configUrl", new File("$projectDir/environment").toPath().toUri()
+    systemProperty "aplgr.keBase", new File("$projectDir/environment/saml").toPath().toUri()
+    systemProperty "aplgr.deBase", new File("$projectDir/environment/saml").toPath().toUri()
+    testLogging {
+        afterSuite { desc, result ->
+            if (!desc.parent) { // will match the outermost suite
+                def output = "Results: ${result.resultType} (${result.testCount} tests, ${result.successfulTestCount} passed, ${result.failedTestCount} failed, ${result.skippedTestCount} skipped)"
+                def startItem = '|  ', endItem = '  |'
+                def repeatLength = startItem.length() + output.length() + endItem.length()
+                println('\n' + ('-' * repeatLength) + '\n' + startItem + output + endItem + '\n' + ('-' * repeatLength))
+            }
+        }
+    }
+}
+
+task printProcessdir {
+    println 'Path    = ' + new File("$projectDir/environment/saml").toPath().toUri()
+    println 'isLocal = ' + isLocal
+
+}
+def srcUrl = "https://sherwoodforest.jfrog.io/artifactory/loyalty-releases/com/b2s/security/b2s-oauth-security/2.0.1-3/b2s-oauth-security-2.0.1-3.war"
+task downloadOauthWar(type: Download) {
+    src srcUrl
+    dest new File(buildDir, 'libs/auth.war')
+    overwrite true
+    username artifactory_user
+    password artifactory_password
+}
+
+tasks.named("build") { finalizedBy("downloadOauthWar")
+
+}
+downloadOauthWar.onlyIf { project.property('artifactory_user') }
+
+sourceSets {
+    main {
+        resources {
+            srcDir file('src/main/resources')
+        }
+    }
+}
+
+sonarqube {
+    properties {
+        property 'sonar.projectKey', "${rootProject.group}:${rootProject.name}"
+        property 'sonar.projectName', "apple/${rootProject.name}"
+        property 'sonar.host.url', 'http://sonar2.cp.bridge2solutions.net:9000'
+        property 'sonar.java.source', '11'
+        property 'sonar.sources', 'src/main/java'
+        property 'sonar.tests', 'src/test/java,src/test/groovy'
+        property 'sonar.java.coveragePlugin', "jacoco"
+        property 'sonar.cpd.exclusions', '**/com/b2s/apple/entity/**,**/com/b2s/apple/model/**,**/com/b2s/db/model/**,**/com/b2s/rewards/apple/model/**,**/com/b2s/shop/common/constant/**'
+        property 'sonar.coverage.exclusions', '**/AbstractOrderLine.java,**/CreditItem.java,**/b2s/apple/model/**,**/com/b2s/apple/entity/**,**/com/b2s/db/model/**,**/apple/integration/model/**,**/rewards/apple/model/order/**,**/b2s/rewards/constants/**,**/com/b2s/ui/**,**/b2s/rewards/domain/**'
+        property "sonar.groovy.binaries", "${buildDir.name}${File.separator}classes"
+    }
+}
+group = 'apple-gr'
+description = 'Apple GR'
+sourceCompatibility = 11
+targetCompatibility = 11
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+idea {
+    if (isLocal) {
+        module {
+            sourceSets {
+                main {
+                    resources {
+                        srcDir file('src/main/config/dev/WEB-INF/classes')
+                    }
+                }
+            }
+        }
+    }
+}
+
+war {
+    manifest {
+        attributes(
+                "Implementation-Title": "Apple GR",
+                "Implementation-Version": version,
+                "Git-Commit": commitId,
+                "Git-Branch": branch,
+                "artifactId": rootProject.name,
+                'Build-Number': buildNumber,
+                "Gerrit-RefSpec": gerritRefspec,
+                "WebApp-Version": version,
+                'Build-Timestamp': new Date().format('yyyy-MM-dd HH:mm:ss'),
+                "B2S-Version": version,
+                "Hudson-Build-Number": buildNumber
+        )
+        archiveFileName = "apple-gr.war"
+    }
+
+}
+
+testlogger {
+    theme 'mocha'
+}

@@ -1,0 +1,85 @@
+<div class="acknowledge-tc-wrapper" id="acknowledge-tc-wrapper" #acknowledgeTcWrapper>
+  <div class="acknowledge-tc-overlay-close" *ngIf="!isMobileModal">
+    <a href="javascript: void(0);" (click)="close()" (keydown.enter)="close()" role="button"
+       class="g-icons icon-icon-close icon-close close-button" aria-label="close modal window"></a>
+  </div>
+  <div class="modal-header acknowledge-tc-modal-header" *ngIf="!isMobileModal">
+    <div role="heading" aria-level="2" class="modal-title acknowledge-tc-modal-title" id="acknowledge-tc-modal-title" *ngIf="messages['merchDisclosuresName']" [innerHtml]="messages['merchDisclosuresName']"></div>
+  </div>
+
+  <div class="acknowledge-tc-modal-body" id="acknowledge-tc-modal-body" #acknowledgeModalData (scroll)="checkScroll()" tabindex="0">
+    <span class="hideFromDOM">{{'termsScrollAriaLabel' | translate }}</span>
+    <div class="acknowledge-tc-overlay-close dont-print" data-html2canvas-ignore="true" *ngIf="isMobileModal">
+      <a href="javascript: void(0);" (click)="close()" (keydown.enter)="close()"  role="button" *ngIf="isMobileModal"
+         class="g-icons icon-icon-close icon-close close-button" aria-label="close modal window"></a>
+    </div>
+    <div class="acknowledge-tc-modal-title-mobile dont-print" data-html2canvas-ignore="true"
+         id="acknowledge-tc-modal-title-mobile" *ngIf="isMobileModal &&
+    messages['merchDisclosuresName']" [innerHtml]="messages['merchDisclosuresName']"></div>
+    <strong class="acknowledge-tc-modal-tagline" *ngIf="messages['merchDisclosuresTagLine']"
+         [innerHtml]="messages['merchDisclosuresTagLine']"></strong>
+    <div class="acknowledge-tc-modal-text">
+      <ul>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine1']" [innerHtml]="messages['merchDisclosuresContentTnCLine1']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine2']" [innerHtml]="messages['merchDisclosuresContentTnCLine2']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine3']" [innerHtml]="messages['merchDisclosuresContentTnCLine3']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine4']" [innerHtml]="messages['merchDisclosuresContentTnCLine4']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine5']" [innerHtml]="messages['merchDisclosuresContentTnCLine5']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine6']" [innerHtml]="messages['merchDisclosuresContentTnCLine6']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine7']" [innerHtml]="messages['merchDisclosuresContentTnCLine7']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine8']" [innerHtml]="messages['merchDisclosuresContentTnCLine8']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine9']" [innerHtml]="messages['merchDisclosuresContentTnCLine9']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine10']" [innerHtml]="messages['merchDisclosuresContentTnCLine10']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine11']" [innerHtml]="messages['merchDisclosuresContentTnCLine11']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine12']" [innerHtml]="messages['merchDisclosuresContentTnCLine12']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine13']" [innerHtml]="messages['merchDisclosuresContentTnCLine13']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine14']" [innerHtml]="messages['merchDisclosuresContentTnCLine14']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine15']"  [innerHtml]="messages['merchDisclosuresContentTnCLine15']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine16']" [innerHtml]="messages['merchDisclosuresContentTnCLine16']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine17']" [innerHtml]="messages['merchDisclosuresContentTnCLine17']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine18']" [innerHtml]="messages['merchDisclosuresContentTnCLine18']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine19']" [innerHtml]="messages['merchDisclosuresContentTnCLine19']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine20']" [innerHtml]="messages['merchDisclosuresContentTnCLine20']"></li>
+        <li *ngIf="messages['merchDisclosuresContentTnCLine21']" [innerHtml]="messages['merchDisclosuresContentTnCLine21']"></li>
+      </ul>
+    </div>
+    <div class="modal-footer white-background text-justify dont-print" data-html2canvas-ignore="true"
+         *ngIf="isMobileModal">
+      <div class="flex-navigation-wrapper">
+        <div class="acknowledge-tc-modal-icon-container">
+          <app-print class="mobile-print-icon" [printElement]="printElementSelector"></app-print>
+          <app-save [content]="acknowledgeModalData" [fileName]="modalContentFileName" ></app-save>
+        </div>
+        <div class="acknowledge-tc-modal-btn-container">
+          <button id="btn-agree-mobile" class="btn-base blue-btn acknowledge-tc-modal-btn-base" role="button"
+                  (keydown.enter)="agree()"
+                  (click)="agree()"><span *ngIf="messages['acceptAndContinue']" [innerHtml]="messages['acceptAndContinue']"></span>
+          </button>
+          <button id="btn-decline-mobile" class="btn-base acknowledge-tc-modal-btn-base decline" role="button"
+                  (keydown.enter)="decline()"
+                  (click)="decline()"><span *ngIf="messages['decline']" [innerHtml]="messages['decline']"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer white-background text-justify" *ngIf="!isMobileModal">
+    <span *ngIf="enableUserNotScrolledMsg" tabindex="0" class="error-text" [innerHtml]="messages['modalContentNotScrolledError']"></span>
+    <div class="flex-navigation-wrapper">
+      <div class="acknowledge-tc-modal-icon-container">
+        <app-print [printElement]="printElementSelector" class="ack-tc-print"></app-print>
+        <app-save [content]="acknowledgeModalData" [fileName]="modalContentFileName" ></app-save>
+      </div>
+      <div class="acknowledge-tc-modal-btn-container">
+        <button id="btn-decline" class="btn-base acknowledge-tc-modal-btn-base decline" role="button"
+                (click)="decline()"
+                (keydown.enter)="decline()"><span *ngIf="messages['decline']" [innerHtml]="messages['decline']"></span>
+        </button>
+        <button id="btn-agree" #btnAgree class="btn-base blue-btn acknowledge-tc-modal-btn-base btn-disabled" aria-disabled="true" role="button"
+                (click)="agree()"
+                (keydown.enter)="agree()"><span *ngIf="messages['acceptAndContinue']" [innerHtml]="messages['acceptAndContinue']"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

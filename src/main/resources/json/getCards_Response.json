@@ -1,0 +1,68 @@
+{
+  "cardDetails": [
+    {
+      "cardId": "44125873852316f2b4d4d796c344e38756339654972776f663745446e6d4c32486f455a4165374a476858343d",
+      "displayCardNumber": "XXXXXXXXXXXX6361",
+      "localCardActivationIndicator": "ACTIVE",
+      "overseasCardActivationIndicator": "INACTIVE",
+      "perpetualActivationFlag": false,
+      "overseasCardActivationStartDate": "2017-01-01",
+      "overseasCardActivationEndDate": "2017-04-01",
+      "currentCreditLimitAmount": 90000,
+      "maximumTemporaryCreditLimitAmount": 630000,
+      "subCardType": "CREDIT",
+      "cardHolderType": "PRIMARY",
+      "cardFunctionsAllowed": [
+        {
+          "cardFunction": "OVERSEAS_CARD_ACTIVATION"
+        },
+        {
+          "cardFunction": "REPORT_LOST_STOLEN"
+        },
+        {
+          "cardFunction": "CREDIT_LIMIT_INCREASE"
+        }
+      ]
+    },
+    {
+      "cardId": "4141704f4c746c6253416d35483468563433754e64723177717871764c624f312b5647677741724f4739593d",
+      "displayCardNumber": "XXXXXXXXXXXX8954",
+      "localCardActivationIndicator": "ACTIVE",
+      "overseasCardActivationIndicator": "INACTIVE",
+      "perpetualActivationFlag": false,
+      "overseasCardActivationStartDate": "2018-03-01",
+      "overseasCardActivationEndDate": "2018-05-01",
+      "currentCreditLimitAmount": 50000,
+      "maximumTemporaryCreditLimitAmount": 150000,
+      "subCardType": "CREDIT",
+      "cardHolderType": "PRIMARY",
+      "cardFunctionsAllowed": [
+        {
+          "cardFunction": "OVERSEAS_CARD_ACTIVATION"
+        },
+        {
+          "cardFunction": "REPORT_LOST_STOLEN"
+        },
+        {
+          "cardFunction": "CREDIT_LIMIT_INCREASE"
+        }
+      ]
+    },
+    {
+      "cardId": "3141704f4c746c6253416d35483468563433754e64723177717871764c624f312b5647677741724f4739593d",
+      "displayCardNumber": "XXXXXXXXXXXX6764",
+      "localCardActivationIndicator": "INACTIVE",
+      "overseasCardActivationIndicator": "ACTIVE",
+      "perpetualActivationFlag": true,
+      "currentCreditLimitAmount": 210000,
+      "maximumTemporaryCreditLimitAmount": 420000,
+      "subCardType": "CREDIT",
+      "cardHolderType": "PRIMARY",
+      "cardFunctionsAllowed": [
+        {
+          "cardFunction": "LOCAL_CARD_ACTIVATION"
+        }
+      ]
+    }
+  ]
+}

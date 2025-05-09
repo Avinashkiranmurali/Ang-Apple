@@ -1,0 +1,50 @@
+@import "~styles/mixins";
+@import "~styles/common/payment-summary";
+@import "~styles/common/payment-module";
+
+.order-summary-component {
+  .rs-summary {
+    margin-top: 0;
+    padding-top: rem(32px);
+    .rs-summary-content {
+      margin-bottom: rem(11px);
+      * {
+        font-size: rem(16px);
+      }
+      &.unbundled-total {
+        margin-bottom: rem(50px);
+        @include for-mobile{
+          margin-bottom: rem(9px);
+        }
+      }
+      .rs-summary-value {
+        line-height: rem(20px);
+        color: #111111;
+        opacity: 1;
+        font-weight: $font-weight-regular;
+        letter-spacing: 0;
+        font-family: $font-base;
+      }
+      .rs-summary-label {
+        line-height: rem(19px);
+        color: #111111;
+        opacity: 1;
+        font-weight: $font-weight-regular;
+        letter-spacing: 0;
+        font-family: $font-base;
+      }
+      .rs-bold-label {
+        font-weight: $font-weight-semi-bold;
+        letter-spacing: 0;
+      }
+    }
+  }
+  .button-container {
+    .btn-base {
+      font-size: rem(16px);
+      line-height: rem(19px);
+      padding: rem(18px) rem(28px);
+      border: 1px solid #CCCCCC;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+<div class="banner-modal-wrapper" id="banner-modal-wrapper" #bannerModalWrapper>
+    <div class="banner-modal-overlay-close" >
+      <a href="javascript:" (click)="close($event)" (keydown.enter)="close($event )" role="button"
+         class="g-icons icon-icon-close icon-close close-button" aria-label="close modal window"></a>
+    </div>
+  
+    <div class="banner-modal-body" id="banner-modal-body" #bannerModalData>
+       <div class="banner-modal-text" id="banner-modal" #bannerModal [innerHTML]="modalHtml | bannerConfig : config : categoryId : imageServerUrl | safe">
+      </div>
+          
+    </div>
+    <div class="btn-container close-modal-btn">
+      <span class="link-base pill-shaped-cta">
+          <a class="nowrap" (click)="close($event)" href="javascript:" role="button" [innerHtml]="messages['close']">btnTxt</a>
+      </span>
+  </div> 
+  </div>
+  

@@ -1,0 +1,31 @@
+<!-- Include for pricing template -->
+<div *ngIf="pricingTemplate" [ngSwitch]="getPricingTemplate(pricingTemplate)">
+
+    <!-- -----------------
+      Templates - standard
+    ----------------- -->
+
+    <!-- Points and Cash -->
+    <div class="subtotal-text" *ngSwitchCase="'points_cash-template.htm'">
+        <div>{{ totalVal.points | number }}
+          <span>{{ pointLabel }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+        </div>
+      <p class="local-currency rs-sub-text" [hidden]="!displayCurrencyPrice">{{ 'or' | translate }} {{ totalVal.amount | currency }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></p>
+    </div>
+    <!-- Cash and Points -->
+    <div class="subtotal-text" *ngSwitchCase="'cash_points-template.htm'">
+        <div>{{ totalVal.amount | currency }}
+          <span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+        </div>
+      <p class="local-currency rs-sub-text" [hidden]="!displayPointsPrice">{{ 'or' | translate }} {{ totalVal.points | number }} {{ pointLabel }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></p>
+    </div>
+
+    <!-- Points Only, Cash Reward - Points Only, Cash Only, EPP Pay Per Period Only, EPP Cash and Pay Per Period -->
+    <div *ngSwitchDefault>
+        <span *ngIf="isPoints" class="subtotal-text">{{ totalVal.points | currencyFormat: pricingTemplate : user.locale}} {{ pointLabel }}</span>
+        <span *ngIf="!isPoints" class="subtotal-text">{{ totalVal.amount | currency}}</span>
+      <span  *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup
+        aria-hidden="true" class="notice-indicator">*</sup></span>
+    </div>
+
+</div>

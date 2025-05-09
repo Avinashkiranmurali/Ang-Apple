@@ -1,0 +1,412 @@
+{
+    "configData": {
+      "additional": {
+        "files": [
+          {
+            "id": "timeout-modal-js",
+            "element": "script",
+            "src": "/apple-gr/vars/ua/js/timeout-modal.js",
+            "type": "text/javascript"
+          }
+        ]
+      },
+      "templates": {
+        "userDropdownLinks": {
+          "authenticated": [
+            "bag",
+            "orders",
+            "navigate-back",
+            "sign-out"
+          ],
+          "unAuthenticated": []
+        },
+        "paymentSummary": "default-sum.htm",
+        "paymentType": "",
+        "program": [
+          {
+            "templateUrl": "apple-gr/vars/default/templates/program-template.html",
+            "class": "",
+            "template": "prog-container.htm",
+            "elements": [
+              {
+                "templateUrl": "apple-gr/vars/default/templates/logo-template.html",
+                "template": "logo-container.htm",
+                "class": "logo-container"
+              },
+              {
+                "templateUrl": "apple-gr/vars/default/templates/userline-template.html",
+                "template": "user-container.htm",
+                "class": "user-nav",
+                "id": "user-nav",
+                "elements": [
+                  {
+                    "template": "msg-container.htm",
+                    "type": "user-msg",
+                    "class": "welcome-msg",
+                    "elements": [
+                      {
+                        "msg": "welcomeFullMsg",
+                        "ext": "messages"
+                      },
+                      {
+                        "msg": "userMp",
+                        "ext": "points"
+                      }
+                    ],
+                    "mobileElements": [
+                      {
+                        "msg": "welcomeFullMsg",
+                        "ext": "messages"
+                      },
+                      {
+                        "msg": "userMp",
+                        "ext": "points"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ],
+        "breadcrumb": {
+          "templateUrl": "apple-gr/vars/default/templates/breadcrumb-template.html",
+          "class": "mobile-show",
+          "template": "breadcrumb-config-var.htm",
+          "elements": [
+            {
+              "redirectType": "redirect-session.htm",
+              "redirectName": "navigateBack",
+              "url": ""
+            }
+          ]
+        },
+        "body": {
+          "terms": {
+            "templateUrl": "apple-gr/vars/default/templates/terms-template.html",
+            "template": "terms-default.htm",
+            "class": "terms-container",
+            "elements": [
+              {
+                "link": "",
+                "template": "terms-content-container.htm",
+                "id": "AppleTsCs",
+                "class": "term-content apple-terms"
+              },
+              {
+                "link": "StorePolicies",
+                "template": "terms-content-container.htm",
+                "id": "StorePolicies",
+                "class": "term-content store-policy"
+              },
+              {
+                "link": "Engraving",
+                "template": "terms-content-container.htm",
+                "id": "Engraving",
+                "class": "term-content engrave"
+              },
+              {
+                "link": "Warranty",
+                "template": "terms-content-container.htm",
+                "id": "Warranty",
+                "class": "term-content warranty"
+              },
+              {
+                "link": "Returns",
+                "template": "terms-content-container.htm",
+                "id": "Returns",
+                "class": "term-content returns"
+              },
+              {
+                "link": "Shipping",
+                "template": "terms-content-container.htm",
+                "id": "Shipping",
+                "class": "term-content shipping"
+              },
+              {
+                "link": "iPhone",
+                "template": "terms-content-container.htm",
+                "id": "iPhone",
+                "class": "term-content iphone-info"
+              }
+            ]
+          },
+          "faqs": {
+            "templateUrl": "apple-gr/vars/default/templates/faqs-template.html",
+            "template": "faqs-without-nav.htm",
+            "class": "faqs-container",
+            "elements": [
+              {
+                "link": "",
+                "template": "faqs-without-header.htm",
+                "id": "faqs-g1",
+                "class": "faqs-content faqs-g1",
+                "elements": [
+                  {
+                    "q": "q-onlineAwardOrdering",
+                    "a": "a-onlineAwardOrdering"
+                  },
+                  {
+                    "q": "q-orderOverPhone",
+                    "a": "a-orderOverPhone"
+                  },
+                  {
+                    "q": "q-shippingPolicy",
+                    "a": "a-shippingPolicy"
+                  },
+                  {
+                    "q": "q-cancelOrUpdate",
+                    "a": "a-cancelOrUpdate"
+                  },
+                  {
+                    "q": "q-receivedMyProduct",
+                    "a": "a-receivedMyProduct"
+                  },
+                  {
+                    "q": "q-arrivedDamaged",
+                    "a": "a-arrivedDamaged"
+                  },
+                  {
+                    "q": "q-howToReturn",
+                    "a": "a-howToReturn"
+                  },
+                  {
+                    "q": "q-canIReturn",
+                    "a": "a-canIReturn"
+                  },
+                  {
+                    "q": "q-warranty",
+                    "a": "a-warranty"
+                  },
+                  {
+                    "q": "q-howLongArrival",
+                    "a": "a-howLongArrival"
+                  },
+                  {
+                    "q": "q-onlyReceivedOne",
+                    "a": "a-onlyReceivedOne"
+                  },
+                  {
+                    "q": "q-orderOutsideUS",
+                    "a": "a-orderOutsideUS"
+                  },
+                  {
+                    "q": "q-giftThirdParties",
+                    "a": "a-giftThirdParties"
+                  },
+                  {
+                    "q": "q-findTerms",
+                    "a": "a-findTerms"
+                  },
+                  {
+                    "q": "q-incorrectBalance",
+                    "a": "a-incorrectBalance"
+                  },
+                  {
+                    "q": "q-notEnoughMiles",
+                    "a": "a-notEnoughMiles"
+                  },
+                  {
+                    "q": "q-itemNotAvailable",
+                    "a": "a-itemNotAvailable"
+                  },
+                  {
+                    "q": "q-noAnswer",
+                    "a": "a-noAnswer"
+                  },
+                  {
+                    "q": "q-csrAvailability",
+                    "a": "a-csrAvailability"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        "detail": {
+          "templateUrl": "apple-gr/vars/default/templates/product-detail-template.html"
+        },
+        "cart": {
+          "cartItems": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/cart-items-template.html"
+          },
+          "cartItemsList": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/cart-items-list-template.html",
+            "template": "cart-default.htm"
+          },
+          "cartItemsButtons": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/cart-buttons-template.html",
+            "template": "cart-button-simple.htm"
+          },
+          "cartDiscounts": null,
+          "cartPaymentSummary": null,
+          "cartPaymentButtons": null
+        },
+        "checkout":{
+            "checkoutItems":{
+               "templateUrl":"apple-gr/vars/default/templates/apple-gr-templates/checkout-items-template.html"
+            },
+            "checkoutItemsList":{
+               "templateUrl":"apple-gr/vars/default/templates/apple-gr-templates/checkout-items-list-template.html",
+               "template":"checkout-default.htm"
+            },
+            "checkoutSummary":{
+               "templateUrl":"apple-gr/vars/default/templates/apple-gr-templates/checkout-summary-template.html"
+            },
+            "checkoutButtons":{
+               "templateUrl":"apple-gr/vars/ua/templates/checkout-buttons-template.html",
+               "template":"",
+               "class":"cart-buttons"
+            },
+            "checkoutSplitPayModal":{
+               "templateUrl":"apple-gr/views/partials/splitPaymentModal.html",
+               "class":"template2",
+               "size":"md"
+            }
+         },
+        "orderConfirmation": {
+          "orderConfirmItemsList": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-confirm-items-list-template.html",
+            "template": "order-confirm-default.htm"
+          },
+          "orderConfirmShippingDetails": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-confirm-shipping-details-template.html",
+            "template": "order-confirm-shipping-details-default.html"
+          }
+        },
+        "orderHistory": {
+          "orderTitle": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-history/order-title-template.html"
+          },
+          "orderTitleTip": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-history/order-title-tip-template.html"
+          },
+          "orderList": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-history/order-list-template.html",
+            "template": "order-list-rewards-template.htm"
+          },
+          "orderItems": {
+            "template": "order-items-subsidy.htm",
+            "class": "max-width-unset"
+          }
+        },
+        "orderStatus": {
+          "orderTitle": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-status/order-title-template.html"
+          },
+          "orderSummary": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-status/order-summary-template.html",
+            "template": "order-summary-rewards-template.htm"
+          },
+          "orderItems": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-status/order-list-items-template.html",
+            "paymentType": "rewards"
+          },
+          "orderContactInfo": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-status/order-contact-info-template.html",
+            "template": "payment-method-rewards-template.htm"
+          },
+          "orderPaymentSummary": {
+            "templateUrl": "apple-gr/vars/default/templates/apple-gr-templates/order-status/order-payment-summary-template.html",
+            "template": "rewards-summary.htm"
+          }
+        },
+        "footer": {
+          "class": "footer",
+          "template": "ua"
+        },
+        "header": {
+          "class": "",
+          "logoTemplate": {
+            "template": "logo-container.htm",
+            "class": "logo-container"
+          },
+          "userLineTemplate": {
+            "template": "default",
+            "class": "user-nav",
+            "btnClass": "",
+            "welcomeMsg": {
+              "template": "custom-msg"
+            }
+          }
+        }
+      },
+      "productConfiguration": {
+        "mac": {
+          "categoryShowOptions": true,
+          "subCategoryExclusions": [
+            "macbook"
+          ]
+        },
+        "ipad": {
+          "categoryShowOptions": false
+        },
+        "iphone": {
+          "categoryShowOptions": false
+        },
+        "watch": {
+          "categoryShowOptions": false
+        },
+        "tv": {
+          "categoryShowOptions": false
+        },
+        "music": {
+          "categoryShowOptions": false
+        },
+        "accessories": {
+          "categoryShowOptions": false
+        }
+      }
+    },
+    "anon": {
+      "configData": {
+        "additional": null,
+        "templates": {
+          "navigation": {
+            "bag": {
+              "template": "anon"
+            }
+          },
+          "program": [
+            {
+              "templateUrl": "apple-gr/vars/default/templates/program-template.html",
+              "class": "",
+              "template": "prog-container.htm",
+              "elements": [
+                {
+                  "templateUrl": "apple-gr/vars/default/templates/logo-template.html",
+                  "template": "logo-container.htm",
+                  "class": "logo-container"
+                },
+                {
+                  "templateUrl": "apple-gr/vars/ua/templates/userline-template.html",
+                  "template": "user-container-anonymous.htm",
+                  "class": "user-nav",
+                  "id": "",
+                  "elements": null,
+                  "btnClass": "btn-yellow"
+                }
+              ]
+            }
+          ],
+          "anonymousModal": {
+            "template": "anonymous-login-modal-join-anon.htm"
+          },
+          "header": {
+            "class": "",
+            "logoTemplate": {
+              "template": "logo-container.htm",
+              "class": "logo-container"
+            },
+            "userLineTemplate": {
+              "template": "anonymous",
+              "anonTemplate": "dual",
+              "class": "user-nav",
+              "btnClass": "sign-in btn-yellow",
+              "welcomeMsg": null
+            }
+          }
+        }
+      }
+    }
+  }

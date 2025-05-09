@@ -1,0 +1,26 @@
+<section class="smart-price-wrapper" [ngSwitch]="getSplitPayTemplate()" [ngClass]="parentClass">
+  <!-- smart price section in cart/checkout header -->
+  <div class="smart-price-section" *ngSwitchCase="'header-section-template.htm'">
+    <div class="split-pay-description" [innerHTML]="'youCanPayWithPointsOrCard' | translate"></div>
+    <div class="split-you-payment-description" [innerHTML]="'splitYourPaymentWithPointsOrCard' | translate: translateParams"></div>
+  </div>
+  <!-- smart price section in cart/checkout footer -->
+  <div class="smart-price-section" *ngSwitchCase="'cta-section-template.htm'">
+    <div class="split-payment-points-desc" [innerHTML]="'useAsLittleAsPointsInCta' | translate: translateParams"></div>
+    <div class="split-payment-amount-desc"
+         [innerHTML]="(smartPrice.isCashMaxLimitReached ? 'coverUpToAmountWithYourCardInCta' : 'coverTheRemainingAmountWithYourCardInCta') | translate: translateParams"></div>
+    <div class="split-payment-option-msg"
+         [innerHTML]="'seeSplitPaymentOptionsInCheckout' | translate: translateParams"></div>
+  </div>
+  <!-- smart price section in PDP/PCP/Carousels -->
+  <div class="smart-price-section" *ngSwitchDefault>
+    <div class="split-payment-header" *ngIf="placement !== 'bagMenu'" [innerHTML]="'splitYourPayment' | translate"></div>
+    <div class="split-payment-desc" *ngIf="config.isSingleLinerSmartPricing"
+         [innerHTML]="(placement === 'bagMenu' ? 'useLittlePointsAndCoverTheRestWithCard' : 'fromPointsAndAmount' ) | translate: translateParams"></div>
+    <div class="split-payment-desc" *ngIf="!config.isSingleLinerSmartPricing">
+      <div class="split-payment-points-desc" [innerHTML]="'useAsLittleAsPoints' | translate: translateParams"></div>
+      <div class="split-payment-amount-desc"
+           [innerHTML]="(smartPrice.isCashMaxLimitReached ? 'coverUpToAmountWithYourCard' : 'coverTheRemainingAmountWithYourCard') | translate: translateParams"></div>
+    </div>
+  </div>
+</section>

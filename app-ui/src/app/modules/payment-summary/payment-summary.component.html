@@ -1,0 +1,204 @@
+<div class="cart-totals-breakdown" [ngSwitch]="getPaymentSummaryTemp()" *ngIf="config.showPaymentSummary">
+  <!-- Cash Only, 'cash_default' -->
+  <div *ngSwitchCase="'cash_default.htm'"
+       class="main-breakdown one-payment rs-summary p-t-0 on large-9 large-offset-3 small-12 small-offset-0 rs-summary-break-down">
+    <div class="unbundled-breakdown on active ">
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'items' | translate }}</div>
+        <div class="rs-summary-value">{{ cartSubtotal['amount'] | currency }}</div>
+      </div>
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'free_Shipping' | translate }}</div>
+        <div class="rs-summary-value">{{ shippingCost['amount'] | currency }}</div>
+      </div>
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'taxesAndFees' | translate }}</div>
+        <div class="rs-summary-value">{{ (totalTaxes['amount'] + totalFees['amount']) | currency }}</div>
+      </div>
+      <div class="rs-summary-content" *ngIf="!config.suppressDiscountLineItemInPriceBreakdown && hasDiscount()">
+        <div class="rs-summary-label">{{ 'discountTitle' | translate }}</div>
+        <div class="rs-summary-value">({{ discountedSubTotal()?.discountAmt | currency }})</div>
+      </div>
+      <div
+        class="unbundled-total cart-total rs-summary-content large-12 large-offset-0 small-12 small-offset-0 top-border-e6 rs-summary-total">
+        <span class="rs-summary-label rs-big-text flex-end">{{ 'Total' | translate }}</span>
+        <span class="rs-summary-value rs-big-text">
+          <app-cart-total-temp [cartSubtotal]="cartSubtotal" [totalVal]="cartTotals" class="totals-mod" ext=""
+                               [showTaxDisclaimer]="showTaxDisclaimer">
+          </app-cart-total-temp>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Cash Only (Subsidy), 'cash_subsidy' -->
+  <div *ngSwitchCase="'cash_subsidy.htm'" class="main-breakdown one-payment subsidy rs-summary p-t-0"
+       [hidden]="totalPayment <= 0">
+    <div class="unbundled-breakdown active large-9 large-offset-3 small-12 small-offset-0 m-b-8">
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'items' | translate }}</div>
+        <div class="rs-summary-value">{{ cartSubtotal['amount'] | currency }}</div>
+      </div>
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'free_Shipping' | translate }}</div>
+        <div class="rs-summary-value">{{ shippingCost['amount'] | currency }}</div>
+      </div>
+      <div class="rs-summary-content" *ngIf="!config.suppressDiscountLineItemInPriceBreakdown && hasDiscount()">
+        <div class="rs-summary-label">{{ 'discountTitle' | translate }}</div>
+        <div class="rs-summary-value">({{ discountedSubTotal()?.discountAmt | currency }})</div>
+      </div>
+    </div>
+    <div [hidden]="negativeBalance || paymentRequired"
+         class="cart-total rs-summary-content large-9 large-offset-3 small-12 small-offset-0 top-border-e6 rs-summary-total">
+      <div class="rs-summary-label" [ngClass]="{'red-txt':negativeBalance}">
+        <label
+          class="rs-big-text">{{ (isReviewPage ? 'additionalPaymentDue' : 'additionalPayment') | translate }}</label>
+      </div>
+      <div class="rs-summary-value rs-big-text" [ngClass]="{'red-txt':negativeBalance}">
+        <span class="total-payment-amount">{{ totalPayment | currency }}</span>
+        <div *ngIf="earnPoints && isReviewPage" class="cart-earn-points-value text-italic">
+          <span> Earned {{ earnPoints | currency }} {{ pointLabel }} <span [hidden]="!showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup
+            aria-hidden="true"  class="notice-indicator">*</sup></span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Installment Monthly - Ex ; Vitality US/CA -->
+  <div *ngSwitchCase="'installment_monthly.htm'" class="cart-totals-breakdown main-breakdown rs-summary">
+    <div class="large-9 large-offset-3 small-12 small-offset-0">
+      <div class="rs-summary-content">
+        <div class="rs-summary-label small-8">{{ 'activationDeposit' | translate }}</div>
+        <div class="rs-summary-value">{{ itemPricing?.activationFee | currency }}</div>
+      </div>
+      <div class="rs-summary-content" *ngIf="itemPricing && itemPricing.upgradeCost > 0">
+        <div class="rs-summary-label small-8">{{ 'upgradeCost'| translate }}</div>
+        <div class="rs-summary-value">{{ itemPricing?.upgradeCost | currency }}</div>
+      </div>
+      <div class="rs-summary-content">
+        <div class="rs-summary-label small-8">{{ 'tax' | translate }}*</div>
+        <div class="rs-summary-value">{{ cartObjTotals?.totalTaxes.amount | currency }}</div>
+      </div>
+      <div class="rs-summary-content top-border-e6 rs-summary-total">
+        <div class="rs-summary-label rs-big-text small-8">{{ 'totalDue' | translate }}</div>
+        <div
+          class="rs-summary-value rs-big-text">{{ itemPricing?.totalDueTodayBeforeTax + cartObjTotals?.totalTaxes.amount + cartObjTotals?.totalFees.amount | currency }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pointsonly , Split Payment, 'points fixed/cc-fixed'-->
+  <div *ngSwitchDefault
+       [ngClass]="{'on': pricingOption === 'unbundledCheckout' ||  config.showCartSplitUp }"
+       class="main-breakdown variable-payment rs-summary p-t-0">
+    <div #pointsVariableRef *ngIf="purchasePaymentOption!=='INSTALLMENT'"
+         [@slideInOut]="{value: animationState, params: { animationHeight: animationHeight }}"
+         class="unbundled-breakdown large-9 large-offset-3 small-12 small-offset-0 bottom-border-e6 rs-summary-break-down">
+      <!-- Split Payment Sub-template, cc_variable unbundled - default -->
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'items' | translate }}</div>
+        <app-pricing-temp *ngIf="!config.showDollars" [parentClass]="parentClass" [offer]="cartSubtotal"
+                          class="rs-summary-value" ext="dual_" [showTaxDisclaimer]="showTaxDisclaimer">
+        </app-pricing-temp>
+        <app-pricing-temp *ngIf="config.showDollars && (cartSubtotal['amount'] > 0)" [parentClass]="parentClass"
+                          [offer]="cartSubtotal" class="rs-summary-value" ext="dual_"
+                          [showTaxDisclaimer]="showTaxDisclaimer">
+        </app-pricing-temp>
+      </div>
+      <div class="rs-summary-content">
+        <div class="rs-summary-label">{{ 'free_Shipping' | translate }}</div>
+        <app-pricing-temp [parentClass]="parentClass" [offer]="shippingCost" class="rs-summary-value" ext="dual_"
+                          [showTaxDisclaimer]="showTaxDisclaimer">
+        </app-pricing-temp>
+      </div>
+      <ng-container>
+        <!-- Split Payment Sub-template, cc_variable unbundled - rounded -->
+        <div class="rs-summary-content" *ngIf="config.combineTaxAndFees">
+          <div class="rs-summary-label" title="{{ setEHFtitle }}">{{ 'taxesAndFees' | translate }} <span [hidden]="!config.showFeeDetails" role="img" aria-label="Superscript asterisk"><sup
+            aria-hidden="true" class="notice-indicator">**</sup></span></div>
+          <div *ngIf="!config.showDollars"
+                class="rs-summary-value">{{ cartTotals['points'] - cartSubtotal['points'] | number }} {{ pointLabel }}</div>
+          <div *ngIf="config.showDollars"
+                class="rs-summary-value">{{ cartTotals['amount'] - cartSubtotal['amount'] | currency }}</div>
+        </div>
+        <ng-container *ngIf="!config.combineTaxAndFees">
+          <div [hidden]="!config.showTotalTaxes" class="rs-summary-content">
+            <div class="rs-summary-label">{{ 'taxes' | translate }}</div>
+            <app-pricing-temp [parentClass]="parentClass" [offer]="totalTaxes" class="rs-summary-value" ext="dual_"
+                              [showTaxDisclaimer]="showTaxDisclaimer">
+            </app-pricing-temp>
+          </div>
+          <div [hidden]="!config.showTotalFees" class="rs-summary-content">
+            <div class="rs-summary-label" title="{{ setEHFtitle }}">{{ 'fees' | translate }} <span [hidden]="!config.showFeeDetails" role="img" aria-label="Superscript asterisk"><sup
+              aria-hidden="true" class="notice-indicator">**</sup></span></div>
+            <app-pricing-temp [parentClass]="parentClass" [offer]="totalFees" class="rs-summary-value" ext="dual_"
+                              [showTaxDisclaimer]="showTaxDisclaimer">
+            </app-pricing-temp>
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+    <div class="large-9 large-offset-3 small-12 small-offset-0">
+      <ng-container [@slideInOut]="{value: animationState, params: { animationHeight: animationHeight }}">
+        <div>
+          <div class="rs-summary-content" *ngIf="isPointsOnlyRewards">
+            <div class="rs-summary-label">{{ 'rewardsBalance' | translate }}</div>
+            <div class="rs-summary-label points-used" *ngIf="!isConfPage">{{ points | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</div>
+            <div class="rs-summary-label points-used" *ngIf="isConfPage">{{ pointsBeforePurchase | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</div>
+          </div>
+          <div>
+            <div class="unbundled-total rs-summary-content">
+              <div class="rs-summary-label flex-end">
+                <span class="rs-bold-label">{{ 'Total' | translate }}</span>
+                <a (click)="toggleShowDetails($event)" [attr.aria-expanded]="animationState === 'in'"
+                   [attr.aria-label]="'Total ' + expanderBtnText" class="btn-expander" href id="item-expand" role="button">
+                  {{ expanderBtnText }}
+                </a>
+              </div>
+              <app-cart-total-temp [cartSubtotal]="cartSubtotal" [totalVal]="cartTotals" class="rs-summary-value" ext=""
+                                   [showTaxDisclaimer]="showTaxDisclaimer"
+                                   [showMinus]="isPointsOnlyRewards">
+              </app-cart-total-temp>
+            </div>
+            <div class="rs-summary-content" *ngIf=!isPointsOnlyRewards>
+              <div
+                class="rs-summary-label payment-amount"> {{ 'splitPaymentAmountPointsText' | translate: translateParams }} </div>
+              <div class="rs-summary-label points-used">
+                &ndash; {{ pointsUsed | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</div>
+            </div>
+          </div>
+          <div class=""
+               [ngClass]="{'points-only-total':isPointsOnlyRewards,
+                'rs-summary-content': showAdditionalPayment() || !isReviewPage,
+                'top-border-e6': showAdditionalPayment() || isPointsOnlyRewards,
+                'cart-total rs-summary-total':isPointsOnlyRewards || showAdditionalPayment() }">
+            <ng-container *ngIf="isPointsOnlyRewards">
+              <div class="rs-summary-content" [ngClass]="{'insufficient-balance':balancePoints < 0}">
+                <div class="rs-summary-label small-6">{{ 'yourRewardsBalance' | translate }}</div>
+                <div
+                  class="rs-summary-label points-used">{{ balancePoints | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</div>
+              </div>
+              <div class="insufficient-balance-content large-6 large-offset-6 small-12 small-offset-0"
+                   *ngIf="balancePoints < 0 && isReviewPage">
+                <span class="rs-summary-label">{{'insufficientBalanceTitle' | translate}}</span>
+                <p class="" [innerHTML]="'insufficientBalanceInfo' | translate "></p>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="showAdditionalPayment()">
+              <div [ngClass]="{'red-txt':negativeBalance}" class="rs-summary-label mob-w-60-percent">
+                <label
+                  class="rs-big-text">{{ (isReviewPage ? 'additionalPaymentDue' : 'additionalPayment') | translate }}</label>
+              </div>
+              <div [ngClass]="{'red-txt':negativeBalance}" class="rs-summary-value rs-big-text">
+                <span *ngIf="config.showDecimal" class="total-payment-amount"> {{ totalPayment | currency }} </span>
+                <span *ngIf="!config.showDecimal"
+                      class="total-payment-amount"> {{ totalPayment | currency : '' : 'symbol' : '1.0-0' }} </span>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>

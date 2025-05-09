@@ -1,0 +1,489 @@
+@import 'src/styles/mixins';
+
+::ng-deep {
+  li {
+    input[type="checkbox"] {
+      &[data-focus-method="key"] + label {
+        outline: rgba(0, 125, 250, 0.6) solid rem(2px);
+        outline-offset: rem(-2px);
+        box-shadow: 0 0 0 rem(1px) rgba(131, 192, 253, 0.5);
+      }
+    }
+  }
+}
+
+::ng-deep {
+  app-facets-filters-component, .mobile-facets-filters {
+    display: block;
+    padding-top: 0;
+    min-width: rem(195px);
+    width: rem(195px);
+    margin: rem(3px) 0 0 0;
+
+    @include for-mobile-to-tablet {
+      margin: 0;
+      width: unset;
+      min-width: unset;
+      padding-top: rem(22px);
+    }
+
+    &.facets-mobile {
+      @include for-mobile-to-tablet {
+        app-facets-filters-component {
+          display: block;
+          padding-top: rem(22px);
+          margin: 0;
+        }
+      }
+    }
+
+    * {
+      overflow: visible;
+    }
+
+    > div {
+      margin: 0;
+      padding: 0;
+
+      button {
+        display: block;
+        width: 100%;
+        position: relative;
+        text-align: left;
+        padding: rem(10px) rem(47px) rem(10px) 0;
+        margin: 0 0 rem(3px) 0;
+        font-size: rem(14px);
+        line-height: 1.5;
+        letter-spacing: -.01em;
+        font-weight: $font-weight-semi-bold;
+        border: none;
+        background: inherit;
+        word-break: break-word;
+
+        &.collapsed :before {
+          content: "";
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          height: rem(1px);
+          width: 88%;
+          border-bottom: rem(1px) solid #e3e3e3;
+          @include for-mobile-to-tablet {
+            width: 96%;
+          }
+        }
+
+        .button-caption {
+          padding: 0;
+
+          @media (max-width: 1007px) {
+            padding: 0 0 0 rem(10px);
+          }
+        }
+
+        &[data-focus-method='key'] {
+          outline: none;
+          @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+        }
+
+        &:hover {
+          outline: none;
+          @include box-shadow(none);
+        }
+
+        &::after {
+          content: "\002B";
+          transform: none;
+          display: inline-block;
+          position: absolute;
+          right: rem(29px);
+          font-weight: $font-weight-light;
+          font-size: rem(14px);
+          color: #888;
+          top: calc(50% - 0.7349705rem); // Half of the icon height value
+          @include duration(.5s);
+        }
+
+        + ul {
+          height: 0;
+          opacity: 0;
+          padding: 0;
+          margin: 0;
+          width: 100%;
+          list-style-type: none;
+          transform: scaleY(0);
+          transform-origin: top;
+          transition: transform 0.1s linear, opacity 0.1s;
+
+          @media (max-width: 1007px) {
+            margin: 0 0 0 rem(7px);
+          }
+
+          > li.facetsOptions {
+            padding: 0 rem(20px) rem(5px) 0;
+            margin: 0;
+            width: 100%;
+            position: relative;
+
+            p {
+              margin-left: rem(-10px);
+              padding: rem(2px) 0 rem(2px) rem(10px);
+              width: 100%;
+              margin-bottom: 0;
+
+              &.isActive {
+                background: #E6E6E6 0 0 no-repeat padding-box;
+
+                a {
+                  span {
+                    color: #0070C9;
+                  }
+                }
+              }
+
+              a {
+                text-decoration: none;
+                display: block;
+                opacity: 1;
+                color: #333;
+
+                span {
+                  width: 100%;
+                  font-weight: $font-weight-regular;
+                }
+
+                &[data-focus-method='key'] + label {
+                  outline: none;
+                  @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+                }
+              }
+            }
+          }
+
+          > li.moreOptions {
+            color: #0070C9;
+            font-weight: $font-weight-medium;
+            outline: none;
+
+            &.lastOption:before {
+              content: "";
+              position: absolute;
+              left: 0;
+              bottom: 0;
+              height: rem(1px);
+              width: 85%;
+              border-bottom: rem(1px) solid #e3e3e3;
+              @include for-mobile-to-tablet {
+                width: 96%;
+              }
+            }
+
+            .moreOptionsLabel {
+              padding: 0;
+              margin: rem(9px) 0 rem(32px) 0;
+              font-weight: $font-weight-regular;
+              cursor: pointer;
+            }
+
+            &[data-focus-method='key'] {
+              .moreOptionsLabel {
+                outline: none;
+                @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+              }
+            }
+          }
+        }
+
+        &.expanded {
+          &::after {
+            @include transform(rotate(45deg));
+          }
+
+          + ul {
+            height: auto;
+            transform: scaleY(1);
+            opacity: 1;
+
+            > li.facetsOptions {
+              width: 100%;
+              position: relative;
+
+              &.lastOption {
+                padding-bottom: rem(22px);
+              }
+
+              &.lastOption:before {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: rem(1px);
+                width: 85%;
+                border-bottom: rem(1px) solid #e3e3e3;
+                @include for-mobile-to-tablet {
+                  width: 96%;
+                }
+              }
+
+              &.disabled {
+                color: #ccc;
+                cursor: default;
+                pointer-events: none;
+                opacity: 0.4;
+              }
+
+              p {
+                width: 100%;
+                color: #333;
+                padding: rem(2px) 0 rem(2px) rem(10px);
+                margin-left: rem(-10px);
+                cursor: pointer;
+
+                &.isActive {
+                  background: #f2f2f2 0 0 no-repeat padding-box;
+                  font-weight: $font-weight-regular;
+
+                  a {
+                    span {
+                      color: #0070C9;
+                    }
+                  }
+                }
+
+                a {
+                  opacity: 1;
+                  color: #333;
+                  text-decoration: none;
+
+                  &[data-focus-method='key'] + label {
+                    outline: none;
+                    @include box-shadow(0 0 0 rem(3px) rgba(131, 192, 253, 0.5));
+                  }
+
+                  &.isActive {
+                    span {
+                      color: #0070C9;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  app-facets-filters-component {
+    display: block;
+    padding-top: 0;
+    min-width: rem(195px);
+    width: rem(195px);
+    margin: rem(25px) 0 0 0;
+    @include for-mobile-to-tablet {
+      position: fixed;
+      top: rem(-15px);
+      width: 94.5%;
+      background-color: #fff;
+      padding: rem(10px);
+      height: 97%;
+      overflow-y: scroll;
+      z-index: 9999;
+    }
+    @keyframes facets-filters-shrink {
+      from {
+        min-width: rem(195px);
+        width: rem(195px);
+        opacity: .7;
+      }
+      to {
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+        flex-basis: 0;
+        opacity: 0;
+      }
+    }
+    @keyframes facets-filters-grow {
+      from {
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+        flex-basis: 0;
+        opacity: 0;
+      }
+      to {
+        min-width: rem(195px);
+        width: rem(195px);
+        opacity: .5;
+      }
+    }
+
+    &.block-animated {
+      &.ng-hide {
+        display: inline-flex;
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
+        opacity: 0;
+        flex-basis: 0;
+        height: 0;
+        @include for-tablet {
+          margin: rem(25px) 0 0 0;
+        }
+      }
+
+      &.facets-filters-shrink-animation {
+        animation-name: facets-filters-shrink;
+        animation-duration: .4s;
+        animation-direction: normal;
+      }
+
+      &.filters-show {
+        display: initial;
+        min-width: rem(195px);
+        width: rem(195px);
+        opacity: 1;
+        animation-name: facets-filters-grow;
+        animation-duration: .4s;
+        animation-direction: normal;
+        border-radius: rem(18px);
+        @include for-tablet {
+          margin: rem(25px) 0 0 rem(9px);
+        }
+        @include for-mobile-to-tablet {
+          width: 94.5%;
+        }
+      }
+    }
+  }
+}
+
+.facets-filters-fixed-container {
+  &.position-fixed {
+    position: fixed;
+    width: inherit;
+    top: rem(80px);
+
+    .facets-filters-template-container {
+      @include translate3d(0px, 0px, 0px); //Dynamically update through script
+    }
+
+    &.notification-enabled {
+      top: rem(132px);
+    }
+  }
+
+  &.position-end {
+    display: flex;
+    height: 100%;
+    align-items: flex-end;
+
+    .facets-filters-template-container {
+      width: 100%;
+    }
+  }
+
+  .facets-filters-template-container {
+    @include translate3d(0px, 0px, 0px);
+  }
+}
+
+/*hide modal for desktop*/
+@include for-all-desktops {
+  .mobile-facets-modal {
+    display: none;
+  }
+}
+
+::ng-deep {
+  .flex-space-between {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .filter-options {
+      float: left;
+    }
+
+    .sort-options {
+      float: right;
+
+      button {
+        position: relative;
+      }
+
+      .dropdown-toggle {
+        &::after {
+          border: 0;
+        }
+      }
+    }
+  }
+}
+
+.mobile-facets-modal {
+  margin: rem(10px);
+  width: auto;
+  @include for-tablet-from-mobile {
+    .modal-dialog {
+      top: 0;
+      max-width: none;
+    }
+  }
+
+  .modal-content {
+    background: none;
+    box-shadow: none;
+
+    .mobile-facets-container {
+      padding: rem(10px) 0;
+
+      .modal-close-action-content {
+        display: inline-block;
+        width: 100%;
+        margin: 0;
+
+        .icon-close {
+          float: left;
+
+          &:before {
+            font-size: rem(24px);
+            width: rem(24px);
+          }
+        }
+
+        .facets-reset {
+          float: right;
+          font-weight: $font-weight-regular;
+          font-size: rem(18px);
+          line-height: rem(21px);
+        }
+
+      }
+
+      .btn-container {
+        padding: rem(32px) 0 rem(24px);
+        border-bottom: rem(1px) solid #ccc;
+
+        #btn-modalDone {
+          font-size: rem(16px);
+          text-transform: none;
+          width: 100%;
+          padding: 0;
+          min-height: rem(38px);
+          margin: 0;
+
+          &::after {
+            content: '';
+          }
+        }
+      }
+
+      .facets-container {
+        padding-top: rem(22px);
+      }
+    }
+  }
+}

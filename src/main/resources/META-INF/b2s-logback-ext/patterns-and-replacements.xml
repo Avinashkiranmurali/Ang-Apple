@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<patterns>
+	<pattern>
+		<!-- known paypal XML patterns -->
+		<regex><![CDATA[(<(cci|PaymentCard|creditCard)>)[\W\w]+(</\1>)]]></regex>
+		<replacement>$1*** $2 MASKED ***$3</replacement>
+	</pattern>
+</patterns>

@@ -1,0 +1,91 @@
+<section class="address-switch-container">
+    <!--ng-cloak-->
+    <article id="approveAddressModal" class="address-switch-content">
+        <!-- Suggested Address Template -->
+        <div class="modal-close-action-content">
+            <a href="javascript: void(0);" (click)="cancel()" (keydown.enter)="cancel()" auto-focus role="button"
+                class="g-icons icon-icon-close icon-close" aria-label="close modal window"></a>
+        </div>
+        <div class="modal-header">
+            <div class="modal-header-content">
+                <h4 class="modal-title" id="address-modal-title">{{ 'editShipping' | translate }}</h4>
+                <p class="modal-width-content" *ngIf="showSuggestedAddr"><span
+                        class="text-bold">{{ 'suggestedShippingAddress' | translate }}:</span>
+                    {{ 'ensureDeliveryAccuracy' | translate }}<br>{{ 'pleaseSeeBelow' | translate }}</p>
+                <p *ngIf="!showSuggestedAddr" class="error-msg">{{ 'unableToVerify' | translate }}</p>
+            </div>
+        </div>
+        <div class="modal-body">
+            <div class="modal-body-content">
+                <div class="address-options">
+                    <ul class="select-address-content">
+                        <!--ng-cloak-->
+                        <li [ngClass]="{'active':selectedAddress === 'suggested'}" *ngIf="showSuggestedAddr">
+                            <span class="address-option-radio"><input type="radio" id="suggestedAddr"
+                                    name="addressSelect" [(ngModel)]="selectedAddress" value="suggested" /></span>
+                            <label for="suggestedAddr">
+                                <span class="address-type">{{ 'suggestedAddress' | translate }}</span>
+                                <span
+                                    [ngClass]="{'changed':warningMessage.address1}">{{ suggestedAddress?.address1 }}</span>
+                                <span *ngIf="suggestedAddress?.address2"
+                                    [ngClass]="{'changed':warningMessage.address2}">{{ suggestedAddress?.address2 }}</span>
+                                <span *ngIf="suggestedAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) < 0)"
+                                    [ngClass]="{'changed':warningMessage.address3}">{{ suggestedAddress?.address3 }}</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.city}">{{ suggestedAddress?.city }}</span><span
+                                    class="inline">{{ (suggestedAddress?.state)? ', ': '' }}</span>
+                                <span class="inline" *ngIf="suggestedAddress?.state">&nbsp;</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.state}">{{ suggestedAddress?.state }}</span>
+                                <span class="inline" *ngIf="suggestedAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) >= 0)">&nbsp;</span>
+                                <span
+                                    *ngIf="suggestedAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) >= 0)"
+                                    [ngClass]="{'changed':warningMessage.address3}">{{ suggestedAddress?.address3 }}</span>
+                                <span class="inline" *ngIf="suggestedAddress?.zip5">&nbsp;</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.zip}">{{ suggestedAddress?.zip5 }}</span>
+                                <span>{{ 'country' | translate }}</span>
+                            </label>
+                        </li>
+                        <li [ngClass]="{'active':selectedAddress === 'original'}">
+                            <span class="address-option-radio"><input type="radio" id="originalAddr"
+                                    name="addressSelect" [(ngModel)]="selectedAddress" value="original" /></span>
+                            <label for="originalAddr">
+                                <span class="address-type">{{ 'originalAddress' | translate }}</span>
+                                <span
+                                    [ngClass]="{'changed':warningMessage.address1}">{{ originalAddress?.address1 }}</span>
+                                <span *ngIf="originalAddress?.address2"
+                                    [ngClass]="{'changed':warningMessage.address2}">{{ originalAddress?.address2 }}</span>
+                                <span *ngIf="originalAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) < 0)"
+                                    [ngClass]="{'changed':warningMessage.address3}">{{ originalAddress?.address3 }}</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.city}">{{ originalAddress?.city }}</span><span
+                                    class="inline">{{ (originalAddress?.state)? ', ': '' }}</span>
+                                <span class="inline" *ngIf="originalAddress?.state">&nbsp;</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.state}">{{ (originalAddress?.state)?  originalAddress?.state : '' }}</span>
+                                <span  class="inline" *ngIf="originalAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) >= 0)">&nbsp;</span>
+                                <span *ngIf="originalAddress?.address3 && (['en_gb','en_za'].indexOf(user.locale) >= 0)"
+                                    [ngClass]="{'changed':warningMessage.address3}">{{ originalAddress?.address3 }}</span>
+                                <span class="inline" *ngIf="originalAddress?.zip5">&nbsp;</span>
+                                <span class="inline"
+                                    [ngClass]="{'changed':warningMessage.zip}">{{ originalAddress?.zip5 }}</span>
+                                <span>{{ 'country' | translate }}</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer" [ngClass]="{'error-bg':!isFormValid}">
+            <div class="modal-btn-container-stacked-flex modal-btn-container">
+                <button id="modal-suggest-btn-next" [ngClass]="buttonColor" class="btn-base blue-btn action-item"
+                    (click)="useAddress(selectedAddress)"
+                    (keydown.enter)="useAddress(selectedAddress)">{{ 'approveAddress' | translate }}</button>
+                <button id="modal-suggest-btn-cancel" [ngClass]="buttonColor" class="btn-base cta-link-type cancel action-item"
+                    (click)="goToAddressFormPage()"
+                    (keydown.enter)="goToAddressFormPage()">{{ 'back' | translate }}</button>
+            </div>
+        </div>
+    </article>
+</section>

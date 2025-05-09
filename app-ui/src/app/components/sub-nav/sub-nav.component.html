@@ -1,0 +1,69 @@
+<!-- Sub navbar -->
+<div id="subnav-container" [ngClass]="{'hide': subNav.length === 0 || showSubNavBar === false}" [ngStyle]="{'background': subNavBackgroundColor}" style="background: rgb(247, 247, 247);">
+  <div class="contain subnav-container" [ngClass]="currentSlug">
+    <div class="navbar-wrap">
+      <button aria-label="SubNavScrollLeft" class="left-scroll" [ngStyle]="{'background' : subNavBackgroundColor}"
+        (click)="scrollNav('left')" #leftScroll>
+        <span class="paddle-left"></span>
+      </button>
+
+      <div class="navbar-par" #navbarPar>
+        <ul class="subnav" #subnav [@slideMenuAnimation]=animationState (@slideMenuAnimation.done)="animationState = 'offset'">
+          <li class="subnav-link" *ngFor="let link of subNav; let i = index" routerLinkActive="active">
+            <a id="subnav-{{link.slug}}"
+              [attr.aria-label]="'Sub Category ' + (messages['subnav-' + link.slug] || link.i18nName)"
+              [attr.aria-current]="link.slug === currentSubcat ? 'page' : false"
+              (click)="currentSubcat = link.slug"
+              [ngStyle]="{'color': subNavTextColor}"
+              *ngIf="link.templateType === 'LIST/GRID'"
+              class="g-icons subnav-icon icon-{{link.slug}} {{currentSlug}}"
+              [routerLink]="getNavStateParams(link, 'browse', { category: currentSlug, subcat: link.slug, addCat:''})"
+              [ngClass]="{'active': link.slug === currentSubcat}">
+              <span class="subNavLabel {{link.slug}}" [ngClass]="currentSlug"
+                [innerHTML]="messages['subnav-' + link.slug] || link.i18nName">
+              </span>
+              <span class="new-indicator" [ngStyle]="{'color' : newIndicatorColor}"
+                    *ngIf="displayNewIndicator && link.new">{{ messages['new'] }}</span>
+            </a>
+            <a id="subnav-{{link.slug}}" [ngStyle]="{'color': subNavTextColor}"
+              [attr.aria-label]="'Sub Category ' + (messages['subnav-' + link.slug] || link.i18nName)"
+              [attr.aria-current]="link.slug === currentSubcat ? 'page' : false"
+              (click)="currentSubcat = link.slug"
+              *ngIf="link.templateType==='CONFIGURABLE'"
+              class="g-icons subnav-icon icon-{{link.slug}} {{currentSlug}}"
+              [routerLink]="getNavStateParams(link, 'configure', { category: currentSlug, subcat: link.slug, addCat:''})"
+              [ngClass]="{'active': link.slug === currentSubcat}">
+              <span class="subNavLabel {{link.slug}}" [ngClass]="currentSlug"
+                [innerHTML]="messages['subnav-' + link.slug] || link.i18nName">
+              </span>
+             <span class="new-indicator" [ngStyle]="{'color' : newIndicatorColor}" *ngIf="displayNewIndicator && link.new">
+                {{ messages['new'] }}
+              </span>
+            </a>
+            <a id="subnav-{{link.slug}}" [ngStyle]="{'color': subNavTextColor}"
+              [attr.aria-label]="'Sub Category ' + (messages['subnav-' + link.slug] || link.i18nName)"
+              [attr.aria-current]="link.slug === currentSubcat ? 'page' : false"
+              (click)="currentSubcat = link.slug"
+              *ngIf="link.templateType==='CATEGORYLIST'"
+              class="g-icons subnav-icon icon-{{link.slug}} {{currentSlug}}"
+              [routerLink]="['curated', currentSlug, link.slug]"
+              [ngClass]="{'active': link.slug === currentSubcat}">
+              <span class="subNavLabel {{link.slug}}" [ngClass]="currentSlug"
+                [innerHTML]="messages['subnav-' + link.slug] || link.i18nName">
+              </span>
+              <span class="new-indicator" [ngStyle]="{'color' : newIndicatorColor}" *ngIf="displayNewIndicator && link.new">
+                {{ messages['new'] }}
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <button class="right-scroll" aria-label="SubNavScrollRight"  [ngStyle]="{'background' : subNavBackgroundColor}"
+        (click)="scrollNav('right')" #rightScroll>
+        <span class="paddle-right"></span>
+      </button>
+    </div>
+  </div>
+</div>
+

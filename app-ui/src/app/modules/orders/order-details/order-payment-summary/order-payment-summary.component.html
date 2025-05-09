@@ -1,0 +1,94 @@
+<div class="order-detail-payment-summary-section">
+  <div>
+    <div>
+      <div class="summary-details large-9 large-offset-3 small-12 small-offset-0 bottom-border-e6"
+        [@slideInOut]="{value: animationState, params: { animationHeight: animationHeight }}">
+          <!-- // Split Payment Sub-template, cc_variable unbundled - default -->
+          <div>
+            <div class="summary-content">
+              <div class="summary-label">{{ 'items' | translate }}</div>
+              <app-pricing-temp parentClass="order-payment-summary-info" [offer]="orderDetails.orderSubTotal"
+                                class="summary-value" ext="dual_" [showTaxDisclaimer]="false">
+              </app-pricing-temp>
+            </div>
+            <div class="summary-content">
+              <div class="summary-label">{{ 'free_Shipping' | translate }}</div>
+              <app-pricing-temp parentClass="order-payment-summary-info" [offer]="orderDetails.shippingCost"
+                                class="summary-value" ext="dual_" [showTaxDisclaimer]="false">
+              </app-pricing-temp>
+            </div>
+            <ng-container *ngIf="!config.combineTaxAndFees">
+              <div [hidden]="!config.showTotalTaxes" class="summary-content">
+                <div class="summary-label">{{ 'taxes' | translate }}</div>
+                <app-pricing-temp parentClass="order-payment-summary-info" [offer]="orderDetails.totalTax"
+                                  class="summary-value" ext="dual_" [showTaxDisclaimer]="false">
+                </app-pricing-temp>
+              </div>
+              <div [hidden]="!config.showTotalFees" class="summary-content">
+                <div class="summary-label">{{ 'fees' | translate }}
+                  <span [hidden]="!config.showFeeDetails" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">**</sup></span>
+                </div>
+                <app-pricing-temp parentClass="order-payment-summary-info" [offer]="orderDetails.totalFee"
+                                  class="summary-value" ext="dual_" [showTaxDisclaimer]="false">
+                </app-pricing-temp>
+              </div>
+            </ng-container>
+            <ng-container *ngIf="config.combineTaxAndFees">
+              <div class="summary-content">
+              <span class="summary-label">{{ 'taxesAndFees' | translate }}
+                <span [hidden]="!config.showFeeDetails" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">**</sup></span>
+              </span>
+                <span *ngIf="!config.showDollars"
+                      class="summary-value">{{ orderDetails.totalTax['points'] + orderDetails.totalFee['points'] | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</span>
+                <span *ngIf="config.showDollars"
+                      class="summary-value">{{ orderDetails.totalTax['amount'] + orderDetails.totalFee['amount'] | currency }}</span>
+              </div>
+            </ng-container>
+          </div>
+      </div>
+      <div class="summary-total large-9 large-offset-3 small-12 small-offset-0">
+        <div class="summary-content" *ngIf="isPointsOnlyRewards">
+          <div class="summary-label">{{ 'rewardsBalance' | translate }}</div>
+          <div class="summary-value points-used">{{ user.balance | currencyFormat: config.pricingTemplate : user.locale  }} {{ pointLabel }}</div>
+        </div>
+        <div class="summary-content total-amount" >
+          <span class="summary-label total-payment">
+            <span>{{ 'Total' | translate }}</span>
+            <a (click)="toggleShowDetails($event)" href id="item-expand" *ngIf="pricingOption === 'unbundledCheckout' || config.showCartSplitUp !== false"
+               [attr.aria-expanded]="animationState === 'in'"
+               [attr.aria-label]="'Total ' + ((animationState === 'out' ? 'viewDetails' : 'hideDetails') | translate)" role="button"
+               class="collapsibleLink">{{ (animationState === 'out' ? 'viewDetails' : 'hideDetails') | translate }}
+            </a>
+          </span>
+          <span class="summary-value">
+            <app-cart-total-temp [cartSubtotal]="orderDetails.orderSubTotal" [totalVal]="orderDetails.orderTotal" ext=""
+                                 parentClass="order-payment-summary"
+                                 [showTaxDisclaimer]="false">
+            </app-cart-total-temp>
+            </span>
+        </div>
+        <div class="summary-content payment-amount" *ngIf="!isPointsOnlyRewards">
+          <div class="summary-label payment-amount">{{ 'paymentAmount' | translate }} ({{ pointLabel }})</div>
+          <div class="summary-label">&ndash; {{ orderDetails.paymentInfo.awardsUsed | currencyFormat: config.pricingTemplate : user.locale }} {{ pointLabel }}</div>
+        </div>
+      </div>
+
+      <div class="additional-payment large-9 large-offset-3 small-12 small-offset-0 top-border-e6" *ngIf="showAdditionalPayment()">
+        <div class="summary-content">
+          <span class="summary-label additional-payment-label">
+            <label class="">{{ 'paymentAmount' | translate }} ({{ 'creditCard' | translate }})</label>
+          </span>
+          <span class="summary-value additional-payment-value">
+            <span *ngIf="config.showDecimal" class="total-payment-amount">{{ orderDetails.paymentInfo.awardsPurchasedPrice | currency }}</span>
+            <span *ngIf="!config.showDecimal" class="total-payment-amount">{{ orderDetails.paymentInfo.awardsPurchasedPrice | currency : '' : 'symbol' : '1.0-0' }}</span>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-info" *ngIf="orderDetails.paymentInfo.ccLast4"
+    [innerHTML]="'appliedToCardEnding' | translate: { ccLast4: orderDetails.paymentInfo.ccLast4 }">
+  </div>
+
+</div>

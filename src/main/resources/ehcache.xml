@@ -1,0 +1,68 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="ehcache.xsd"
+    updateCheck="false"
+    monitoring="autodetect"
+    dynamicConfig="true">
+
+    <!-- DESCRIPTION ABOUT EACH ATTRIBUTE
+            maxEntriesLocalHeap - LONG - Maximum number of elements in memory, before they are evicted (0 == no limit).
+            maxBytesLocalHeap - LONG - Maximum bytes in heap in bytes.
+            memoryStoreEvictionPolicy - STRING - One of "LRU", "LFU" or "FIFO".
+            timeToIdleSeconds - LONG - Amount of time to live for an element from its last accessed or modified date.
+            timeToLiveSeconds - LONG - Amount amount of time to live for an element from its creation date.
+            transactionalMode - STRING - TransactionalMode ==> one of OFF, LOCAL, XA, XA_STRICT.
+            eternal - BOOLEAN - If eternal, timeouts are ignored and the element is never expired. False by default.
+            logging - BOOLEAN - Enables or disables logging for the cache.
+            cacheName - STRING - Cache Name for Verification.
+            cacheLoaderTimeoutMillis - LONG - Timeout for CacheLoader execution (0 = no timeout).
+            clearOnFlush - BOOLEAN - Whether MemoryStore should be cleared when flush() is called on the cache - true by default.
+            copyOnRead - BOOLEAN - Whether the Cache should copy elements it returns.
+            copyOnWrite - BOOLEAN - Whether the Cache should copy elements it gets.
+            overflowToOffHeap - BOOLEAN - Whether elements can overflow to off heap memory when the in-memory cache has reached the set limit.
+            maxEntriesInCache - LONG - NOT APPLICABLE: Sets the maximum number of entries in the cache. Only applies to terracotta clustered caches.
+     -->
+
+    <cache name="ProductAttributeConfigurationDao_findByCategoryConfiguration"
+        maxEntriesLocalHeap="500"
+        eternal="false"
+        timeToIdleSeconds="7200"
+        timeToLiveSeconds="7200"
+        memoryStoreEvictionPolicy="LRU"
+        transactionalMode="off"
+        logging="true">
+        <cacheEventListenerFactory class="com.b2s.rewards.apple.interceptor.CacheLoggingListener" listenFor="all"/>
+    </cache>
+
+    <cache name="CategoryConfigurationDao_getCategoryConfigurationByName"
+        maxEntriesLocalHeap="500"
+        eternal="false"
+        timeToIdleSeconds="7200"
+        timeToLiveSeconds="7200"
+        memoryStoreEvictionPolicy="LRU"
+        transactionalMode="off"
+        logging="true">
+        <cacheEventListenerFactory class="com.b2s.rewards.apple.interceptor.CacheLoggingListener" listenFor="all"/>
+    </cache>
+
+    <cache name="EngraveConfigurationDao_getByLocale"
+        maxEntriesLocalHeap="200"
+        eternal="false"
+        timeToIdleSeconds="7200"
+        timeToLiveSeconds="86400"
+        memoryStoreEvictionPolicy="LRU"
+        transactionalMode="off"
+        logging="true">
+        <cacheEventListenerFactory class="com.b2s.rewards.apple.interceptor.CacheLoggingListener" listenFor="all"/>
+    </cache>
+
+    <cache name="CarouselTemplateDao_getCarouselTemplates"
+        maxEntriesLocalHeap="20"
+        eternal="false"
+        timeToIdleSeconds="300"
+        timeToLiveSeconds="3600"
+        memoryStoreEvictionPolicy="LRU"
+        transactionalMode="off"
+        logging="true">
+        <cacheEventListenerFactory class="com.b2s.rewards.apple.interceptor.CacheLoggingListener" listenFor="all"/>
+    </cache>
+  </ehcache>

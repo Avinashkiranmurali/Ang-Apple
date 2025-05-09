@@ -1,0 +1,150 @@
+<div class="section-divider"></div>
+<div class="items-list order-item-list">
+    <ng-container [ngSwitch]="orderHistoryTemplate['orderItems'] && orderHistoryTemplate['orderItems']['template'] ? orderHistoryTemplate['orderItems']['template'] : 'null.htm'">
+      <div *ngSwitchCase="'order-items-subsidy.htm'" >
+          <div class="cart-items" *ngFor="let item of lineItems | orderBy: 'desc' : 'addedDate'; let index = index">
+            <div class="cart-product-image large-3 small-12 small-offset-0">
+              <img [src]="item.itemImageURL | aplImgSize : '200'" alt="{{ item.itemName }}"/>
+            </div>
+            <div class="cart-product-details large-9 small-12 small-offset-0">
+              <div class="cart-item-pricing">
+                <div class="cart-item-name text-bold small-12 large-9 item-section" [class]="orderHistoryTemplate['orderItems']['class']">
+                  <span>{{ item.itemName }}</span>
+                </div>
+                <div class="cart-item-subtotal  small-12 large-3 item-section" [attr.title]="">
+                  <app-cart-pricing-temp ext="qty_" [offers]="item.offer" [item]="item" parentClass="order-items" [verifyFullDiscount] = 'item?.isGift'></app-cart-pricing-temp>
+                </div>
+              </div>
+              <section class="progress-bar-container" #progressBarElem>
+                <p class="status-title text-bold">{{ 'orderStatus-' + item.orderLineProgress.status | translate }}
+                  <span *ngIf="item.orderLineProgress.modifiedDate">{{ item.orderLineProgress.modifiedDate | date: 'MMM dd' }} </span>
+                </p>
+                <ngb-progressbar [value]="progressLevel[item.orderLineProgress.progressValue]" [max]="740" ></ngb-progressbar>
+                <ul class="status-progress-bar">
+                  <li *ngFor="let progress of item.orderLineProgress.progressBarText;  let i = index">
+                    <p class="padding-text"
+                       [ngClass]="((i+1)===item.orderLineProgress.progressValue) ? 'text-semibold': 'text-normal'">
+                      {{ 'orderStatus-'+ progress | translate}}</p>
+                  </li>
+                </ul>
+              </section>
+              <div class="order-detail-section">
+                <div class="order-detail-section-content shipping-info-container">
+                  <div class="order-detail-icon-div">
+                      <span class="icon icon-shipping"></span>
+                  </div>
+                  <div class="order-detail-col">
+                    <p class="text-semibold order-details-title">{{ 'shippingInformation' | translate }}:</p>
+                    <p class="shipping-availability" *ngIf="orderItemStatus(item) === 'processing'">
+                      <span>{{'shippingAvailableOrder' | translate }}&nbsp;</span>
+                      <span>{{ (item.shippingAvailabilityDate)? (item.shippingAvailabilityDate | date:'M/d/yyyy':'':locale ) : item.shippingAvailability }}</span>
+                    </p>
+                    <p class="shipping-availability" *ngIf="orderItemStatus(item) === 'delayed'">
+                      <span [innerHTML]="'shippingDelayOrderText' | translate:{'delayedShippingInfoAsOfDate':item.delayedShippingInfo.asOfDate}"></span>
+                      <br>
+                      <span>{{ item.delayedShippingInfo.shippingAvailability }}</span>
+                    </p>
+                    <p class="shipped-carrier"  *ngIf="orderItemStatus(item) === 'shipped'">
+                      <span>{{ 'shippedOn'  | translate  }} {{ item.shipmentInfo.shipmentDate |  date:mediumDate:'':locale }}</span>
+                    </p>
+                    <p class="shipment-tracking" *ngIf="item?.shipmentInfo?.trackingID">
+                      <a [href]="item?.shipmentInfo?.trackingID" target="_blank" rel="noopener noreferrer">{{
+                        'trackShipment'  | translate  }}</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="order-detail-section-content engraving-details-container" *ngIf="item.engrave && item.engrave.line1 !== ''">
+                  <div class="order-detail-icon-div">
+                    <div class="icon order-engraving-icon"></div>
+                  </div>
+                  <div class="order-detail-col">
+                    <p class="text-semibold order-details-title">{{ 'engraved'  | translate  }}</p>
+                    <p class="engrave-lines">{{ item.engrave.line1 }}</p>
+                    <p class="engrave-lines">{{ item.engrave.line2 }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+     <div *ngSwitchDefault>
+        <div class="cart-items" *ngFor="let item of lineItems | orderBy: 'desc' : 'addedDate'; let index= index">
+          <div class="cart-product-image large-3 small-12 small-offset-0">
+            <img [src]="item.itemImageURL | aplImgSize : '200'" alt="{{ item.itemName }}"/>
+          </div>
+          <div class="cart-product-details large-9 small-12 small-offset-0">
+            <div class="cart-item-pricing">
+              <div class="cart-item-name text-bold small-12 large-9 item-section">
+                <span>{{ item.itemName }}</span>
+                <span *ngIf="item.quantity > 1">({{ item.quantity }})</span>
+              </div>
+              <div class="cart-item-subtotal  small-12 large-3 item-section" [attr.title]="">
+                <app-cart-pricing-temp ext="qty_" [offers]="item.offer" [item]="item" parentClass="order-items" [verifyFullDiscount] = 'item?.isGift'></app-cart-pricing-temp>
+              </div>
+            </div>
+            <section class="progress-bar-container" #progressBarElem>
+              <p class="status-title text-bold">{{ 'orderStatus-' + item.orderLineProgress.status | translate }}
+                <span *ngIf="item.orderLineProgress.modifiedDate">{{ item.orderLineProgress.modifiedDate | date: 'MMM dd' }} </span>
+              </p>
+              <ngb-progressbar [value]="progressLevel[item.orderLineProgress.progressValue]" [max]="740" ></ngb-progressbar>
+              <ul class="status-progress-bar">
+                <li *ngFor="let progress of item.orderLineProgress.progressBarText;  let i = index">
+                  <p class="padding-text"
+                     [ngClass]="((i+1)===item.orderLineProgress.progressValue) ? 'text-semibold': 'text-normal'">
+                    {{ 'orderStatus-'+ progress | translate}}</p>
+                </li>
+              </ul>
+            </section>
+            <div class="order-detail-section">
+              <div class="order-detail-section-content shipping-info-container">
+                <div class="order-detail-icon-div">
+                  <span class="icon icon-shipping"></span>
+                </div>
+                <div class="order-detail-col">
+                  <p class="text-semibold order-details-title">{{ 'shippingInformation' | translate }}:</p>
+                  <p class="shipping-availability" *ngIf="orderItemStatus(item) === 'processing'">
+                    <span>{{'shippingAvailableOrder' | translate }}&nbsp;</span>
+                    <span>{{ (item.shippingAvailabilityDate)? (item.shippingAvailabilityDate | date:'M/d/yyyy':'':locale ) : item.shippingAvailability }}</span>
+                  </p>
+                  <p class="shipping-availability" *ngIf="orderItemStatus(item) === 'delayed'">
+                    <span [innerHTML]="'shippingDelayOrderText' | translate:{'delayedShippingInfoAsOfDate':item.delayedShippingInfo.asOfDate}"></span>
+                    <br>
+                    <span>{{ item.delayedShippingInfo.shippingAvailability }}</span>
+                  </p>
+                  <p class="shipped-carrier"  *ngIf="orderItemStatus(item) === 'shipped'">
+                    <span>{{ 'shippedOn'  | translate  }} {{ item.shipmentInfo.shipmentDate |  date:mediumDate:'':locale }}</span>
+                  </p>
+                  <p class="shipment-tracking" *ngIf="item?.shipmentInfo?.trackingID">
+                    <a [href]="item?.shipmentInfo?.trackingID" target="_blank" rel="noopener noreferrer">{{
+                      'trackShipment'  | translate  }}</a>
+                  </p>
+                </div>
+              </div>
+              <div *ngIf="item.productOptions !== null && item.productOptions !== undefined && item.productOptions.length > 0"
+                   class="order-detail-section-content configuration-details-container">
+                <div class="order-detail-icon-div">
+                  <div class="icon order-configuration-icon"></div>
+                </div>
+                <div class="order-detail-col">
+                  <p class="text-semibold order-details-title">{{ 'configDetails' | translate }}:</p>
+                  <ul>
+                    <li *ngFor="let options of item.productOptions" [innerHTML]="options"></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="order-detail-section-content engraving-details-container" *ngIf="item.engrave && item.engrave.line1 !== ''">
+                <div class="order-detail-icon-div">
+                  <div class="icon order-engraving-icon"></div>
+                </div>
+                <div class="order-detail-col">
+                  <p class="text-semibold order-details-title">{{ 'engraved'  | translate  }}</p>
+                  <p class="engrave-lines">{{ item.engrave.line1 }}</p>
+                  <p class="engrave-lines">{{ item.engrave.line2 }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>

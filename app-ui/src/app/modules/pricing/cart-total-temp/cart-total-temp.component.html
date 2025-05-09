@@ -1,0 +1,57 @@
+<!-- Include for pricing template -->
+<div class="" [ngClass]="parentClass" *ngIf="pricingTemplate" [ngSwitch]="getCartTotalPriceTemp(pricingTemplate, ext)">
+
+    <!-- -----------------
+      Templates - standard
+  ----------------- -->
+
+    <!-- Points and Cash -->
+    <div class="subtotal-text" *ngSwitchCase="'total-points_cash-template.htm'">
+        <div>{{ totalVal.points | number }} <span>{{ pointLabel }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*
+        </sup></span></span></div>
+      <p class="local-currency rs-sub-text {{cartSubtotal['amount']}}" [hidden]="!(cartSubtotal['amount'] > 0)">{{ 'or' | translate }} {{ totalVal.amount | currency }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></p>
+    </div>
+    <!-- Cash and Points -->
+    <div class="subtotal-text" *ngSwitchCase="'total-cash_points-template.htm'">
+        <div>{{ totalVal.amount | currency }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*
+        </sup></span></div>
+      <p class="local-currency rs-sub-text" [hidden]="!(cartSubtotal['amount'] > 0)">{{ 'or' | translate }} {{ totalVal.points | number }} {{ pointLabel }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator" >*</sup></span></p>
+    </div>
+
+    <!-- -----------------
+          Templates - exceeded
+    ----------------- -->
+
+    <!-- Points Exceeded -->
+    <div *ngSwitchCase="'exceeded_total-points-template.htm'">
+        <span class="exceeded">{{ pointLabel }} {{ 'exceeded' | translate }}</span>
+    </div>
+    <!-- Cash Exceeded -->
+    <div *ngSwitchCase="'exceeded_total-cash-template.htm'">
+        <span class="exceeded">{{ 'amount' | translate }} {{ 'exceeded' | translate }}</span>
+    </div>
+
+    <!-- Sub total for Payroll deduction/Finance -->
+    <div *ngSwitchCase="'sub-total_pd-finance.htm'">
+        <!--payroll and employerManaged based price -->
+        <div class="text-semibold" [innerHTML]="'estPayPerPeriod-sub'| translate" *ngIf="!config.employerManaged"></div>
+        <div *ngIf="config['employerManaged']" class="rs-summary-value rs-big-text">{{ 'estimated' | translate}} {{cartObjTotals['payPerPeriod'] | currency }}</div>
+        <div class="rs-summary-label rs-summary-label-color rs-sub-text">
+            <span [innerText]="ctPriceTempMsg"></span> / <span [innerHTML]=" 'noOfPayPeriods'| translate"></span>
+          <span [hidden]="!config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup
+            aria-hidden="true" class="notice-indicator">*</sup>
+          </span>
+        </div>
+    </div>
+
+    <!-- Points Only, Cash Reward - Points Only, Cash Only, EPP Pay Per Period Only, EPP Cash and Pay Per Period -->
+    <div *ngSwitchDefault>
+        <span *ngIf="showMinus">&ndash;</span>
+        <span *ngIf="isPoints" class="subtotal-text">{{ totalVal.points | currencyFormat: pricingTemplate : user.locale}} {{ pointLabel }}</span>
+        <span *ngIf="!isPoints" class="subtotal-text">{{ totalVal.amount | currency}}</span>
+        <span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup
+          aria-hidden="true" class="notice-indicator">*</sup>
+        </span>
+    </div>
+
+</div>

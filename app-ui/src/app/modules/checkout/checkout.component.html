@@ -1,0 +1,68 @@
+<div id="checkoutTemp" class="container checkout-module-container">
+  <app-checkout-summary [checkoutAddress]="checkoutAddress" [creditItem]="creditItem" [pointsUsed]="pointsUsed" [totalPayment]="totalPayment" [selectedRedemptionOption]="selectedRedemptionOption"></app-checkout-summary>
+  <div class="content-container m-b-0">
+    <section class="cart-container">
+      <div class="cart-title">
+        <h3>{{ messages['whatsInYourBag'] }}</h3>
+      </div>
+      <app-checkout-items [cartItems]="cartObjItems" [setCartTaxFeeTitle]="setCartTaxFeeTitle"></app-checkout-items>
+      <app-media-product [mediaProducts]="subscribedMediaProducts" [readOnly]="true"></app-media-product>
+    </section>
+  </div>
+  <app-payment-summary
+    [cartSubtotal]="cartSubtotal" [cartObjTotals]="cartObjTotals" [cartTotals]="cartTotals"
+    [negativeBalance]="negativeBalance" [shippingCost]="shippingCost" [totalFees]="totalFees"
+    [totalTaxes]="totalTaxes" parentClass="checkout-payment-summary" [purchasePaymentOption]="purchasePaymentOption"
+    [totalPayment]="totalPayment" [pointsUsed]="pointsUsed" [paymentRequired]="paymentRequired" [itemPricing]="itemPricing"
+    [points]="points" [balancePoints]="balancePoints" [earnPoints]="earnPoints" [isReviewPage]="true"
+    (hasDiscounts)="hasDiscounts()" (discountedSubtotal)="discountedSubtotal()">
+  </app-payment-summary>
+  <div [class]="checkoutTemplate['checkoutButtons']['class']" *ngIf="(isPointsOnlyRewards && balancePoints > 0) || !isPointsOnlyRewards" >
+    <div class="promotional-subscription" *ngIf="promotionalSubscription['displayCheckbox']">
+      <div class="custom-checkbox">
+        <input type="checkbox" id="promotion_checkbox" [ngModel]="promotionalSubscription['isChecked']">
+        <label for="promotion_checkbox">
+          {{ messages['promoSubscriptionConsentText'] }}
+          <button tooltip placement="top-right" [ngbTooltip]="messages['promoSubscriptionTooltipText']" title="{{messages['promoSubscriptionTooltipTitle']}}">
+            <img [src]="config['imageServerUrl'] + '/apple-gr/assets/img/AppleQuestionMark.svg'" alt=""/>
+          </button>
+        </label>
+      </div>
+    </div>
+    <div class="flex-reverse-mobile clearfix">
+      <app-checkout-buttons
+        [cartObjItems] = "cartObjItems"
+        [remainingBalance] = "remainingBalance"
+        [promotionalSubscription] = "promotionalSubscription"
+        [purchasePaymentOption] = "purchasePaymentOption"
+        [totalPayment] = "totalPayment"
+        [pointsPurchase] = "pointsPurchase"
+        [pointsAvailable] = "pointsAvailable"
+        [subscribedMediaProducts] = "subscribedMediaProducts"
+      ></app-checkout-buttons>
+
+      <div [ngSwitch]="checkoutTemplate['policyTermsTemplate']" >
+        <div *ngSwitchCase="'retail.htm'" class="main-breakdown rs-summary p-t-0 large-9 large-offset-3 small-12 small-offset-0">
+          <p class="dkgrey-txt text-align-justify" [innerHTML]="'paymentDisclaimerCheckout' | translate: translateParams" >  </p>
+          <p class="dkgrey-txt">*{{ 'taxVatIncluded' | translate }}</p>
+          <div class="rs-summary-content dotted">
+            <span class="">{{  'fullRetailPrice' | translate }}</span>
+            <span class="">{{ cartObjTotals?.itemsSubtotalPrice?.amount | currency }}</span>
+          </div>
+          <div class="rs-summary-content dotted">
+            <span class="">{{ 'monthlyPayments' | translate }}</span>
+            <span *ngIf="cartObjItems" class="">{{ cartObjItems[0].productDetail.additionalInfo.PricingModel?.paymentValue | currency }}{{ "perMonth" | translate}}</span>
+          </div>
+        </div>
+        <div *ngSwitchDefault class="policies-terms-note large-9 large-offset-3 small-12 small-offset-0">
+          <div>
+            <p *ngIf="!enableAcknowledgeTermsConds && !negativeBalance" [innerHTML]="policiesTermsContent" class="large-6 small-12 small-offset-0" [ngClass]="{ 'pull-right': !isMobile }"></p>
+            <p *ngIf="negativeBalance" class="large-6 small-12 small-offset-0 pull-right red-txt">{{ 'notEnoughPoints' | translate }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="msg-disclaimer" *ngIf="showTaxDisclaimer">* {{ 'taxFeeDisclaimerCart' | translate }}</p>
+  <p class="msg-disclaimer" *ngIf="showFeeDetails">** {{  'efhDisclaimer' | translate }}</p>
+</div>

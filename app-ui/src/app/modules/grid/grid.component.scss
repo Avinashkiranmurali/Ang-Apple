@@ -1,0 +1,124 @@
+@import "~styles/mixins";
+
+::ng-deep {
+  ngb-popover-window{
+    will-change: unset !important;
+  }
+  .sort-options {
+    .btn-secondary{
+      outline: none;
+    }
+    .dropdown-toggle {
+      color: #333;
+      background-color: transparent;
+    }
+    .popover {
+      width: rem(241px);
+      max-width: rem(276px);
+      border-radius: unset;
+      left: unset !important;
+      transform: none !important;
+      top: rem(25px) !important;
+      right: rem(-20px) !important;
+      .popover-arrow {
+        left: 42% !important;
+        top: rem(-16px);
+        &::after {
+          top: rem(1px);
+          right: rem(-6px);
+          border-bottom-color: #fff;
+          border-width: rem(8px);
+        }
+        &::before {
+          top: 0;
+          right: rem(-6px);
+          border-bottom-color: #00000040;
+          border-width: rem(8px);
+        }
+      }
+      .popover-body {
+        font-family: $font-base;
+        @include for-mobile-to-tablet {
+          padding: rem(3px) rem(21px);
+        }
+        .dropdown-item {
+          background-color: #fff;
+          padding: rem(12px) 0;
+
+          .sort-by-label {
+            padding: 0;
+            &:hover {
+              color: #0070c9;
+              background-color: #fff;
+            }
+            &:focus {
+              background-color: #fff;
+            }
+          }
+          &:last-child {
+            border-bottom: 0;
+          }
+        }
+        ul {
+          margin-bottom : 0;
+        }
+      }
+    }
+  }
+  .facets-filter-backdrop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    position: fixed;
+    top: 0;
+    opacity: 0.15;
+    background-color: #000;
+  }
+}
+
+.product-grid-view {
+  ul {
+    li {
+      a {
+        &:focus {
+          outline: rgba(0, 125, 250, 0.6) solid rem(2px);
+          outline-offset: rem(-2px);
+          box-shadow: 0 0 0 rem(1px) #83c0fd80;
+        }
+      }
+    }
+  }
+  &.filters-enabled {
+    ul {
+      @media (max-width: 768px) {
+        width: auto;
+      }
+      @include for-tablet {
+        width: 80vw;
+      }
+      li {
+        @include for-tablet {
+          flex: 1 1 15rem;
+          max-width: 45%;
+        }
+      }
+    }
+  }
+}
+
+/* for adjust margin top for showing border sortpopup*/
+@media (min-width:576px) and (max-width:765px) {
+  #sortByPopup {
+      margin-top: 0.188rem;
+  }
+  ::ng-deep {
+    .sort-options {
+      .popover {
+        .popover-arrow {
+          margin-top: -0.0625rem;
+        }
+      }
+    }
+  }
+}

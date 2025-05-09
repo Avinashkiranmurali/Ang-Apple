@@ -1,0 +1,136 @@
+<!-- <Facets Filter - Mobile Template> -->
+
+<div class="mobile-facets-modal" cdkTrapFocus [cdkTrapFocusAutoCapture]="false" *ngIf="isMobile">
+  <div class="modal-dialog modal-md2">
+    <div class="modal-content">
+      <section class="mobile-facets-container">
+        <article id="mobileFacetsModal" class="mobile-facets-content">
+          <div class="modal-close-action-content">
+            <div>
+              <span
+                class="g-icons icon-icon-close icon-close"
+                tabindex="0"
+                role="button"
+                aria-label="close modal window"
+                (click)="closeActiveModal()"
+              ></span>
+            </div>
+            <div>
+              <a
+                id="modal-suggest-btn-cancel"
+                class="link-btn facets-reset"
+                role="link"
+                *ngIf="enableResetFlag"
+                [routerLink]="[]" [queryParams]="null"
+              >
+                <span class="sit-mid">{{ "resetLabel" | translate }}</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="btn-container btn-container-flex">
+            <button
+              id="btn-modalDone"
+              role="button"
+              class="btn-base blue-btn"
+              (click)="closeActiveModal()"
+            >
+              {{ "done" | translate }}
+            </button>
+          </div>
+          <div class="mobile-facets-filters facets-mobile">
+            <ng-container *ngTemplateOutlet="facetsFiltersTemplate">
+            </ng-container>
+          </div>
+        </article>
+      </section>
+    </div>
+  </div>
+</div>
+
+<!-- <Facets Filter - Desktop Template> -->
+<div class="facets-filters-fixed-container" *ngIf="isDesktop || isTablet"
+     [ngClass]="{ 'position-fixed' : facetsScrollObj['fixedFacetsContainer'],
+      'position-end' : facetsScrollObj['endPositionFacetsContainer'] ,
+      'notification-enabled': facetsScrollObj['notificationRibbonEnabled']}">
+  <div class="facets-filters-template-container">
+    <ng-container *ngIf="isDesktop || isTablet" [ngTemplateOutlet]="facetsFiltersTemplate">
+    </ng-container>
+  </div>
+</div>
+
+<!-- <Facets Filter Template> -->
+<ng-template #facetsFiltersTemplate>
+  <div
+    *ngFor="let facetItem of facetsFilters | keyvalue: sharedService.returnZero; let i = index" role="group">
+    <button
+      class="facetsTitle {{expandCollapse}}"
+      tabindex="0"
+      [attr.aria-expanded]="expanded[i]"
+      [attr.aria-controls]="'label-id' + i"
+      [ngClass]="{ expanded: expanded[i], collapsed: !expanded[i] }"
+      (click)="expanded[i] = !expanded[i]; filterGroupExpanded();"
+      [attr.aria-labelledby]="'categoryLabel-id' + i"
+    >
+      <span [id]="'categoryLabel-id' + i" class="button-caption">{{ facetItem.value[0].i18Name }}</span>
+    </button>
+    <ul
+      [id]="'label-id' + i"
+      [attr.aria-label]="'filter ' + facetItem.value[0].i18Name"
+      [attr.aria-hidden]="!expanded[i]"
+    >
+      <li
+        class="facetsOptions"
+        *ngFor="let filterOption of facetItem.value | slice : 0 : filterLimit[i]; let idx = index; let last = last;"
+        [ngClass]="{
+          filtered: filterOption.isFiltered,
+          disabled: filterOption.disabled,
+          lastOption: last && facetItem.value.length <= 7
+        }"
+      >
+        <p [class.isActive]="filterOption.isFiltered" #isActive>
+          <a role="checkbox" [attr.aria-checked]="isActive.classList.contains('isActive')" [attr.aria-disabled]="filterOption.disabled"
+             [routerLink]="[]" tabindex="{{ expanded[i] ? '0' : '-1' }}"
+             [queryParams]="queryParamsObj(filterOption)">
+            <span>
+             {{ filterOption.value }}
+            </span>
+          </a>
+        </p>
+      </li>
+      <li
+        class="moreOptions lastOption"
+        (click)="toggleLimit(i, facetItem?.value?.length)"
+        (keyup.enter)="toggleLimit(i, facetItem?.value?.length)"
+        *ngIf="facetItem.value.length > 7 && !(filterLimit[i] > 7)"
+      >
+        <label
+          tabindex="{{ expanded[i] ? '0' : '-1' }}"
+          class="moreOptionsLabel"
+          [attr.aria-hidden]="!expanded[i]"
+        >{{
+          'moreFacetsFilters' | translate
+          }}
+
+        </label>
+      </li>
+      <li
+        class="moreOptions lastOption"
+        (click)="toggleLimit(i, facetItem?.value?.length)"
+        (keyup.enter)="toggleLimit(i, facetItem?.value?.length)"
+        *ngIf="facetItem.value.length > 7 && filterLimit[i] > 7"
+      >
+        <label
+          tabindex="{{ expanded[i] ? '0' : '-1' }}"
+          class="moreOptionsLabel"
+          [attr.aria-hidden]="!expanded[i]"
+          >{{
+            'lessFacetsFilter'  | translate
+          }}
+
+        </label>
+      </li>
+
+    </ul>
+  </div>
+</ng-template>

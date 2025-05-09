@@ -1,0 +1,185 @@
+@import "~styles/mixins";
+@import "~styles/typography";
+@import "~styles/common/payment-module";
+
+::ng-deep {
+  .payment-module {
+    $spinner-display: inline-block !default;
+    $spinner-height-width: rem(24px) !default;
+    $spinner-visible-color-white: #fff !default;
+    $spinner-invisible-color: rgba(255,255,255, 0) !default;
+    $spinner-border-width: rem(2px) !default;
+    $spinner-border-type: solid !default;
+    $spinner-animation-name: loading-spinner !default;
+    $spinner-animation-duration: infinite !default;
+    $spinner-animation-timing-function: linear !default;
+    $spinner-radius: 50% !default;
+    $spinner-animation-speed: 1s !default;
+    $spinner-transform-value: rotate(360deg) !default;
+
+    @mixin spinner-base {
+      display: $spinner-display;
+      width: $spinner-height-width;
+      height: $spinner-height-width;
+      border: $spinner-border-width $spinner-border-type $spinner-invisible-color;
+      border-radius: $spinner-radius;
+      -webkit-animation:  $spinner-animation-name $spinner-animation-speed $spinner-animation-timing-function $spinner-animation-duration;
+      -moz-animation:     $spinner-animation-name $spinner-animation-speed $spinner-animation-timing-function $spinner-animation-duration;
+      -ms-transform:      $spinner-animation-name $spinner-animation-speed $spinner-animation-timing-function $spinner-animation-duration;
+      -o-animation:       $spinner-animation-name $spinner-animation-speed $spinner-animation-timing-function $spinner-animation-duration;
+      animation:          $spinner-animation-name $spinner-animation-speed $spinner-animation-timing-function $spinner-animation-duration;
+    }
+
+    @mixin spinner-color($color) {
+      border-top-color: $color;
+      border-right-color: $color;
+      border-bottom-color: $color;
+    }
+
+    @mixin spinner-transform($transform-value) {
+      -webkit-transform: $transform-value;
+      -moz-transform:    $transform-value;
+      -ms-transform:     $transform-value;
+      -o-transform:      $transform-value;
+      transform:         $transform-value;
+    }
+
+    .loading-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+
+      .loading-spinner {
+        @include spinner-base();
+
+        &.loading-spinner-blue {
+          @include spinner-color($spinner-visible-color-white)
+        }
+      }
+    }
+
+    @keyframes #{$spinner-animation-name} {
+      to { @include spinner-transform($spinner-transform-value); }
+    }
+    @-webkit-keyframes #{$spinner-animation-name} {
+      to { @include spinner-transform($spinner-transform-value); }
+    }
+  }
+}
+
+.payment-module {
+  .point-entry-component {
+    display: block;
+    width: 100%;
+    margin: rem(15px) 0 rem(10px) 0;
+
+    .point-entry-desc {
+      display: block;
+      width: 100%;
+      padding: rem(5px) rem(15px) 0 rem(15px);
+      font-size: rem(14px);
+      font-weight: 400;
+      position: absolute;
+      z-index: 11;
+    }
+    .point-entry-display {
+      display: block;
+      margin: rem(-27px) 0 0 rem(15px);
+      position: absolute;
+      font-size: rem(17px);
+      line-height: 1.23543;
+      font-weight: 400;
+      &:focus + label {
+        display: none;
+        color: transparent;
+      }
+    }
+
+    label {
+      cursor: pointer;
+      color: #333333;
+      margin-top: rem(15px);
+      margin-bottom: 0;
+      position: relative;
+      display: block;
+      border-radius: rem(12px);
+
+      &.point-entry {
+        .label-display{
+          margin: 0;
+          padding-top: rem(26px);
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+        }
+      }
+
+      input, .label-display {
+        width: 100%;
+        display: block;
+        font-size: rem(17px);
+        line-height: 1.23543;
+        font-weight: 400;
+        letter-spacing: -.022em;
+        box-sizing: border-box;
+        height: 3.3em;
+        padding-top: rem(18px);
+        padding-left: rem(16px);
+        padding-right: rem(16px);
+        color: #333;
+        text-align: left;
+        border: rem(1px) solid #cccccc;
+        border-radius: rem(12px);
+        position: relative;
+        z-index: 10;
+
+        &.point-entry-field {
+          color: transparent;
+          background: transparent;
+        }
+        &:focus:not(.disabled){
+          color: #333;
+        }
+        &:focus + label {
+          display: none;
+          color: transparent;
+        }
+      }
+
+      &.error {
+        color: $error-text-color;
+
+        input {
+          background: #fef0f0;
+          border-color: $input-border-error;
+        }
+      }
+    }
+    .error-wrapper {
+      .error-text {
+        @include red-txt;
+        padding: rem(2px) rem(3px) rem(1px) rem(20px);
+
+        top: rem(156px);
+        display: inline-block;
+
+        &:before {
+          content: "\e902";
+          @include error-icon;
+          margin-left: rem(-18px);
+          margin-top: rem(3px);
+          padding-right: .3em;
+          display: inline-block;
+          font-weight: bold;
+          font-size: rem(13px);
+        }
+      }
+    }
+  }
+}

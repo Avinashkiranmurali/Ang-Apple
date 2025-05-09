@@ -1,0 +1,11 @@
+@import "~styles/common/payment-summary";
+@import "~styles/common/payment-module";
+@import "~styles/common/total-breakdown";
+
+.cart-totals-breakdown {
+  .variable-payment, .one-payment {
+    .unbundled-breakdown {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+<div class="user-info-popup">
+    <ul class="action-item-list" [hidden]="!(userDropdownLinks.length > 0)">
+
+        <li [hidden]="!(userDropdownLinks.indexOf('bag') >= 0)" class="action-item-bag">
+            <a [hidden]="user.browseOnly" [routerLink]="['cart']" data-pt-name="cc_apple_bagicon" class="g-icons icon-UserBagIcon chaseanalytics-track-link">{{ 'shoppingCart' | translate }}&nbsp;<span *ngIf="cartItemsTotalCount > 0">({{ cartItemsTotalCount }})</span></a>
+            <a [hidden]="!user.browseOnly" (click)="openModal();" href="javascript:void(0)" class="g-icons icon-UserBagIcon">{{ 'shoppingCart' | translate }}&nbsp;<span *ngIf="cartItemsTotalCount > 0">({{ cartItemsTotalCount }})</span></a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('orders') >= 0" class="action-item-orders">
+            <a routerLink="/store/order-history" data-pt-name='cc_apple_ordersicon' class="g-icons icon-Orders chaseanalytics-track-link">{{ 'orders' | translate }} </a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('navigate-back') >= 0" class="action-item-navigateBack">
+            <a (click)="sessionTypeAction('navigateTo')" href="" [innerHTML]="messages['programHome'] ? messages['programHome'] : messages['programDisplayName']" class="g-icons icon-navigateHome"></a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('home') >= 0" class="action-item-programHomeLink">
+            <a href="{{ messages['programHomeLink'] }}" data-external target="_self" class="g-icons icon-navigateHome">{{ 'programHome' | translate }}</a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('sign-out') >= 0 && !config.hideLoginLogoutLink" class="action-item-signOut">
+            <a href="" (click)="sessionTypeAction('signOut')" class="g-icons icon-SignIn">{{ 'signOut' | translate }} </a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('sign-in') >= 0 && !config.hideLoginLogoutLink" class="action-item-signIn">
+            <a href="" (click)="sessionTypeAction('signIn')" class="g-icons icon-SignIn">{{ 'signIn' | translate }} </a>
+        </li>
+
+        <li *ngIf="userDropdownLinks.indexOf('terms') >= 0"  class="action-item-termUrl">
+            <a *ngIf="messages['termUrl']" href="{{ messages['termUrl'] }}" data-external target="{{ (config['openTermUrlInSameTab']) ? '_self' : '_blank' }}">{{ 'termsAndConditionText' | translate }}</a>
+            <a *ngIf="!messages['termUrl']" href="javascript:void(0)">{{ 'termsAndConditionText' | translate }}</a>
+        </li>
+
+        <li *ngIf="five9SocialWidget && five9SocialWidget.widgetAdded && userDropdownLinks.indexOf('live-chat') >= 0 && !isMobile"  class="action-item-liveChat">
+            <a class="g-icons icon-LiveChat" href="" (click)="openFive9Chat()">{{ 'liveChatLink' | translate }}</a>
+        </li>
+
+    </ul>
+  <div *ngIf="messages['authenticatedBagItemList'] && !config.loginRequired" #termsLink [innerHTML]="'authenticatedBagItemList' | translate : { messages : messages, glbImgDomain : config.imageServerUrl } | safe"></div>
+</div>

@@ -1,0 +1,80 @@
+<div>
+  <div class="product-tile">
+    <div class="hideFromDOM" *ngIf="disabled" role="alert" [attr.aria-label]="'loadingAlt' | translate"></div>
+    <div class="product-image">
+      <img [src]="item.images.large | aplImgSize : '431'" alt="" />
+    </div>
+    <div class="product-info-grid">
+      <div class="product-link">{{ item.name }}</div>
+        <div class="product-variations"
+           *ngFor="let optionSet of productByConfigOptions | keyvalue : sharedService.returnZero  | orderBy: 'asc':  'key'; let
+           last=last"
+           [ngClass]="{ 'last-variant' : last }">
+
+          <div *ngIf="optionSet.value['name'] === 'color'" class="color-variant">
+            <legend class="dimensionColor">
+              {{ 'color' | translate }}
+              <span class="selected-text"> -
+                {{ hoverColor || selectedVariantText }}
+              </span>
+            </legend>
+
+            <ul class="bandColor-list">
+              <li class="item" *ngFor="let option of optionSet.value['optionData']; let indexVal = index"
+                  (mouseover)="mouseHoverEvent(option['value'])" (mouseleave)="mouseLeaveEvent()"
+                  [ngClass]="{'hidden': option['optHidden']}">
+                <input type="radio" id="{{ option['key'] + '-' }}{{ optionSet.value['name'] + '-' }}{{ index }}"
+                       [attr.name]="optionSet.value['name']" [ngClass]="'opt-cell ' + option['value']"
+                       [value]="option['key']"
+                       [attr.aria-label]="option['key'] + '-' + optionSet.value['name'] "
+                       [(ngModel)]="selectedVariant[optionSet.value['name']]"
+                       [checked]="(selectedVariant[optionSet.value['name']] === option['key'])"
+                       (click)="changeVariantOption(option['key'],optionSet.value)" />
+
+                <label appConfigOption [indexVal]="indexVal" [optdata]="option" [config]="config"
+                       [messages]="messages" [optset]="optionSet.value"
+                       for="{{ option['key'] + '-' }}{{ optionSet.value['name'] + '-' }}{{ index }}" class="item-details"
+                       [ngClass]="{'selected':selectedVariant[optionSet.value['name']] === option['key'] }">
+                </label>
+              </li>
+            </ul>
+          </div>
+
+          <div *ngIf="optionSet.value['name'] !== 'color'" class="language-variant">
+            <label class="language-label"
+                  [attr.for]="selectedVariant[optionSet.value['name']] + '_' + optionSet.value['name'] + '_' + index">{{optionSet.value['name']}}
+            </label>
+            <select [(ngModel)]="selectedVariant[optionSet.value['name']]"
+                   [attr.id]="selectedVariant[optionSet.value['name']] + '_' + optionSet.value['name'] + '_' + index"
+                   [attr.aria-label]="optionSet.value['name']"
+                   (change)="changeVariantOption(selectedVariant[optionSet.value['name']],optionSet.value)">
+              <option [ngValue]="option.key"
+                     *ngFor="let option of optionSet.value['optionData']">
+               {{ option['value'] }}</option>
+            </select>
+          </div>
+        </div>
+
+      <!--Pricing-->
+      <div class="product-item-price">
+          <app-pricing-temp
+            parentClass="related-products-tile"
+            ext=""
+            [offer]="item.offers[0]"
+            [item]="item">
+          </app-pricing-temp>
+      </div>
+
+      <!--  Btn Container-->
+      <div class="btn-container">
+        <button class="btn-base blue-btn" attr.aria-label="{{ 'addToCartBtn' | translate }} {{ item.name }}"
+                [ngClass]="{'disabled':disabled }"
+                [disabled]="disabled"
+                (click)="addItemToCart(item['psid'], item)">
+          {{ 'addToCartBtn' | translate }}</button>
+        <span class="cart-added-message" *ngIf="item['selected']">{{ 'itemAddedToBag' | translate }}</span>
+      </div>
+
+    </div>
+  </div>
+</div>

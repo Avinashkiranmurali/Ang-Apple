@@ -1,0 +1,74 @@
+<div class="nav-searchbar"
+     [ngClass]="{
+       'on-search-page' : searchPage,
+       'global-search-page': !searchPage,
+       'mobile-search-focus-animate' : mobileSearchFocused && !searchPage,
+       'mobile-search-focus-animate-off' : mobileSearchFocused === false && !searchPage
+     }">
+  <div class="search-overlay open" [ngClass]="{ 'sb-content-mobile' : !(isDesktop || isTablet) && !searchPage}">
+    <form class="global-search" autocomplete="off" [ngClass]="{ 'padding-right-0' : mobileSearchFocused }"
+          (ngSubmit)="doSearchSubmit(searchForm)" #searchForm="ngForm">
+      <div class="mobile-search-entry">
+        <div class="search-bar-component-container">
+          <div class="search-bar-component-content search-on"
+               [ngClass]="{ 'focus-width': mobileSearchFocused, 'focus-indicator': searchIsFocused && searchPage }">
+            <div class="search-bar-container">
+              <span class="mainnav-search g-icons icon-SearchIcon" tabindex="0"
+                (click)="searchForm.ngSubmit.emit()"
+                (keyup.enter)="searchForm.ngSubmit.emit()"
+                title="{{ 'globalSearch' | translate }}"
+                [ngStyle]="{'margin-top': searchPage ? '0.2004465rem' : '0' }">
+              </span>
+              <span class="mainnav-search">
+                <input type='submit' tabindex="0" />
+              </span>
+              <input type="text" aria-label="Search" id="search-input" tabindex="0" [placeholder]="('searchPlaceHolder' | translate)"
+                     [ngClass]="{'on-nav-bar': !searchPage }"
+                     [ngStyle]="{'width': searchPage ? '81%' : '90%' }"
+                     (click)="focusSearchInput()"
+                     (keyup)="onSearchTextChange($event)"
+                     (blur)="onSearchBlur()"
+                     (focus)="focusSearchInput()"
+                     [(ngModel)]="terms"
+                     role="combobox"
+                     aria-controls="search"
+                     [attr.aria-expanded]="!searchPage"
+                     name="searchTerm" #searchField />
+              <span role="button" aria-label="Search Close" tabindex="0" role="button"  class="g-icons icon-icon-close close-btn" id="search"
+                    *ngIf="!searchPage" (click)="onSearchClose()" (keydown.enter)="onSearchClose()" [hidden]="!(isDesktop || isTablet)">
+              </span>
+              <span role="button" aria-label="Clear" role="button" tabindex="0" class="g-icons icon-ImagePager-53 close-btn" [hidden]="(isDesktop || isTablet) && !searchPage"
+                [ngClass]="{'show-me': searchPage && isSearchTextEntered || isMobile && isSearchTextEntered }"
+                [ngStyle]="{'margin': searchPage ? '0.133631rem 0.133631rem 0 0' : ''}"
+                (click)="resetSearchForm(); this.searchForm.reset();"
+                (keydown.enter)="resetSearchForm(); this.searchForm.reset(); $event.preventDefault()">
+              </span>
+            </div>
+          </div>
+
+          <span class="mobile-close-button" role="button"
+            [ngClass]="{ 'show-mobile-close-button': mobileSearchFocused}"
+            [hidden]="(isDesktop || isTablet) || searchPage"
+            (click)="blurSearchInput(); this.searchForm.reset();">
+              {{ 'cancel' | translate }}
+          </span>
+
+          <app-quick-links *ngIf="showQuickLinks && !isSearchTextEntered && (isDesktop || isTablet) && !searchPage && quickLinks"
+            [quickLinks]="quickLinks"
+            [mobileNav]="mobileNav" (closeQuickLinks)="closeQuickLinks()"
+            class="open"
+            parentClass="nav-search-page"
+          >
+          </app-quick-links>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <app-quick-links *ngIf="showQuickLinks && !isSearchTextEntered && !isDesktop && !searchPage && quickLinks"
+    [quickLinks]="quickLinks"
+    [mobileNav]="mobileNav"
+    class="open">
+  </app-quick-links>
+</div>
+

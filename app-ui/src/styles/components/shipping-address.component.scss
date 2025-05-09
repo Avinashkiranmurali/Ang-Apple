@@ -1,0 +1,578 @@
+@import "~styles/mixins";
+
+.address-form-container {
+  .address-form-header {
+    background-color: #ffffff;
+    border-bottom: rem(1px) solid #e6e6e6;
+    padding: rem(45px) rem(20px);
+    text-align: center;
+
+    h1 {
+      font-size: rem(20px);
+      font-weight: $font-weight-semi-bold;
+      line-height: 1.4;
+      margin: 0;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .error-msg {
+      color: $error-text-color;
+      font-size: rem(14px);
+      font-weight: $font-weight-semi-bold;
+    }
+
+    .error-list {
+      display: none;
+      margin: rem(15px) auto rem(-20px);
+      padding: 0 rem(20px);
+
+      //width: max-content;
+      //cannot use max-content as it is experimental
+      //does not work in firefox or IE
+      width: auto;
+
+      li {
+        color: $error-text-color;
+        text-align: left;
+      }
+    }
+  }
+
+  .address-form-body,
+  .address-form-footer {
+    margin: 0 auto;
+    max-width: rem(1010px);
+  }
+
+  .address-form-body {
+    display: table;
+    padding: 0 rem(15px) rem(30px) rem(15px);
+    width: 100%;
+
+    .full-width-buttons {
+      .blue-btn {
+        margin: rem(11px) 0 rem(5px) 0;
+      }
+
+      .cancel {
+        margin: rem(4px) 0 rem(8px) 0;
+      }
+    }
+
+    .wrap-container {
+      width: 50%;
+
+      &.form-margin {
+        margin-bottom: rem(40px);
+      }
+    }
+
+    > form, > article {
+      display: table-cell;
+      vertical-align: top;
+      width: 50%;
+    }
+
+    h4, legend {
+      font-size: rem(20px);
+      font-weight: $font-weight-semi-bold;
+    }
+
+    .btn-container {
+      > p {
+        display: table-cell;
+        text-align: left;
+
+        &.right-btn {
+          text-align: right;
+          padding-left: rem(10px);
+          width: 100%;
+        }
+
+        #btn-apply-edit-shipContact {
+          width: 100%;
+        }
+      }
+    }
+
+    .form-content {
+      legend {
+        border: none;
+        margin-bottom: rem(5px);
+
+        em {
+          color: #666666;
+        }
+      }
+
+      .address-fields-header {
+        h1 {
+          margin: rem(45px) 0 rem(40px);
+          font-size: rem(40px);
+          line-height: 1.1;
+          font-weight: $font-weight-semi-bold;
+          letter-spacing: 0;
+        }
+
+        legend {
+          font-size: rem(24px);
+          line-height: 1.16667;
+          font-weight: $font-weight-semi-bold;
+          letter-spacing: .009em;
+          margin-bottom: rem(30px);
+        }
+      }
+
+      .address-fields-header-section {
+        padding-bottom: rem(45px);
+
+        h1 {
+          margin: 0;
+          font-size: $s-med3;
+          line-height: 1.1;
+          font-weight: $font-weight-semi-bold;
+          letter-spacing: 0;
+          border-bottom: rem(1px) solid #e6e6e6;
+          padding: rem(5px) 0 rem(10px) 0;
+          color: red;
+        }
+      }
+
+      select {
+        border-color: #999;
+        border-radius: rem(12px);
+        padding: rem(5px) rem(6px);
+        margin-right: rem(10px);
+        height: rem(30px);
+        width: rem(80px);
+
+        //to stop firefox from adding red border around form input without errors
+        //stops browser feature from adding red border
+        &:invalid {
+          box-shadow: none;
+        }
+
+        &.multi-address {
+          width: 93%;
+        }
+      }
+
+      &.form-fields {
+        clear: both;
+        margin: 0;
+        padding: rem(10px) 0 0;
+        position: relative;
+
+        .field-row {
+          position: relative;
+          margin-bottom: rem(14px);
+
+          &.input-entered {
+            label {
+              font-size: rem(12px);
+              top: rem(8px);
+              color: #333;
+            }
+          }
+
+          &.input-error-row {
+            margin-bottom: 0;
+
+            label {
+              color: $error-text-color !important;
+            }
+
+            input {
+              background: #fef0f0;
+              border-color: $input-border-error;
+            }
+
+            .error-text {
+              @include red-txt;
+            }
+          }
+
+          select {
+            padding: rem(18px) rem(11px) 0;
+            @include dropdown-icon;
+            @include appearance(none);
+            border-radius: rem(12px);
+
+            &:focus {
+              background: #ffffff;
+              @include focus-border;
+              @include dropdown-icon;
+            }
+          }
+
+          input, select {
+            @include responsive-input-select;
+
+            //to stop firefox from adding red border around form input without errors
+            //stops browser feature from adding red border
+            &:invalid {
+              box-shadow: none;
+            }
+
+            &:required {
+              box-shadow: none;
+            }
+
+            &#state, &#zip5, &#zip4 {
+              display: inline-block;
+              margin: 0;
+            }
+
+            &:focus ~ label {
+              font-size: rem(12px);
+              top: rem(8px);
+              color: #333;
+            }
+
+            &:focus {
+              background: #ffffff;
+              @include focus-border;
+            }
+
+          }
+
+          label {
+            @include responsive-field-row-label;
+
+            &.text-bold {
+              font-weight: $fw-bold
+            }
+          }
+        }
+
+        input:disabled, select:disabled {
+          @include responsive-input-select-disabled;
+
+          &.input-error {
+            border-color: $input-border-error;
+          }
+        }
+      }
+
+      #edit-address-fields,
+      #edit-contact-fields {
+
+        .field-row {
+          padding: rem(1px) rem(1px) rem(20px);
+        }
+      }
+
+      #edit-address-fields {
+        padding-bottom: 0;
+
+        .field-row {
+          padding: rem(1px) rem(1px) 0;
+
+          a {
+            &.diff-address {
+              float: right;
+              text-decoration: underline;
+            }
+          }
+        }
+
+        .multi-address-select {
+          padding-bottom: rem(20px);
+
+          .field-row {
+            padding-bottom: rem(5px);
+
+            label {
+              font-weight: $font-weight-regular;
+            }
+
+            &:first-child {
+              margin-bottom: 0;
+            }
+
+
+            &.ng-b-dropdown {
+              &.show {
+                .select-selected:after {
+                  content: '\2C6';
+                }
+              }
+              .dropdown-toggle:after {
+                display: none;
+              }
+              .select-items {
+                width: 100%;
+                .select-option {
+                  color: #333;
+                  padding: 0.400893rem 1.069048rem;
+                  cursor: pointer;
+                  font-size: 1.069048rem;
+                  line-height: 1.2694945rem;
+                  .bold-label {
+                    font-weight: 700;
+                    padding: 0 0 0.3340775rem;
+                  }
+                  span {
+                    display: block;
+                  }
+                  &:hover, &:focus {
+                    background-color: DodgerBlue;
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    #address-disclaimer-content {
+      border-top: rem(1px) solid #e6e6e6;
+
+      .shipping-policy {
+        padding-top: rem(19px);
+
+        h4 {
+          margin-bottom: rem(20px);
+        }
+      }
+
+      ul {
+        padding: 0 0 rem(15px) rem(16px);
+
+        li {
+          padding: 0 0 rem(15px);
+        }
+      }
+
+      dl {
+        color: #666666;
+      }
+
+      dd {
+        padding-bottom: rem(15px);
+      }
+    }
+
+    .address-options {
+      background: #F2F2F2;
+      border: none;
+      border-radius: 0;
+    }
+
+    &.error-content {
+      background: #F2F2F2;
+      padding: rem(20px) rem(25px);
+    }
+  }
+
+  .address-form-footer {
+    padding: 0 rem(15px) rem(30px);
+
+    .btn-container {
+      display: table;
+      margin: 0 auto;
+      max-width: rem(1010px);
+      padding: 0 0 rem(10px);
+      width: 100%;
+
+      > p {
+        display: table-cell;
+        text-align: left;
+        width: 50%;
+
+        &.right-btn {
+          text-align: right;
+        }
+      }
+
+      .btn-base {
+        height: 3.3em;
+      }
+    }
+  }
+
+  .address-form-padding-shrink {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .address-form-padding-bottom-shrink {
+    padding-bottom: 0;
+  }
+
+  &.address-error {
+    .address-form-header {
+      .error-list {
+        display: inline-block;
+      }
+    }
+
+    .address-form-body {
+      .input-error {
+        border-color: $input-border-error;
+      }
+
+      .error-text {
+        display: block;
+        color: $error-text-color;
+      }
+    }
+  }
+
+  .custom-select {
+    @include responsive-input-select;
+    background: none;
+    position: relative;
+
+    &.display-address {
+      .select-selected {
+        p {
+          color: $darkGrayColor;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          width: 90%;
+          max-width: 80vw;
+        }
+      }
+    }
+
+    .select-selected {
+
+      @include responsive-label;
+      position: relative;
+      top: rem(4px);
+      padding: 0;
+      color: $input-text-color;
+
+      &:after {
+        position: absolute;
+        content: #{symbol(02C7)};
+        top: rem(-18.8px);
+        right: rem(9px);
+        width: rem(15px);
+        height: rem(19px);
+        font-size: rem(44px);
+        color: #999;
+      }
+
+      /*point the arrow upwards when the select box is open (active):*/
+      &.select-arrow-active:after {
+        content: #{symbol(02C6)};
+        top: rem(-18.8px);
+        right: rem(9px);
+        width: rem(15px);
+        font-size: rem(44px);
+        color: #999;
+      }
+
+    }
+
+    /*style the items (options), including the selected item:*/
+    /*style items (options):*/
+    .select-items {
+      list-style: none;
+      margin: 0 rem(-2px) 0 rem(-2px);
+      padding: 0;
+      position: absolute;
+      background-color: white;
+      top: 100%;
+      left: 0;
+      right: 0;
+      z-index: 99;
+      overflow: auto;
+
+      li {
+        color: #333;
+        padding: rem(6px) rem(16px);
+        cursor: pointer;
+        user-select: none;
+        font-size: rem(16px);
+        line-height: rem(19px);
+
+        span {
+          display: block;
+        }
+
+        &.disabled-opt {
+          color: #999;
+          font-size: rem(14px);
+        }
+      }
+
+      .bold-label {
+        font-weight: bold;
+        padding: 0 0 rem(5px);
+      }
+
+      .select-option {
+        &:hover {
+          background-color: DodgerBlue;
+          color: #ffffff;
+        }
+      }
+    }
+
+    &.open {
+      border-radius: rem(12px);
+      border-bottom: none;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+
+      .select-items {
+        border: $input-border-active;
+        border-top: transparent;
+        border-bottom-right-radius: rem(4px);
+        border-bottom-left-radius: rem(4px);
+      }
+
+    }
+
+    /*hide the items when the select box is closed:*/
+    .select-hide {
+      display: none;
+    }
+
+    .select-items div:hover, .same-as-selected {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    //Change style on focus
+    &:focus ~ label, div:focus {
+      font-size: rem(12px);
+      top: rem(8px);
+      color: #666;
+    }
+
+    &:focus {
+      @include focus-border;
+    }
+  }
+}
+
+@include for-phablet-only {
+  .address-form-container {
+    .address-form-body {
+      .wrap-container {
+        padding: $wrap-container-padding;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include for-small-mobile {
+  .address-form-container {
+    .address-form-body {
+      .wrap-container {
+        padding: $wrap-container-padding;
+        width: 100%;
+      }
+    }
+  }
+}

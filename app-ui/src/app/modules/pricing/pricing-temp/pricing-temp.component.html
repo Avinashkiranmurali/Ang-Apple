@@ -1,0 +1,233 @@
+<!-- Include for pricing template -->
+<div class="pricing-module" [class.discounted]="(isDiscounted?.discounted)" [ngClass]="parentClass">
+  <div class="price-content" [ngSwitch]="sharedService.getPricingTemp(config.pricingTemplate, ext, verifyFullDiscount, isDiscounted, hideFullDiscount)"
+       *ngIf="config.pricingTemplate && config.pricingTemplate !== 'no_pay'">
+
+    <!-- -----------------
+          Templates
+     ----------------- -->
+
+    <!-- Show Free text instead of Zero Points - irrespective of rewards template-->
+    <div *ngSwitchCase="'full-discounted.htm'">
+      <span class="gift-promo-free-caption full-discount-free-caption uppercase">{{ 'free' | translate }}</span>
+    </div>
+    <!-- no-pricing template-->
+    <div *ngSwitchCase="'no-pricing.htm'">
+    </div>
+
+    <!-- Cash Only -->
+    <div *ngSwitchCase="'cash-template.htm'">
+      <div class="discount-container" *ngIf="!config.disableStrikethrough && (isDiscounted?.discounted) && (isDiscounted?.cash) && !hideStrikethroughPrice">
+        <div [classList]="(isDiscounted?.cash) ? 'cash-discounted discount-module': 'discount-module'">
+        </div>
+      </div>
+      <div *ngIf="!config.pricingShowOriginalPrice" class="price-amount r-pad cash">{{ offer.displayPrice.amount | currency }}
+        <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup  aria-hidden="true" class="notice-indicator">*</sup></span>
+      </div>
+      <div *ngIf="config.pricingShowOriginalPrice" class="price-amount r-pad cash">
+        <span class="offscreen">Original price was</span>
+        <span>{{ offer?.unpromotedDisplayPrice?.amount | currency }}</span>
+        <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup  aria-hidden="true" class="notice-indicator">*</sup></span>
+      </div>
+    </div>
+
+    <!-- Points and Cash -->
+    <div *ngSwitchCase="'points_cash-template.htm'">
+      <div [classList]="(isDiscounted?.point) && (isDiscounted?.cash) ?
+      'discount-container dual-price':
+      'discount-container'" *ngIf="!config.disableStrikethrough &&  (isDiscounted?.discounted) && !hideStrikethroughPrice" >
+        <div [classList]="(isDiscounted?.point) ?  'point-discounted discount-module': 'discount-module'" *ngIf="(isDiscounted?.point)">
+              <span><app-discount-temp [parentClass]="parentClass" messages="messages" ext=""  [offers]="item['offers'][0]">
+                </app-discount-temp></span>
+        </div>
+        <div [classList]="(isDiscounted?.cash) ?  'cash-discounted amount-discount':'amount-discount'" *ngIf="(isDiscounted?.cash)">
+          <span class="offscreen">Original price was</span>
+          &nbsp;<span *ngIf="(isDiscounted?.point)">{{ 'or' | translate }}</span>&nbsp;<span>{{offer?.unpromotedDisplayPrice?.amount | currency}}</span>
+        </div>
+      </div>
+      <div class="price-amount">
+        <!-- From --><span class="from-label" *ngIf="showFromLabel && !this.user.locale.includes('zh')">{{ 'From' | translate }} </span>
+        {{ offer.displayPrice.points | number}} <span>{{ pointLabel }}<span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk">
+        <sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+        <!-- From (zh_*) --><span class="from-label" *ngIf="showFromLabel && this.user.locale.includes('zh')"> {{ 'From' | translate }}</span>
+      </div>
+      <p class="local-currency">
+        {{ 'or' | translate }} {{ offer.displayPrice.amount | currency }}<span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></p>
+    </div>
+
+    <!-- Points and Cash Checkout -->
+    <div *ngSwitchCase="'dual_points_and_currency-template.htm'">
+      <!--points pricing -->
+      <!-- From --><span class="from-label" *ngIf="showFromLabel && !this.user.locale.includes('zh')">{{ 'From' | translate }} </span>
+      <div class="price-amount text-normal" *ngIf="!config.showDollars">
+        {{ offer.points| currencyFormat: pricingTemplate : user.locale }}
+        <span>{{ pointLabel}}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+      </div>
+      <!-- From (zh_*) --><span class="from-label" *ngIf="showFromLabel && this.user.locale.includes('zh')"> {{ 'From' | translate }}</span>
+      <p class="local-currency rs-summary-label" *ngIf="!config.showDollars && 'points_cash' === config.pricingTemplate">
+        {{ 'or' | translate }} {{ offer.amount | currency }}
+        <span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+      </p>
+      <!--cash pricing -->
+      <!-- From --><span class="from-label" *ngIf="showFromLabel && !this.user.locale.includes('zh')">{{ 'From' | translate }} </span>
+      <div class="price-amount" *ngIf="config.showDollars">
+        {{ offer.amount | currency }} {{(config.usePointLabelForDollar)? pointLabel : ''}}
+        <span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator" >*</sup></span>
+      </div>
+      <!-- From (zh_*) --><span class="from-label" *ngIf="showFromLabel && this.user.locale.includes('zh')"> {{ 'From' | translate }}</span>
+      <p class="local-currency rs-summary-label" *ngIf="config.showDollars && 'points_cash' === config.pricingTemplate">
+        {{ 'or' | translate }} {{ offer.points | currencyFormat: pricingTemplate : user.locale }} {{ pointLabel }}<span *ngIf="config.showTaxDisclaimer && showTaxDisclaimer" role="img" aria-label="Superscript asterisk">
+        <sup aria-hidden="true" class="notice-indicator">*</sup></span></p>
+    </div>
+
+    <!-- Cash and Points -->
+    <div *ngSwitchCase="'cash_points-template.htm'">
+      <div [classList]="(isDiscounted?.point) && (isDiscounted?.cash) ?
+       'dual-price discount-container':  'discount-container'" *ngIf="!config.disableStrikethrough &&
+       (isDiscounted?.discounted) && !hideStrikethroughPrice">
+        <div [classList]="(isDiscounted?.cash) ?  'cash-discounted amount-discount': 'amount-discount'" *ngIf="(isDiscounted?.cash)">
+          <span class="offscreen">Original price was</span>
+          <span>{{offer?.unpromotedDisplayPrice?.amount | currency}}</span>
+        </div>
+        <div [classList]="(isDiscounted?.point) ?  'point-discounted discount-module': 'discount-module'" *ngIf="(isDiscounted?.point)">
+          <span *ngIf="(isDiscounted?.cash)">{{ 'or' | translate }} </span>
+        </div>
+      </div>
+      <div class="price-amount"> {{ offer.displayPrice.amount | currency}} <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*
+      </sup></span>
+      </div>
+      <p class="local-currency">
+        {{ 'or' | translate }} {{ offer.displayPrice.points | number }} {{ pointLabel }}<span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk">
+        <sup aria-hidden="true" class="notice-indicator">*</sup></span>
+      </p>
+    </div>
+
+    <!-- EPP Pay Per Period Only -->
+    <div  *ngSwitchCase="'pd_only-template.htm'">
+      <div [class.]="{'isEligible': offer.isEligibleForPayrollDeduction}">
+        <div class="product-estimate r-pad">
+          <span [innerHTML]="messages['estPayPeriod']"></span>
+          <span *ngIf="!config.validTax && config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"> <sup aria-hidden="true" class="notice-indicator">*</sup></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- EPP Cash and Pay Per Period / each -->
+    <div  *ngSwitchCase="'pd_cash-template.htm'">
+      <div [class.]="{'isEligible': offer.isEligibleForPayrollDeduction}">
+        <div class="product-estimate r-pad">
+          <span class="pay-period-amount" [innerHTML]="messages['estPayPeriod']"></span>
+          <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span>
+        </div>
+        <div class="price-amount r-pad cash" [innerHTML]="messages['retailPrice']"></div>
+      </div>
+    </div>
+
+    <!-- -----------------
+         Wellness Templates Styles
+     ----------------- -->
+    <!--Wellness - 'payroll_cash' Template -->
+    <div *ngSwitchCase="'payroll_cash-template.htm'">
+      <p class ="total-due" [class.]="{'cash-only': !offer.isEligibleForPayrollDeduction}">
+        <span>{{ offer.totalPrice.amount | currency }} </span><span *ngIf="offer.isEligibleForPayrollDeduction"> {{ 'or' | translate }}</span>
+      </p>
+      <div [innerHTML]="messages['payPeriodPrice']"  class="pay-period-price" *ngIf="offer.isEligibleForPayrollDeduction"></div>
+      <div class="subsidy-discount-applied" *ngIf="offer.discountApplied > 0">
+        {{ offer.discountApplied | currency }} {{ messages['subsidyApplied'] }}
+      </div>
+    </div>
+
+    <!--Wellness 'installments' Template-->
+    <div *ngSwitchCase="'installment-template.htm'">
+      <div class="cost-breakdown">
+        <p>
+          <span>{{ messages['activationDeposit'] }}</span>&nbsp;<span class="amount">{{ priceModel?.activationFee | currency }}</span>
+        </p>
+        <p *ngIf="priceModel && priceModel.upgradeCost > 0">
+          <span>{{ messages['upgradeCost'] }}</span>&nbsp;<span class="amount">{{ priceModel?.upgradeCost | currency }}</span>
+        </p>
+        <p class="total-due">
+          <span class="amountLabel">{{ messages['totalDue'] }}</span>&nbsp;<span class="amount">{{ priceModel?.totalDueTodayBeforeTax | currency }} <small>+{{ 'tax' | translate }}*</small></span>
+        </p>
+      </div>
+    </div>
+
+    <!--Cash Only - discount exclusive-->
+    <div *ngSwitchCase="'cash_discount_exclusive-template.htm'">
+      <p class="total-due cash-only"><span>{{ offer.unpromotedDisplayPrice.amount | currency }}</span></p>
+    </div>
+
+    <!-- -----------------
+     Wellness Templates  End
+     ----------------- -->
+
+    <!---------------------------
+     Wellness  Cart Template Start
+    ---------------------------->
+    <div *ngSwitchCase="'cart_payroll_cash-template.htm'">
+      <div class="total-due" [class.]="{'cash-only': !offer.isEligibleForPayrollDeduction}">
+        <span>{{ offer.totalPrice.amount | currency }} </span>
+        <span *ngIf="offer.isEligibleForPayrollDeduction">
+          {{ 'or' | translate }}
+        </span>
+        <sup *ngIf="offer.totalPrice.amount > 0 && !offer.isEligibleForPayrollDeduction">{{ messages['taxesIncluded'] }}</sup>
+        <div [innerHTML]="messages['cartPayPeriodPrice']" class="pay-period-price" *ngIf="offer.isEligibleForPayrollDeduction"></div>
+      </div>
+    </div>
+
+    <!--Pay Per Period Only [Cart]-->
+    <div *ngSwitchCase="'cart_no-cash_pd_cash-template.htm'">
+      <div [innerHTML]="messages['cartPayPeriodPrice']" class="pay-period-price"></div>
+    </div>
+
+    <!---------------------------
+     Wellness  Cart Template Ends
+    ---------------------------->
+
+    <!-- -----------------
+     Additional Templates Styles
+    ----------------- -->
+
+    <!-- EPP Cash and Pay Per Period / each -->
+    <div *ngSwitchCase="'full_pd_cash-template.htm'">
+      <div [class.]="{'isEligible': offer.isEligibleForPayrollDeduction}">
+        <div class="product-estimate r-pad">
+          <span class="pay-period-amount" [innerHTML]="messages['estPayPeriod-full']"></span>
+          <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator" >*</sup></span>
+        </div>
+        <div class="price-amount r-pad cash" [innerHTML]="messages['retailPrice-full']"></div>
+      </div>
+    </div>
+
+    <!-- EPP Cash and Pay Per Period / each -->
+    <div *ngSwitchCase="'alt_pd_cash-template.htm'">
+      <div [class.]="{'isEligible': offer.isEligibleForPayrollDeduction}">
+          <div class="price-amount r-pad cash" [innerHTML]="messages['retailPrice-alt']"></div>
+          <div class="product-estimate r-pad">
+              <span class="pay-period-amount" [innerHTML]="messages['estPayPeriod-alt']"></span>
+            <span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator" >*</sup></span>
+          </div>
+      </div>
+    </div>
+
+    <!-- Rewards - Points Only & Cash Rewards -->
+    <div *ngSwitchDefault>
+      <div class="discount-container" *ngIf="!config.disableStrikethrough && (isDiscounted?.discounted) && !hideStrikethroughPrice">
+        <div [classList]="(isDiscounted?.point) ? 'point-discounted discount-module': 'discount-module'" *ngIf="(isDiscounted?.point)">
+          <span>
+            <app-discount-temp [parentClass]="parentClass" messages="messages" ext=""  [offers]="item['offers'][0]"></app-discount-temp>
+          </span>
+        </div>
+      </div>
+      <div class="price-amount r-pad">
+        <!-- From --><span class="from-label" *ngIf="showFromLabel && !this.user.locale.includes('zh')">{{ 'From' | translate }} </span>
+        <!-- Points -->{{ offer.displayPrice.points | currencyFormat: config.pricingTemplate : user.locale }}
+        <!-- Label --><span class="points-label">{{ pointLabel }}<span *ngIf="config.showTaxDisclaimer" role="img" aria-label="Superscript asterisk"><sup aria-hidden="true" class="notice-indicator">*</sup></span></span>
+        <!-- From (zh_*) --><span class="from-label" *ngIf="showFromLabel && this.user.locale.includes('zh')"> {{ 'From' | translate }}</span>
+      </div>
+    </div>
+
+    <div class="price-earn-points" *ngIf="offer.earnPoints" [innerHTML]="'earnPointsMsg' | translate:{ earnPoints: offer.earnPoints, pointLabel: pointLabel }"></div>
+  </div>
+
+</div>

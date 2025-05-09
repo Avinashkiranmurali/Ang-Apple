@@ -1,0 +1,32 @@
+# Starter pipeline
+# https://aka.ms/yaml
+name: $(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+- develop
+
+parameters:
+  - name: SKIP_BUILD
+    type: boolean
+    default: false
+  - name: SPEED_BUILD
+    type: boolean
+    default: false
+
+resources:
+  repositories:
+  - repository: CICD-SRE #REPO-ALIAS
+    type: github
+    endpoint: Sherwood-forest
+    name: Sherwood-forest/pipelines
+    ref: refs/heads/main
+
+
+extends:
+  template: /apps/domains/loyalty/apple-gr-webapp/build/azure-pipelines.yml@CICD-SRE #/PATH-TO-PIPELINE-IN-REPO@REPO-ALIAS
+  # Defaults being passed through on each run to the template.
+  parameters:
+    SKIP_BUILD: ${{ parameters.SKIP_BUILD }}
+    SPEED_BUILD: ${{ parameters.SPEED_BUILD }}
+    jdkVersion: '11'
+    jdkUrl: 'https://github.com/AdoptOpenJDK/openjdk11-upstream-binaries/releases/download/jdk-11.0.7%2B10/OpenJDK11U-jdk_x64_linux_11.0.7_10.tar.gz'

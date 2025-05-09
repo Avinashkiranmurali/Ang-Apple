@@ -1,0 +1,186 @@
+@use "sass:math";
+
+//***********************TYPOGRAPHY*************************//
+$font-base: "SF Pro Display", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-text-icon: "SF Pro Text", "SF Pro Icons", "AOS Icons", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+$font-family-text-display: "SF Pro Text", "SF Pro Display", -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+//***********************FONT SIZES*************************//
+$fs-base: 14px;
+$wellness-fs-base: rem(16px);
+$s-xxxs: .42em; //px
+$s-xxs: .5em; //7px
+$s-xxs1: .80em; //9px
+$s-xs: .83em; //11px
+$s-s: .92em; //12px
+$s-reg: 1em; //14px
+$s-reg1: 1.08em; //15px
+$s-reg2: 1.16em; //16px
+$s-reg3: 1.20em; //16.5px?
+$s-reg4: 1.25em; //17px - results in 17.5
+$s-reg5: 1.33em; //18px - results in 18.6
+$s-reg6: 1.44em; //20px
+$s-reg7: 1.50em; //21px
+$s-reg8: 1.60em; //22px
+$s-med1: 1.66em; //23px
+$s-med15: 1.715em; //24.01px
+$s-med2: 1.75em; //24.5px
+$s-med8: 1.786em;//25.004px
+$s-med8: 1.786em;//25.004px
+$s-med3: 1.84em; //26px
+$s-med4: 1.92em; //27px
+$s-med5: 2.00em; //28px
+$s-med6: 2.16em; //30px
+$s-med7: 2.28em; //32px
+$s-lg1: 2.50em; //35px
+$s-lg2: 2.66em; //37px
+$s-lg3: 3.00em; //42px
+$s-lg4: 3.33em; //47px
+$s-lg5: 3.50em; //49px
+$s-lg6: 3.68em; //52px
+$s-lg7: 3.83em; //54px
+$s-lg8: 4.0em; //56px
+$s-xlg1: 4.58em; //64px
+$s-xlg3: 5.142851em; //71.9999px
+$s-xlg2: 5.83em; //82px
+
+$s-regN: rem(17px);
+$s-reg-m: rem(16px);
+$s-reg-l: rem(18px);
+$s-reg-l1: rem(21px);
+
+$banner-title-s: 2.285em; //32px
+$banner-title-m: 2.857em; //40px
+$banner-title-l: 6em; //84px
+
+$banner-tagLine-s: 1.857em; //26px
+$banner-tagLine-l: 4.285em; //60px
+//font weights
+$fw-light: 100;
+$fw-light1: 200;
+$fw-regular: 400;
+$fw-regular1: 500;
+$fw-new-banner-bold: 500;
+$fw-medium: 600;
+$fw-medium2: 700;
+$fw-bold: 800;
+
+$font-weight-ultra-light: 100;
+$font-weight-thin: 200;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+$font-weight-heavy: 800;
+$font-weight-black: 900;
+
+//font colors
+$fc-black: #333; // conflicts with $fc-black: #000; line 178
+$fc-dark-charcoal: #333;
+$fc-jet-black: #111;
+$fc-gray: #666;
+$fc-error: #c1272d;
+$fc-sonic-silver: #757575;
+$fc-dove-gray: #666;
+$fc-vivid-cerise: #D6107E;
+$fc-dogwood-rose: #d00861;
+$fc-neon-orange: #f15d22;
+$fc-rust: #b5461a;
+$fc-true-blue: #0071E3;
+$fc-navy-blue: #0070C9;
+$fc-chinese-silver: #CCCCCC;
+$fc-dark-charcoal: #333;
+$fc-shadow: #1D1D1D;
+
+//Mixins used in typography
+@mixin red-txt {
+  color: $fc-error;
+}
+
+//Line heights calculated
+$lh-base: 1.428571429;
+$lh-computed: floor($fs-base * $lh-base);
+
+//FONT Mixin
+@mixin font-style($size:$fs-base, $height: inherit, $color: inherit, $weight: inherit, $family: inherit) {
+  font-size: rem($size);
+  line-height: $height;
+  color: $color;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+@function stripUnit($value) {
+  @return math.div($value, $value * 0 + 1);
+}
+
+@function rem($pxValue) {
+  @return #{stripUnit($pxValue) * 0.0668155}rem;
+}
+
+//******************************COLOR VARIABLES*****************************************//
+
+//Navigation
+$page-bg: #FFF;
+$page-alt-bg: #F2F2F2;
+$top-hat-bg: #FFF;
+$container-bg: #FFF;
+$focus-border-color: #0070C9;
+$vitality-link-blue: $focus-border-color;
+
+//***************************VARIABLES**************************************************//
+
+$wrap-container-padding: rem(10px) 0 rem(10px) 0;
+$label-transition-delay: 0.125s ease all;
+
+$focus-box-shadow: 0 0 0 rem(3px) rgba(131, 192, 253, .5);
+$focus-outline-color: rem(2px) solid -webkit-focus-ring-color;
+$focus-outline-box-color: rem(2px) solid Highlight;
+
+$focus-outline-color-minimal: rem(0.25px) dotted rgba(204, 204, 204, 1);
+$focus-outline-offset-minimal: rem(4px);
+$focus-outline-width-minimal: thin;
+
+
+$input-border-active: 0.0668155rem solid #D6D6D6;
+$input-border-inactive: 0.0668155rem solid #C3C3C3;
+$input-border-error: #de071c;
+$label-text-color: #333;
+$label-placeholder-color: #666666;
+$input-text-color: #333;
+
+$text-color-disabled: #333;
+
+$error-icon-margin: rem(18px);
+$error-icon-margin-offset: 0rem;
+$error-text-color: #C1272D;
+$error-font-size: rem(12px);
+
+$image-folder: "../assets/images/";
+$error-icon: "errorIcon.svg";
+$information-icon: "informationIcon.svg";
+$dropdown-icon: "staticDropdownIcon.svg";
+$icon-size: rem(14px);
+
+//Wellness
+$fc-inactive-blue:#3F7D9E;
+$fc-active-blue:#0F5C86;
+$fc-lightgray: #576b81;
+$c-lightgray: #576b81;
+$fc-med-gray: #90a2b2;
+$fc-gray:#7A97A6;
+$fc-dark-gray: #666;
+$fc-description-gray: #808080;
+$fc-light-gray: #999999;
+$fc-green:#62c46f;
+$fc-dark-green: #58bb65;
+$fc-co-green:#2B8838;
+$fc-points-green: #009245;
+$fc-black: #000;
+$fc-blue:#0e7ac8;
+$fc-red: #ff0000;
+$fc-darkred: #c3272f;
+$fc-white: #fff;
+$fc-form-header:#3F7D9E;
+$fc-link-blue:#3F7D9E;
+$fc-input-blue:#b7c9d2;

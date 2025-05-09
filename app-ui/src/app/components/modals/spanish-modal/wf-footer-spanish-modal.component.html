@@ -1,0 +1,18 @@
+<div class="wf-modal wf-fade spanish-modal" id="spanishModal" role="dialog" tabindex="-1"
+     aria-labelledby="spanishModal"
+     lang="es">
+  <div class="modal-close-action-content">
+    <a href="javascript: void(0);" (click)="cancel()" (keydown.enter)="cancel()" auto-focus role="button"
+       class="g-icons icon-icon-close icon-close" aria-label="close modal window"></a>
+  </div>
+  <div class="modal-header">
+    <div class="modal-header-content">
+      <h4 class="modal-title" id="spanish-modal-title">{{messages['wf-spanish-modal-title']}}</h4>
+    </div>
+  </div>
+  <div class="modal-body">
+    <div class="modal-body-content">
+      <p class="spanish-modal-content" [innerHTML]="messages['wf-spanish-modal-content']"></p>
+    </div>
+  </div>
+</div>

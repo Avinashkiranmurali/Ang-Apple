@@ -1,0 +1,58 @@
+@import "~styles/mixins";
+
+.modal-processing {
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 1000;
+
+  .inner-content {
+    width: rem(560px);
+    margin: 0 auto;
+    text-align: center;
+
+    img {
+      margin: 0 auto;
+      display: block;
+      height: rem(52px);
+      width: rem(52px);
+    }
+
+    a.btn-base {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .spin-primary-msg {
+      color: #666;
+      font-size: rem(30px);
+      margin-top: rem(15px);
+    }
+
+    .spin-secondary-msg {
+      color: #666;
+      margin: rem(15px) auto rem(30px);
+      width: 70%;
+
+      .spin-secondary-error-msg {
+        font-weight: bold;
+      }
+    }
+  }
+
+  &.startup-temp, &.no-opacity {
+    background-color: rgba(255, 255, 255, 1);
+  }
+
+  &.failure-temp {
+    .inner-content {
+      width: 55%;
+    }
+  }
+}

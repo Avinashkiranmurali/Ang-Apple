@@ -1,0 +1,20 @@
+<div>
+  <div class="modal-close-action-content">
+    <a href class="g-icons icon-icon-close icon-close" (click)="cancel()" role="button" aria-label="close modal window" auto-focus></a>
+  </div>
+  <div class="modal-header">
+    <h4 class="modal-title" id="browse-only-modal-title">{{ 'browseOnlyHeader' | translate  }}</h4>
+  </div>
+  <div class="modal-body split-container ">
+    <div class="info-block">
+      <h5 [innerHTML]="messages['browseOnlyInfo']"></h5>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <div class="modal-btn-container-stacked-flex modal-btn-container">
+      <button class="btn-base blue-btn action-item" aria-label="ok" (click)="cancel()">
+        {{ 'ok' | translate  }}
+      </button>
+    </div>
+  </div>
+</div>

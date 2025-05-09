@@ -1,0 +1,59 @@
+@import "~styles/mixins";
+
+.content-container {
+  .banner-content {
+
+    .cta-type-image {
+      @include for-mobile-to-tablet {
+        max-width: 81%;
+        height: rem(291px);
+      }
+
+    }
+
+    .banner-title {
+      font-style: normal;
+      font-weight: 600;
+      font-size: rem(32px);
+      line-height: rem(38px);
+      margin-bottom: rem(20px);
+
+      @include for-mobile-to-tablet {
+        font-style: normal;
+        font-weight: 600;
+        font-size: rem(24px);
+        line-height: rem(29px);
+        margin-top: rem(-40px);
+      }
+    }
+
+    .banner-description {
+      margin: rem(-14px) 0 0 0;
+      font-style: normal;
+      font-weight: 400;
+      font-size: rem(21px);
+      line-height: rem(25px);
+    }
+
+    .cta-container {
+      margin-top: rem(18px);
+      margin-bottom: rem(67px);
+    }
+
+    .mw-contain {
+      .pos-contain {
+
+        .text-container {
+          text-align: left;
+
+          @include for-mobile-to-tablet {
+            text-align: center;
+            width: fit-content;
+            padding-left: rem(5px);
+            padding-right: rem(5px);
+          }
+        }
+      }
+    }
+  }
+}

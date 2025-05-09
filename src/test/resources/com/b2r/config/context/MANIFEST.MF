@@ -1,0 +1,7 @@
+Manifest-Version: 1.0
+Svn-Revision: 1234546
+Built-By: user
+Build-Jdk: 1.7.0_45
+Created-By: Apache Maven
+B2S-Version: 6.2-SNAPSHOT
+Archiver-Version: Plexus Archiver

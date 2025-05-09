@@ -1,0 +1,35 @@
+<div class="cart-item-engrave">
+    <div class="cart-item-engrave-add-remove" *ngIf="!showEngraveOptions">
+        <div><span class="cart-engraving-icon"></span>
+            <span class="engrave-item"><span class="cart-add-engrave-caption">{{ 'addEngrv' | translate }}</span></span>
+        </div>
+        <div>
+            <a class="engrave-item" role="button" id="btn-add-engraving-main-{{item.id}}" href="javascript:void(0);"
+              attr.aria-label=" {{ 'addEngrv' | translate }} for {{item.productName}}"
+              (click)="editEngraveGiftTxt()">{{ 'add' | translate }}</a>
+        </div>
+    </div>
+    <div class="cart-engrave-options" *ngIf="showEngraveOptions" [ngClass]="{'edit-view': editEngravingOptions}">
+        <div>
+            <span class="cart-engraving-icon"></span>
+            <span class="cart-engraving-title"
+                *ngIf="cartEngrave[engraveIndex].line1.length === 0 && cartEngrave[engraveIndex].line2.length === 0 ">{{ 'addEngrv' | translate }}</span>
+            <span class="cart-engraving-title"
+                *ngIf="cartEngrave[engraveIndex].line1.length > 0 || cartEngrave[engraveIndex].line2.length > 0">{{ 'engraved' | translate }}</span>
+            <span class="edit-link-pipe" *ngIf="!editEngravingOptions" style="margin: 0 3px;">|</span>
+            <span class="cart-engraving-edit" *ngIf="!editEngravingOptions">
+                <a id="btn-edit-engraving-{{item.id}}" href="javascript:void(0);" (click)="editEngraveGiftTxt()"
+                    attr.aria-label="{{messages.editLink}} engraving for {{item.productName}}">
+                    {{ 'editLink' | translate }}</a>
+            </span>
+            <span *ngIf="!editEngravingOptions && !(cartEngrave[engraveIndex].line1.length > 0)">
+                <a id="btn-remove-engraving-{{item.id}}" href="javascript:void(0);" (click)="removeEngraving(engraveIndex,item.id)"
+                    attr.aria-label="{{messages.remove}} engraving from {{item.productName}} ">{{ 'remove'| translate }}</a></span>
+            <span class="free-caption uppercase">{{ 'free' | translate }}</span>
+        </div>
+        <div *ngIf="!editEngravingOptions" class="engrave-text-view">
+            <p>{{cartEngrave[engraveIndex].line1}}</p>
+            <p>{{cartEngrave[engraveIndex].line2}}</p>
+        </div>
+    </div>
+</div>

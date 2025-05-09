@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config />
+<!--    <import resource="classpath:applicationContext-util.xml" />-->
+<!--    <import resource="classpath:applicationContext-pricing-services.xml" />-->
+    <import resource="classpath:/com/b2r/shop/common/order/util/test-context.xml" />
+<!--    <import resource="test-context-products.xml" />-->
+    <context:component-scan base-package="com.b2s.apple.mapper"/>
+    <context:component-scan base-package="com.b2s.common.services.transformers"/>
+    <bean id="jndiBinder" class="org.springframework.mock.jndi.SimpleNamingContextBuilder" factory-method="emptyActivatedContextBuilder"/>
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="jndiBinder"/>
+        <property name="targetMethod" value="bind"/>
+        <property name="arguments">
+            <array>
+                <value type="java.lang.String">java:comp/env/jdbc/b2r</value>
+                <ref bean="default"/>
+            </array>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="jndiBinder"/>
+        <property name="targetMethod" value="bind"/>
+        <property name="arguments">
+            <array>
+                <value type="java.lang.String">java:comp/env/jdbc/reporting</value>
+                <ref bean="default"/>
+            </array>
+        </property>
+    </bean>
+
+    <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+        <property name="targetObject" ref="jndiBinder"/>
+        <property name="targetMethod" value="bind"/>
+        <property name="arguments">
+            <array>
+                <value type="java.lang.String">java:comp/env/jdbc/payment</value>
+                <ref bean="default"/>
+            </array>
+        </property>
+    </bean>
+
+    <!-- resource bundle message source -->
+    <bean id="messageSource" class="com.b2s.web.B2RReloadableResourceBundleMessageSource">
+        <property name="basenames">
+            <list>
+                <value>file:src/main/webapp/WEB-INF/i18n/b2r_rewardstep_resources</value>
+                <value>file:src/main/webapp/WEB-INF/i18n/b2r_rewardstep_admin_resources</value>
+            </list>
+        </property>
+        <property name="defaultEncoding" value="UTF-8"/>
+        <property name="cacheSeconds" value="60"/>
+    </bean>
+
+    <bean id="viewedItemService" name="viewedItemService" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.rewards.common.service.ViewedItemService"/>
+    </bean>
+    <bean id="landingPageService" name="landingPageService" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.rewards.common.service.LandingPageService"/>
+    </bean>
+    <bean id="shoppingCartService" name="shoppingCartService" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.rewards.service.ShoppingCartService"/>
+    </bean>
+
+    <bean id="cartService" name="cartService" class="com.b2s.apple.services.CartService"/>
+    <bean id="detailService" name="detailService" class="com.b2s.apple.services.DetailService"/>
+
+
+
+    <bean id="sessionUtil" name="sessionUtil" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.rewards.security.util.SessionUtil"/>
+    </bean>
+
+    <bean id="contextApplicationContextProvider" class="com.b2s.rewards.common.context.ApplicationContextProvider"/>
+    <bean id="pricingServiceV1Facade"
+          name="pricingServiceV1Facade"
+          class="com.b2s.common.services.pricing.impl.LocalPricingServiceV1">
+        <property name="pricingClient" ref="pricingClient"/>
+        <property name="userToPricingContextTransformer" ref="userToPricingContextTransformer"/>
+
+        <property name="shoppingCartToCartRequestTransformer" ref="shoppingCartToCartRequestTransformer"/>
+
+        <property name="productPricingErrorToProductTransformer" ref="productPricingErrorToProductTransformer"/>
+        <property name="cartResponseToShoppingCartTransformer" ref="cartResponseToShoppingCartTransformer"/>
+
+     </bean>
+    <bean id="pricingClient" name="pricingClient" class="com.b2s.service.pricing.client.simple.SimpleClient">
+        <constructor-arg value="http://pricing1.dev.applerewards.bridge2solutions.net:8080/pricing/v1"/>
+    </bean>
+    <bean id="userToPricingContextTransformer" name="userToPricingContextTransformer" class="com.b2s.common.services.pricing.transformers.UserToPricingContextTransformer">
+    </bean>
+
+
+
+
+
+
+</beans>

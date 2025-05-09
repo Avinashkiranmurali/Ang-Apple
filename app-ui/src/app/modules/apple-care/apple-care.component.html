@@ -1,0 +1,60 @@
+<div class="apple-care-container"
+     [ngClass]="{'apple-care-cart-view': !isProductView, 'apple-care-gift-view': isGiftView}">
+  <div class="section-divider"></div>
+  <section class="apple-care-section" [ngClass]="{'loading': isProcessing }">
+    <div class="hideFromDOM" *ngIf="isProcessing" role="alert" [attr.aria-label]="'loadingAlt' | translate"></div>
+    <div class="apple-care-list" *ngIf="!selectedServicePlan">
+      <div *ngFor="let appleCare of appleCareServicePlans">
+        <div class="apple-care-wrapper">
+          <div class="apple-care-desc-container">
+            <p class="apple-care-header apple-care-icon" *ngIf="isProductView"
+               [innerHTML]="'appleCareCoverageOptions' | translate"></p>
+            <div class="apple-care-title-section">
+              <p class="apple-care-title" [ngClass]="{'apple-care-icon': !isProductView}"
+              >{{appleCare.name}}</p>
+              <div class="btn-container">
+                <span class="link-base" [ngClass]="{'remove-link': appleCare.selected}" *ngIf="!readOnly">
+                  <a href="javascript:void(0);" role="link" (click)="addAppleCareServicePlan(appleCare)"
+                    attr.aria-label="{{ (appleCare.selected ? 'remove' : 'add') | translate }} {{ appleCare.name }}">
+                    {{(appleCare.selected ? 'remove' : 'add') | translate}}</a>
+                </span>
+              </div>
+            </div>
+            <app-pricing-temp *ngIf="isProductView || !appleCare.selected"
+                              [parentClass]="{'apple-care-container': true, 'apple-care-cart-view': !isProductView, 'apple-care-gift-view': isGiftView }"
+                              [item]="appleCare"
+                              [ext]=""
+                              [offer]="appleCare.offers[0]"
+                              [showTaxDisclaimer]="false"></app-pricing-temp>
+            <a class="learnMoreLink" href="javascript:void(0);" (click)="openAppleCareModal(appleCare)"
+               attr.aria-label="{{ 'learnMore' | translate }} about {{ appleCare.name }}">{{ 'learnMore' | translate }}</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="apple-care-list" *ngIf="selectedServicePlan">
+      <div>
+        <div class="apple-care-wrapper">
+          <div class="apple-care-desc-container">
+            <p class="apple-care-title apple-care-icon">{{ selectedServicePlan.productName }}</p>
+            <a class="learnMoreLink" href="javascript:void(0);" (click)="openAppleCareModal(selectedServicePlan)"
+               attr.aria-label="{{ 'learnMore' | translate }} about {{ selectedServicePlan.productName }}">{{ 'learnMore' | translate }}</a>
+          </div>
+          <div class="btn-container">
+            <app-pricing-temp
+              [parentClass]="{'apple-care-container': true, 'apple-care-cart-view-enabled': !isProductView, 'apple-care-gift-view-enabled': isGiftView }"
+              [offer]="selectedServicePlan.productDetail.offers[0]"
+              [ext]=""
+              [item]="selectedServicePlan.productDetail"
+              [showTaxDisclaimer]="false"></app-pricing-temp>
+            <span class="link-base remove-link" *ngIf="!readOnly">
+              <a href="javascript:void(0);" role="link" (click)="removeAppleCareServicePlan()"
+                 attr.aria-label="{{ 'remove' | translate }} {{ selectedServicePlan.productName }}">
+                {{ 'remove' | translate }}</a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

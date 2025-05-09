@@ -1,0 +1,581 @@
+{
+  "products": [
+    {
+      "index": 1,
+      "merchant": "Apple",
+      "sku": "MK0C2ZA/A",
+      "quantity": 1,
+      "appliedPromotions": {},
+      "prices": {
+        "basePrice": {
+          "unitPoints": 44000,
+          "totalPoints": 44000,
+          "unpromotedUnitPoints": 44000,
+          "unpromotedTotalPoints": 44000,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 127.33",
+              "totalPrice": "SGD 127.33",
+              "unpromotedUnitPrice": "SGD 127.33",
+              "unpromotedTotalPrice": "SGD 127.33"
+            },
+            "PNT": {
+              "unitPrice": "PNT 44000",
+              "totalPrice": "PNT 44000",
+              "unpromotedUnitPrice": "PNT 44000",
+              "unpromotedTotalPrice": "PNT 44000"
+            }
+          }
+        },
+        "supplierFees": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "bridge2Tax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "varPrice": {
+          "unitPoints": 44000,
+          "totalPoints": 44000,
+          "unpromotedUnitPoints": 44000,
+          "unpromotedTotalPoints": 44000,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 127.33",
+              "totalPrice": "SGD 127.33",
+              "unpromotedUnitPrice": "SGD 127.33",
+              "unpromotedTotalPrice": "SGD 127.33"
+            },
+            "PNT": {
+              "unitPrice": "PNT 44000",
+              "totalPrice": "PNT 44000",
+              "unpromotedUnitPrice": "PNT 44000",
+              "unpromotedTotalPrice": "PNT 44000"
+            }
+          }
+        },
+        "hstTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "gstTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "pstTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "ehfFee": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "cityTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "cityDistrictTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "countyTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "countyDistrictTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "stateTax": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "bridge2ItemMarkup": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "varItemMarkup": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "bridge2ShippingMarkup": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "varShippingMarkup": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "displayItemPrice": {
+          "unitPoints": 44000,
+          "totalPoints": 44000,
+          "unpromotedUnitPoints": 44000,
+          "unpromotedTotalPoints": 44000,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 127.33",
+              "totalPrice": "SGD 127.33",
+              "unpromotedUnitPrice": "SGD 127.33",
+              "unpromotedTotalPrice": "SGD 127.33"
+            },
+            "PNT": {
+              "unitPrice": "PNT 44000",
+              "totalPrice": "PNT 44000",
+              "unpromotedUnitPrice": "PNT 44000",
+              "unpromotedTotalPrice": "PNT 44000"
+            }
+          }
+        },
+        "displayShippingCost": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "displayFees": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "displayPrice": {
+          "unitPoints": 44000,
+          "totalPoints": 44000,
+          "unpromotedUnitPoints": 44000,
+          "unpromotedTotalPoints": 44000,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 127.33",
+              "totalPrice": "SGD 127.33",
+              "unpromotedUnitPrice": "SGD 127.33",
+              "unpromotedTotalPrice": "SGD 127.33"
+            },
+            "PNT": {
+              "unitPrice": "PNT 44000",
+              "totalPrice": "PNT 44000",
+              "unpromotedUnitPrice": "PNT 44000",
+              "unpromotedTotalPrice": "PNT 44000"
+            }
+          }
+        },
+        "displayTaxes": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        },
+        "bridge2Fee": {
+          "unitPoints": 0,
+          "totalPoints": 0,
+          "unpromotedUnitPoints": 0,
+          "unpromotedTotalPoints": 0,
+          "currencies": {
+            "SGD": {
+              "unitPrice": "SGD 0.00",
+              "totalPrice": "SGD 0.00",
+              "unpromotedUnitPrice": "SGD 0.00",
+              "unpromotedTotalPrice": "SGD 0.00"
+            },
+            "PNT": {
+              "unitPrice": "PNT 0",
+              "totalPrice": "PNT 0",
+              "unpromotedUnitPrice": "PNT 0",
+              "unpromotedTotalPrice": "PNT 0"
+            }
+          }
+        }
+      },
+      "conversionRates": {
+        "costPerPoint": "SGD 0.0029",
+        "fxRates": {
+          "SGD": {
+            "rate": 1,
+            "inverseRate": 1
+          },
+          "PNT": {
+            "rate": 344.8275862068966,
+            "inverseRate": 0.0029
+          }
+        }
+      },
+      "pricingParameters": {
+        "b2sMargin": 0E-9,
+        "varMargin": 0E-9,
+        "roundingIncrement": 1
+      }
+    }
+  ],
+  "errors": [],
+  "prices": {
+    "displayShippingCost": {
+      "totalPoints": 0,
+      "unpromotedTotalPoints": 0,
+      "currencies": {
+        "SGD": {
+          "totalPrice": "SGD 0.00",
+          "unpromotedTotalPrice": "SGD 0.00"
+        },
+        "PNT": {
+          "totalPrice": "PNT 0",
+          "unpromotedTotalPrice": "PNT 0"
+        }
+      }
+    },
+    "displayTaxes": {
+      "totalPoints": 0,
+      "unpromotedTotalPoints": 0,
+      "currencies": {
+        "SGD": {
+          "totalPrice": "SGD 0.00",
+          "unpromotedTotalPrice": "SGD 0.00"
+        },
+        "PNT": {
+          "totalPrice": "PNT 0",
+          "unpromotedTotalPrice": "PNT 0"
+        }
+      }
+    },
+    "displayPrice": {
+      "totalPoints": 44000,
+      "unpromotedTotalPoints": 44000,
+      "currencies": {
+        "SGD": {
+          "totalPrice": "SGD 127.33",
+          "unpromotedTotalPrice": "SGD 127.33"
+        },
+        "PNT": {
+          "totalPrice": "PNT 44000",
+          "unpromotedTotalPrice": "PNT 44000"
+        }
+      }
+    },
+    "displayItemPrice": {
+      "totalPoints": 44000,
+      "unpromotedTotalPoints": 44000,
+      "currencies": {
+        "SGD": {
+          "totalPrice": "SGD 127.33",
+          "unpromotedTotalPrice": "SGD 127.33"
+        },
+        "PNT": {
+          "totalPrice": "PNT 44000",
+          "unpromotedTotalPrice": "PNT 44000"
+        }
+      }
+    },
+    "displayFees": {
+      "totalPoints": 0,
+      "unpromotedTotalPoints": 0,
+      "currencies": {
+        "SGD": {
+          "totalPrice": "SGD 0.00",
+          "unpromotedTotalPrice": "SGD 0.00"
+        },
+        "PNT": {
+          "totalPrice": "PNT 0",
+          "unpromotedTotalPrice": "PNT 0"
+        }
+      }
+    }
+  },
+  "splitTenderResult": {
+    "ccBuyInAmount": "SGD 0.00",
+    "ccBuyInPoints": 0,
+    "preCCMarkupAmount": "SGD 0.00",
+    "ccB2sProfit": "SGD 0.00",
+    "ccVarProfit": "SGD 0.00",
+    "ccB2sMargin": 0E-7,
+    "ccVarMargin": 0E-7,
+    "effectiveB2sMargin": 0E+2,
+    "effectiveVarMargin": 0E+2,
+    "ccVarPrice": "SGD 0.00",
+    "effectiveConversionRate": 0.0029,
+    "pointPurchaseRate": 0.002900000000000000,
+    "ccBuyInPointsLimit": 35200,
+    "ccBuyInAmountLimit": "SGD 102.08",
+    "ccTaxAmount": "SGD 0.00"
+  }
+}

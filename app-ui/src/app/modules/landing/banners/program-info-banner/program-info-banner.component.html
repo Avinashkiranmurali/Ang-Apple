@@ -1,0 +1,137 @@
+<article class="content-container">
+  <ng-container [ngSwitch]="messages[programBanner['template']]">
+    <div class="banner-content text-only" *ngSwitchCase="'text-only.htm'">
+      <div class="position-container" [ngClass]="messages[programBanner['ctaClass']]">
+        <div class="text-container">
+          <h2 class="banner-title" [innerHTML]="messages[programBanner['title']] | safe"></h2>
+          <h3 class="banner-subtitle" [innerHTML]="messages[programBanner['tagLine']] | safe"></h3>
+          <div class="banner-description" [innerHTML]="messages[programBanner['shortDescription']] | safe"></div>
+          <div class="cta-container">
+            <strong>{{messages[programBanner['btnTxt']]}}</strong>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edge-cover banner-content" *ngSwitchCase="'edge-cover.htm'" [ngClass]="messages[programBanner['templateClass']]">
+      <div class="banner-img"
+           [ngClass]="messages[programBanner['imageClass']]" aria-label="" [style.background-image]="'url(\'' +
+           config['imageServerUrl'] + '/' +messages[programBanner['imageUrl']] + '\')'"></div>
+      <div class="wrap-contain set-mw">
+        <div class="mw-contain">
+          <div class="pos-contain" [ngClass]="messages[programBanner['ctaClass']]">
+            <div class="midz"></div>
+            <div class="text-container">
+              <h2 class="banner-title" [innerHTML]="messages[programBanner['title']] | safe"></h2>
+              <p class="banner-subtitle" [innerHTML]="messages[programBanner['tagLine']] | safe"></p>
+              <div class="banner-description"
+                   [innerHTML]="messages[programBanner['shortDescription']] | safe"></div>
+              <div class="cta-container" *ngIf="messages[programBanner['btnType']] !== 'button'">
+                <p *ngIf="!messages[programBanner['btnLink']] && messages[programBanner['btnTxt']]"
+                   class="banner-par">{{messages[programBanner['btnTxt']] }}</p>
+                <span *ngIf="messages[programBanner['btnLink']] && messages[programBanner['btnTxt']]"
+                      class="link-base icon icon-arrow-right">
+                  <a [href]="messages[programBanner['btnLink']]">{{messages[programBanner['btnTxt']]}}</a>
+                </span>
+              </div>
+              <div class="btn-container cta-container" *ngIf="messages[programBanner['btnType']] === 'button'">
+                <span class="link-base pill-shaped-cta">
+                  <a [routerLink]="messages[programBanner['btnLink']]"> {{ messages[programBanner['btnTxt']] }}</a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="full-cover banner-content" *ngSwitchCase="'dynamic-cover.htm'">
+      <div class="banner-img"
+           [style.background-image]="'url(\'' + config['imageServerUrl'] + '/' + messages[programBanner['imageUrl']] + '\')'"
+           [ngClass]="messages[programBanner['imageClass']]" aria-label=""></div>
+      <div class="wrap-contain">
+        <div class="mw-contain">
+          <div class="pos-contain" [ngClass]="messages[programBanner['ctaClass']]">
+            <div class="midz"></div>
+            <div class="text-container">
+              <h2 class="banner-title" [innerHTML]="messages[programBanner['title']] | safe"></h2>
+              <p class="banner-subtitle">{{messages[programBanner['tagLine']]}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="banner-content category-view-banner" *ngSwitchCase="'category-view-banner.htm'"
+         [ngClass]="messages[programBanner['templateClass']]">
+      <section role="presentation" class="contain" [ngClass]="messages[programBanner['ctaClass']]" >
+        <div class="cta">
+          <h2 *ngIf="messages[programBanner['titleImg']]">
+            <img src="{{config.imageServerUrl}}/{{ messages[programBanner['titleImg']] }}" alt="{{ messages[programBanner['title']] }}"/>
+          </h2>
+          <h2 *ngIf="!messages[programBanner['titleImg']] && messages[programBanner['title']]"
+              [innerHTML]="messages[programBanner['title']] | safe"></h2>
+          <h3 class="tagline" [hidden]="!messages[programBanner['tagLine']]"
+              [innerHTML]="messages[programBanner['tagLine']] | safe
+          "></h3>
+          <div *ngIf="messages[programBanner['shortDescription']]" class="banner-description desktop-only"
+               [innerHTML]="messages[programBanner['shortDescription']] | safe"></div>
+          <div class="btn-container" [innerHTML]="messages[programBanner['btnTxt']] | safe"></div>
+        </div>
+        <img src="{{config.imageServerUrl}}/{{ messages[programBanner['imageUrl']] }}" alt="{{
+        messages[programBanner['imageTxt']] }}" class="shared-image">
+        <div *ngIf="messages[programBanner['shortDescription']]" class="banner-description mobile-only"
+             [innerHTML]="messages[programBanner['shortDescription']] | safe"></div>
+      </section>
+    </div>
+    <div class="multi-banner-content" *ngSwitchCase="'multi-banner.htm'"
+         [ngClass]="messages[programBanner['templateClass']]">
+      <section role="presentation" class="banner-title-section">
+        <h2 class="multi-banner-title" [innerHTML]="messages[programBanner['multiBannerTitle']]"
+            *ngIf="messages[programBanner['multiBannerTitle']] | safe"></h2>
+        <p class="banner-subtitle" [innerHTML]="messages[programBanner['multiBannerSubTitle']]"
+           *ngIf="messages[programBanner['multiBannerSubTitle']] | safe"></p>
+      </section>
+      <section role="presentation" class="banner-content-section" *ngIf="messages[programBanner['list']] !== ''">
+        <section role="presentation" class="banner-tile" *ngFor="let product of messages[programBanner['list']].split(',')" >
+          <div class="banner-img"
+               [style.background-image]="'url(\'' + config['imageServerUrl'] + '/' + messages[product +'-'+
+               programBanner['imageUrl']]
+              + '\')'"
+               [ngClass]="messages[product+'-'+programBanner['imageClass']]" aria-label=""
+               *ngIf="product+'-'+messages[programBanner['imageUrl']]"></div>
+          <div class="pos-contain" [ngClass]="messages[product+'-'+programBanner['ctaClass']]">
+            <div class="text-container">
+              <h3 class="banner-title" [innerHTML]="messages[product+'-'+programBanner['title']] | safe"
+                  *ngIf="messages[product+'-'+programBanner['title']]"></h3>
+              <p class="banner-subtitle" [innerHTML]="messages[product+'-'+programBanner['tagLine']] | safe"
+                 *ngIf="messages[product+'-'+programBanner['tagLine']]"></p>
+              <div class="banner-description" [innerHTML]="messages[product+'-'+programBanner['shortDescription']] | safe"
+                   *ngIf="messages[product+'-'+programBanner['shortDescription']]"></div>
+              <div class="cta-container btn-container">
+                <span class="link-base" [ngClass]="messages[product+'-programBtnClass']">
+              <a [routerLink]="messages[product+'-programBtnLink']">{{ product+'-programBtnTxt' | translate : {messages:messages} }}</a>
+            </span>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+    <div class="full-cover banner-content" *ngSwitchDefault>
+      <div class="banner-img"
+           [style.background-image]="'url(\'' + config['imageServerUrl'] + '/' + messages[programBanner['imageUrl']] + '\')'"
+           [ngClass]="messages[programBanner['imageClass']]" aria-label=""></div>
+      <div class="wrap-contain">
+        <div class="mw-contain">
+          <div class="pos-contain" [ngClass]="messages[programBanner['ctaClass']]">
+            <div class="midz"></div>
+            <div class="text-container">
+              <h2 class="banner-title" [innerHTML]="messages[programBanner['title']] | safe"></h2>
+              <p class="banner-subtitle" [innerHTML]="messages[programBanner['tagLine']] | safe"></p>
+              <div class="banner-description" [innerHTML]="messages[programBanner['shortDescription']] | safe"></div>
+              <div class="cta-container">{{messages[programBanner['btnTxt']]}}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</article>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<dataset>
+    <messages varid="1" programid="unit_test" supplierid="200" code="101" message="This is the default merch terms and conditions" merchantid="-1"/>
+    <messages varid="1" programid="unit_test" supplierid="200" code="101" message="This is the future shop terms and conditions" merchantid="futureshop"/>
+    <messages varid="RBC" programid="unit_test" supplierid="200" code="101" message="&lt;p&gt;rbc.text.general.merchandise.terms.conditions.long&lt;/p&gt;" merchantid="futureshop"/>
+    <messages varid="RBC" programid="unit_test" supplierid="200" code="101" message="rbc.general.merchandise.terms.conditions.short" merchantid="bestbuycanada"/>
+
+    <messages varid="FIS" programid="unit_test" supplierid="20" code="111" message='{
+              "flight":"flight TOS",
+              "hotel":"hotel TOS ",
+              "car":"car TOS",
+              "activity":"activity TOS",
+              "curise":"cruise TOS",
+              "header":"header TOS",
+              "footer":"footer TOS"
+              }' merchantid="-1"/>
+
+    <messages varid="FIS" programid="unit_test2" supplierid="20" code="111" message='{
+              "flight":"flight TOS",
+              "hotel":"hotel TOS ",
+              "car":"car TOS",
+              "activity":"activity TOS",
+              "curise":"cruise TOS"}' merchantid="-1"/>
+
+</dataset>

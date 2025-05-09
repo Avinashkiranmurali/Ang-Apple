@@ -1,0 +1,260 @@
+@import '~styles/mixins';
+
+.category-navigation-tray-section {
+  &.expanded {
+    .category-navigation-tray-wrapper {
+      pointer-events: auto;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      @include for-mobile {
+        background: none;
+        height: 96%;
+      }
+
+      .nav-tray {
+        pointer-events: auto;
+        transform: translateY(0);
+        transition: transform .3s cubic-bezier(.28, .11, .32, 1);
+        height: auto;
+        @include for-mobile-to-tablet {
+          min-height: 100%;
+        }
+
+        .nav-tray-container {
+          display: flex;
+          @include for-mobile-to-tablet {
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+
+  .btn-nav-tray-control {
+    color: #111111;
+    font-size: rem(14px);
+    line-height: rem(14px);
+    font-weight: $font-weight-regular;
+    margin-right: rem(14px); //This will make the arrow icon also in the container
+    a {
+      color: inherit;
+      text-decoration: none;
+      display: inline-block;
+
+      &:hover {
+        color: #0070c9;
+      }
+    }
+
+    .drop-down-icon {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: "\203A";
+        font-size: rem(17px);
+        top: rem(3px);
+        right: rem(-15px);
+        transform: rotate(-270deg);
+        -webkit-transform: rotate(-270deg);
+        -moz-transform: rotate(-270deg);
+        -ms-transform: rotate(-270deg);
+
+      }
+
+      &.expanded {
+        &:after {
+          transform: rotate(270deg);
+          -webkit-transform: rotate(270deg);
+          -moz-transform: rotate(270deg);
+          -ms-transform: rotate(270deg);
+          right: rem(-13px);
+          top: rem(2px);
+        }
+      }
+    }
+
+  }
+
+  .category-navigation-tray-wrapper {
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    pointer-events: none;
+    height: 0;
+    z-index: 999;
+    right: 0;
+    top: rem(50px);
+    @include for-mobile-to-tablet {
+      overflow-y: auto;
+    }
+
+    .nav-tray {
+      transform: translateY(-100%) translateY(rem(46px)) translateY(rem(53px));
+      border-bottom: 0;
+      //transition: transform .15s cubic-bezier(.28,.11,.32,1),background-color .03s;
+      transition: background-color .03s ease;
+
+      .nav-tray-container {
+        display: none;
+      }
+    }
+
+    //General Style for nav tray
+    .nav-tray {
+      background: #FFFFFF;
+      padding: rem(35px) 0 rem(53px) 0;
+
+      @include for-mobile-to-tablet {
+        padding: rem(39px) 0 rem(53px) 0;
+      }
+
+      .nav-tray-container {
+        display: flex;
+        max-width: rem(1010px);
+        padding: 0 rem(15px);
+        margin: 0 auto;
+        @include for-mobile-to-tablet {
+          padding: 0 rem(20px);
+        }
+
+
+        .shop-by-section-title {
+          letter-spacing: 0;
+          color: #333333;
+          line-height: rem(19px);
+          font-size: rem(16px);
+          font-weight: $font-weight-semi-bold;
+        }
+
+        .nav-product-link, .nav-category-list-link {
+          line-height: rem(19px);
+          text-align: left;
+          font-weight: $font-weight-regular;
+          font-size: rem(16px);
+          letter-spacing: 0;
+          color: #333333;
+          text-decoration: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          display: inline-block;
+          width: 90%;
+
+          &.current {
+            color: #666666;
+          }
+
+          &:hover {
+            color: #0070c9;
+          }
+        }
+
+        .shop-by-products-tray {
+          min-width: rem(180px);
+          width: 25%;
+
+          @include for-mobile-to-tablet {
+            padding: 0 0 rem(37px) 0;
+            border: 0;
+          }
+
+          .nav-product-list {
+            list-style: none;
+            margin: rem(8px) 0 0 0;
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+
+            .nav-product-list-item {
+              display: inline-flex;
+              padding: rem(7px) rem(26px) rem(7px) 0;
+              height: rem(33px);
+
+              .nav-product-link {
+
+              }
+            }
+          }
+        }
+
+        .shop-by-category-tray {
+          width: 100%;
+          padding: 0 0 0 rem(26px);
+          border-left: rem(1px) solid #E6E6E6;
+          opacity: 1;
+          display: inline-table;
+          @include for-mobile-to-tablet {
+            padding: rem(43px) 0 0 0;
+            border: 0;
+            border-top: rem(1px) solid #E6E6E6;
+          }
+
+          .nav-category-list {
+            list-style: none;
+            display: flex;
+            flex-flow: column;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-content: flex-start;
+            width: 100%;
+            margin: rem(8px) 0 0 0;
+            padding-inline-start: 0;
+
+            &.nav-category-list-coumn-5 {
+              height: rem(166px);
+            }
+
+            .nav-category-list-item {
+              padding: rem(7px) 0;
+              width: 33.3333%;
+              height: rem(33px);
+              @include for-mobile-to-tablet {
+                width: 100%;
+              }
+
+              .nav-category-list-link {
+
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .view-control-container {
+    text-align: right;
+  }
+}
+
+::ng-deep {
+  .content-container {
+    &.nav-tray-expanded {
+      @include for-mobile-to-tablet {
+        height: 100vh;
+      }
+
+      .tool-toggle-buttons {
+        a {
+          &.toggle-button {
+            &::after {
+              transform: rotate(-180deg);
+              -webkit-transform: rotate(-180deg);
+              -moz-transform: rotate(-180deg);
+              -ms-transform: rotate(-180deg);
+            }
+          }
+        }
+      }
+
+      .product-result-list {
+        ul {
+          @include for-mobile {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

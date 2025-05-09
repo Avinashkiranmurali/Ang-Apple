@@ -1,0 +1,34 @@
+<section class="product-item-tile" id="{{ item.name | parseName }}-acc-{{ index }}" tabindex="-1" (click)="setDetailsname(item.name)" [routerLink]="constructRouterUrl(item, '')">
+  <div class="product-tile">
+    <div class="product-image">
+      <img [src]="item.images.large | aplImgSize: imageSize" alt="{{ item['name'] }}" />
+    </div>
+    <div class="product-info-grid">
+      <div class="product-link" role="link" [routerLink]="constructRouterUrl(item, '')">{{ item.name }}</div>
+      <ul class="facets-grid" *ngIf="item.options.length > 0 && showGridOptions(item)">
+        <li class="facet-grid" *ngFor="let options of item.options | orderBy: 'asc': 'orderBy'">{{ options.value }}</li>
+      </ul>
+      <div class="product-item-price">
+        <!-- new pricingTemplate -->
+        <div ng-init="item.offers[0].earnPoints=0">
+          <app-pricing-temp
+            messages="messages"
+            ext=""
+            [offer]="item.offers[0]"
+            [item]="item"
+            pay-frequency="payFrequency">
+          </app-pricing-temp>
+        </div>
+      </div>
+      <div class="smart-price-container" *ngIf="smartPrice">
+        <app-smart-price [smartPrice]="smartPrice" [ext]="" [parentClass]="'grid-view'"></app-smart-price>
+      </div>
+      <app-swatches-color [item]="item"></app-swatches-color>
+      <div *ngIf="showMoreOptionsAvailable(item)"
+        [ngClass]="{'more-option' : showMoreOptionsAvailable(item) ,
+        'more-options-with-color' : item.optionsConfigurationData.color}">
+        {{ messages.moreOptAvailable }}
+      </div>
+    </div>
+  </div>
+</section>

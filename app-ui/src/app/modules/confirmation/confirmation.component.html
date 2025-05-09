@@ -1,0 +1,42 @@
+<div class="container" *ngIf="confirmOrder">
+  <div class="content-container bottom-border-e6">
+    <section class="cart-container"> <!--  ng-cloak -->
+      <div class="cart-title">
+        <h2>{{ messages.orderConfirmation }}</h2>
+      </div>
+      <div class="order-confirm-text order-verify-text p-b-5">
+        <p [innerHTML]="(orderOnHold === true) ? ('orderMayBeDelayed' | translate: translateParams) : ('thankYouForOrder' | translate)" class="m-b-15"></p>
+       <p class="order-confirm-number"><span [innerHTML]="messages.printThisPage | safe"></span><span style="display: inline-block;">&nbsp;</span><strong>{{ confirmOrder['orderID'] }}</strong></p>
+        <p class="order-confirm-number-print">{{ messages.orderNumber }}:<strong>{{ confirmOrder['orderID'] }}</strong></p>
+        <p class="order-confirm-date-print">{{ messages.orderDate }}
+          <strong>{{ currentOrderDate | date: mediumDate : '' : locale }}</strong></p> <!-- | date:'fullDate'  -->
+      </div>
+      <app-order-confirm-shipping-details
+        [confirmationTemplate]="confirmationTemplate" [confirmOrder]="confirmOrder" [cartTotals]="cartTotals" [orderData]="orderData"
+        [isCashOnly]="sharedService.isCashOnlyRedemption()" [pointsUsed]="pointsUsed" [totalPurchase]="totalPurchase"
+        [currLocale]="orderLocale"
+        ></app-order-confirm-shipping-details>
+    </section>
+  </div>
+  <div class="content-container">
+    <div class="cart-container">
+      <app-order-confirm-items-list class="items-list" [cartItems]="confirmOrder.items" [isUnbundled]="isUnbundled"></app-order-confirm-items-list>
+      <app-media-product [mediaProducts]="subscribedMediaProducts" [readOnly]="true"></app-media-product>
+      <div class="confirm-sec">
+        <app-payment-summary
+          [cartSubtotal]="cartSubtotal" [cartObjTotals]="cartObjTotals" [cartTotals]="cartTotals" [shippingCost]="shippingCost" [totalFees]="totalFees"
+          [totalTaxes]="totalTaxes" [parentClass]="" [isReviewPage]="false" [balancePoints]="points" [negativeBalance]="false" [pointsBeforePurchase]="pointsBeforePurchase"
+          [purchasePaymentOption]="purchasePaymentOption" [totalPayment]="totalPayment" [pointsUsed]="pointsUsed" [paymentRequired]="paymentRequired"
+          [earnPoints]="earnedPoints" (hasDiscounts) = "hasDiscounts()" (discountedSubtotal) = "discountedSubtotal()" [points]="points">
+        </app-payment-summary>
+      </div>
+    </div>
+    <div class="large-9 large-offset-3 small-12 small-offset-0">
+      <app-order-confirm-buttons [displayContinueShopping]="displayContinueShopping"></app-order-confirm-buttons>
+    </div>
+  </div>
+</div>
+<div class="contain">
+  <p class="msg-disclaimer" *ngIf="config.showTaxDisclaimer">* {{ 'taxFeeDisclaimerCart' | translate }}</p>
+  <p class="msg-disclaimer" *ngIf="config.showFeeDetails">** {{ 'efhDisclaimer' | translate }}</p>
+</div>

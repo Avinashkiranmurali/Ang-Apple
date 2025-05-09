@@ -1,0 +1,49 @@
+<div class="related-products-wrapper" *ngIf="productDetail">
+  <div class="result-title">
+    <div class="result-title-wrapper">
+      <app-page-title
+        [pageTitle]="productDetail.categories[0].name">
+      </app-page-title>
+    </div>
+  </div>
+  <div class="related-products-container">
+    <div class="review-container">
+      <div class="product-header">
+        <div class="product-detail">
+          <div class="product-image" *ngIf="!isMobile">
+            <img [src]="productDetail.images?.medium | aplImgSize : '125'" alt="{{productDetail.name}}"/>
+          </div>
+          <div class="product-name">{{ productDetail.name }}</div>
+        </div>
+        <div class="button-container">
+          <button class="btn-base blue-btn btn-large-plus" attr.aria-label="{{ 'reviewBag' | translate }} {{ productDetail.name }}"
+                  (click)="navigateToBagPage()">{{ 'reviewBag' | translate }}</button>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <h3>{{ 'relatedProductHeaderText' | translate }}</h3>
+      <!--Grid -->
+      <ul class="related-product-list" attr.aria-label="{{ 'breadcrumbRelatedProducts' | translate }}"
+          *ngIf="productDetail.hasRelatedProduct && productDetail.relatedProducts.length > 0">
+        <li class="related-product-list-item"
+            *ngFor="let item of productDetail.relatedProducts; let index=index;"
+            [ngClass]="{'grid-last-row': indexes.includes(index) }">
+          <app-tile [item]="item" [messages]="messages"
+              [index]="index"
+              (getVariationDetails)="getDetails($event)"
+              (addTileItemToCart)="addItemToCart($event)"></app-tile>
+        </li>
+      </ul>
+    </div>
+    <div class="page-error-container full-width-overlay" role="alert" aria-live="polite"
+      [class]="{'error-overlay': addCartError || cartFullError || pricingFullError}"
+      *ngIf="relatedProductLoadError || addCartError || cartFullError || pricingFullError">
+      <h2 role="presentation" *ngIf="relatedProductLoadError">{{ 'unknownError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="addCartError">{{ 'addToCartError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="cartFullError">{{ 'addTocartFullError' | translate }}</h2>
+      <h2 role="presentation" *ngIf="pricingFullError">{{ 'pricingFullError' | translate }}</h2>
+      <p>{{ 'tryAgainLater' | translate }}</p>
+    </div>
+  </div>
+</div>

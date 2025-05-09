@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+<!--    <import resource="classpath:applicationContext-util.xml" />-->
+
+    <bean id="imageObfuscatory" name="imageObfuscatory" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.common.services.util.ImageObfuscatory"/>
+    </bean>
+
+    <bean id="coreDetailRequestToProductDetailRequestTransformer" class="com.b2s.common.services.transformers.productservice.MultiProductDetailToProductDetail" />
+    <bean id="productDetailsServiceToCoreProductDetailTransformer" class="com.b2s.common.services.transformers.productservice.MultiProductDetailToCoreProductDetail">
+        <constructor-arg name="supplierProductMapping" ref="supplierProductMapping"/>
+        <constructor-arg name="supplierIdPricingCategoryToSupplierCategory" ref="supplierIdPricingCategoryCodeToSupplierCategoryCode"/>
+        <constructor-arg name="imageObfuscatory" ref="imageObfuscatory"/>
+        <constructor-arg name="legacyMerchantMapper" ref="legacyMerchantCodeMappings"/>
+    </bean>
+    <bean id="detailTransformersHolder" class="com.b2s.common.services.transformers.TransformersHolder">
+        <constructor-arg name="requestTransformer" ref="coreDetailRequestToProductDetailRequestTransformer"/>
+        <constructor-arg name="responseTransformer" ref="productDetailsServiceToCoreProductDetailTransformer"/>
+    </bean>
+    <bean id="coreCategoryToCategoryTaxonomy" class="com.b2s.common.services.transformers.productservice.CoreCategoryToCategoryTaxonomy" />
+    <bean id="categoryNodeToCategoryInfo" class="com.b2s.common.services.transformers.productservice.CategoryNodeToCategoryInfo" />
+    <bean id="categoryTransformersHolder" class="com.b2s.common.services.transformers.TransformersHolder">
+        <constructor-arg name="requestTransformer" ref="coreCategoryToCategoryTaxonomy"/>
+        <constructor-arg name="responseTransformer" ref="categoryNodeToCategoryInfo"/>
+    </bean>
+    <bean id="productServiceFactoryWrapper" class="com.b2s.common.services.productservice.ProductServiceFactoryWrapper">
+        <constructor-arg name="url" value="http://localhost:8049/"/>
+        <constructor-arg name="timeOut" value="10000"/>
+        <constructor-arg name="poolSize" value="10"/>
+    </bean>
+
+    <bean id="categoryServiceV3Service" class="com.b2s.common.services.productservice.CategoryServiceV3" >
+        <constructor-arg name="productServiceFactoryWrapper" ref="productServiceFactoryWrapper"/>
+        <constructor-arg name="categoryTransformersHolder" ref="categoryTransformersHolder"/>
+    </bean>
+    <!--<bean id="seachFilter2Service" class="com.b2s.amazon.shop.service.SeachFilter2Service">-->
+    <!--</bean>-->
+    <bean id="additionalProgramInfoService" class="com.b2s.amazon.shop.service.AdditionalProgramInfoService"/>
+
+    <bean id="priceOverrideService" class="org.easymock.EasyMock" factory-method="createNiceMock">
+        <constructor-arg value="com.b2s.rewards.service.PriceOverrideService"/>
+    </bean>
+
+    <beans profile="unit-test">
+        <bean id="productServiceV3Service" class="org.easymock.EasyMock" factory-method="createNiceMock">
+            <constructor-arg value="com.b2s.common.services.productservice.ProductServiceV3"/>
+        </bean>
+    </beans>
+
+</beans>

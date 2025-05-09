@@ -1,0 +1,1014 @@
+{
+  "response": [
+    {
+      "slug": "ipod",
+      "name": "iPod",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "ipod-accessories",
+          "name": "Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "ipod-applecare",
+              "name": "AppleCare+ for iPod",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-Keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "ipod-cases-armbands-films",
+              "name": "Cases, Armbands, & Films",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "ipod-nano",
+          "name": "iPod nano",
+          "depth": 1
+        },
+        {
+          "slug": "ipod-touch",
+          "name": "iPod touch",
+          "depth": 1
+        },
+        {
+          "slug": "ipod-shuffle",
+          "name": "iPod shuffle",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "slug": "ipad",
+      "name": "iPad",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "ipad-mini-3",
+          "name": "iPad mini 3",
+          "depth": 1
+        },
+        {
+          "slug": "ipad-air-2",
+          "name": "iPad Air 2",
+          "depth": 1
+        },
+        {
+          "slug": "ipad-mini",
+          "name": "iPad mini",
+          "depth": 1
+        },
+        {
+          "slug": "ipad-accessories",
+          "name": "iPad Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "ipad-applecare",
+              "name": "AppleCare+ for iPad",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-cases-armbands-films",
+              "name": "Cases",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-stands",
+              "name": "Stands",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "ipad-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "ipad-mini-2",
+          "name": "iPad mini 2",
+          "depth": 1
+        },
+        {
+          "slug": "ipad-air",
+          "name": "iPad Air",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "slug": "apple-tv",
+      "name": "Apple TV",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "apple-tv-accessories",
+          "name": "Apple TV Accessories",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "slug": "mac",
+      "name": "Mac",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "imac",
+          "name": "iMac",
+          "depth": 1
+        },
+        {
+          "slug": "macbook-air",
+          "name": "MacBook Air",
+          "depth": 1
+        },
+        {
+          "slug": "mac-mini",
+          "name": "Mac Mini",
+          "depth": 1
+        },
+        {
+          "slug": "macbook-pro",
+          "name": "MacBook Pro",
+          "depth": 1
+        },
+        {
+          "slug": "mac-accessories",
+          "name": "Mac Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "mac-device-care",
+              "name": "Device Care",
+              "depth": 2
+            },
+            {
+              "slug": "mac-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "mac-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "mac-video",
+              "name": "Video",
+              "depth": 2
+            },
+            {
+              "slug": "mac-scanners",
+              "name": "Scanners",
+              "depth": 2
+            },
+            {
+              "slug": "mac-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "mac-cameras-photo-video",
+              "name": "Cameras, Photo, and Video",
+              "depth": 2
+            },
+            {
+              "slug": "mac-applecare",
+              "name": "AppleCare Protection Plan",
+              "depth": 2
+            },
+            {
+              "slug": "mac-displays-graphics",
+              "name": "Displays & Graphics",
+              "depth": 2
+            },
+            {
+              "slug": "mac-presentation",
+              "name": "Presentation",
+              "depth": 2
+            },
+            {
+              "slug": "mac-cables",
+              "name": "Cables",
+              "depth": 2
+            },
+            {
+              "slug": "mac-mice-keyboards",
+              "name": "Mice & Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "mac-bags-cases",
+              "name": "Bags & Cases",
+              "depth": 2
+            },
+            {
+              "slug": "mac-networking",
+              "name": "Networking",
+              "depth": 2
+            },
+            {
+              "slug": "mac-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "mac-software",
+              "name": "Software",
+              "depth": 2
+            },
+            {
+              "slug": "mac-stands-mounts-locks",
+              "name": "Stands, Mounts, & Locks",
+              "depth": 2
+            },
+            {
+              "slug": "mac-server-accessories",
+              "name": "Server Accessories",
+              "depth": 2
+            },
+            {
+              "slug": "mac-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "mac-storage",
+              "name": "Storage",
+              "depth": 2
+            },
+            {
+              "slug": "mac-airport-wireless",
+              "name": "Airport & Wireless",
+              "depth": 2
+            },
+            {
+              "slug": "mac-memory",
+              "name": "Memory",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "mac-pro",
+          "name": "Mac Pro",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "slug": "iphone",
+      "name": "iPhone",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "iphone-6",
+          "name": "iPhone 6",
+          "depth": 1
+        },
+        {
+          "slug": "iphone-5c",
+          "name": "iPhone 5c",
+          "depth": 1
+        },
+        {
+          "slug": "iphone-accessories",
+          "name": "iPhone Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "iphone-applecare",
+              "name": "AppleCare+ for iPhone",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-cases-armbands-films",
+              "name": "Cases, Armbands, & Films",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "iphone-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "iphone-6plus",
+          "name": "iPhone 6 Plus",
+          "depth": 1
+        },
+        {
+          "slug": "iphone-5s",
+          "name": "iPhone 5s",
+          "depth": 1
+        }
+      ]
+    },
+    {
+      "slug": "accessories",
+      "name": "Accessories",
+      "depth": 0,
+      "children": [
+        {
+          "slug": "acc-ipod-accessories",
+          "name": "iPod Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "acc-ipod-Keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-applecare",
+              "name": "AppleCare+ for iPod",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipod-cases-armbands-films",
+              "name": "Cases, Armbands, & Films",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "acc-accessories",
+          "name": "Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "acc-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "acc-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "acc-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-storage",
+              "name": "Storage",
+              "depth": 2
+            },
+            {
+              "slug": "acc-stands-mounts-locks",
+              "name": "Stands, Mounts & Locks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "acc-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "acc-cameras-photo-video",
+              "name": "Cameras, Photo & Video",
+              "depth": 2
+            },
+            {
+              "slug": "acc-displays-graphics-presentation",
+              "name": "Displays, Graphics & Presentation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mice-keyboards",
+              "name": "Mice & Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "acc-device-care",
+              "name": "Device Care",
+              "depth": 2
+            },
+            {
+              "slug": "acc-bags-shells-sleeves",
+              "name": "Bags, Shells, & Sleeves",
+              "depth": 2
+            },
+            {
+              "slug": "acc-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-scanners",
+              "name": "Scanners",
+              "depth": 2
+            },
+            {
+              "slug": "acc-networking-server-accessories",
+              "name": "Networking & Server Accessories",
+              "depth": 2
+            },
+            {
+              "slug": "acc-applecare",
+              "name": "AppleCare Protection Plan",
+              "depth": 2
+            },
+            {
+              "slug": "acc-software",
+              "name": "Software",
+              "depth": 2
+            },
+            {
+              "slug": "acc-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-cases-films",
+              "name": "Cases & Films",
+              "depth": 2
+            },
+            {
+              "slug": "acc-airport-wireless",
+              "name": "AirPort & Wireless",
+              "depth": 2
+            },
+            {
+              "slug": "acc-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "acc-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "acc-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "acc-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "acc-memory",
+              "name": "Memory",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "acc-mac-accessories",
+          "name": "Mac Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "acc-mac-presentation",
+              "name": "Presentation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-server-accessories",
+              "name": "Server Accessories",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-memory",
+              "name": "Memory",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-video",
+              "name": "Video",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-airport-wireless",
+              "name": "Airport & Wireless",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-displays-graphics",
+              "name": "Displays & Graphics",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-cameras-photo-video",
+              "name": "Cameras, Photo, and Video",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-device-care",
+              "name": "Device Care",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-storage",
+              "name": "Storage",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-applecare",
+              "name": "AppleCare Protection Plan",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-bags-cases",
+              "name": "Bags & Cases",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-mice-keyboards",
+              "name": "Mice & Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-networking",
+              "name": "Networking",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-cables",
+              "name": "Cables",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-stands-mounts-locks",
+              "name": "Stands, Mounts, & Locks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-scanners",
+              "name": "Scanners",
+              "depth": 2
+            },
+            {
+              "slug": "acc-mac-software",
+              "name": "Software",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "acc-iphone-accessories",
+          "name": "iPhone Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "acc-iphone-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-applecare",
+              "name": "AppleCare+ for iPhone",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-cases-armbands-films",
+              "name": "Cases, Armbands, & Films",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-iphone-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "acc-ipad-accessories",
+          "name": "iPad Accessories",
+          "depth": 1,
+          "children": [
+            {
+              "slug": "acc-ipad-fitness-sport",
+              "name": "Fitness & Sport",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-healthkit",
+              "name": "HealthKit",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-music-creation",
+              "name": "Music Creation",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-charging-devices",
+              "name": "Charging Devices",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-cases-armbands-films",
+              "name": "Cases",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-printers",
+              "name": "Printers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-connected-home",
+              "name": "Connected Home",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-stands",
+              "name": "Stands",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-headphones",
+              "name": "Headphones",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-keyboards",
+              "name": "Keyboards",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-business-security",
+              "name": "Business & Security",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-cables-docks",
+              "name": "Cables & Docks",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-speakers",
+              "name": "Speakers",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-car-travel",
+              "name": "Car & Travel",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-toys-hobbies",
+              "name": "Toys & Hobbies",
+              "depth": 2
+            },
+            {
+              "slug": "acc-ipad-applecare",
+              "name": "AppleCare+ for iPad",
+              "depth": 2
+            }
+          ]
+        },
+        {
+          "slug": "apple-accessories",
+          "name": "Apple Accessories",
+          "depth": 1
+        }
+      ]
+    }
+  ]
+}

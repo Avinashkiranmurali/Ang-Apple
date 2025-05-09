@@ -1,0 +1,107 @@
+<div class="order-info-details" *ngIf="confirmOrder">
+  <ng-container [ngSwitch]="confirmationTemplate['orderConfirmShippingDetails']['template']">
+    <div *ngSwitchCase="'order-confirm-shipping-details-default.html'" class="order-details-wrapper">
+      <div class="order-addresses p-t-20 p-b-20">
+        <div>
+          <h3>{{ messages.shippingInformation }}</h3>
+          <p><em>{{ confirmOrder['shipAddress']['firstName'] }} {{ confirmOrder['shipAddress'].lastName }}</em></p>
+          <p [hidden]="!confirmOrder['shipAddress'].businessName">{{ confirmOrder['shipAddress'].businessName }}</p>
+          <p>{{ confirmOrder['shipAddress'].address1 }}</p>
+          <p [hidden]="!confirmOrder['shipAddress'].address2">{{ confirmOrder['shipAddress'].address2 }}</p>
+          <p>
+            <span [hidden]="!(confirmOrder['shipAddress'].address3 && (['en_gb','en_za'].indexOf(currLocale) < 0))">{{ confirmOrder['shipAddress'].address3 }} </span>
+            <span [hidden]="!(confirmOrder['shipAddress'].subCity)">{{ ', ' + confirmOrder['shipAddress'].subCity }}</span>
+          </p>
+          <p><span>{{ confirmOrder['shipAddress'].city }}</span><span [hidden]="!confirmOrder['shipAddress'].state">{{ ', ' + confirmOrder['shipAddress'].state }}</span></p>
+          <p [hidden]="!(confirmOrder['shipAddress'].address3 && (['en_gb','en_za'].indexOf(currLocale) >= 0))">{{ confirmOrder['shipAddress'].address3 }}</p> <!-- county or suburb-->
+          <p [hidden]="!confirmOrder['shipAddress'].zip5">
+            <span>{{ confirmOrder['shipAddress'].zip5 | mask : '' : 'all': 0 : '*' : 0 : config.maskInputs }}</span>
+            <span [hidden]="!confirmOrder['shipAddress'].zip4">-{{ confirmOrder['shipAddress'].zip4 }}</span>
+          </p>
+          <p [hidden]="!confirmOrder['shipAddress'].country">{{ messages.country }}</p>
+          <div class="contact-info">
+            <p>{{ confirmOrder['shipAddress'].phoneNumber | mask :'(?!^\\\\d*)[^\\s+\\-\\(\\)](?=.{5})': 'all' : 0 : '*' : 0 : config.maskInputs }}</p>
+            <p>{{ confirmOrder['shipAddress'].email | emailMask : config.maskInputs }}</p>
+          </div>
+        </div>
+        <div *ngIf="confirmOrder['billAddress']">
+          <h3>{{ messages.billTo }}</h3>
+          <p>{{ confirmOrder['billAddress'].firstName }} {{ confirmOrder['billAddress'].lastName }}</p>
+          <p>{{ confirmOrder['billAddress'].addressLine }}</p>
+          <p><span>{{ confirmOrder['billAddress'].city }}</span>,&nbsp;<span>{{ confirmOrder['billAddress'].state }}</span>&nbsp;<span>{{ confirmOrder['billAddress'].zip | mask : '' : 'all': 0 : '*' : 0 : config.maskInputs }}</span></p>
+          <p [hidden]="!confirmOrder['billAddress'].country">{{ messages.country }}</p>
+        </div>
+        <div *ngIf="((pointsUsed > 0 || cartTotals.points > 0) || (totalPurchase > 0)) && !isDRP">
+          <h3>{{ messages.paymentMethod }}</h3>
+          <p>
+            <span [hidden]="isCashOnly"> <!-- ng-hide -->
+              {{ (pointsUsed === 0 ? pointsUsed : (pointsUsed || cartTotals.points) ) | currencyFormat:config.pricingTemplate:user.locale}} {{ pointLabel }} {{ 'used' | translate }}
+            </span>
+            <span class="text-italic" [hidden]="!isCashOnly">{{ messages.creditDebitCard }}</span>
+          </p>
+          <p [hidden]="!(totalPurchase > 0)">
+            <span>
+              <strong><span>{{ totalPurchase | currency }}</span></strong>&nbsp;<span [innerHTML]="'appliedToCardEnding' | translate: { ccLast4: confirmOrder['ccLast4'] }"></span>
+            </span>
+          </p>
+        </div>
+        <div *ngIf="displayPaymentAgreement()" class="order-payment-aggrement">
+          <h3>{{ messages.paymentInformation }}</h3>
+          <p class="capitalize">{{ messages.payrollDeductionLabel }}</p>
+          <p>{{ messages.agreementId}} : {{orderData.payrollAgreementId}}</p>
+          <a target="_blank" rel="noopener noreferrer">{{ messages.paymentAgreement}}</a>
+        </div>
+      </div>
+    </div>
+    <div *ngSwitchCase="'order-confirm-shipping-details-tw.html'" class="order-details-wrapper">
+      <div class="order-addresses p-t-20 p-b-20">
+        <div>
+          <h3>{{ messages.shippingInformation }}</h3>
+          <p><em>{{ confirmOrder['shipAddress'].lastName }} {{ confirmOrder['shipAddress'].firstName }}</em></p>
+          <p [hidden]="!(confirmOrder['shipAddress'].businessName)">{{ confirmOrder['shipAddress'].businessName }}</p>
+          <p>{{ confirmOrder['shipAddress'].address1 }}</p>
+          <p [hidden]="!(confirmOrder['shipAddress'].address2)">{{ confirmOrder['shipAddress'].address2 }}</p>
+          <p>
+            <span [hidden]="!(confirmOrder['shipAddress'].address3)">{{ confirmOrder['shipAddress'].address3 }}</span>
+            <span [hidden]="!(confirmOrder['shipAddress'].subCity)">{{ ', ' + confirmOrder['shipAddress'].subCity }}</span>
+          </p>
+          <p><span>{{ confirmOrder['shipAddress'].city }}</span><span [hidden]="!(confirmOrder['shipAddress'].state)">{{ ', ' + confirmOrder['shipAddress'].state }}</span></p>
+          <p [hidden]="!(confirmOrder['shipAddress'].county && currLocale === 'en_gb')">{{ confirmOrder['shipAddress'].county }}</p>
+          <p [hidden]="!(confirmOrder['shipAddress'].zip5)">
+            <span>{{ confirmOrder['shipAddress'].zip5 | mask : '' : 'all': 0 : '*' : 0 : config.maskInputs }}</span>
+            <span [hidden]="!(confirmOrder['shipAddress'].zip4)">-{{ confirmOrder['shipAddress'].zip4 }}</span>
+          </p>
+          <p [hidden]="!(confirmOrder['shipAddress'].country)">{{ messages.country }}</p>
+          <div class="contact-info">
+            <p>{{ confirmOrder['shipAddress'].phoneNumber | mask :'(?!^\\\\d*)[^\\s+\\-\\(\\)](?=.{5})': 'all' : 0 : '*' : 0 : config.maskInputs}}</p>
+            <p>{{ confirmOrder['shipAddress'].email | emailMask : config.maskInputs }}</p>
+          </div>
+        </div>
+        <div *ngIf="confirmOrder['billAddress']">
+          <h3>{{ messages.billTo }}</h3>
+          <p>{{ confirmOrder['billAddress'].lastName }} {{ confirmOrder['billAddress'].firstName }}</p>
+          <p>{{ confirmOrder['billAddress'].addressLine }}</p>
+          <p><span>{{ confirmOrder['billAddress'].city }}</span>,&nbsp;<span>{{ confirmOrder['billAddress'].state }}</span>&nbsp;<span>{{ confirmOrder['billAddress'].zip | mask :'' : 'all': 0 : '*' : 0 : config.maskInputs }}</span></p>
+          <p [hidden]="!(confirmOrder['billAddress'].country)">{{ messages.country }}</p>
+        </div>
+        <div [hidden]="!((pointsUsed > 0 || cartTotals.points > 0) || (totalPurchase > 0))">
+          <h3>{{ messages.paymentMethod }}</h3>
+          <p>
+            <span [hidden]="isCashOnly">
+              {{ (pointsUsed === 0 ? pointsUsed : (pointsUsed || cartTotals.points) ) | currencyFormat:config.pricingTemplate:user.locale}} {{ pointLabel }} {{ 'used' | translate }}
+            </span>
+            <span class="text-italic" [hidden]="!isCashOnly">{{ messages.creditDebitCard }}</span>
+          </p>
+          <p [hidden]="!(totalPurchase > 0)">
+            <span>
+              <strong>
+                <span *ngIf="config.showDecimal">{{ totalPurchase | currency }}</span>
+                <span *ngIf="!config.showDecimal">{{ totalPurchase | currency : '' : 'symbol' : '1.0-0' }}</span>
+              </strong>&nbsp;<span [innerHTML]="'appliedToCardEnding' | translate: { ccLast4: confirmOrder['ccLast4'] }"></span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

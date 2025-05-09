@@ -1,0 +1,836 @@
+{
+  "cartItems": [
+    {
+      "id": 778636,
+      "addedDate": 1613535114000,
+      "supplierId": 200,
+      "productId": "30001MHXH3AM/A",
+      "productName": "MagSafe Charger",
+      "imageURL": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000?wid=150&hei=150",
+      "parentProductId": "30001MHXH3AM/A",
+      "merchantId": "30001",
+      "quantity": 1,
+      "engrave": {
+        "line1": "",
+        "line2": "",
+        "font": "",
+        "fontCode": "",
+        "maxCharsPerLine": "",
+        "widthDimension": "",
+        "noOfLines": 0,
+        "engraveBgImageLocation": null,
+        "isSkuBasedEngraving": false,
+        "templateClass": null,
+        "engraveFontConfigurations": null
+      },
+      "gift": {
+        "giftWrap": false,
+        "freeGiftWrap": false,
+        "giftWrapPoints": 100,
+        "message1": "",
+        "message2": "",
+        "message3": "",
+        "message4": "",
+        "message5": ""
+      },
+      "productDetail": {
+        "psid": "30001MHXH3AM/A",
+        "sku": "MHXH3AM/A",
+        "name": "MagSafe Charger",
+        "shortDescription": "MagSafe Charger",
+        "longDescription": "",
+        "brand": "Apple®",
+        "manufacturer": "Apple",
+        "averageRating": 0,
+        "upc": "",
+        "shippingAvailabilityMessage": "4–7 business days",
+        "shipmentQuoteDate": "2021-02-25",
+        "promotion": null,
+        "categories": [
+          {
+            "imageUrl": "",
+            "i18nName": "Power & Cables",
+            "slug": "all-accessories-power-cables",
+            "name": "Power & Cables",
+            "templateType": "CATEGORYLIST",
+            "defaultImage": "",
+            "summaryIconImage": "",
+            "displayOrder": 99,
+            "engraveBgImageLocation": null,
+            "subCategories": [],
+            "parents": [
+              {
+                "imageUrl": "",
+                "i18nName": "Accessories",
+                "slug": "all-accessories",
+                "name": "Accessories",
+                "templateType": "CATEGORYLIST",
+                "defaultImage": "",
+                "summaryIconImage": "",
+                "displayOrder": 1,
+                "engraveBgImageLocation": null,
+                "subCategories": [],
+                "parents": [
+                  {
+                    "imageUrl": "",
+                    "i18nName": "Accessories",
+                    "slug": "accessories",
+                    "name": "Accessories",
+                    "templateType": "",
+                    "defaultImage": "",
+                    "summaryIconImage": "",
+                    "displayOrder": 7,
+                    "engraveBgImageLocation": null,
+                    "subCategories": [],
+                    "parents": [],
+                    "products": [],
+                    "images": {},
+                    "detailUrl": null,
+                    "psid": null,
+                    "depth": 0,
+                    "new": false,
+                    "configurable": false,
+                    "active": true
+                  }
+                ],
+                "products": [],
+                "images": {},
+                "detailUrl": null,
+                "psid": null,
+                "depth": 1,
+                "new": false,
+                "configurable": false,
+                "active": true
+              }
+            ],
+            "products": [],
+            "images": {},
+            "detailUrl": null,
+            "psid": null,
+            "depth": 2,
+            "new": false,
+            "configurable": false,
+            "active": true
+          }
+        ],
+        "offers": [
+          {
+            "basePrice": null,
+            "payPerPeriodPrice": null,
+            "payPeriods": 0,
+            "payDuration": null,
+            "upgradeCost": null,
+            "earnPoints": 0,
+            "convRate": 185.1851851851852,
+            "orgSupplierTaxPrice": null,
+            "msrpPrice": null,
+            "sku": "MHXH3AM/A",
+            "appleSku": null,
+            "payPerPeriodTotalPrice": null,
+            "displayPrice": {
+              "amount": 39,
+              "currencyCode": "USD",
+              "points": 7400
+            },
+            "b2sItemPrice": {
+              "amount": 39,
+              "currencyCode": "USD",
+              "points": 7400
+            },
+            "b2sShippingPrice": {
+              "amount": 0,
+              "currencyCode": "USD",
+              "points": 0
+            },
+            "varPrice": {
+              "amount": 41.73,
+              "currencyCode": "USD",
+              "points": 8000
+            },
+            "unpromotedVarPrice": {
+              "amount": 41.73,
+              "currencyCode": "USD",
+              "points": 8000
+            },
+            "supplierTaxPrice": {
+              "amount": 2.73,
+              "currencyCode": "USD",
+              "points": 600
+            },
+            "totalPrice": {
+              "amount": 41.73,
+              "currencyCode": "USD",
+              "points": 8000
+            },
+            "unitTotalPrice": {
+              "amount": 41.73,
+              "currencyCode": "USD",
+              "points": 8000
+            },
+            "unpromotedDisplayPrice": {
+              "amount": 39,
+              "currencyCode": "USD",
+              "points": 7400
+            },
+            "fees": {
+              "EHF": {
+                "feeId": "EHF",
+                "amount": {
+                  "amount": 0,
+                  "currencyCode": "USD",
+                  "points": 0
+                }
+              }
+            },
+            "tax": {
+              "CITYDISTRICT": {
+                "taxId": "CITYDISTRICT",
+                "amount": {
+                  "amount": 0,
+                  "currencyCode": "USD",
+                  "points": 0
+                }
+              },
+              "CITY": {
+                "taxId": "CITY",
+                "amount": {
+                  "amount": 0,
+                  "currencyCode": "USD",
+                  "points": 0
+                }
+              },
+              "STATE": {
+                "taxId": "STATE",
+                "amount": {
+                  "amount": 1.56,
+                  "currencyCode": "USD",
+                  "points": 400
+                }
+              },
+              "COUNTY": {
+                "taxId": "COUNTY",
+                "amount": {
+                  "amount": 0.39,
+                  "currencyCode": "USD",
+                  "points": 200
+                }
+              },
+              "COUNTYDISTRICT": {
+                "taxId": "COUNTYDISTRICT",
+                "amount": {
+                  "amount": 0.78,
+                  "currencyCode": "USD",
+                  "points": 200
+                }
+              }
+            },
+            "discountApplied": 0,
+            "isEligibleForPayrollDeduction": false
+          }
+        ],
+        "options": [],
+        "additionalInfo": {
+          "whatsInTheBox": "[\"MagSafe Charger\",\"USB-C integrated cable (1 m)\"]"
+        },
+        "images": {
+          "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=30&hei=30",
+          "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=75&hei=75",
+          "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=150&hei=150",
+          "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000"
+        },
+        "variations": [
+          {
+            "psid": "30001MHXH3AM/A",
+            "sku": "MHXH3AM/A",
+            "name": "MagSafe Charger",
+            "shortDescription": "MagSafe Charger",
+            "longDescription": "",
+            "brand": "Apple®",
+            "manufacturer": "apple",
+            "averageRating": 0,
+            "upc": null,
+            "shippingAvailabilityMessage": "4–7 business days",
+            "shipmentQuoteDate": "2021-02-25",
+            "promotion": null,
+            "categories": [],
+            "offers": [
+              {
+                "basePrice": null,
+                "payPerPeriodPrice": null,
+                "payPeriods": 0,
+                "payDuration": null,
+                "upgradeCost": null,
+                "earnPoints": 0,
+                "convRate": null,
+                "orgSupplierTaxPrice": null,
+                "msrpPrice": null,
+                "sku": "MHXH3AM/A",
+                "appleSku": null,
+                "payPerPeriodTotalPrice": null,
+                "displayPrice": {
+                  "amount": 39,
+                  "currencyCode": "USD",
+                  "points": 7400
+                },
+                "b2sItemPrice": {
+                  "amount": 39,
+                  "currencyCode": "USD",
+                  "points": 7400
+                },
+                "b2sShippingPrice": {
+                  "amount": 0,
+                  "currencyCode": "PNT",
+                  "points": 0
+                },
+                "varPrice": {
+                  "amount": 0,
+                  "currencyCode": "",
+                  "points": 0
+                },
+                "unpromotedVarPrice": {
+                  "amount": 0,
+                  "currencyCode": "",
+                  "points": 0
+                },
+                "supplierTaxPrice": {
+                  "amount": 0,
+                  "currencyCode": "",
+                  "points": 0
+                },
+                "totalPrice": {
+                  "amount": 39,
+                  "currencyCode": "USD",
+                  "points": 7400
+                },
+                "unitTotalPrice": {
+                  "amount": 39,
+                  "currencyCode": "USD",
+                  "points": 7400
+                },
+                "unpromotedDisplayPrice": {
+                  "amount": 39,
+                  "currencyCode": "USD",
+                  "points": 7400
+                },
+                "fees": {},
+                "tax": {},
+                "discountApplied": 0,
+                "isEligibleForPayrollDeduction": false
+              }
+            ],
+            "options": [],
+            "additionalInfo": {
+              "varAnalyticCode": "ELEC",
+              "whatsInTheBox": "[\"MagSafe Charger\",\"USB-C integrated cable (1 m)\"]"
+            },
+            "images": {
+              "thumbnail": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=30&hei=30",
+              "small": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=75&hei=75",
+              "medium": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000&wid=150&hei=150",
+              "large": "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MHXH3?wid=1200&hei=1200&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1603835871000"
+            },
+            "variations": [],
+            "available": true,
+            "appleSku": null,
+            "merchantSpecificData": {
+              "compatibility": {}
+            },
+            "accessoryItem": true,
+            "optionsConfigurationData": null,
+            "hasVariations": false,
+             "addOns": {
+        "availableGiftItems": []
+      },
+            "isEngravable": false,
+            "engrave": null,
+            "defaultOffer": {
+              "basePrice": null,
+              "payPerPeriodPrice": null,
+              "payPeriods": 0,
+              "payDuration": null,
+              "upgradeCost": null,
+              "earnPoints": 0,
+              "convRate": null,
+              "orgSupplierTaxPrice": null,
+              "msrpPrice": null,
+              "sku": "MHXH3AM/A",
+              "appleSku": null,
+              "payPerPeriodTotalPrice": null,
+              "displayPrice": {
+                "amount": 39,
+                "currencyCode": "USD",
+                "points": 7400
+              },
+              "b2sItemPrice": {
+                "amount": 39,
+                "currencyCode": "USD",
+                "points": 7400
+              },
+              "b2sShippingPrice": {
+                "amount": 0,
+                "currencyCode": "PNT",
+                "points": 0
+              },
+              "varPrice": {
+                "amount": 0,
+                "currencyCode": "",
+                "points": 0
+              },
+              "unpromotedVarPrice": {
+                "amount": 0,
+                "currencyCode": "",
+                "points": 0
+              },
+              "supplierTaxPrice": {
+                "amount": 0,
+                "currencyCode": "",
+                "points": 0
+              },
+              "totalPrice": {
+                "amount": 39,
+                "currencyCode": "USD",
+                "points": 7400
+              },
+              "unitTotalPrice": {
+                "amount": 39,
+                "currencyCode": "USD",
+                "points": 7400
+              },
+              "unpromotedDisplayPrice": {
+                "amount": 39,
+                "currencyCode": "USD",
+                "points": 7400
+              },
+              "fees": {},
+              "tax": {},
+              "discountApplied": 0,
+              "isEligibleForPayrollDeduction": false
+            },
+            "hasOffers": true,
+            "productBasedPricingKey": ""
+          }
+        ],
+        "available": true,
+        "appleSku": null,
+        "merchantSpecificData": {
+          "compatibility": {}
+        },
+        "accessoryItem": true,
+        "optionsConfigurationData": {},
+        "hasVariations": false,
+        "addOns": {
+          "availableGiftItems": [
+            {
+              "psid": "30001MK0C2AM/A",
+              "name": "Apple Pencil (1st generation)",
+              "isEngravable": false
+            },
+            {
+              "psid": "30001MKQ42AM/A",
+              "name": "USB-C to Lightning Cable (2 m)",
+              "isEngravable": false
+            },
+            {
+              "psid": "30001MU8F2AM/A",
+              "name": "Apple Pencil (2nd generation)",
+              "isEngravable": true
+            }
+          ]
+        },
+        "isEngravable": false,
+        "engrave": null,
+        "defaultOffer": {
+          "basePrice": null,
+          "payPerPeriodPrice": null,
+          "payPeriods": 0,
+          "payDuration": null,
+          "upgradeCost": null,
+          "earnPoints": 0,
+          "convRate": 185.1851851851852,
+          "orgSupplierTaxPrice": null,
+          "msrpPrice": null,
+          "sku": "MHXH3AM/A",
+          "appleSku": null,
+          "payPerPeriodTotalPrice": null,
+          "displayPrice": {
+            "amount": 39,
+            "currencyCode": "USD",
+            "points": 7400
+          },
+          "b2sItemPrice": {
+            "amount": 39,
+            "currencyCode": "USD",
+            "points": 7400
+          },
+          "b2sShippingPrice": {
+            "amount": 0,
+            "currencyCode": "USD",
+            "points": 0
+          },
+          "varPrice": {
+            "amount": 41.73,
+            "currencyCode": "USD",
+            "points": 8000
+          },
+          "unpromotedVarPrice": {
+            "amount": 41.73,
+            "currencyCode": "USD",
+            "points": 8000
+          },
+          "supplierTaxPrice": {
+            "amount": 2.73,
+            "currencyCode": "USD",
+            "points": 600
+          },
+          "totalPrice": {
+            "amount": 41.73,
+            "currencyCode": "USD",
+            "points": 8000
+          },
+          "unitTotalPrice": {
+            "amount": 41.73,
+            "currencyCode": "USD",
+            "points": 8000
+          },
+          "unpromotedDisplayPrice": {
+            "amount": 39,
+            "currencyCode": "USD",
+            "points": 7400
+          },
+          "fees": {
+            "EHF": {
+              "feeId": "EHF",
+              "amount": {
+                "amount": 0,
+                "currencyCode": "USD",
+                "points": 0
+              }
+            }
+          },
+          "tax": {
+            "CITYDISTRICT": {
+              "taxId": "CITYDISTRICT",
+              "amount": {
+                "amount": 0,
+                "currencyCode": "USD",
+                "points": 0
+              }
+            },
+            "CITY": {
+              "taxId": "CITY",
+              "amount": {
+                "amount": 0,
+                "currencyCode": "USD",
+                "points": 0
+              }
+            },
+            "STATE": {
+              "taxId": "STATE",
+              "amount": {
+                "amount": 1.56,
+                "currencyCode": "USD",
+                "points": 400
+              }
+            },
+            "COUNTY": {
+              "taxId": "COUNTY",
+              "amount": {
+                "amount": 0.39,
+                "currencyCode": "USD",
+                "points": 200
+              }
+            },
+            "COUNTYDISTRICT": {
+              "taxId": "COUNTYDISTRICT",
+              "amount": {
+                "amount": 0.78,
+                "currencyCode": "USD",
+                "points": 200
+              }
+            }
+          },
+          "discountApplied": 0,
+          "isEligibleForPayrollDeduction": false
+        },
+        "hasOffers": true,
+        "productBasedPricingKey": "all-accessories-power-cables|"
+      },
+      "productGroupId": null,
+      "productGroupName": null,
+      "productGroupDisplayName": null,
+      "maxQuantity": null,
+      "payPeriodPrice": null,
+      "shippingMethod": null,
+      "giftCardMaxQuantity": null,
+      "giftCardDenomination": {
+        "negative": false,
+        "zero": true,
+        "positive": false,
+        "amount": 0,
+        "currencyUnit": {
+          "code": "USD",
+          "numericCode": 840,
+          "decimalPlaces": 2,
+          "symbol": "$",
+          "numeric3Code": "840",
+          "countryCodes": [
+            "PR",
+            "MP",
+            "IO",
+            "FM",
+            "PW",
+            "GU",
+            "BQ",
+            "TC",
+            "VG",
+            "AS",
+            "VI",
+            "TL",
+            "UM",
+            "MH",
+            "EC",
+            "US"
+          ],
+          "pseudoCurrency": false
+        },
+        "scale": 2,
+        "amountMinorInt": 0,
+        "amountMajorInt": 0,
+        "negativeOrZero": true,
+        "amountMajor": 0,
+        "amountMajorLong": 0,
+        "amountMinor": 0,
+        "amountMinorLong": 0,
+        "minorPart": 0,
+        "positiveOrZero": true
+      },
+      "installment": null,
+      "selectedAddOns": {
+        "giftItem": null
+      },
+      "discount": null
+    }
+  ],
+  "shippingAddress": {
+    "firstName": "",
+    "middleName": "",
+    "lastName": "",
+    "businessName": "",
+    "address1": "",
+    "address2": "",
+    "address3": "",
+    "subCity": null,
+    "city": "Alpharetta",
+    "state": "GA",
+    "zip5": "30005",
+    "zip4": "5479",
+    "country": "US",
+    "phoneNumber": "(770) 555-1234",
+    "faxNumber": "",
+    "email": "etheall@bridge2solutions.com",
+    "errorMessage": {},
+    "warningMessage": {},
+    "ignoreSuggestedAddress": "false",
+    "cartTotalModified": false,
+    "selectedAddressId": 0,
+    "addressModified": null,
+    "validAddress": false
+  },
+  "cartTotal": {
+    "price": {
+      "amount": 41.73,
+      "currencyCode": "USD",
+      "points": 99999900
+    },
+    "discountedPrice": null,
+    "discountAmount": 0,
+    "shippingPrice": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "taxes": {},
+    "fees": {},
+    "expeditedShippingPrice": null,
+    "itemsSubtotalPrice": {
+      "amount": 39,
+      "currencyCode": "USD",
+      "points": 7400
+    },
+    "discountedItemsSubtotalPrice": null,
+    "totalTaxes": {
+      "amount": 2.73,
+      "currencyCode": "USD",
+      "points": 600
+    },
+    "totalFees": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "currency": "USD",
+    "establishmentFees": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "payPerPeriod": null,
+    "payPeriods": 0,
+    "discountCodePerOrder": 1,
+    "discountApplied": false,
+    "actual": true
+  },
+  "displayCartTotal": {
+    "price": {
+      "amount": 41.73,
+      "currencyCode": "USD",
+      "points": 8000
+    },
+    "discountedPrice": null,
+    "discountAmount": 0,
+    "shippingPrice": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "taxes": {},
+    "fees": {},
+    "expeditedShippingPrice": null,
+    "itemsSubtotalPrice": {
+      "amount": 39,
+      "currencyCode": "USD",
+      "points": 7400
+    },
+    "discountedItemsSubtotalPrice": null,
+    "totalTaxes": {
+      "amount": 2.73,
+      "currencyCode": "USD",
+      "points": 600
+    },
+    "totalFees": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "currency": "USD",
+    "establishmentFees": {
+      "amount": 0,
+      "currencyCode": "",
+      "points": 0
+    },
+    "payPerPeriod": null,
+    "payPeriods": 0,
+    "discountCodePerOrder": 1,
+    "discountApplied": false,
+    "actual": true
+  },
+  "cartModifiedBySystem": false,
+  "cartTotalModified": false,
+  "discounts": [],
+  "installment": null,
+  "paymentType": null,
+  "addPoints": 0,
+  "pointsPayment": 8000,
+  "pointsBalance": 0,
+  "pointPurchaseRate": 0.0070419375,
+  "cost": 5,
+  "ccPayment": 0,
+  "creditItem": {
+    "baseItemPrice": 0,
+    "b2sProfit": 0,
+    "varProfit": 0,
+    "varPrice": 0,
+    "currency": {
+      "code": "USD",
+      "numericCode": 840,
+      "decimalPlaces": 2,
+      "symbol": "$",
+      "numeric3Code": "840",
+      "countryCodes": [
+        "PR",
+        "MP",
+        "IO",
+        "FM",
+        "PW",
+        "GU",
+        "BQ",
+        "TC",
+        "VG",
+        "AS",
+        "VI",
+        "TL",
+        "UM",
+        "MH",
+        "EC",
+        "US"
+      ],
+      "pseudoCurrency": false
+    },
+    "itemTotal": -1,
+    "creditCardType": null,
+    "ccFirstName": null,
+    "ccLastName": null,
+    "ccLast4": null,
+    "b2sMargin": 0,
+    "varMargin": 0.35
+  },
+  "id": 485414,
+  "userId": "eric",
+  "creditLineItem": null,
+  "selectedPaymentOption": null,
+  "isEligibleForPayrollDeduction": false,
+  "isPayrollOnly": true,
+  "addressError": false,
+  "supplementaryPaymentLimit": null,
+  "redemptionPaymentLimit": {
+    "pointsMaxLimit": {
+      "amount": 21.599999999999998,
+      "currencyCode": "USD",
+      "points": 4000
+    },
+    "pointsMinLimit": {
+      "amount": 21.599999999999998,
+      "currencyCode": "USD",
+      "points": 4000
+    },
+    "cashMaxLimit": {
+      "amount": 28.17,
+      "currencyCode": "USD",
+      "points": 4000
+    },
+    "cashMinLimit": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 0
+    },
+    "useMaxPoints": {
+      "amount": 28.16775,
+      "currencyCode": "USD",
+      "points": 4000
+    },
+    "useMinPoints": {
+      "amount": 28.16775,
+      "currencyCode": "USD",
+      "points": 99000000
+    },
+    "cartMaxLimit": {
+      "amount": 0,
+      "currencyCode": "USD",
+      "points": 2598
+    }
+  },
+  "paymentLimit": null,
+  "timeZoneId": null,
+  "convRate": 185.1851851851852,
+  "ignoreSuggestedAddress": null,
+  "promotionalSubscription": null,
+  "isAddressChanged": "Y",
+  "isEmailChanged": "N",
+  "gstAmount": 0,
+  "earnPoints": 0,
+  "selectedRedemptionOption": null,
+  "physicalGiftcardMaxValue": null,
+  "totalDiscountAmount": 0,
+  "maxCartTotalExceeded": false,
+  "subscriptions" : []
+}

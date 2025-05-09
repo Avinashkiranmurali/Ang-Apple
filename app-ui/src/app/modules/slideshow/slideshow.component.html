@@ -1,0 +1,33 @@
+<div class="uk-position-relative" uk-slideshow="min-height: 325; max-height: 325; velocity:3.84"  id="slideShowComponent" #slideShow>
+  <div class="uk-position-relative uk-visible-toggle" tabindex="-1">
+    <section>
+      <ul class="uk-slideshow-items">
+        <li *ngFor="let banner of banners; let i = index" id="{{i}}" [ngClass]="banner['categoryId']">
+
+          <!-- Template Banner -->
+          <ng-container *ngIf="banner['config']['template']">
+          <app-template-banner [templateBanner]="banner['config']['template']" [modalHtml]="banner['config']['modalHtml']" [myChasePlanLink]="banner['config']['chaseLink']"
+            [config]="banner['config']" [imageServerUrl]="imageServerUrl" [categoryId]="banner['categoryId']">
+          </app-template-banner>
+        </ng-container>
+
+          <!-- Single Banner-->
+          <ng-container *ngIf="!banner['config']['template']">
+            <app-single-banner [banner]="banner" [imageServerUrl]="imageServerUrl">
+            </app-single-banner>
+          </ng-container>
+
+        </li>
+      </ul>
+    </section>
+
+    <a class="uk-position-center-left" role="button" aria-label="Carousel Previous" href="#" uk-slidenav-previous uk-slideshow-item="previous">
+      <span class="uk-slidenav-previous-icon"></span>
+    </a>
+    <a class="uk-position-center-right" role="button" aria-label="Carousel Next" href="#" uk-slidenav-next uk-slideshow-item="next">
+      <span class="uk-slidenav-next-icon"></span>
+    </a>
+  </div>
+
+  <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-position-absolute uk-position-bottom"></ul>
+</div>

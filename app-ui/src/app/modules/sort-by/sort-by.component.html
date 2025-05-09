@@ -1,0 +1,46 @@
+<div class="{{parentClass}}">
+  <div class="sort-options">
+    <button [attr.aria-expanded]="isOpen"
+            attr.aria-label="Sort By {{ sortBy.label | translate }}"
+            placement="bottom"
+            role="button"
+            class="btn-secondary dropdown-toggle"
+            role="button"
+            #bagMenu="ngbPopover"
+            triggers="manual"
+            [ngbPopover]="popContent"
+            [autoClose]="true"
+            (click)="bagMenu.toggle()"
+            (shown)="popupTabEvent()"
+            (hidden)="closePopover()"
+            id="dropdownMenu"
+            aria-controls="sortByPopup">
+      <span>{{ "sortBy" | translate }}: </span>
+      <span class="selected-filter">{{
+        sortBy.label | translate
+        }}</span>
+      <span class="drop-down-icon"></span>
+      <span class="caret"></span>
+    </button>
+
+    <ng-template #popContent>
+      <div cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+        <ul class="" id="sortByPopup" role="listbox" aria-label="Sort By options">
+          <ng-container *ngFor="let sort of sortOptions | keyvalue: sharedService.returnZero">
+            <li class="dropdown-item" (hidden)="closePopover()" *ngIf="!sort.value.hidden" role="group">
+              <div class="sort-by-label" [ngClass]="{selected: sort.value.label === sortBy.label}" role="presentation">
+                <a [routerLink]="[]" role="option"
+                  [queryParams]="(sort.value.label === sortBy.label) ? {} : {sort: sort.value.label}" queryParamsHandling="merge"
+                  [attr.aria-selected]="(sort.value.label === sortBy.label)">
+                  {{ sort.value.label | translate }}
+                </a>
+              </div>
+            </li>
+          </ng-container>
+        </ul>
+      </div>
+    </ng-template>
+
+    <div class="cart-popupbg-new" [style.display]="bagMenu.isOpen() ? 'block' : 'none'"></div>
+  </div>
+</div>

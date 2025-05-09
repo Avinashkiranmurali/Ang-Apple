@@ -1,0 +1,34 @@
+{
+  "easyPaymentPlan": [
+    {
+      "tenor": "3",
+      "effectiveInterestRate": 12.99,
+      "annualPercentageRate": 13.67,
+      "installmentAmount": 266.67,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "oneTimeProcessingFeeAmount": 15.15,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "offerIndicator": "RATE_BASED"
+    },
+    {
+      "tenor": "6",
+      "effectiveInterestRate": 25.99,
+      "annualPercentageRate": 26.67,
+      "installmentAmount": 133.34,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "oneTimeProcessingFeeAmount": 15.15,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "offerIndicator": "RATE_BASED"
+    },
+    {
+      "tenor": "12",
+      "effectiveInterestRate": 42.99,
+      "annualPercentageRate": 43.67,
+      "installmentAmount": 66.67,
+      "oneTimeProcessingFeeIndicator": "FIXED_AMOUNT",
+      "oneTimeProcessingFeeAmount": 15.15,
+      "oneTimeProcessingFeePercentage": 0.75,
+      "offerIndicator": "RATE_BASED"
+    }
+  ]
+}

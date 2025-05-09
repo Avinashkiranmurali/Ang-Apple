@@ -1,0 +1,50 @@
+<div id="footer-content">
+  <footer>
+    <div class="wf-container">
+      <div class="footer-links">
+        <ul>
+          <li>
+            <a href="{{ messages['wf-contact-us-url'] }}" id="contact-us">{{messages['wf-footer-contact-us-label']}}</a>
+          </li>
+          <li>
+            <a href="{{ messages['wf-help-url'] }}" id="help">{{messages['wf-footer-help-label']}}</a>
+          </li>
+          <li>
+            <a href="{{ messages['wf-privacy-cookies-security-legal-url'] }}"
+               id="privacy-security">{{messages['wf-footer-privacy-cookies-label']}}</a>
+          </li>
+          <li>
+            <a href="{{ messages['wf-notice-of-data-collection-url'] }}"
+               id="notice-of-data-collection">{{messages['wf-footer-notice-data-collection-label']}}</a>
+          </li>
+          <li>
+            <a href="{{ messages['wf-terms-and-conditions-url'] }}"
+               id="terms-and-conditions">{{messages['wf-footer-terms-and-conditions-label']}}</a>
+          </li>
+          <li>
+            <a href="{{ messages['wf-es-terms-and-conditions-url'] }}"
+               id="terms-and-conditions-es" lang="es">{{messages['wf-footer-es-terms-and-conditions-label']}}</a>
+          </li>
+          <li>
+            <a href="#" (click)="getSpanishModal($event)" lang="es">{{messages['wf-footer-es-spanish-label']}}
+              <span class="sr-only" aria-label="Abre el diálogo"></span>
+            </a>
+          </li>
+          <li class="sign-off-footer-mobile">
+            <a href="" (click)="signOutAction('signOut')">
+              <span class="footer-lock-icon" aria-hidden="true"></span>
+              <span class="sign-off">{{messages['wf-footer-sign-off-label']}}</span>
+            </a>
+          </li>
+        </ul>
+        <a href="" (click)="signOutAction('signOut')" class="sign-off-footer">
+          <span class="footer-lock-icon" aria-hidden="true"></span>
+          <span class="sign-off">{{messages['wf-footer-sign-off-label']}}</span>
+        </a>
+      </div>
+      <div class="copyright-info">Copyright &copy; 1999-{{footerData['currentYear']}} Wells Fargo Bank,
+        N.A.
+      </div>
+    </div>
+  </footer>
+</div>

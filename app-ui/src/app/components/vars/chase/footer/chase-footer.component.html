@@ -1,0 +1,9 @@
+<div class="extended-disclaimer-container">
+    <div *ngIf="messages['footerExtendedDisclaimer'] && footerDisclaimerService.isWatchLanding() &&
+        footerDisclaimerService.displayFooterWatchExtendedDisclaimer"
+        [innerHTML]="'footerExtendedDisclaimer' | translate"
+        class="base-link large-12 small-12 extended-disclaimer">
+    </div>
+</div>
+<chase-footer *ngIf="!displayDynamicHeaderFooter" [baseUrl]="baseUrl"></chase-footer>
+<ur-nav-footer *ngIf="displayDynamicHeaderFooter"></ur-nav-footer>

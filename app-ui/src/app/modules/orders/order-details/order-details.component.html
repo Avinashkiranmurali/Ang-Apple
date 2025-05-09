@@ -1,0 +1,23 @@
+<section class="order-detail-parent-container">
+  <div class="container contain" *ngIf="isLoaded && orderDetails">
+    <div class="content-container order-info">
+      <div class="order-title">
+        <h1>{{ 'detailsOfYourOrder' | translate }}</h1>
+        <div class="details-order-number">{{ 'orderNumberHeading' | translate }}: {{ orderId }}</div>
+        <div class="details-order-date">{{ 'orderPlaced' | translate }}: {{ orderDetails.orderDate | date:'MMMM d yyyy':'':locale }}</div>
+      </div>
+    </div>
+    <app-order-shipping-payment-details
+      *ngIf="!hideOrderSummary"
+      [shippingAddress]="orderDetails.deliveryAddress"
+      [billToAddress] = "orderDetails.billTo"
+      [paymentInfo] = "orderDetails.paymentInfo"
+      [contactInfo] = "orderDetails.contactInfo"
+    ></app-order-shipping-payment-details>
+    <app-order-items [lineItems] = "orderDetails.lineItems"></app-order-items>
+    <app-order-payment-summary *ngIf="!hidePaymentSummary" [orderDetails]="orderDetails"></app-order-payment-summary>
+    <app-order-refund-summary *ngIf="!hideRefundSummary"
+      [ccLast4] = "orderDetails.paymentInfo.ccLast4"
+      [refundSummary] = "orderDetails.refundSummary"></app-order-refund-summary>
+  </div>
+</section>

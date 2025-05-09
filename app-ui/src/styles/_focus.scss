@@ -1,0 +1,31 @@
+:focus {
+  outline: none;
+  -moz-box-shadow: 0 0 0 3px rgba(131, 192, 253, 0.5);
+  -webkit-box-shadow: 0 0 0 3px rgba(131, 192, 253, 0.5);
+  box-shadow: 0 0 0 3px rgba(131, 192, 253, 0.5);
+}
+
+:focus[data-focus-method="mouse"], :focus[data-focus-method="touch"] {
+  &:not(input), &:not(textarea), &:not(select) {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+:focus:not([tabindex^="-"]) {
+  outline: none!important;
+}
+
+.pill-shaped-cta a {
+  &:focus {
+    -webkit-box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.6);
+    box-shadow: 0 0 0 4px rgba(0, 125, 250, 0.6);
+    outline: none;
+    &[data-focus-method="mouse"], &[data-focus-method="touch"] {
+      &:not(input), &:not(textarea), &:not(select) {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+      }
+    }
+  }
+}

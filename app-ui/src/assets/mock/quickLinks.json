@@ -1,0 +1,57 @@
+[
+  {
+    "locale": "en_US",
+    "varId": "-1",
+    "programId": "default",
+    "linkCode": "airpods",
+    "linkText": "AirPods",
+    "linkUrl": "/store/browse/music/music-airpods/",
+    "order": 10,
+    "showUnauthenticated": true,
+    "display": true
+  },
+  {
+    "locale": "en_US",
+    "varId": "-1",
+    "programId": "default",
+    "linkCode": "applepencil",
+    "linkText": "Apple Pencil",
+    "linkUrl": "/store/browse/ipad/apple-pencil/",
+    "order": 20,
+    "showUnauthenticated": true,
+    "display": true
+  },
+  {
+    "locale": "en_US",
+    "varId": "-1",
+    "programId": "default",
+    "linkCode": "iphonese",
+    "linkText": "iPhone SE",
+    "linkUrl": "/store/configure/iphone/iphone-se/",
+    "order": 30,
+    "showUnauthenticated": true,
+    "display": true
+  },
+  {
+    "locale": "en_US",
+    "varId": "-1",
+    "programId": "default",
+    "linkCode": "homepod",
+    "linkText": "HomePod",
+    "linkUrl": "/store/configure/music/homepod/",
+    "order": 50,
+    "showUnauthenticated": true,
+    "display": true
+  },
+  {
+    "locale": "en_US",
+    "varId": "UA",
+    "programId": "default",
+    "linkCode": "orderhistory",
+    "linkText": "Order History",
+    "linkUrl": "/store/order-history/",
+    "order": 60,
+    "showUnauthenticated": false,
+    "display": true
+  }
+]

@@ -1,0 +1,149 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- develop
+- rel-*
+pr:
+- develop
+- rel-*
+
+variables:
+  - group: loyalty-credentials
+  - name: build.source.ref
+    value: $[ resources.repositories['self'].ref ]
+  - name: build.source.displayBranch
+    readonly: true
+    ${{ if startsWith(variables['Build.SourceBranch'], 'refs/heads/') }}:
+      value: $[ replace(variables['Build.SourceBranch'], 'refs/heads/', '') ]
+    ${{ if startsWith(variables['Build.SourceBranch'], 'refs/pull/') }}:
+      value: $[ replace(variables['System.PullRequest.TargetBranch'], 'refs/heads/', '') ]
+  - name: isPR
+    value: $[startsWith(variables['build.source.ref'], 'refs/pull')] 
+pool:
+  name: On-Prem Loyalty
+
+resources:
+  containers:
+  - container: docker-jenkins
+    image: sherwoodforest-docker-virtual.jfrog.io/loyalty/jdk/adoptopenjdk/openjdk11:jdk-11.0.7_10
+    options: -v /usr/local/devops1/.gradle:/home/jenkins_azpcontainer/.gradle -v /usr/local/devops1/.npm:/home/jenkins_azpcontainer/.npm -v /usr/local/devops1/.sonar:/home/jenkins_azpcontainer/.sonar --net=host
+    endpoint: Sherwoodforest-Docker
+
+stages:
+- stage: verify_released
+  jobs:
+  - job: checking_version
+    steps:
+    - script: |
+          set +e
+          chmod +x gradlew
+          echo "You can use macro syntax for variables: $(CODE_VERSION)"
+          LATEST_JAR_VERSION=$(cat gradle.properties| grep "version="|cut -d= -f2|cut -d- -f1)
+          if [[ $LATEST_JAR_VERSION == *'SNAPSHOT'* ]]; then
+           LATEST_JAR_VERSION=$(echo $LATEST_JAR_VERSION| sed 's/-SNAPSHOT//g')
+          fi
+          echo $LATEST_JAR_VERSION
+          #Before Stage build, Check if the pom version has been released already to Platform-released
+          python3 /usr/local/devops1/scripts/jenkins-scripts/verify_released.py -r 'platform-released' -g 'apple-gr' -a 'apple-gr' --version "$LATEST_JAR_VERSION"
+          rc=$?;
+          if [[ $rc != 0 ]]; then
+            exit $rc;
+          fi
+      displayName: validation_check
+    - bash: |
+            LATEST_JAR_VERSION=$(cat gradle.properties| grep "version="|cut -d= -f2|cut -d- -f1)
+            echo "##vso[task.setvariable variable=CODE_VERSION;isOutput=true]$LATEST_JAR_VERSION-$(Build.BuildNumber)"
+      name: VERSION_BUILD
+    - bash: |
+            LATEST_JAR_VERSION=$(cat gradle.properties| grep "version="|cut -d= -f2|cut -d- -f1)
+            echo "##vso[task.setvariable variable=COOKBOOK_VERSION;isOutput=true]$LATEST_JAR_VERSION"
+      name: COOKBOOK_VERSION_BUILD
+- stage: cx
+  dependsOn: verify_released
+  jobs:
+    - job: run_cx
+      steps:
+        - task: Application security testing@2022
+          inputs:
+            projectName: 'Loyalty-Apple_GR'
+            syncMode: false
+            enableProxy: false
+            enableSastScan: true
+            preset: 'High and Medium'
+            CheckmarxService: 'Checkmarx_AWS_Cloud'
+            fullTeamName: 'CxServer\SP\Bakkt\Loyalty'
+            fullScansScheduled: false
+            folderExclusion: 'cvs, .svn, .hg , .git, .bzr, bin , obj,  backup, .idea, node_modules, /src/test-integration/, /src/test/'
+            enableDependencyScan: true
+            dependencyServerURL: 'Checkmarx_AWS_Cloud_SCA'
+            scaTeam: 'Loyalty'
+
+- stage: Build_Stage
+  dependsOn: verify_released
+  variables:
+      version_number: $[stageDependencies.verify_released.checking_version.outputs['VERSION_BUILD.CODE_VERSION']]
+  jobs:
+  - job: build
+    workspace:
+      clean: all
+    container: docker-jenkins
+    steps:
+      - task: Gradle@3
+        inputs:
+          gradleWrapperFile: 'gradlew'
+          tasks: 'compileJava'
+          Options: '-Pversion=$(version_number) -Pbranch=$(build.source.displayBranch)'
+          javaHomeOption: 'JDKVersion'
+        displayName: "compile"
+        
+- stage: Sonar_Scan
+  dependsOn: 
+  - Build_Stage
+  condition: and(succeeded(), eq(variables['isPR'], False))
+  jobs:
+  - job: sonar_analysis
+    container: docker-jenkins
+    steps:
+      - task: SonarQubePrepare@5
+        inputs:
+          SonarQube: 'sonar-loyalty'
+          scannerMode: 'Other'
+          extraProperties: |
+            sonar.projectName=apple/apple-gr
+            sonar.projectKey=apple-gr:apple-gr
+      - task: Gradle@3
+        inputs:
+          gradleWrapperFile: 'gradlew'
+          tasks: 'sonarqube'
+          Options: '-Dsonar.analysis.mode=publish'
+          javaHomeOption: 'JDKVersion'
+          sonarQubeRunAnalysis: true
+        displayName: "sonar-analysis"
+      - task: SonarQubePublish@5
+        inputs:
+          pollingTimeoutSec: '300'
+
+- stage: Publish_Stage
+  dependsOn:
+  - verify_released
+  - Build_Stage
+  - Sonar_Scan
+  condition: and(succeeded(), eq(variables['isPR'], False))
+  variables:
+    #- group: loyalty-credentials
+    - name: version_number
+      value: $[stageDependencies.verify_released.checking_version.outputs['VERSION_BUILD.CODE_VERSION']]
+  jobs:
+  - job: publish
+    container: docker-jenkins
+    steps:
+      - task: Gradle@3
+        inputs:
+          gradleWrapperFile: 'gradlew'
+          options: '-PmavenUser=$(nexususer) -PmavenPassword=$(nexussecret) -Pversion=$(version_number) -PbranchName=$(build.source.displayBranch) -PuploadRepoKey=releases'
+          tasks: 'build publish -x test -x downloadOauthWar'
+          javaHomeOption: 'JDKVersion'
+        displayName: "publish"

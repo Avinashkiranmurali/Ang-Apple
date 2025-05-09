@@ -1,0 +1,49 @@
+<div class="order-shipping-payment-container">
+  <section class="order-shipping-detail-container">
+    <div class="order-shipping-detail-title">{{ messages.shippingAddress }}</div>
+    <div class="order-shipping-detail-list">
+      <div class="italic">{{ shippingAddress.firstName }} {{ shippingAddress.lastName }}</div>
+      <div [hidden]="!shippingAddress.businessName">{{ shippingAddress.businessName }}</div>
+      <div>{{ shippingAddress.addressLine1 }}</div>
+      <div [hidden]="!shippingAddress.addressLine2">{{ shippingAddress.addressLine2 }}</div>
+      <div [hidden]="!(shippingAddress.addressLine3 && (['en_gb','en_za'].indexOf(currLocale) < 0))">
+        {{shippingAddress.addressLine3 }}</div>
+      <div>{{ shippingAddress.city }}<span [hidden]="!shippingAddress.state">{{ ', ' + shippingAddress.state }}</span></div>
+      <div [hidden]="!shippingAddress.addressLine3 && (['en_gb','en_za'].indexOf(currLocale) >= 0)">{{ shippingAddress.addressLine3 }}</div>
+      <div [hidden]="!shippingAddress.postalCode">{{ shippingAddress.postalCode | mask :'' : 'all': 0 : '*' : 0 : config.maskInputs }}</div>
+      <div [hidden]="!shippingAddress.country" class="m-b-0" >{{ shippingAddress.country }}</div>
+    </div>
+    <div *ngIf="contactInfo" class="order-shipping-contact-detail">
+      <div>{{ contactInfo.phone }}</div>
+      <div class="m-b-0">{{ contactInfo.email }}</div>
+    </div>
+  </section>
+
+  <section class="order-payment-billto-detail-container">
+    <div class="order-payment-detail-title">{{ 'paymentMethod' | translate }}</div>
+    <section class="order-detail-payment-list">
+      <div class="">
+        <span class="text-semibold">{{ paymentInfo.awardsUsed | currencyFormat: pricingTemplate : user.locale }}</span> {{ pointLabel }} {{ 'used'| translate }}
+      </div>
+        <div *ngIf="paymentInfo.awardsPurchasedPrice && paymentInfo.ccLast4"><span class="semi-bold" *ngIf="config.showDecimal"
+                                                                                  ext="historyDetail">{{ paymentInfo.awardsPurchasedPrice | currency }}</span>
+        <span class="semi-bold" *ngIf="!config.showDecimal"
+              ext="historyDetail">{{ paymentInfo.awardsPurchasedPrice | currency : '' : 'symbol' : '1.0-0' }}
+        </span>&nbsp;<span [innerHTML]="'appliedToCardEnding' | translate: { ccLast4 : paymentInfo.ccLast4 }"></span>
+      </div>
+    </section>
+
+    <section class="order-detail-billto-list" *ngIf="billToAddress">
+      <div class="bill-to semi-bold">{{ 'billTo' | translate }} </div>
+      <div class="italic" *ngIf="billToAddress.firstName || billToAddress.lastName ">{{ billToAddress.firstName}} {{ billToAddress.lastName}}</div>
+      <div *ngIf="billToAddress.addressLine">{{ billToAddress.addressLine}} </div>
+      <div>
+        {{ billToAddress.city}}<span *ngIf="billToAddress.city">,</span>
+        &nbsp;<span>{{ billToAddress.state}}</span>&nbsp;
+        <span>{{ +billToAddress.zip | mask : '' : 'all': 0 : '*' : 0 : config.maskInputs }}</span>
+      </div>
+      <div [hidden]="!billToAddress.country" class="m-b-0">{{ messages.country}} </div>
+    </section>
+
+  </section>
+</div>

@@ -1,0 +1,28 @@
+<ng-container>
+    <div class="modal-close-action-content">
+        <a href class="g-icons icon-icon-close icon-close" (click)="cancel()" auto-focus role="button" aria-label="close modal window"></a>
+    </div>
+
+    <div class="modal-header">
+        <h4 class="modal-title" id="timeout-warning-modal-title">{{ "sessionExpiredWarningTitle" | translate }}</h4>
+    </div>
+
+    <div class="modal-body">
+        <div class="info-block">
+            <h5 [innerHTML]="'sessionExpiredWarningText'  | translate:{'sessionTimeoutRemaining':sessionTimeoutRemaining}"></h5>
+        </div>
+    </div>
+
+    <div class="modal-footer">
+        <div class="modal-btn-container-stacked-flex modal-btn-container">
+            <button class="btn-base blue-btn action-item" aria-label="continue" (click)="extendSession()">
+        {{ "yes" | translate }}
+      </button>
+
+            <div class="action-item">
+                <a class="link-btn cancel" href role="link" (click)="cancel()">
+                    {{ "no" | translate }}</a>
+            </div>
+        </div>
+    </div>
+</ng-container>

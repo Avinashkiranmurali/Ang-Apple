@@ -1,0 +1,24 @@
+title Keystone Payment Flow
+
+participant Browser
+participant "Web App" as webapp
+participant "Payment Server" as paymentserver
+participant "Payment Provider" as provider #8888FF
+
+Browser -> webapp : "Pay with CC"
+webapp -> paymentserver : "POST ClientId+ProgramId+UserId+Amount to /api/transaction \n (Only when Cash is used for Redemption)"
+paymentserver -> webapp : transactionId
+webapp -> Browser : "Payment Form"
+Browser -> paymentserver : "POST with card information (include transactionId. /payment/{transactionid} (CORS)) \n Full Name, Address, Card Number, Expiry (month, year), CVV, Amount"
+paymentserver -> provider : "Authorize Credit Card \n Full Name, Address, Card Number, Expiry (month, year), CVV, Amount"
+provider-> paymentserver : "Payment Provider Transaction Id"
+paymentserver -> paymentserver : "Update Transaction to add the Payment Provider Transaction Id"
+paymentserver -> Browser: "OK"
+Browser -> Browser: "Redirect customer \n to next step in checkout"
+Browser -> webapp : "Place Order(include transactionId)"
+webapp -> paymentserver : "POST transactionId to trigger capture \n(/api/transaction/{transactionid}/capture)"
+paymentserver -> provider: "Capture (Pass Payment Provider Transaction Id)"
+provider-> paymentserver : OK
+paymentserver -> webapp : OK
+webapp -> webapp : "Further order processing"
+webapp -> Browser : "Order Confirmation"
